@@ -928,3 +928,8 @@ document.addEventListener('DOMContentLoaded', () => {
     })
   })
 })
+
+// go down smooth scroll
+$('#go-down').on('click', function () {
+  scrollTo('footer')
+})

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>淳の神奇網站</title>
+  <icon>https://chuen666666.github.io/icon.png</icon>
+  <subtitle>部落格</subtitle>
+  <link href="https://chuen666666.github.io/atom.xml" rel="self"/>
+  
+  <link href="https://chuen666666.github.io/"/>
+  <updated>2025-09-10T13:22:24.205Z</updated>
+  <id>https://chuen666666.github.io/</id>
+  
+  <author>
+    <name>淳</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="https://chuen666666.github.io/2025/09/10/hello-world/"/>
+    <id>https://chuen666666.github.io/2025/09/10/hello-world/</id>
+    <published>2025-09-10T13:22:24.205Z</published>
+    <updated>2025-09-10T13:22:24.205Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot;&gt;documentation&lt;/a&gt; for more info. If you get any problems when using Hexo, you can find the answer in &lt;a</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+</feed>
