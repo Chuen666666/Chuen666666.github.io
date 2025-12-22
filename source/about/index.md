@@ -6,7 +6,7 @@ layout: about
 ## 網站介紹
 這個網站是我分享個人經歷的地方，我會分享參加的比賽、專案經驗、學習心得與筆記、檢定與證照考取等內容。
 
-## 關於我
+## 自我介紹
 - 網名：淳、Chuen666666、淳宇淳蠢
 - 姓別：男
 - 生日：1 月 12 日
@@ -16,7 +16,8 @@ layout: about
 - 興趣：寫程式、剪片、運動（羽球、路跑、溜冰、扯鈴）
 
 ## 聯絡我
-- Discord: chuen666666
-- LINE: chuen666666
-- Email: chunyutsai97@gmail.com
+- Discord: [chuen666666](http://discordapp.com/users/929138508772311150)
+- LINE: [chuen666666](https://line.me/ti/p/PIRT8GwtGk)
+- Email: [chunyutsai97@gmail.com](mailto:chunyutsai97@gmail.com)
 > 歡迎透過以上方式與我詢問事情、合作、交流、甚至打屁聊天！
+> 所有聯絡方式都確認開啟了陌生人訊息，加入後請直接傳訊息表明自己是從個網來的，否則可能被我誤以為是垃圾帳號而忽略
