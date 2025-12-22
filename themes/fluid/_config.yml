@@ -446,15 +446,17 @@ footer:
   # 頁腳第一行文字的 HTML，建議保留 Fluid 的連結，用於向更多人推廣本主題
   # HTML of the first line of the footer, it is recommended to keep the Fluid link to promote this theme to more people
   content: '
+    <span>© 2025 淳</span>
+    <br>
     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a>
     <i class="iconfont icon-love"></i>
     <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a>
-  '
+    '
 
   # 展示網站的 PV、UV 統計數
   # Display website PV and UV statistics
   statistics:
-    enable: false
+    enable: true
 
     # 統計數據來源，使用 leancloud, umami 需要設置 `web_analytics` 中對應的參數；使用 busuanzi 不需要額外設置，但是有時不穩定，另外本地運行時 busuanzi 顯示統計數據很大屬於正常現象，部署後會正常
     # Data source. If use leancloud, umami, you need to set the parameter in `web_analytics`
@@ -468,7 +470,7 @@ footer:
     # ICP證號
     icp_text: 京ICP證123456号
     # 公安備案號，不填則只顯示ICP
-    police_text: 京公网安备12345678号
+    police_text: 京公網安備12345678號
     # 公安備案的編號，用於URL跳轉查詢
     police_code: 12345678
     # 公安備案的圖片. 為空時不顯示備案圖片
