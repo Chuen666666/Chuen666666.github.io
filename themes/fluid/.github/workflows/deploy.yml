@@ -1,0 +1,36 @@
+name: Hexo Deploy
+
+on:
+  push:
+    branches:
+      - main # 只有當你 push 到 main 分支時才啟動
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout source
+        uses: actions/checkout@v3
+        with:
+          submodules: true # 如果主題是用 git clone 的會用到
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18' # 使用穩定的 Node 版本
+
+      - name: Install Dependencies
+        run: |
+          npm install
+
+      - name: Generate Files
+        run: |
+          npx hexo clean
+          npx hexo generate
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public # 編譯後的資料夾
+          publish_branch: gh-pages # 編譯後的成品要丟去哪個分支
