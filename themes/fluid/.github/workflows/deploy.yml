@@ -5,6 +5,9 @@ on:
     branches:
       - main # 只有當你 push 到 main 分支時才啟動
 
+permissions:
+    contents: write
+
 jobs:
   build:
     runs-on: ubuntu-latest
