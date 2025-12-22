@@ -3,32 +3,5 @@
   
   
   
-  <entry>
-    <title>test</title>
-    <link href="/2025/12/22/test/"/>
-    <url>/2025/12/22/test/</url>
-    
-    <content type="html"><![CDATA[<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;Hello, World!&quot;</span>)<br></code></pre></td></tr></table></figure>]]></content>
-    
-    
-    <categories>
-      
-      <category>testing</category>
-      
-      <category>test</category>
-      
-    </categories>
-    
-    
-    <tags>
-      
-      <tag>test, code</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
   
 </search>
