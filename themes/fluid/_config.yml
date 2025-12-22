@@ -237,7 +237,7 @@ custom_js:
 
 # 指定自定義 .css 文件路徑，用法和 custom_js 相同
 # The usage is the same as custom_js
-custom_css:
+custom_css: [/css/custom.css]
 
 # 網頁訪問統計
 # Analysis of website visitors
