@@ -371,8 +371,8 @@ navbar:
     - { key: "archive", link: "/archives/", icon: "iconfont icon-archive-fill" }
     - { key: "category", link: "/categories/", icon: "iconfont icon-category-fill" }
     - { key: "tag", link: "/tags/", icon: "iconfont icon-tags-fill" }
-    - { key: "about", link: "/about/", icon: "iconfont icon-user-fill" }
-    - { key: "links", link: "/links/", icon: "iconfont icon-link-fill" }
+    - { key: "about", link: "/about/", icon: "iconfont icon-user-fill", name: "關於我" }
+    - { key: "links", link: "/links/", icon: "iconfont icon-link-fill", name: "友情連結" }
 
 # 搜索功能，基於 hexo-generator-search 插件，若已安裝其他搜索插件請關閉此功能，以避免生成多餘的索引文件
 # Search feature, based on hexo-generator-search. If you have installed other search plugins, please disable this feature to avoid generating redundant index files
