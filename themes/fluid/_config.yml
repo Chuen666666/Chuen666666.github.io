@@ -64,7 +64,7 @@ code:
       # Select a style in the link
       # See: https://highlightjs.org/demo/
       style: "atom-one-dark"
-      style_dark: "dark"
+      style_dark: "atom-one-dark"
 
     prismjs:
       # 在下方連結頁面右側的圓形按鈕挑選 style 填入，也可以直接填入 css 連結
