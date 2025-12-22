@@ -15,7 +15,7 @@ layout: about
 - 程式：Python
 - 興趣：寫程式、剪片、運動（羽球、路跑、溜冰、扯鈴）
 
-## 聯絡我
+## 聯絡方式
 - Discord: [chuen666666](http://discordapp.com/users/929138508772311150)
 - LINE: [chuen666666](https://line.me/ti/p/PIRT8GwtGk)
 - Email: [chunyutsai97@gmail.com](mailto:chunyutsai97@gmail.com)
