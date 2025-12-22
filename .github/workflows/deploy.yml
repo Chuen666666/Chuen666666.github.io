@@ -3,28 +3,29 @@ name: Hexo Deploy
 on:
   push:
     branches:
-      - main # 只有當你 push 到 main 分支時才啟動
+      - main
 
 permissions:
-    contents: write
+  contents: write
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout source
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4 # 升級到 v4 更穩定
         with:
-          submodules: true # 如果主題是用 git clone 的會用到
+          submodules: true
 
       - name: Setup Node.js
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4 # 升級到 v4
         with:
-          node-version: '18' # 使用穩定的 Node 版本
+          node-version: '20' # 嘗試使用最新的穩定版
+          cache: 'npm' # 開啟快取功能，下次編譯會更快
 
       - name: Install Dependencies
         run: |
-          npm install
+          npm install --no-audit --no-fund # 快速安裝
 
       - name: Generate Files
         run: |
@@ -35,5 +36,5 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./public # 編譯後的資料夾
-          publish_branch: gh-pages # 編譯後的成品要丟去哪個分支
+          publish_dir: ./public
+          publish_branch: gh-pages
