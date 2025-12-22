@@ -1,18 +1,19 @@
-.idea/
-.vscode/
+# --- 系統與開發工具檔案 ---
 .DS_Store
 Thumbs.db
-
-*.log
+.idea/
+.vscode/
 *.iml
+
+# --- Hexo 產生的臨時與編譯檔案 ---
 node_modules/
 package-lock.json
 *.lock
-
-.DS_Store
-Thumbs.db
 db.json
-node_modules/
 public/
 .deploy_git/
 .log
+*.log
+
+# --- 其他 ---
+.cache/

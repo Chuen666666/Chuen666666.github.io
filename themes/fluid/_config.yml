@@ -63,7 +63,7 @@ code:
       # 在連結中挑選 style 填入
       # Select a style in the link
       # See: https://highlightjs.org/demo/
-      style: "github gist"
+      style: "atom-one-dark"
       style_dark: "dark"
 
     prismjs:
@@ -80,7 +80,7 @@ code:
 # 一些好玩的功能
 # Some fun features
 fun_features:
-  # 为 subtitle 添加打字機效果
+  # 為 subtitle 添加打字機效果
   # Typing animation for subtitle
   typing:
     enable: true
@@ -89,7 +89,7 @@ fun_features:
     # Typing speed, the larger the number, the slower
     typeSpeed: 70
 
-    # 游標字符
+    # 遊標字符
     # Cursor character
     cursorChar: "_"
 
@@ -116,7 +116,7 @@ fun_features:
     # Options: § | # | ❡
     icon: ""
 
-  # 加载进度条
+  # 加載進度條
   # Progress bar when loading
   progressbar:
     enable: true
@@ -125,11 +125,11 @@ fun_features:
     # See: https://github.com/rstacruz/nprogress
     options: { showSpinner: false, trickleSpeed: 100 }
 
-# 主題暗色模式，开啟後菜單中会出現切換按鈕，用戶瀏覽器會存儲切換選項，並且會遵循 prefers-color-scheme 自動切換
+# 主題暗色模式，開啟後菜單中會出現切換按鈕，用戶瀏覽器會存儲切換選項，並且會遵循 prefers-color-scheme 自動切換
 # Theme dark mode. If enable, a switch button will appear on the menu, each of the visitor's browser will store his switch option
 dark_mode:
   enable: true
-  # 默認的選項（當用戶手动切換后則不再按照默認模式），選擇 `auto` 會優先遵循 prefers-color-scheme，其次按用戶本地時間 18 點到次日 6 點之間進入暗色模式
+  # 默認的選項（當用戶手動切換後則不再按照默認模式），選擇 `auto` 會優先遵循 prefers-color-scheme，其次按用戶本地時間 18 點到次日 6 點之間進入暗色模式
   # Default option (when the visitor switches manually, the default mode is no longer followed), choosing `auto` will give priority to prefers-color-scheme, and then enter the dark mode from 18:00 to 6:00 in the visitor's local time
   # Options: auto | light | dark
   default: auto
@@ -244,7 +244,7 @@ custom_css:
 web_analytics:
   enable: true
 
-  # 遵循訪客瀏覽器"請勿追踪"的設置，如果開啟則不統計其訪問
+  # 遵循訪客瀏覽器"請勿追蹤"的設置，如果開啟則不統計其訪問
   # Follow the "Do Not Track" setting of the visitor's browser
   # See: https://www.w3.org/TR/tracking-dnt/
   follow_dnt: true
@@ -278,7 +278,7 @@ web_analytics:
     # 統計頁面時獲取路徑的屬性
     # Get the attribute of the page path during statistics
     path: window.location.pathname
-    # 开啟後不統計本地路徑( localhost 與 127.0.0.1 )
+    # 開啟後不統計本地路徑( localhost 與 127.0.0.1 )
     # If true, ignore localhost & 127.0.0.1
     ignore_local: false
 
@@ -286,15 +286,15 @@ web_analytics:
   # Umami Analytics, only Self-host support. If you want to display PV UV need to set all config items, otherwise only set 'src' and 'website_id'
   # See: https://umami.is/docs
   umami:
-    # umami js 文件地址，需要在 umami 後台創建站點後獲取
+    # umami js 文件地址，需要在 umami 後臺創建站點後獲取
     # umami js file url, get after create website in umami
     src:
 
-    # umami 的 website id，需要在 umami 後台創建站點後獲取
+    # umami 的 website id，需要在 umami 後臺創建站點後獲取
     # umami website id, get after create website in umami
     website_id:
 
-    # 如果你只想統計特定的域名可以填入此字段，多个域名通過逗號分隔，這可以避免統計 localhost。
+    # 如果你只想統計特定的域名可以填入此字段，多個域名通過逗號分隔，這可以避免統計 localhost。
     # If you only want to tracker to specific domains you can fill in this field, multiple domain names are separated by commas, which can avoid tracker localhost
     domains:
 
@@ -302,7 +302,7 @@ web_analytics:
     # statistics on the start time, the format is "YYYY-MM-DD"
     start_time: 2024-01-01
 
-    # 新建一个 umami viewOnly 用戶，然后通過 login api 獲取該用戶 token
+    # 新建一個 umami viewOnly 用戶，然後通過 login api 獲取該用戶 token
     # create an umami viewOnly user, and then get user token through the login api
     token:
 
@@ -310,7 +310,7 @@ web_analytics:
     # server url of umami deployment, such as "https://umami.example.com"
     api_server:
 
-# Canonical 用於向 Google 搜索指定規範網址，开啟前確保 hexo _config.yml 中配置 `url: http://yourdomain.com`
+# Canonical 用於向 Google 搜索指定規範網址，開啟前確保 hexo _config.yml 中配置 `url: http://yourdomain.com`
 # Canonical, to specify a canonical URL for Google Search, need to set up `url: http://yourdomain.com` in hexo _config.yml
 # See: https://support.google.com/webmasters/answer/139066
 canonical:
@@ -321,7 +321,7 @@ canonical:
 lazyload:
   enable: true
 
-  # 加載時的占位圖片
+  # 加載時的佔位圖片
   # The placeholder image when loading
   loading_img: /img/loading.gif
 
@@ -333,7 +333,7 @@ lazyload:
   # The factor of viewport height that triggers loading
   offset_factor: 2
 
-# 圖標庫，包含了大量社交類圖標，主題依賴的不包含在内，因此可自行修改，詳见 https://hexo.fluid-dev.com/docs/icon/
+# 圖標庫，包含了大量社交類圖標，主題依賴的不包含在內，因此可自行修改，詳見 https://hexo.fluid-dev.com/docs/icon/
 # Icon library, which includes many social icons, does not include those theme dependent, so your can modify link by yourself. See: https://hexo.fluid-dev.com/docs/en/icon/
 iconfont: //at.alicdn.com/t/c/font_1736178_k526ubmyhba.css
 
@@ -399,7 +399,7 @@ search:
 # 首屏圖片的相關配置
 # Config of the big image on the first screen
 banner:
-  # 視差滾動，圖片與板塊會随著螢幕滾動產生視差效果
+  # 視差滾動，圖片與板塊會隨著螢幕滾動產生視差效果
   # Scrolling parallax
   parallax: true
 
@@ -412,7 +412,7 @@ banner:
 scroll_down_arrow:
   enable: true
 
-  # 首屏圖片高度不小于指定比例，才顯示箭頭
+  # 首屏圖片高度不小於指定比例，才顯示箭頭
   # Only the height of the banner image is greater than the ratio, the arrow is displayed
   # Available: 0 - 100
   banner_height_limit: 80
@@ -468,7 +468,7 @@ footer:
   beian:
     enable: false
     # ICP證號
-    icp_text: 京ICP證123456号
+    icp_text: 京ICP證123456號
     # 公安備案號，不填則只顯示ICP
     police_text: 京公網安備12345678號
     # 公安備案的編號，用於URL跳轉查詢
@@ -501,11 +501,11 @@ index:
   slogan:
     enable: true
 
-    # 為空則按 hexo config.subtitle 顯示，支援列表格式来實現随機選擇一行文字顯示
+    # 為空則按 hexo config.subtitle 顯示，支援列表格式來實現隨機選擇一行文字顯示
     # If empty, text based on `subtitle` in hexo config, support list format to random selection of a row for display
     text: 淳の神奇小網站
 
-    # 通過 API 接口作為首页副標題的内容，必須返回的是 JSON 格式，如果請求失敗則按 text 字段顯示，該功能必須先开啟 typing 打字機功能
+    # 通過 API 接口作為首頁副標題的內容，必須返回的是 JSON 格式，如果請求失敗則按 text 字段顯示，該功能必須先開啟 typing 打字機功能
     # Subtitle of the homepage through the API, must be returned a JSON. If the request fails, it will be displayed in `text` value. This feature must first enable the typing animation
     api:
       enable: false
@@ -532,7 +532,7 @@ index:
   auto_excerpt:
     enable: true
 
-  # 打开文章的標籤方式
+  # 打開文章的標籤方式
   # The browser tag to open the post
   # Available: _blank | _self
   post_url_target: _self
@@ -630,7 +630,7 @@ post:
   category_bar:
     enable: true
 
-    # 开啟後，只有在文章 Front-matter 裡指定 `category_bar: true` 才會展示分類，也可以通過 `category_bar: ["分類A"]` 來指定分類
+    # 開啟後，只有在文章 Front-matter 裡指定 `category_bar: true` 才會展示分類，也可以通過 `category_bar: ["分類A"]` 來指定分類
     # If true, only set `category_bar: true` in Front-matter will enable sidebar of category, also set `category_bar: ["CategoryA"]` to specify categories
     specific: true
 
@@ -732,7 +732,7 @@ post:
     # Options: mathjax | katex
     engine: mathjax
 
-  # 流程圖，基於 mermaid-js，具體請見：https://hexo.fluid-dev.com/docs/guide/#mermaid-流程图
+  # 流程圖，基於 mermaid-js，具體請見：https://hexo.fluid-dev.com/docs/guide/#mermaid-流程圖
   # Flow chart, based on mermaid-js, see: https://hexo.fluid-dev.com/docs/en/guide/#mermaid
   mermaid:
     # 開啟後文章默認可用，自定義頁面如需使用，需在 Front-matter 中指定 `mermaid: true`
@@ -836,7 +836,7 @@ valine:
   enableQQ: false
 
 # Waline
-# 從 Valine 衍生而来，額外增加了客戶端和多種功能
+# 從 Valine 衍生而來，額外增加了客戶端和多種功能
 # Derived from Valine, with self-hosted service and new features
 # See: https://waline.js.org/
 waline:
@@ -866,7 +866,7 @@ livere:
   uid: ''
 
 # Remark42
-# 需要自托管客戶端
+# 需要自託管客戶端
 # Based on self-hosted service
 # See: https://remark42.com
 remark42:
@@ -877,7 +877,7 @@ remark42:
   components: ['embed']
 
 # Twikoo
-# 支援騰訊雲、Vercel、Railway 等多種平台部署
+# 支援騰訊雲、Vercel、Railway 等多種平臺部署
 # Based on Tencent CloudBase
 # See: https://twikoo.js.org
 twikoo:
@@ -886,7 +886,7 @@ twikoo:
   path: window.location.pathname
 
 # Cusdis
-# 基於第三方服務或自托管服務
+# 基於第三方服務或自託管服務
 # Based on third-party or self-hosted service
 # See https://cusdis.com
 cusdis:
@@ -912,7 +912,7 @@ giscus:
   lang: zh-TW
 
 # Discuss
-# 多平台、多數據庫、自托管、免費開源評論系統
+# 多平臺、多數據庫、自託管、免費開源評論系統
 # Self-hosted, small size, multi-platform, multi-database, free and open source commenting system
 # See: https://discuss.js.org
 discuss:
