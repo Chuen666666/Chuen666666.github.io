@@ -372,7 +372,7 @@ navbar:
     - { key: "category", link: "/categories/", icon: "iconfont icon-category-fill" }
     - { key: "tag", link: "/tags/", icon: "iconfont icon-tags-fill" }
     - { key: "about", link: "/about/", icon: "iconfont icon-user-fill" }
-    #- { key: "links", link: "/links/", icon: "iconfont icon-link-fill" }
+    - { key: "links", link: "/links/", icon: "iconfont icon-link-fill" }
 
 # 搜索功能，基於 hexo-generator-search 插件，若已安裝其他搜索插件請關閉此功能，以避免生成多餘的索引文件
 # Search feature, based on hexo-generator-search. If you have installed other search plugins, please disable this feature to avoid generating redundant index files
@@ -1034,22 +1034,28 @@ links:
   # Member item of page
   items:
     - {
-      title: "Fluid Blog",
-      intro: "主題博客",
-      link: "https://hexo.fluid-dev.com/",
-      avatar: "/img/favicon.png"
+      title: "郭10",
+      intro: "觀念考不到5級的115特選生",
+      link: "https://yilinguo121.github.io/",
+      avatar: "https://yilinguo121.github.io/avatar/avatar.webp"
     }
     - {
-      title: "Fluid Docs",
-      intro: "主題使用指南",
-      link: "https://hexo.fluid-dev.com/docs/",
-      avatar: "/img/favicon.png"
+      title: "Raymond Weng",
+      intro: "什麼都沾一點的怪人",
+      link: "https://rwc.dpdns.org/",
+      avatar: "https://avatars.githubusercontent.com/u/87399369"
     }
     - {
-      title: "Fluid Repo",
-      intro: "主題 GitHub 倉庫",
-      link: "https://github.com/fluid-dev/hexo-theme-fluid",
-      avatar: "/img/favicon.png"
+      title: "Frank",
+      intro: "Junior Backend Dev & CTF Player from ICEDTEA",
+      link: "https://frankk.uk/",
+      avatar: "https://frk.tw/_astro/avatar.D0ahJV7p_Z2qipOw.webp"
+    }
+    - {
+      title: "LDN",
+      intro: "才不是蘿莉控",
+      link: "https://ldn970110.github.io/",
+      avatar: "https://media.discordapp.net/attachments/1437814045989273660/1438796613090017371/LDN.jpeg?ex=694a4844&is=6948f6c4&hm=fc947c7303b85be3e81476e593239dee945d82d14986a65b8e2811d4f990a5ee&=&format=webp&width=1400&height=1400"
     }
 
   # 當成員頭像加載失敗時，替換為指定圖片
@@ -1059,8 +1065,8 @@ links:
   # 友連下方自定義區域，支援 HTML，可插入例如申請友連的文字
   # Custom content at the bottom of the links
   custom:
-    enable: false
-    content: '<hr><p>在下方留言申請加入我的友連，按如下格式提供資訊：</p><ul><li>博客名：Fluid</li><li>簡介：Fluid 主題官方博客</li><li>連結：https://hexo.fluid-dev.com</li><li>圖片：https://hexo.fluid-dev.com/img/favicon.png</li></ul>'
+    enable: true
+    content: '<hr><p>歡迎交換友情連結！請先將本站加入自己的個網，我確定後才會將你加入我的友連～</p><p>以下提供本站資訊，並也請以相同格式提供自己的網站資料：</p><ul><li>網站名稱：淳の神奇小網站</li><li>網站簡介：群除我佬，我是肺霧</li><li>網站頭貼：https://chuen666666.github.io/img/avatar.jpg</li><li>網站網址：https://chuen666666.github.io/</li></ul>'
 
   # 評論插件
   # Comment plugin

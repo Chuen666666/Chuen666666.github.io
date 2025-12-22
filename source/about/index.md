@@ -1,6 +1,5 @@
 ---
 title: 關於我
-date: 2025-12-22 09:44:05
 layout: about
 ---
 
