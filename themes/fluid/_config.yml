@@ -1137,6 +1137,12 @@ links:
       link: "https://ya-ya-12.github.io/",
       avatar: "https://ya-ya-12.github.io/image/head.png"
     }
+    - {
+      title: "C.Y.",
+      intro: "一個被眾多電神給電死的文組學生",
+      link: "https://chenyou0113.github.io/",
+      avatar: "https://avatars.githubusercontent.com/u/120460986?s=400&u=fb754141f80325cc4076c59f0c48e764615173ba&v=4"
+    }
 
   # 當成員頭像加載失敗時，替換為指定圖片
   # When the member avatar fails to load, replace the specified image
