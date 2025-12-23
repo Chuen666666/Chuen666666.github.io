@@ -1042,22 +1042,28 @@ links:
       avatar: "https://yilinguo121.github.io/avatar/avatar.webp"
     }
     - {
+      title: "閔捷",
+      intro: "站在山頂的傻逼",
+      link: "https://xieserver.com/",
+      avatar: "https://images-ext-1.discordapp.net/external/VgTXV_TVcquSsv4losRZ78VMv5rZc4EXlHbuDNdZclY/%3Fsize%3D512/https/cdn.discordapp.com/avatars/866580360304001035/58d265c4a684f2d46a326c6f3d20577a.png?format=webp&quality=lossless&width=512&height=512"
+    }
+    - {
       title: "Raymond Weng",
       intro: "什麼都沾一點的怪人",
       link: "https://rwc.dpdns.org/",
       avatar: "https://avatars.githubusercontent.com/u/87399369"
     }
     - {
-      title: "Frank",
-      intro: "Junior Backend Dev & CTF Player from ICEDTEA",
-      link: "https://frankk.uk/",
-      avatar: "https://frk.tw/_astro/avatar.D0ahJV7p_Z2qipOw.webp"
-    }
-    - {
       title: "LDN",
       intro: "才不是蘿莉控",
       link: "https://ldn970110.github.io/",
       avatar: "https://media.discordapp.net/attachments/1437814045989273660/1438796613090017371/LDN.jpeg?ex=694a4844&is=6948f6c4&hm=fc947c7303b85be3e81476e593239dee945d82d14986a65b8e2811d4f990a5ee&=&format=webp&width=1400&height=1400"
+    }
+    - {
+      title: "Frank",
+      intro: "Junior Backend Dev & CTF Player from ICEDTEA",
+      link: "https://frankk.uk/",
+      avatar: "https://frk.tw/_astro/avatar.D0ahJV7p_Z2qipOw.webp"
     }
     - {
       title: "匿名用戶9487",
