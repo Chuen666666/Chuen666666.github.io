@@ -564,13 +564,13 @@ post:
   # Path of the default post cover when `index_img` is not set. If both are empty, no image will be displayed
   default_index_img:
 
-  # 文章標題下方的元信息
+  # 文章標題下方的元資訊
   # Meta information below title
   meta:
     # 作者，優先根據 front-matter 裡 author 字段，其次是 hexo 配置中 author 值
     # Author, based on `author` field in front-matter, if not set, based on `author` value in hexo config
     author:
-      enable: false
+      enable: true
 
     # 文章日期，優先根據 front-matter 裡 date 字段，其次是 md 文件日期
     # Post date, based on `date` field in front-matter, if not set, based on create date of .md file
@@ -579,7 +579,7 @@ post:
       # 格式參照 ISO-8601 日期格式化
       # ISO-8601 date format
       # See: http://momentjs.cn/docs/#/parsing/string-format/
-      format: "LL a"
+      format: "YYYY-MM-DD HH:mm"
 
     # 字數統計
     # Word count
@@ -600,7 +600,7 @@ post:
     # 瀏覽量計數
     # Number of visits
     views:
-      enable: false
+      enable: true
       # 統計數據來源
       # Data Source
       # Options: busuanzi | leancloud | umami
@@ -609,16 +609,16 @@ post:
   # 在文章開頭顯示文章更新時間，該時間默認是 md 文件更新時間，可通過 front-matter 中 `updated` 手動指定（和 date 一樣格式）
   # Update date is displayed at the beginning of the post. The default date is the update date of the md file, which can be manually specified by `updated` in front-matter (same format as date)
   updated:
-    enable: false
+    enable: true
 
     # 格式參照 ISO-8601 日期格式化
     # ISO-8601 date format
     # See: http://momentjs.cn/docs/#/parsing/string-format/
-    date_format: "LL a"
+    date_format: "YYYY-MM-DD HH:mm"
 
     # 是否使用相對時間表示，比如："3 天前"
     # If true, it will be a relative time, such as: "3 days ago"
-    relative: false
+    relative: true
 
     # 提示標籤類型
     # Note class
@@ -656,7 +656,7 @@ post:
     # 置於板塊的左側或右側
     # place in the board
     # Options: left | right
-    placement: right
+    placement: left
 
     # 目錄會選擇這些節點作為標題
     # TOC will select these nodes as headings
@@ -684,13 +684,13 @@ post:
     # Show post date
     post_date:
       enable: true
-      format: "LL"
+      format: "YYYY-MM-DD HH:mm"
 
     # 顯示更新日期
     # Show update date
     update_date:
-      enable: false
-      format: "LL"
+      enable: true
+      format: "YYYY-MM-DD HH:mm"
 
   # 文章底部上一篇下一篇功能
   # Link to previous/next post
@@ -737,11 +737,11 @@ post:
   mermaid:
     # 開啟後文章默認可用，自定義頁面如需使用，需在 Front-matter 中指定 `mermaid: true`
     # If you want to use mermaid on the custom page, you need to set `mermaid: true` in Front-matter
-    enable: false
+    enable: true
 
     # 開啟後，只有在文章 Front-matter 裡指定 `mermaid: true` 才會在文章頁啟動公式轉換，以便在頁面不包含公式時提高載入速度
     # If true, only set `mermaid: true` in Front-matter will enable mermaid, to load faster when the page does not contain mermaid
-    specific: false
+    specific: true
 
     # See: http://mermaid-js.github.io/mermaid/
     options: { theme: 'default' }
