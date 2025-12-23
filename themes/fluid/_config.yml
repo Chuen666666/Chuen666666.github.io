@@ -1102,6 +1102,12 @@ links:
       avatar: "https://media.discordapp.net/attachments/1410239398829625414/1410274013988782180/4fc9caf6dcc197a3137319f2885f2eee.png?ex=694aab06&is=69495986&hm=e2203a670ddd014355e528d0bbce3f61f6eec3151233777f3de2bc47a7149615&=&format=webp&quality=lossless&width=1024&height=1024"
     }
     - {
+      title: "伊藤蒼太",
+      intro: "喵",
+      link: "https://itousouta15.tw",
+      avatar: "https://itousouta15.tw/img/avatar.webp"
+    }
+    - {
       title: "PepperSauce",
       intro: "好想成為資安佬...",
       link: "https://peppersauce0712.github.io/",
