@@ -1059,6 +1059,12 @@ links:
       link: "https://ldn970110.github.io/",
       avatar: "https://media.discordapp.net/attachments/1437814045989273660/1438796613090017371/LDN.jpeg?ex=694a4844&is=6948f6c4&hm=fc947c7303b85be3e81476e593239dee945d82d14986a65b8e2811d4f990a5ee&=&format=webp&width=1400&height=1400"
     }
+    - {
+      title: "匿名用戶9487",
+      intro: "喵",
+      link: "https://qwo877.github.io/me/",
+      avatar: "https://media.discordapp.net/attachments/1437814045989273660/1452808651642503288/image14841987481.png?ex=694b28fe&is=6949d77e&hm=330ed4aedd543bebdd5cdd641da4aefb29ecc520d4908237121101a806217954&=&format=webp&quality=lossless&width=578&height=566"
+    }
 
   # 當成員頭像加載失敗時，替換為指定圖片
   # When the member avatar fails to load, replace the specified image
