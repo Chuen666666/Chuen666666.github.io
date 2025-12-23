@@ -6,5 +6,4 @@ categories:
   - [程式]
 tags:
   - 程式
-draft: true
 ---
