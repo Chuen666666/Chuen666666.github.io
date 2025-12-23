@@ -114,7 +114,7 @@ fun_features:
     visible: hover
 
     # Options: § | # | ❡
-    icon: ""
+    icon: ❡
 
   # 加載進度條
   # Progress bar when loading
@@ -952,7 +952,7 @@ category:
   # 文章的排序字段，前面帶減號是倒序，不帶減號是正序
   # Sort field for posts, with a minus sign is reverse order
   # Options: date | title | or other field of front-matter
-  post_order_by: "-date"
+  post_order_by: -date
 
   # 單個分類中折疊展示文章數的最大值，超過限制會顯示 More，0 則不限制
   # The maximum number of posts in a single category. If the limit is exceeded, it will be displayed More. If 0 no limit
