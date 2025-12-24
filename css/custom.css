@@ -1,0 +1,41 @@
+/* Discord 風格防雷塊 */
+.spoiler {
+  background-color: #333;
+  color: transparent !important;
+  border-radius: 4px;
+  padding: 0 4px;
+  transition: background-color 0.3s;
+  cursor: pointer;
+  user-select: none;
+}
+.spoiler:hover {
+  background-color: #444; 
+}
+.spoiler.open {
+  background-color: transparent !important;
+  color: inherit !important;
+  cursor: default;
+  user-select: text;
+}
+
+/* PDF 與 試算表外框 */
+.embed-container {
+  width: 100%;
+  height: 800px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  overflow: hidden;
+  margin: 20px 0;
+}
+.embed-link {
+  text-align: center;
+  margin-bottom: 20px;
+  display: block;
+}
+
+/* 手機版自動縮短 PDF 高度 */
+@media (max-width: 768px) {
+  .embed-container {
+    height: 500px;
+  }
+}
