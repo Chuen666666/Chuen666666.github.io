@@ -1048,6 +1048,12 @@ links:
       avatar: "/avatar/minje.webp"
     }
     - {
+      title: "nini",
+      intro: "聽小妹的就對了",
+      link: "https://www.instagram.com/nininini_970623/",
+      avatar: "/avatar/nini.jpg"
+    }
+    - {
       title: "Muha",
       intro: "Your friendly Indonesian",
       link: "https://muhawow.github.io/Muha-Guarddin/",
