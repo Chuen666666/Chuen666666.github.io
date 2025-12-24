@@ -1054,10 +1054,22 @@ links:
       avatar: "/avatar/nini.jpg"
     }
     - {
+      title: "大眼睛",
+      intro: "我的私人飛機怎麼還沒來",
+      link: "https://www.instagram.com/_lwh_0421?igsh=MXNhM2FxcmFxamEyNQ%3D%3D&utm_source=qr",
+      avatar: "/avatar/LWH.jpg"
+    }
+    - {
       title: "Muha",
       intro: "Your friendly Indonesian",
       link: "https://muhawow.github.io/Muha-Guarddin/",
       avatar: "/avatar/muha.jpg"
+    }
+    - {
+      title: "Moon",
+      intro: "100% made in Vietnam",
+      link: "https://www.instagram.com/monovanaalesia?igsh=djZxcTk2cnh5NzZs&utm_source=qr",
+      avatar: "/avatar/moon.jpg"
     }
     - {
       title: "Raymond Weng",
@@ -1171,7 +1183,7 @@ links:
   custom:
       enable: true
       content: '
-        <hr><p>歡迎交換友情連結！請先將本站加入自己的個網，我確定後才會將你加入我的友連～</p>
+        <hr><p>歡迎交換友情連結！若沒有自己的網站，也可以放上個人的社群帳號（IG、X、Threads、YouTube 等）～</p>
         <p>以下提供本站資訊，並也請以相同格式提供自己的網站資料：</p>
         <ul>
           <li>名稱：淳</li>
