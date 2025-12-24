@@ -727,7 +727,7 @@ post:
 
     # 開啟後，只有在文章 Front-matter 裡指定 `math: true` 才會在文章頁啟動公式轉換，以便在頁面不包含公式時提高載入速度
     # If true, only set `math: true` in Front-matter will enable math, to load faster when the page does not contain math
-    specific: false
+    specific: true
 
     # Options: mathjax | katex
     engine: mathjax
