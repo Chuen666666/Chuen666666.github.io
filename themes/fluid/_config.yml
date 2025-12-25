@@ -18,11 +18,11 @@
 
 # 用於瀏覽器標籤的圖標
 # Icon for browser tab
-favicon: /img/avatar.png
+favicon: /img/avatar.jpg
 
 # 用於蘋果設備的圖標
 # Icon for Apple touch
-apple_touch_icon: /img/avatar.png
+apple_touch_icon: /img/avatar.jpg
 
 # 瀏覽器標籤頁中的標題分隔符，效果：文章名 - 站點名
 # Title separator in browser tab, eg: article - site
