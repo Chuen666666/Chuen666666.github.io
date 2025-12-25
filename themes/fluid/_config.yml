@@ -18,11 +18,11 @@
 
 # 用於瀏覽器標籤的圖標
 # Icon for browser tab
-favicon: /img/favicon.png
+favicon: /img/avatar.png
 
 # 用於蘋果設備的圖標
 # Icon for Apple touch
-apple_touch_icon: /img/favicon.png
+apple_touch_icon: /img/avatar.png
 
 # 瀏覽器標籤頁中的標題分隔符，效果：文章名 - 站點名
 # Title separator in browser tab, eg: article - site
@@ -943,7 +943,7 @@ category:
   # 分類的排序字段，前面帶減號是倒序，不帶減號是正序
   # Sort field for categories, with a minus sign is reverse order
   # Options: length | name
-  order_by: "-length"
+  order_by: -length
 
   # 層級的折疊深度，0 是全部折疊，大於 0 後如果存在子分類則默認展開
   # Collapse depth. If 0, all posts collapsed. If greater than 0, it will be expanded by default if there are subcategories
@@ -972,8 +972,8 @@ tag:
     min_font: 15
     max_font: 30
     unit: px
-    start_color: "#BBBBEE"
-    end_color: "#337ab7"
+    start_color: #BBBBEE
+    end_color: #337ab7
 
 
 #---------------------------
@@ -1038,176 +1038,176 @@ links:
     - {
       title: "郭10",
       intro: "觀念考不到5級的115特選生",
-      link: "https://yilinguo121.github.io/",
-      avatar: "/avatar/yilin.webp"
+      link: https://yilinguo121.github.io/,
+      avatar: /avatar/yilin.webp
     }
     - {
       title: "閔捷",
       intro: "站在山頂的傻逼",
-      link: "https://xieserver.com/",
-      avatar: "/avatar/minje.webp"
+      link: https://xieserver.com/,
+      avatar: /avatar/minje.webp
     }
     - {
       title: "nini",
       intro: "聽小妹的就對了",
-      link: "https://www.instagram.com/nininini_970623/",
-      avatar: "/avatar/nini.jpg"
+      link: https://www.instagram.com/nininini_970623/,
+      avatar: /avatar/nini.jpg
     }
     - {
       title: "Wy",
       intro: "我是一個扮成蘿莉的小男娘",
-      link: "https://www.youtube.com/@Wy-killlllllll-yyy",
-      avatar: "/avatar/Wy.jpg"
+      link: https://www.youtube.com/@Wy-killlllllll-yyy,
+      avatar: /avatar/Wy.jpg
     }
     - {
       title: "哈哈哈",
       intro: "陽明電神🛐",
-      link: "https://www.instagram.com/harry.chen.14855?igsh=cmVwamszbmpnNTI2",
-      avatar: "/avatar/youc.jpg"
+      link: https://www.instagram.com/harry.chen.14855?igsh=cmVwamszbmpnNTI2,
+      avatar: /avatar/youc.jpg
     }
     - {
       title: "大眼睛",
       intro: "我的私人飛機怎麼還沒來",
-      link: "https://www.instagram.com/_lwh_0421?igsh=MXNhM2FxcmFxamEyNQ%3D%3D&utm_source=qr",
-      avatar: "/avatar/LWH.jpg"
+      link: https://www.instagram.com/_lwh_0421?igsh=MXNhM2FxcmFxamEyNQ%3D%3D&utm_source=qr,
+      avatar: /avatar/LWH.jpg
     }
     - {
       title: "Muha",
       intro: "Your friendly Indonesian",
-      link: "https://muhawow.github.io/Muha-Guarddin/",
-      avatar: "/avatar/muha.jpg"
+      link: https://muhawow.github.io/Muha-Guarddin/,
+      avatar: /avatar/muha.jpg
     }
     - {
       title: "Moon",
       intro: "100% made in Vietnam",
-      link: "https://www.instagram.com/monovanaalesia?igsh=djZxcTk2cnh5NzZs&utm_source=qr",
-      avatar: "/avatar/moon.jpg"
+      link: https://www.instagram.com/monovanaalesia?igsh=djZxcTk2cnh5NzZs&utm_source=qr,
+      avatar: /avatar/moon.jpg
     }
     - {
       title: "Raymond Weng",
       intro: "什麼都沾一點的怪人",
-      link: "https://rwc.dpdns.org/",
-      avatar: "/avatar/raymond_weng.jpg"
+      link: https://rwc.dpdns.org/,
+      avatar: /avatar/raymond_weng.jpg
     }
     - {
       title: "LDN",
       intro: "才不是蘿莉控",
-      link: "https://ldn970110.github.io/",
-      avatar: "/avatar/LDN.jpg"
+      link: https://ldn970110.github.io/,
+      avatar: /avatar/LDN.jpg
     }
     - {
       title: "Frank",
       intro: "Junior Backend Dev & CTF Player from ICEDTEA",
-      link: "https://frankk.uk/",
-      avatar: "/avatar/frank.webp"
+      link: https://frankk.uk/,
+      avatar: /avatar/frank.webp
     }
     - {
       title: "匿名用戶9487",
       intro: "喵",
-      link: "https://qwo877.github.io/me/",
-      avatar: "/avatar/qwo877.png"
+      link: https://qwo877.github.io/me/,
+      avatar: /avatar/qwo877.png
     }
     - {
       title: "su2u4",
       intro: "廢物一個",
-      link: "https://github.com/su2u4-1/",
-      avatar: "/avatar/su2u4.png"
+      link: https://github.com/su2u4-1/,
+      avatar: /avatar/su2u4.png
     }
     - {
       title: "小一",
       intro: "一個喜歡開發遊戲的人類",
-      link: "https://www.instagram.com/littleonechung/",
-      avatar: "/avatar/littleone.png"
+      link: https://www.instagram.com/littleonechung/,
+      avatar: /avatar/littleone.png
     }
     - {
       title: "橘子",
       intro: "橘子喵",
-      link: "https://xn--gew.tw/",
-      avatar: "/avatar/littleorange.png"
+      link: https://xn--gew.tw/,
+      avatar: /avatar/littleorange.png
     }
     - {
       title: "kohiro",
       intro: "<del>我是ko教授我超電</del>",
-      link: "https://github.com/kohiro961021",
-      avatar: "/avatar/kohiro.png"
+      link: https://github.com/kohiro961021,
+      avatar: /avatar/kohiro.png
     }
     - {
       title: "Icrack",
       intro: "別再TLE了，我裂開",
-      link: "https://lbc0841.github.io/icrack41-blog/",
-      avatar: "/avatar/lbc0841.webp"
+      link: https://lbc0841.github.io/icrack41-blog/,
+      avatar: /avatar/lbc0841.webp
     }
     - {
       title: "伊藤有栖",
       intro: "競程邊角料",
-      link: "https://siewilly.github.io/",
-      avatar: "/avatar/siewilly.webp"
+      link: https://siewilly.github.io/,
+      avatar: /avatar/siewilly.webp
     }
     - {
       title: "伊藤蒼太",
       intro: "喵喵",
-      link: "https://itousouta15.tw",
-      avatar: "/avatar/itousouta15.webp"
+      link: https://itousouta15.tw,
+      avatar: /avatar/itousouta15.webp
     }
     - {
       title: "PepperSauce",
       intro: "好想成為資安佬...",
-      link: "https://peppersauce0712.github.io/",
-      avatar: "/avatar/PepperSauce.jpg"
+      link: https://peppersauce0712.github.io/,
+      avatar: /avatar/PepperSauce.jpg
     }
     - {
       title: "Small Z",
       intro: "Developer",
-      link: "https://yuzen9622.github.io/",
-      avatar: "/avatar/yuzen9622.webp"
+      link: https://yuzen9622.github.io/,
+      avatar: /avatar/yuzen9622.webp
     }
     - {
       title: "Justin",
       intro: "",
-      link: "https://justin0711.com/",
-      avatar: "/avatar/justin0711.jpg"
+      link: https://justin0711.com/,
+      avatar: /avatar/justin0711.jpg
     }
     - {
       title: "伊藤喵貓",
       intro: "",
-      link: "https://github.com/twcat0503",
-      avatar: "/avatar/twcat0503.gif"
+      link: https://github.com/twcat0503,
+      avatar: /avatar/twcat0503.gif
     }
     - {
       title: "鴨鴨",
       intro: "我是一個小廢廢",
-      link: "https://ya-ya-12.github.io/",
-      avatar: "/avatar/yaya.png"
+      link: https://ya-ya-12.github.io/,
+      avatar: /avatar/yaya.png
     }
     - {
       title: "C.Y.",
       intro: "一個被眾多電神給電死的文組學生",
-      link: "https://chenyou0113.github.io/",
-      avatar: "/avatar/CY.jpg"
+      link: https://chenyou0113.github.io/,
+      avatar: /avatar/CY.jpg
     }
     - {
       title: "Robin",
       intro: "花束を",
-      link: "https://robin-tw.me/",
-      avatar: "/avatar/robin.jpg"
+      link: https://robin-tw.me/,
+      avatar: /avatar/robin.jpg
     }
     - {
       title: "暴力又被TLE",
       intro: "PY派對 (⁠・⁠∀⁠・⁠)",
-      link: "https://www.threads.com/@ericshen19555",
-      avatar: "/avatar/ericshen19555.png"
+      link: https://www.threads.com/@ericshen19555,
+      avatar: /avatar/ericshen19555.png
     }
     - {
       title: "AiverAiva",
       intro: "咕咕嘎嘎",
-      link: "https://weikuwu.me/",
-      avatar: "/avatar/AiverAiva.jpg"
+      link: https://weikuwu.me/,
+      avatar: /avatar/AiverAiva.jpg
     }
     - {
       title: "夜月",
       intro: "我太菜了，是不是應該轉文組",
-      link: "https://www.instagram.com/lyscnf23?igsh=YzY5NGp2b3RvZHpz",
-      avatar: "/avatar/lyscnf23.jpg"
+      link: https://www.instagram.com/lyscnf23?igsh=YzY5NGp2b3RvZHpz,
+      avatar: /avatar/lyscnf23.jpg
     }
 
   # 當成員頭像加載失敗時，替換為指定圖片
