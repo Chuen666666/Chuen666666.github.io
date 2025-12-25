@@ -1203,12 +1203,12 @@ links:
       link: "https://weikuwu.me/",
       avatar: "/avatar/AiverAiva.jpg"
     }
-    # - {
-    #   title: "",
-    #   intro: "",
-    #   link: "https://www.instagram.com/lyscnf23?igsh=YzY5NGp2b3RvZHpz",
-    #   avatar: ""
-    # }
+    - {
+      title: "夜月",
+      intro: "我太菜了，是不是應該轉文組",
+      link: "https://www.instagram.com/lyscnf23?igsh=YzY5NGp2b3RvZHpz",
+      avatar: "/avatar/lyscnf23.jpg"
+    }
 
   # 當成員頭像加載失敗時，替換為指定圖片
   # When the member avatar fails to load, replace the specified image
