@@ -1054,6 +1054,12 @@ links:
       avatar: "/avatar/nini.jpg"
     }
     - {
+      title: "哈哈哈",
+      intro: "陽明電神🛐",
+      link: "https://www.instagram.com/harry.chen.14855?igsh=cmVwamszbmpnNTI2",
+      avatar: "/avatar/youc.jpg"
+    }
+    - {
       title: "大眼睛",
       intro: "我的私人飛機怎麼還沒來",
       link: "https://www.instagram.com/_lwh_0421?igsh=MXNhM2FxcmFxamEyNQ%3D%3D&utm_source=qr",
@@ -1178,6 +1184,18 @@ links:
       intro: "花束を",
       link: "https://robin-tw.me/",
       avatar: "/avatar/robin.jpg"
+    }
+    # - {
+    #   title: "暴力又被TLE",
+    #   intro: "", #todo
+    #   link: "",
+    #   avatar: "/avatar/ericshen19555.png"
+    # }
+    - {
+      title: "AiverAiva",
+      intro: "咕咕嘎嘎",
+      link: "https://weikuwu.me/",
+      avatar: "/avatar/AiverAiva.jpg"
     }
 
   # 當成員頭像加載失敗時，替換為指定圖片
