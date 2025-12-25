@@ -1114,6 +1114,12 @@ links:
       avatar: "/avatar/littleorange.png"
     }
     - {
+      title: "kohiro",
+      intro: "<del>我是ko教授我超電</del>",
+      link: "https://github.com/kohiro961021",
+      avatar: "/avatar/kohiro.png"
+    }
+    - {
       title: "Icrack",
       intro: "別再TLE了，我裂開",
       link: "https://lbc0841.github.io/icrack41-blog/",
@@ -1183,13 +1189,13 @@ links:
   custom:
       enable: true
       content: '
-        <hr><p>歡迎交換友情連結！若沒有自己的網站，也可以放上個人的社群帳號（IG、X、Threads、YouTube 等）～</p>
+        <hr><p>歡迎交換友情連結！若沒有自己的網站，也可以放上個人的社群帳號（IG、X、Threads、YouTube、GitHub、HackMD 等）～</p>
         <p>以下提供本站資訊，並也請以相同格式提供自己的網站資料：</p>
         <ul>
           <li>名稱：淳</li>
+          <li>網址：https://chuen666666.github.io/</li>
           <li>簡介：群除我佬，我是肺霧</li>
           <li>頭貼：https://chuen666666.github.io/img/avatar.jpg</li>
-          <li>網址：https://chuen666666.github.io/</li>
         </ul>
         <p>若有任何疑問，請至<a href="https://chuen666666.github.io/about/">關於</a>頁與我聯繫！</p>
         '
