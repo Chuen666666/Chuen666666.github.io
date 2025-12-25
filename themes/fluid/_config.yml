@@ -1191,18 +1191,24 @@ links:
       link: "https://robin-tw.me/",
       avatar: "/avatar/robin.jpg"
     }
-    # - {
-    #   title: "暴力又被TLE",
-    #   intro: "", #todo
-    #   link: "",
-    #   avatar: "/avatar/ericshen19555.png"
-    # }
+    - {
+      title: "暴力又被TLE",
+      intro: "PY派對 (⁠・⁠∀⁠・⁠)",
+      link: "https://www.threads.com/@ericshen19555",
+      avatar: "/avatar/ericshen19555.png"
+    }
     - {
       title: "AiverAiva",
       intro: "咕咕嘎嘎",
       link: "https://weikuwu.me/",
       avatar: "/avatar/AiverAiva.jpg"
     }
+    # - {
+    #   title: "",
+    #   intro: "",
+    #   link: "https://www.instagram.com/lyscnf23?igsh=YzY5NGp2b3RvZHpz",
+    #   avatar: ""
+    # }
 
   # 當成員頭像加載失敗時，替換為指定圖片
   # When the member avatar fails to load, replace the specified image
