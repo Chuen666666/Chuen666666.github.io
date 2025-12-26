@@ -1258,7 +1258,7 @@ links:
           <li>頭貼：https://chuen666666.github.io/img/avatar.jpg</li>
         </ul>
         <p>若有任何其他客製化要求（例如更新簡介、加上<del>劃掉線</del>效果、加上<span class="spoiler" onclick="this.classList.add(&apos;open&apos;)">防雷</span>等）</p>
-        <p>若有任何疑問，請至<a href="/about/" class="link-highlight">關於</a>頁與我聯繫！</p>
+        <p>若有任何疑問，請至<a href="/about/">關於</a>頁與我聯繫！</p>
         '
 
   # 評論插件
