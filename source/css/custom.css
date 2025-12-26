@@ -51,20 +51,3 @@
 .links .card-avatar:hover img {
   transform: scale(1.1);
 }
-
-/* 1. 針對你手動加 class 的連結（例如友站區） */
-.link-highlight, 
-/* 2. 針對所有在文章內容裡的普通 Markdown 連結 */
-.post-content a, 
-.links-content a {
-  color: #007bff !important;
-  text-decoration: underline !important;
-  transition: color 0.2s;
-}
-/* 懸停效果 */
-.link-highlight:hover,
-.post-content a:hover,
-.links-content a:hover {
-  color: #0056b3 !important;
-  text-decoration: none !important;
-}
