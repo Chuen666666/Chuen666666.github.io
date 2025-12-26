@@ -52,3 +52,16 @@
 .links .card-avatar:hover img {
   transform: scale(1.1);
 }
+
+/* 讓友鏈申請區的連結平時就顯示顏色 */
+.links-content a {
+  color: #007bff !important;
+  text-decoration: underline;
+  transition: color 0.2s ease-in-out;
+}
+
+/* 懸停時顏色稍微變深 */
+.links-content a:hover {
+  color: #0056b3 !important;
+  text-decoration: none;
+}
