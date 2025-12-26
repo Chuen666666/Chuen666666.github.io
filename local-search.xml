@@ -4,9 +4,71 @@
   
   
   <entry>
+    <title>I’ve Finished Building My Personal Website!</title>
+    <link href="/en/%E6%88%91%E5%BB%BA%E7%AB%8B%E5%A5%BD%E8%87%AA%E5%B7%B1%E7%9A%84%E5%80%8B%E7%B6%B2%E4%BA%86%EF%BC%81/"/>
+    <url>/en/%E6%88%91%E5%BB%BA%E7%AB%8B%E5%A5%BD%E8%87%AA%E5%B7%B1%E7%9A%84%E5%80%8B%E7%B6%B2%E4%BA%86%EF%BC%81/</url>
+    
+    <content type="html"><![CDATA[<h2 id="Starting-Point-amp-Motivation"><a href="#Starting-Point-amp-Motivation" class="headerlink" title="Starting Point &amp; Motivation"></a>Starting Point &amp; Motivation</h2><p>The reason I wanted to build this website—besides the fact that everyone seems to have one and it looks cool—was that during high school I didn’t have a personal site. That made it much harder and more troublesome to organize what I had done and prepare application materials.<br>So, I decided to use this website to document my life after taking the GSAT in high school (including my final semester, university, graduate school, and even after entering the workforce).</p><h2 id="How-to-Use-This-Site"><a href="#How-to-Use-This-Site" class="headerlink" title="How to Use This Site"></a>How to Use This Site</h2><p>This website should be pretty self-explanatory, so here are just a few things to note:</p><ol><li>I’m quite good at <del>awkward chatting</del> talking nonsense, so if you want to reach me, feel free to leave a comment or contact me via the methods listed on the <a href="https://chuen666666.github.io/about/">About Me</a> page.</li><li>I’ll try to keep categories fairly strict, so posts should be easy to find (hopefully).</li><li>If you’d like to add a friend link, please check the <a href="https://chuen666666.github.io/links/">Friend Links</a> page for instructions, or just contact me directly.</li><li>If you want to join my Discord server, please DM me. If you’d like to add me as a game friend, you can do so via my Discord profile (or just DM me).</li><li>Besides personal record-keeping, my goal is simply to share experiences. I’m not an expert, so please be kind.</li><li>For this website’s GitHub repository, I first uploaded the original Hexo source code, then used GitHub Actions to automatically compile and deploy it to GitHub Pages. So you can absolutely see my raw source code in the repo.</li><li>There are some things I might not share (for example, detailed experiences or methods for building this site). If you’d like me to cover a specific topic, feel free to leave a comment or DM me.</li><li>Many things are also shared in video form on my <a href="https://www.youtube.com/@chuen666">YouTube channel</a>, so you’re welcome to check that out as well.</li><li>I really don’t have Instagram or Facebook, so please stop asking.</li><li>Thanks for visiting my personal website—hope you have a wonderful day!</li></ol><h2 id="A-Small-Reminder"><a href="#A-Small-Reminder" class="headerlink" title="A Small Reminder"></a>A Small Reminder</h2><p>If you also want to build your own personal website, I’d actually recommend asking Gemini to teach you directly. Based on my experience, it’s better at website setup than ChatGPT (even the free version of Gemini outperforms the paid version of ChatGPT). You can basically just follow along with AI step by step.<br>I haven’t tried other AIs myself—if you have, feel free to leave a comment and discuss!</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Programming</category>
+      
+      <category>Hexo</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Personal Website</tag>
+      
+      <tag>Hexo</tag>
+      
+      <tag>Programming</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>我建立好自己的个网了！</title>
+    <link href="/zh-CN/%E6%88%91%E5%BB%BA%E7%AB%8B%E5%A5%BD%E8%87%AA%E5%B7%B1%E7%9A%84%E5%80%8B%E7%B6%B2%E4%BA%86%EF%BC%81/"/>
+    <url>/zh-CN/%E6%88%91%E5%BB%BA%E7%AB%8B%E5%A5%BD%E8%87%AA%E5%B7%B1%E7%9A%84%E5%80%8B%E7%B6%B2%E4%BA%86%EF%BC%81/</url>
+    
+    <content type="html"><![CDATA[<h2 id="起点动机"><a href="#起点动机" class="headerlink" title="起点动机"></a>起点动机</h2><p>我之所以想架这个网站，除了因为大家都有，觉得很酷之外，也是因为在高中的时期没有个网，想要整理做过的事情和制作备审，都变得困难和麻烦许多，因此想借由这个网站来记录我高中学测后的生活（包含三下、大学、研究所、出社会后）</p><h2 id="食用方式"><a href="#食用方式" class="headerlink" title="食用方式"></a>食用方式</h2><p>这个网站该如何使用应该一看就会了，所以这里说点注意事项</p><ol><li>我很会<del>尬聊</del>讲屁话，所以若想找我，都欢迎以留言或<a href="https://chuen666666.github.io/about/">关于我</a>页面的联络方式来找我</li><li>我会尽量严格进行分类，所以文章应该很好找吧？</li><li>想加入友情链接者，请至<a href="https://chuen666666.github.io/links/">友情链接</a>页面查看添加方式，或者直接与我联络也可以</li><li>若想加入我的 Discord 伺服器，请私讯我；若想要加我的游戏好友，也请至我的 Discord 个人介绍中加入（或直接私讯我）</li><li>我分享的目的除了个人纪录外，也只想顺便分享经验，我没有特别强，因此不喜勿喷</li><li>这个个网的 GitHub repo 是先将原 hexo 码放上去，再用 GitHub Actions 自动 compile 并部署到 GitHub Pages 中，因此你完全可以从 repo 中看到我的原始码</li><li>有些东西我不一定会分享出来（例如架这个站的经验与做法等），因此若想要敲碗某个主题，欢迎留言或私讯我</li><li>很多东西我也会以视屏的形式分享在我的 <a href="https://www.youtube.com/@chuen666">YouTube 频道</a> 中，因此也可以去那边看看我的视屏</li><li>我真的没有 IG 和 FB，所以不用再问了</li><li>感谢大家来看我的个网，祝大家有个愉快的一天！<h2 id="小小提醒"><a href="#小小提醒" class="headerlink" title="小小提醒"></a>小小提醒</h2>如果你也想架自己的个网，我建议直接叫 Gemini 教你就好，依我的经验，它在架站上比 ChatGPT 强一些（甚至是免费版 Gemini 都比付费版 ChatGPT 强），所以可以直接跟着 AI 架即可（其他 AI 我是没试过，试过的可以下面留言讨论看看）</li></ol>]]></content>
+    
+    
+    <categories>
+      
+      <category>程式</category>
+      
+      <category>Hexo</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Hexo</tag>
+      
+      <tag>个人网站</tag>
+      
+      <tag>程式</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>我建立好自己的個網了！</title>
-    <link href="/%E6%88%91%E5%BB%BA%E7%AB%8B%E5%A5%BD%E8%87%AA%E5%B7%B1%E7%9A%84%E5%80%8B%E7%B6%B2%E4%BA%86%EF%BC%81/"/>
-    <url>/%E6%88%91%E5%BB%BA%E7%AB%8B%E5%A5%BD%E8%87%AA%E5%B7%B1%E7%9A%84%E5%80%8B%E7%B6%B2%E4%BA%86%EF%BC%81/</url>
+    <link href="/zh-TW/%E6%88%91%E5%BB%BA%E7%AB%8B%E5%A5%BD%E8%87%AA%E5%B7%B1%E7%9A%84%E5%80%8B%E7%B6%B2%E4%BA%86%EF%BC%81/"/>
+    <url>/zh-TW/%E6%88%91%E5%BB%BA%E7%AB%8B%E5%A5%BD%E8%87%AA%E5%B7%B1%E7%9A%84%E5%80%8B%E7%B6%B2%E4%BA%86%EF%BC%81/</url>
     
     <content type="html"><![CDATA[<h2 id="起點動機"><a href="#起點動機" class="headerlink" title="起點動機"></a>起點動機</h2><p>我之所以想架這個網站，除了因為大家都有，覺得很酷之外，也是因為在高中的時期沒有個網，想要整理做過的事情和製作備審，都變得困難和麻煩許多，因此想藉由這個網站來記錄我高中學測後的生活（包含三下、大學、研究所、出社會後）</p><h2 id="食用方式"><a href="#食用方式" class="headerlink" title="食用方式"></a>食用方式</h2><p>這個網站該如何使用應該一看就會了，所以這裡說點注意事項</p><ol><li>我很會<del>尬聊</del>講屁話，所以若想找我，都歡迎以留言或<a href="https://chuen666666.github.io/about/">關於我</a>頁面的聯絡方式來找我</li><li>我會盡量嚴格進行分類，所以文章應該很好找吧？</li><li>想加入友情連結者，請至<a href="https://chuen666666.github.io/links/">友情連結</a>頁面查看添加方式，或者直接與我聯絡也可以</li><li>若想加入我的 Discord 伺服器，請私訊我；若想要加我的遊戲好友，也請至我的 Discord 個人介紹中加入（或直接私訊我）</li><li>我分享的目的除了個人紀錄外，也只想順便分享經驗，我沒有特別強，因此不喜勿噴</li><li>這個個網的 GitHub repo 是先將原 hexo 碼放上去，再用 GitHub Actions 自動 compile 並部署到 GitHub Pages 中，因此你完全可以從 repo 中看到我的原始碼</li><li>有些東西我不一定會分享出來（例如架這個站的經驗與做法等），因此若想要敲碗某個主題，歡迎留言或私訊我</li><li>很多東西我也會以影片的形式分享在我的 <a href="https://www.youtube.com/@chuen666">YouTube 頻道</a> 中，因此也可以去那邊看看我的影片</li><li>我真的沒有 IG 和 FB，所以不用再問了</li><li>感謝大家來看我的個網，祝大家有個愉快的一天！<h2 id="小小提醒"><a href="#小小提醒" class="headerlink" title="小小提醒"></a>小小提醒</h2>如果你也想架自己的個網，我建議直接叫 Gemini 教你就好，依我的經驗，它在架站上比 ChatGPT 強一些（甚至是免費版 Gemini 都比付費版 ChatGPT 強），所以可以直接跟著 AI 架即可（其他 AI 我是沒試過，試過的可以下面留言討論看看）</li></ol>]]></content>
     
@@ -22,11 +84,11 @@
     
     <tags>
       
-      <tag>個人網站</tag>
-      
       <tag>Hexo</tag>
       
       <tag>程式</tag>
+      
+      <tag>個人網站</tag>
       
     </tags>
     
