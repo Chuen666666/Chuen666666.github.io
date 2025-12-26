@@ -1233,6 +1233,12 @@ links:
       link: https://www.instagram.com/yuki._0608?igsh=MWhuNXBlb3B4emU3dQ==,
       avatar: /avatar/yuki.jpg
     }
+    - {
+      title: "eason",
+      intro: "APCS菜逼",
+      link: https://www.instagram.com/easoneason609/#,
+      avatar: /avatar/eason.jpg
+    }
 
   # 當成員頭像加載失敗時，替換為指定圖片
   # When the member avatar fails to load, replace the specified image
