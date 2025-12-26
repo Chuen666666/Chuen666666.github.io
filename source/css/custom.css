@@ -53,14 +53,11 @@
   transform: scale(1.1);
 }
 
-/* 自定義的高亮連結樣式 */
+/* 網站超連結藍色效果 */
 .link-highlight {
   color: #007bff !important;
   text-decoration: underline !important;
-  font-weight: 500;
-  transition: color 0.2s ease;
 }
-
 .link-highlight:hover {
   color: #0056b3 !important;
   text-decoration: none !important;
