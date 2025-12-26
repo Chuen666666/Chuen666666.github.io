@@ -34,7 +34,6 @@
   margin-bottom: 20px;
   display: block;
 }
-
 /* 手機版自動縮短 PDF 高度 */
 @media (max-width: 768px) {
   .embed-container {
