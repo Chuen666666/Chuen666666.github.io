@@ -53,26 +53,15 @@
   transform: scale(1.1);
 }
 
-/* 僅針對文章內容區、友站內容區的連結進行顯色 */
-.post-content a, 
-.links-content a,
-.about-content a {
+/* 自定義的高亮連結樣式 */
+.link-highlight {
   color: #007bff !important;
-  text-decoration: underline;
-  transition: color 0.2s ease-in-out;
+  text-decoration: underline !important;
+  font-weight: 500;
+  transition: color 0.2s ease;
 }
-/* 懸停樣式 */
-.post-content a:hover, 
-.links-content a:hover,
-.about-content a:hover {
+
+.link-highlight:hover {
   color: #0056b3 !important;
-  text-decoration: none !important;
-}
-/* 排除掉文章內的標題連結（避免 H1, H2, H3 也變藍色） */
-.post-content h1 a, 
-.post-content h2 a, 
-.post-content h3 a, 
-.post-content h4 a {
-  color: inherit !important;
   text-decoration: none !important;
 }
