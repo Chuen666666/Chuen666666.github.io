@@ -1,0 +1,50 @@
+name: Discord Notification
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  notify:
+    if: startsWith(github.event.head_commit.message, 'publish')
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 2
+
+      - name: Get New Post Filename
+        id: get_file
+        run: |
+          git config --global core.quotepath false
+          
+          NEW_POST=$(git diff --name-only HEAD^ HEAD | grep "source/_posts/" | grep ".md" | head -n 1)
+          
+          if [ -z "$NEW_POST" ]; then
+            echo "post_name=" >> $GITHUB_OUTPUT
+          else
+            POST_NAME=$(basename "$NEW_POST" .md)
+            echo "post_name=$POST_NAME" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Send Message to Discord
+        run: |
+          POST_PATH="${{ steps.get_file.outputs.post_name }}"
+
+          ENCODED_PATH=$(python3 -c "import urllib.parse; print(urllib.parse.quote('$POST_PATH'))")
+          
+          if [ -z "$POST_PATH" ]; then
+            FINAL_URL="https://chuen666666.github.io/"
+          else
+            FINAL_URL="https://chuen666666.github.io/$ENCODED_PATH/"
+          fi
+
+          curl -H "Content-Type: application/json" \
+          -X POST \
+          -d "{
+            \"content\": \"<@1011970589738664057>\n**淳** 發布了 [新文章]($FINAL_URL)！\",
+            \"allowed_mentions\": { \"users\": [\"1011970589738664057\"] }
+          }" \
+          ${{ secrets.DISCORD_WEBHOOK }}
