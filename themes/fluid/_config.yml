@@ -1257,12 +1257,6 @@ links:
       link: https://leinuoawa.xyz/,
       avatar: /avatar/leinuo.png
     }
-    - {
-      title: "",
-      intro: "",
-      link: ,
-      avatar: /avatar/
-    }
 
   # 當成員頭像加載失敗時，替換為指定圖片
   # When the member avatar fails to load, replace the specified image
