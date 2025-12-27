@@ -733,9 +733,12 @@ post:
     engine: mathjax
 
     mathjax:
-      extra_options:
-        loader: { load: ['[tex]/cancel'] }
-        tex: { packages: { '[+]': ['cancel'] } }
+      loader:
+        load: ['[tex]/cancel']
+      tex:
+        packages: { '[+]': ['cancel'] }
+      options:
+        enableMenu: false
 
   # 流程圖，基於 mermaid-js，具體請見：https://hexo.fluid-dev.com/docs/guide/#mermaid-流程圖
   # Flow chart, based on mermaid-js, see: https://hexo.fluid-dev.com/docs/en/guide/#mermaid
