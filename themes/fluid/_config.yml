@@ -1239,6 +1239,24 @@ links:
       link: https://www.instagram.com/easoneason609/#,
       avatar: /avatar/eason.jpg
     }
+    - {
+      title: "Aaron",
+      intro: "依舊沒學校的我 嗚嗚嗚",
+      link: https://ronkao.tw/,
+      avatar: /avatar/Aaron.jpg
+    }
+    - {
+      title: "jackoha",
+      intro: "東方廚",
+      link: https://jackoha.github.io/,
+      avatar: /avatar/jackoha.webp
+    }
+    - {
+      title: "雷諾",
+      intro: "你好呀!我是雷諾，一個喜歡女裝的男娘",
+      link: https://leinuoawa.xyz/,
+      avatar: /avatar/leinuo.png
+    }
 
   # 當成員頭像加載失敗時，替換為指定圖片
   # When the member avatar fails to load, replace the specified image
