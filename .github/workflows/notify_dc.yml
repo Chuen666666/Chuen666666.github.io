@@ -50,7 +50,7 @@ jobs:
               \"title\": \"$DISPLAY_TITLE\",
               \"url\": \"$FINAL_URL\",
               \"color\": 5814783,
-              \"description\": \"點擊上方連結閱讀全文內容。\",
+              \"description\": \"點擊上方連結閱讀全文內容\",
               \"timestamp\": \"$(date -u +%Y-%m-%dT%H:%M:%SZ)\",
               \"footer\": {
                 \"text\": \"Hexo 自動通知\"
