@@ -4,6 +4,39 @@
   
   
   <entry>
+    <title>新手都能看懂的羅必達法則</title>
+    <link href="/%E6%96%B0%E6%89%8B%E9%83%BD%E8%83%BD%E7%9C%8B%E6%87%82%E7%9A%84%E7%BE%85%E5%BF%85%E9%81%94%E6%B3%95%E5%89%87/"/>
+    <url>/%E6%96%B0%E6%89%8B%E9%83%BD%E8%83%BD%E7%9C%8B%E6%87%82%E7%9A%84%E7%BE%85%E5%BF%85%E9%81%94%E6%B3%95%E5%89%87/</url>
+    
+    <content type="html"><![CDATA[<h2 id="基本微分"><a href="#基本微分" class="headerlink" title="基本微分"></a>基本微分</h2><ol><li>用符號「$’$」（讀作 <em>prime</em>）表示，$f’(x)=[f(x)]’$<ul><li>有時也會用 $\frac{\mathrm dy}{\mathrm dx}=\frac{\mathrm d}{\mathrm dx}f(x)$ 表示</li></ul></li><li>常數項微分=0</li><li>$[a\cdot x^b]’=a\cdot b\cdot x^{b-1}$（次方拿下來，次方-1）</li><li>多項式微分=每一項單獨微，再拼一起<ul><li>e.g., $[3x^2+5x+7]’=3\cdot2x^1+5\cdot1x^0=6x+5$</li></ul></li></ol><h2 id="微分公式"><a href="#微分公式" class="headerlink" title="微分公式"></a>微分公式</h2><ol><li>乘法律：$[f(x)\cdot g(x)]’=f’(x)\cdot g(x)+f(x)\cdot g’(x)$<ul><li>口訣：前微後不微+後微前不微</li><li>若有更多項相乘，就拆成更多項（每次只微其中一個）再相加</li><li>除法：$[\frac{f(x)}{g(x)}]’=[f(x)\cdot g(x)^{-1}]’$ 再處理即可</li><li>根號：$[\sqrt x]=[x^\frac12]$ 再處理即可</li></ul></li><li>連鎖律（chain rule）：$[f(g(x))]’=f’(g(x))\cdot g’(x)$</li><li>三角函數<ul><li>$[\sin x]’=\cos x$</li><li>$[\cos x]’=-\sin x$</li><li>若是 $\sin(f(x))$ 或 $\cos(f(x))$，要記得 chain rule</li></ul></li></ol><h2 id="不定形式（indeterminate）"><a href="#不定形式（indeterminate）" class="headerlink" title="不定形式（indeterminate）"></a>不定形式（indeterminate）</h2><ol><li>只會出現在<strong>做極限時</strong>，否則應該會是 D.N.E.（不存在）或 Undef（未定義）</li><li>共有七種：<ul><li>$\frac00$</li><li>$\frac\infty\infty$</li><li>$0\cdot\infty$</li><li>$\infty-\infty$</li><li>$1^\infty$</li><li>$\infty^0$</li><li>$0^0$</li></ul></li><li>只有 $\frac00$ 和 $\frac\infty\infty$ 適用，其餘都要先轉成這兩種形式<ul><li>e.g., $0\cdot\infty \to \frac{0}{\frac1\infty} \to \frac00$</li></ul></li></ol><h2 id="羅必達法則（L’Hopital’s-rule）"><a href="#羅必達法則（L’Hopital’s-rule）" class="headerlink" title="羅必達法則（L’Hôpital’s rule）"></a>羅必達法則（L’Hôpital’s rule）</h2><ol><li>可以用的條件（要全符合）<ul><li>可微函數（在趨近值的附近可微）</li><li>$\frac00$ 或 $\frac\infty\infty$</li><li>在做極限</li></ul></li><li>做法：分子、分母都微分一次<ul><li>若羅一次後仍不定形式，可再羅一次</li></ul></li></ol><h2 id="例子"><a href="#例子" class="headerlink" title="例子"></a>例子</h2><ol><li><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><munder><mo data-mjx-texclass="OP" movablelimits="true">lim</mo><mrow><mi>x</mi><mo accent="false" stretchy="false">→</mo><mn>0</mn></mrow></munder><mfrac><msqrt><mi>x</mi></msqrt><mrow><msqrt><mn>1</mn><mo>+</mo><msqrt><mi>x</mi></msqrt></msqrt><mo>−</mo><mn>1</mn></mrow></mfrac><mo>=</mo><munder><mo data-mjx-texclass="OP" movablelimits="true">lim</mo><mrow><mi>x</mi><mo accent="false" stretchy="false">→</mo><mn>0</mn></mrow></munder><mfrac><menclose notation="updiagonalstrike"><mfrac><mn>1</mn><mn>2</mn></mfrac><msup><mi>x</mi><mrow><mo>−</mo><mn>1</mn><mrow><mo>/</mo></mrow><mn>2</mn></mrow></msup></menclose><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo stretchy="false">(</mo><mn>1</mn><mo>+</mo><msqrt><mi>x</mi></msqrt><mo stretchy="false">)</mo><mo>⋅</mo><menclose notation="updiagonalstrike"><mfrac><mn>1</mn><mn>2</mn></mfrac><msup><mi>x</mi><mrow><mo>−</mo><mn>1</mn><mrow><mo>/</mo></mrow><mn>2</mn></mrow></msup></menclose></mrow></mfrac><mo>=</mo><munder><mo data-mjx-texclass="OP" movablelimits="true">lim</mo><mrow><mi>x</mi><mo accent="false" stretchy="false">→</mo><mn>0</mn></mrow></munder><mfrac><mn>2</mn><mrow><mn>1</mn><mo>+</mo><msqrt><mi>x</mi></msqrt></mrow></mfrac><mo>=</mo><mn>2</mn></math></li><li><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><munder><mo data-mjx-texclass="OP" movablelimits="true">lim</mo><mrow><mi>x</mi><mo accent="false" stretchy="false">→</mo><mn>1</mn></mrow></munder><mfrac><mrow><mi>sin</mi><mo data-mjx-texclass="NONE">⁡</mo><mo stretchy="false">(</mo><msup><mi>x</mi><mn>2</mn></msup><mo>−</mo><mn>1</mn><mo stretchy="false">)</mo></mrow><mrow><mi>x</mi><mo>−</mo><mn>1</mn></mrow></mfrac><mo>=</mo><munder><mo data-mjx-texclass="OP" movablelimits="true">lim</mo><mrow><mi>x</mi><mo accent="false" stretchy="false">→</mo><mn>1</mn></mrow></munder><mfrac><mrow><mi>cos</mi><mo data-mjx-texclass="NONE">⁡</mo><mo stretchy="false">(</mo><msup><mi>x</mi><mn>2</mn></msup><mo>−</mo><mn>1</mn><mo stretchy="false">)</mo><mo>⋅</mo><mn>2</mn><mi>x</mi></mrow><mn>1</mn></mfrac><mo>=</mo><mn>2</mn></math></li></ol>]]></content>
+    
+    
+    <categories>
+      
+      <category>筆記</category>
+      
+      <category>數學</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>數學</tag>
+      
+      <tag>微積分</tag>
+      
+      <tag>極限</tag>
+      
+      <tag>羅必達法則</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>我建立好自己的個網了！</title>
     <link href="/%E6%88%91%E5%BB%BA%E7%AB%8B%E5%A5%BD%E8%87%AA%E5%B7%B1%E7%9A%84%E5%80%8B%E7%B6%B2%E4%BA%86%EF%BC%81/"/>
     <url>/%E6%88%91%E5%BB%BA%E7%AB%8B%E5%A5%BD%E8%87%AA%E5%B7%B1%E7%9A%84%E5%80%8B%E7%B6%B2%E4%BA%86%EF%BC%81/</url>
