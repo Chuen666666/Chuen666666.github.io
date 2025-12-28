@@ -32,19 +32,30 @@ jobs:
       - name: Send Message to Discord
         run: |
           POST_PATH="${{ steps.get_file.outputs.post_name }}"
-
           ENCODED_PATH=$(python3 -c "import urllib.parse; print(urllib.parse.quote('$POST_PATH'))")
           
           if [ -z "$POST_PATH" ]; then
             FINAL_URL="https://chuen666666.github.io/"
+            DISPLAY_TITLE="前往 淳的網誌"
           else
             FINAL_URL="https://chuen666666.github.io/$ENCODED_PATH/"
+            DISPLAY_TITLE="$POST_PATH"
           fi
 
           curl -H "Content-Type: application/json" \
           -X POST \
           -d "{
-            \"content\": \"<@1011970589738664057>\n**淳** 發布了 [新文章]($FINAL_URL)！\",
-            \"allowed_mentions\": { \"users\": [\"1011970589738664057\"] }
+            \"content\": \"<@&1011970589738664057>\n**淳** 發布了一篇新文章！\",
+            \"embeds\": [{
+              \"title\": \"$DISPLAY_TITLE\",
+              \"url\": \"$FINAL_URL\",
+              \"color\": 5814783,
+              \"description\": \"點擊上方連結閱讀全文內容。\",
+              \"timestamp\": \"$(date -u +%Y-%m-%dT%H:%M:%SZ)\",
+              \"footer\": {
+                \"text\": \"Hexo 自動通知\"
+              }
+            }],
+            \"allowed_mentions\": { \"roles\": [\"1011970589738664057\"] }
           }" \
           ${{ secrets.DISCORD_WEBHOOK }}
