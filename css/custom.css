@@ -57,9 +57,10 @@
   color: #31a5d9 !important;
   text-decoration: none !important;
   border-bottom: none !important;
+  transition: color 0.2s ease-in-out;
 }
 /* 當滑鼠移到連結上時的效果 */
 #board .markdown-body a:not(.btn):hover {
-  color: #f0932b !important;
+  color: #1a7fa6 !important;
   text-decoration: underline !important;
 }
