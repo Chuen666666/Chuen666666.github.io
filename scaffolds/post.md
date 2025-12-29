@@ -2,7 +2,9 @@
 title: {{ title }}
 date: {{ date }}
 excerpt: 
-categories: [筆記, 程式]
+categories:
+  - 筆記
+  - 程式
 tags:
   - 程式
 math: false
