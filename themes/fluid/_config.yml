@@ -660,7 +660,7 @@ post:
 
     # 目錄會選擇這些節點作為標題
     # TOC will select these nodes as headings
-    headingSelector: h1,h2,h3,h4,h5,h6
+    headingSelector: h1,h2,h3
 
     # 層級的折疊深度，0 是全部折疊，大於 0 後如果存在下級標題則預設展開
     # Collapse depth. If 0, all headings collapsed. If greater than 0, it will be expanded by default if there are sub headings
