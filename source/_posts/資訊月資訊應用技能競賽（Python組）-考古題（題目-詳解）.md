@@ -10,7 +10,7 @@ tags:
   - 資訊月資訊應用技能競賽
 math: true
 mermaid: false
-hide: true
+hide: false
 date: 2025-12-29 11:44:51
 excerpt: 資訊月資訊應用技能競賽（Python 組）的考古題，題目、答案、解題思路
 ---
