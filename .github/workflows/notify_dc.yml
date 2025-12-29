@@ -42,7 +42,6 @@ jobs:
             DISPLAY_TITLE="$POST_PATH"
           fi
 
-          # 發送卡片通知，標題已更新
           curl -H "Content-Type: application/json" \
           -X POST \
           -d "{
