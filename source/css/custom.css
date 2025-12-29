@@ -53,16 +53,13 @@
 }
 
 /* 設定文章內連結的顏色與樣式 */
-.markdown-body a {
+#board .markdown-body a:not(.btn) {
   color: #007bff !important;
-  text-decoration: none;
-  border-bottom: 1px solid rgba(0, 123, 255, 0.2);
-  transition: all 0.3s ease;
+  text-decoration: none !important;
+  border-bottom: none !important;
 }
 /* 當滑鼠移到連結上時的效果 */
-.markdown-body a:hover {
+#board .markdown-body a:not(.btn):hover {
   color: #0056b3 !important;
-  text-decoration: none;
-  border-bottom: 2px solid #0056b3;
-  background-color: rgba(0, 123, 255, 0.05);
+  text-decoration: underline !important;
 }
