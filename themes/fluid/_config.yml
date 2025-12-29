@@ -623,7 +623,7 @@ post:
     # 提示標籤類型
     # Note class
     # Options: default | primary | info | success | warning | danger | light
-    note_class: info
+    note_class: light
 
   # 側邊欄展示當前分類下的文章
   # Sidebar of category
