@@ -54,12 +54,12 @@
 
 /* 設定文章內連結的顏色與樣式 */
 #board .markdown-body a:not(.btn) {
-  color: #007bff !important;
+  color: #31a5d9 !important;
   text-decoration: none !important;
   border-bottom: none !important;
 }
 /* 當滑鼠移到連結上時的效果 */
 #board .markdown-body a:not(.btn):hover {
-  color: #0056b3 !important;
+  color: #f0932b !important;
   text-decoration: underline !important;
 }
