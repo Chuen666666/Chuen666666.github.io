@@ -71,3 +71,21 @@
   color: #1a7fa6 !important;
   text-decoration: underline !important;
 }
+
+/* 修復手機版導航欄按鈕不顯示的問題 */
+.navbar-toggler {
+  color: #31a5d9 !important; /* 強制改為你的專屬藍色 */
+  border: none !important;
+}
+/* 針對 iconfont 類型的圖示進行修正 */
+.navbar-toggler .iconfont {
+  color: #31a5d9 !important;
+  font-size: 1.5rem !important;
+  line-height: 1;
+  display: block !important;
+}
+/* 確保按鈕在點擊時不會出現奇怪的黑框 */
+.navbar-toggler:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
