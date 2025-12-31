@@ -71,32 +71,3 @@
   color: #1a7fa6 !important;
   text-decoration: underline !important;
 }
-
-/* --- 試算表與內嵌容器 --- */
-.sheet-control-panel {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 15px;
-  margin-bottom: 10px;
-  background: rgba(49, 165, 217, 0.05);
-  padding: 10px;
-  border-radius: 8px;
-}
-.sheet-slider {
-  cursor: pointer;
-  accent-color: #31a5d9;
-  flex-grow: 1;
-  max-width: 200px;
-}
-.sheet-zoom-text {
-  font-size: 14px;
-  font-weight: bold;
-  color: #31a5d9;
-  min-width: 45px;
-}
-.embed-container.sheet-box {
-  position: relative;
-  background: #fff;
-  height: 600px;
-}
