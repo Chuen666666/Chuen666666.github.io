@@ -233,7 +233,7 @@ font:
 
 # 指定自定義 .js 文件路徑，支援列表；路徑是相對 source 目錄，如 /js/custom.js 對應存放目錄 source/js/custom.js
 # Specify the path of your custom js file, support list. The path is relative to the source directory, such as `/js/custom.js` corresponding to the directory `source/js/custom.js`
-custom_js:
+custom_js: [/js/custom.js]
 
 # 指定自定義 .css 文件路徑，用法和 custom_js 相同
 # The usage is the same as custom_js
