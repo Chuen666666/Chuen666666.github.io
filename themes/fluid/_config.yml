@@ -1032,7 +1032,7 @@ links:
   banner_img: /img/default.png
   banner_img_height: 60
   banner_mask_alpha: 0.3
-  # 友連的成員項
+  # 友站的成員項
   # Member item of page
   items:
     - {
