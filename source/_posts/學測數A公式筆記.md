@@ -335,7 +335,7 @@ $s=\frac{a+b+c}{2}$（半周長）
 - $\tan\frac\theta2=\pm\sqrt{\frac{1-\cos\theta}{1+\cos\theta}}$
 
 ### 疊合
-- $y=a\sin x+b\cos x=\sqrt{a^2+b^2}\sin(x+\theta)$（其中 $\cos\theta=\frac{a}{\sqrt{a^2+b^2}}$、$\sin\theta=\frac{b}{\sqrt{a^2+b^2}}$
+- $y=a\sin x+b\cos x=\sqrt{a^2+b^2}\sin(x+\theta)$（其中 $\cos\theta=\frac{a}{\sqrt{a^2+b^2}}$、$\sin\theta=\frac{b}{\sqrt{a^2+b^2}}$）
 
   {% fold info @ 完整推導過程 %}
   $$
