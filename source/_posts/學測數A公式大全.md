@@ -311,3 +311,12 @@ $s=\frac{a+b+c}{2}$（半周長）
 - $\cos(\alpha-\beta)=\cos\alpha\cdot\cos\beta+\sin\alpha\cdot\sin\beta$（co co + sin sin）
 - $\tan(\alpha+\beta)=\frac{\tan\alpha+\tan\beta}{1-\tan\alpha\cdot\tan\beta}$
 - $\tan(\alpha-\beta)=\frac{\tan\alpha-\tan\beta}{1+\tan\alpha\cdot\tan\beta}$
+
+### 倍角
+- $\sin2\theta=2\sin\theta\cos\theta$
+- $\cos2\theta=\cos^2\theta-\sin^2\theta=1-2\sin^2\theta=2\cos^2\theta-1$
+- $\tan2\theta=\frac{2\tan\theta}{1-\tan^2\theta}$
+- $\sin3\theta=3\sin\theta-4\sin^3\theta$
+- $\cos3\theta=4\cos^3\theta-3\cos\theta$
+
+### 半角
