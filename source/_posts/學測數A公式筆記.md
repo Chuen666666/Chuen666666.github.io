@@ -60,7 +60,7 @@ excerpt: 整理所出學測數 A 範圍（高一 + 高二）的所有公式和�
 
 ## 直線與圓
 ### 斜率
-- $m=\frac{\Delta y}{\Delta x}=\tan\theta(\theta\ne90\degree)$
+- $m=\frac{\Delta y}{\Delta x}=\tan\theta(\theta\ne90^\circ)$
 
 ### 直線方程式
 - 點斜式：$y-y_0=m(x-x_0)$
@@ -248,8 +248,8 @@ excerpt: 整理所出學測數 A 範圍（高一 + 高二）的所有公式和�
 
 ## 指數與對數
 ### 指數律
-- 整數指數：$a\ne0,n\in\N$，則 $a^0=1$ 且 $a^{-n}=\frac{1}{a^n}$
-- 有理指數：$a>0,m\in\N 且 n\ge2$，則 $a^\frac{1}{n}=\sqrt[n]a$
+- 整數指數：$a\ne0,n\in\mathbb{N}$，則 $a^0=1$ 且 $a^{-n}=\frac{1}{a^n}$
+- 有理指數：$a>0,m\in\mathbb{N} 且 n\ge2$，則 $a^\frac{1}{n}=\sqrt[n]a$
 - 指數律（實數）
   - $a^m\cdot a^n=a^{m+n}$
   - $\frac{a^m}{a^n}=a^{m-n}$
@@ -275,7 +275,7 @@ excerpt: 整理所出學測數 A 範圍（高一 + 高二）的所有公式和�
 ### 基本關係式
 - 平方：$\sin^2\theta+\cos^2\theta=1$
 - 商數：$\tan\theta=\frac{\sin\theta}{\cos\theta}$
-- 餘角：$\sin(90\degree-\theta)=\cos\theta;\cos(90\degree-\theta)=\sin\theta$
+- 餘角：$\sin(90^\circ-\theta)=\cos\theta;\cos(90^\circ-\theta)=\sin\theta$
 
 ### 廣義角
 - 任一點坐標 $P(x,y)=(r\cos\theta,r\sin\theta)$
@@ -302,9 +302,9 @@ $s=\frac{a+b+c}{2}$（半周長）
 ## 三角函數
 ### 弳度
 - 半徑為 $r$，弧長為 $s$ 的圓中，弧對應的圓心角為 $\theta=\frac sr$
-- $180\degree=\pi$
-- $1\degree=\frac{\pi}{180}$
-- $1=(\frac{180}{\pi})\degree\approx57.3\degree$
+- $180^\circ=\pi$
+- $1^\circ=\frac{\pi}{180}$
+- $1=(\frac{180}{\pi})^\circ\approx57.3^\circ$
 
 ### 扇形
 扇形半徑為 $r$、圓心角為 $\theta$ 弳
