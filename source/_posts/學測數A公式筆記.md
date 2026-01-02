@@ -136,8 +136,8 @@ excerpt: 整理所出學測數 A 範圍（高一 + 高二）的所有公式和�
 
 ## 排列組合
 ### 笛摩根定律
-- $\left(A \cup B\right)'=A'\cap B'$
-- $\left(A \cap B\right)'=A'\cup B'$
+- $\left(A \cup B\right)\prime=A\prime\cap B\prime$
+- $\left(A \cap B\right)\prime=A\prime\cup B\prime$
 
 ### 取捨原理
 - $n\left( A\cup B\right)=n(A)+n(B)-n\left(A\cap B\right)$
@@ -220,15 +220,15 @@ excerpt: 整理所出學測數 A 範圍（高一 + 高二）的所有公式和�
 - $\sigma\_y=\left|a\right|\times\sigma\_x$（標準差伸縮斜率倍）
 
 ### 標準化
-- $x\_i'=\frac{x\_i-\mu}{\sigma}$
-- $\mu'=0;\sigma'=1$
+- $x\_i\prime=\frac{x\_i-\mu}{\sigma}$
+- $\mu\prime=0;\sigma\prime=1$
 
 ## 二維數據分析
 ### 相關係數
 - $S_{xy}=(x_1-\mu_x)(y_1-\mu_y)+(x_2-\mu_x)(y_2-\mu_y)+\cdots+(x_n-\mu_x)(y_n-\mu_y)$
 - $S_{xx}=(x_1-\mu_x)^2+(x_2-\mu_x)^2+\cdots+(x_n-\mu_x)^2$
 - $S_{yy}=(y_1-\mu_y)^2+(y_2-\mu_y)^2+\cdots+(y_n-\mu_y)^2$
-- 相關係數：$r=\frac{x_1'y_1'+x_2'y_2'+\cdots+x_n'y_n'}{n}=\frac{S_{xy}}{\sqrt{S_{xx}}\sqrt{S_{yy}}}$（內積）
+- 相關係數：$r=\frac{x_1\prime y_1\prime+x_2\prime y_2\prime+\cdots+x_n\prime y_n\prime}{n}=\frac{S_{xy}}{\sqrt{S_{xx}}\sqrt{S_{yy}}}$（內積）
 - 零相關：資料排列呈水平線、鉛直線、對稱，$r=0$
 - 兩組數據伸縮平移：只影響 $r$ 的正負號（係數同號則不變、異號則加負號）
 
@@ -240,8 +240,8 @@ excerpt: 整理所出學測數 A 範圍（高一 + 高二）的所有公式和�
   - $\Rightarrow L:\;y-\mu\_y=m(x-\mu\_x)$
 - 迴歸直線 VS 已標準化數據
   - $L$ 必過 $(0,0)$
-  - $m'=r$
-  - $\Rightarrow L:\;y'=rx'$
+  - $m\prime=r$
+  - $\Rightarrow L:\;y\prime=rx\prime$
 
 ## 指數與對數
 ### 指數律
@@ -452,7 +452,26 @@ excerpt: 整理所出學測數 A 範圍（高一 + 高二）的所有公式和�
   - $\left|\vec a\times\vec b\right|=\left|\vec a\right|\left|\vec b\right|\sin\theta$
 
 ### 空間三角形面積
-- $\vec{AB},\vec{AC}$ 決定的三角形 $[\triangle ABC]=\frac12\left|\vec{AB}\right|\left|\vec{AC}\right|\sin\theta=\frac12\left|\vec{AB}\times\vec{AC}\right|$
-- $\vec{AB},\vec{AC}$ 決定的平行四邊形 $[\text{▱}ABCD]=\left|\vec{AB}\right|\left|\vec{AC}\right|\sin\theta=\left|\vec{AB}\times\vec{AC}\right|$
+- 三角形 $[\triangle ABC]=\frac12\left|\vec{AB}\right|\left|\vec{AC}\right|\sin\theta=\frac12\left|\vec{AB}\times\vec{AC}\right|$
+- 平行四邊形 $[\text{▱}ABCD]=\left|\vec{AB}\right|\left|\vec{AC}\right|\sin\theta=\left|\vec{AB}\times\vec{AC}\right|$
 
 ### 三階行列式
+- $\begin{vmatrix}a&b&c\\d&e&f\\g&h&i\end{vmatrix}=(aei+bfg+cdh)-(ceg+bdi+afh)$ （左上右下 - 右上左下）
+- 性質與二階相同
+- 降階：
+
+  {% raw %}
+  $$
+  \begin{aligned}
+  \begin{vmatrix}a&b&c\\d&e&f\\g&h&i\end{vmatrix} 
+  &= a\begin{vmatrix}e&f\\h&i\end{vmatrix}-b\begin{vmatrix}d&f\\g&i\end{vmatrix}+c\begin{vmatrix}d&e\\g&h\end{vmatrix} && \text{（第一列降階展開）} \\
+  &= -d\begin{vmatrix}b&c\\h&i\end{vmatrix}+e\begin{vmatrix}a&c\\g&i\end{vmatrix}-f\begin{vmatrix}a&b\\g&h\end{vmatrix} && \text{（第二列降階展開）} \\
+  &= a\begin{vmatrix}e&f\\h&i\end{vmatrix}-d\begin{vmatrix}b&c\\h&i\end{vmatrix}+g\begin{vmatrix}b&c\\e&f\end{vmatrix} && \text{（第一行降階展開）}
+  \end{aligned}
+  $$
+  {% endraw %}
+
+### 空間體積公式
+- 平行六面體 $V=\left|\left(\vec a\times\vec b\right)\cdot\vec c\right|=\begin{vmatrix}a\_1&a\_2&a\_3\\b\_1&b\_2&b\_3\\c\_1&c\_2&c\_3\end{vmatrix}$
+- 四面體 $V\prime=\frac16V$
+- $\vec a,\vec b,\vec c\text{ 共平面}\Leftrightarrow V=0$
