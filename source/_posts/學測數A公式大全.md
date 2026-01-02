@@ -34,6 +34,9 @@ excerpt: 整理所出學測數 A 範圍（高一 + 高二）的所有公式和�
 
 ### 分點公式
 
+{% raw %}
+<iframe src="https://www.geogebra.org/geometry/qpwugu35?embed" width="800" height="600" allowfullscreen style="border: 1px solid #e4e4e4;border-radius: 4px;" frameborder="0"></iframe>
+{% endraw %}
 
 - $P=\frac{na+mb}{m+n}$
 
@@ -350,3 +353,6 @@ $s=\frac{a+b+c}{2}$（半周長）
 
 ### 分點公式
 
+{% raw %}
+<iframe src="https://www.geogebra.org/geometry/j8grr8zf?embed" width="800" height="600" allowfullscreen style="border: 1px solid #e4e4e4;border-radius: 4px;" frameborder="0"></iframe>
+{% endraw %}
