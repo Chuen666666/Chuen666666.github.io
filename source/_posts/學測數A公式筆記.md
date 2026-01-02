@@ -349,12 +349,11 @@ excerpt: 整理所出學測數 A 範圍（高一 + 高二）的所有公式和�
 - 三角不等式（恆成立）：$\left|\vec a\right|+\left|\vec b\right|\ge\left|\vec a+\vec b\right|$（等號成立於同方向或其一為零向量）
 
 ### 分點公式
+- $P(x,y)=\left(\frac{nx\_1+mx\_2}{m+n},\frac{ny\_1+my\_2}{m+n}\right)$
 
 {% raw %}
 <iframe src="https://www.geogebra.org/geometry/j8grr8zf?embed" width="800" height="600" allowfullscreen style="border: 1px solid #e4e4e4;border-radius: 4px;" frameborder="0"></iframe>
 {% endraw %}
-
-- $P(x,y)=\left(\frac{nx\_1+mx\_2}{m+n},\frac{ny\_1+my\_2}{m+n}\right)$
 
 ### 重心性質
 若 $G$ 為 $\triangle ABC$ 的重心
@@ -408,4 +407,52 @@ excerpt: 整理所出學測數 A 範圍（高一 + 高二）的所有公式和�
 - $\Delta=\Delta\_x=\Delta\_y=0$：無限解
 - $\Delta=0$ 且 $\Delta\_x,\Delta\_y$ 有一不為 0：無解
 
-##
+## 空間向量
+### 二面角
+- 各取一條與交線垂直的向量 &rarr; 算兩向量夾角 $\theta,\;180^\circ-\theta$
+
+{% raw %}
+<iframe src="https://www.geogebra.org/3d/knq2tbne?embed" width="800" height="600" allowfullscreen style="border: 1px solid #e4e4e4;border-radius: 4px;" frameborder="0"></iframe>
+{% endraw %}
+
+### 三垂線定理
+- $\overline{AB}$ 垂直平面 $E$ 於 $B$ 點，直線 $L$ 在平面 $E$ 上，若 $\overline{BC}$ 垂直 $L$ 於 $C$，則 $\overline{AC}$ 與 $L$ 垂直
+
+{% raw %}
+<iframe src="https://www.geogebra.org/3d/h8b28duu?embed" width="800" height="600" allowfullscreen style="border: 1px solid #e4e4e4;border-radius: 4px;" frameborder="0"></iframe>
+{% endraw %}
+
+### 空間向量
+- $\left|\vec{AC}\right|=\sqrt{\Delta\_x^2+\Delta\_y^2+\Delta\_z^2}$
+
+### 分點公式
+- $\vec{OP}=\frac{n\vec{OA}+m\vec{OB}}{m+n}$（其中 $O$ 為任意點）
+- $P\left(\frac{nx\_1+mx\_2}{m+n},\frac{ny\_1+my\_2}{m+n},\frac{nz\_1+mz\_2}{m+n}\right)$
+
+{% raw %}
+<iframe src="https://www.geogebra.org/geometry/pnjxdfg4?embed" width="800" height="600" allowfullscreen style="border: 1px solid #e4e4e4;border-radius: 4px;" frameborder="0"></iframe>
+{% endraw %}
+
+### 空間向量的內積
+- $\vec a\cdot\vec b=\left|\vec a\right|\left|\vec b\right|\cos\theta=a\_1b\_1+a\_2b\_2+a\_3b\_3$
+- $\vec a\perp\vec b\Leftrightarrow\vec a\cdot\vec b=0$
+- 特性皆與二維向量相同
+- 正射影與二維向量相同
+
+### 柯西不等式
+- $\left|\vec a\right|\left|\vec b\right|\ge\left|\vec a\cdot\vec b\right|$，等號成立於 $\vec a\parallel\vec b$
+- 推廣方式同二維（方和積 &ge; 積和方）
+
+### 外積
+- $\vec c=\vec a\times\vec b=\left(\begin{vmatrix}a\_2&a\_3\\b\_2&b\_3\\\end{vmatrix},\begin{vmatrix}a\_3&a\_1\\b\_3&b\_1\\\end{vmatrix},\begin{vmatrix}a\_1&a\_2\\b\_1&b\_2\\\end{vmatrix}\right)$（抄兩次，去頭尾，行列式）
+- $\vec c$ 為 $\vec a$ 與 $\vec b$ 的公垂向量
+- 性質
+  - $\vec a\times\vec b=-\left(\vec b\times\vec a\right)$
+  - 若 $\vec n\perp\vec a$ 且 $\vec n\perp\vec b$，則 $\vec n\parallel\left(\vec a\times\vec b\right)$
+  - $\left|\vec a\times\vec b\right|=\left|\vec a\right|\left|\vec b\right|\sin\theta$
+
+### 空間三角形面積
+- $\vec{AB},\vec{AC}$ 決定的三角形 $[\triangle ABC]=\frac12\left|\vec{AB}\right|\left|\vec{AC}\right|\sin\theta=\frac12\left|\vec{AB}\times\vec{AC}\right|$
+- $\vec{AB},\vec{AC}$ 決定的平行四邊形 $[\text{▱}ABCD]=\left|\vec{AB}\right|\left|\vec{AC}\right|\sin\theta=\left|\vec{AB}\times\vec{AC}\right|$
+
+### 三階行列式
