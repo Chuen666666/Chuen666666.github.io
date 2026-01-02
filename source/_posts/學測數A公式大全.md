@@ -320,3 +320,10 @@ $s=\frac{a+b+c}{2}$（半周長）
 - $\cos3\theta=4\cos^3\theta-3\cos\theta$
 
 ### 半角
+公式的正負看 $\frac\theta2$ 象限決定
+
+- $\sin\frac\theta2=\pm\sqrt{\frac{1-\cos\theta}{2}}$
+- $\cos\frac\theta2=\pm\sqrt{\frac{1+\cos\theta}{2}}$
+- $\tan\frac\theta2=\pm\sqrt{\frac{1-\cos\theta}{1+\cos\theta}}$
+
+### 疊合
