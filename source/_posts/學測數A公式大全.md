@@ -304,8 +304,10 @@ $s=\frac{a+b+c}{2}$（半周長）
 - 弧長：$s=r\theta$
 - 面積：$A=\frac12r^2\theta$
 
-### 三角函數圖形
-
-{% raw %}
-<iframe src="https://www.desmos.com/calculator/upbyb6mf1f?embed" width="500" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
-{% endraw %}
+### 和差角
+- $\sin(\alpha+\beta)=\sin\alpha\cdot\cos\beta+\cos\alpha\cdot\sin\beta$（sin co + co sin）
+- $\sin(\alpha-\beta)=\sin\alpha\cdot\cos\beta-\cos\alpha\cdot\sin\beta$（sin co - co sin）
+- $\cos(\alpha+\beta)=\cos\alpha\cdot\cos\beta-\sin\alpha\cdot\sin\beta$（co co - sin sin）
+- $\cos(\alpha-\beta)=\cos\alpha\cdot\cos\beta+\sin\alpha\cdot\sin\beta$（co co + sin sin）
+- $\tan(\alpha+\beta)=\frac{\tan\alpha+\tan\beta}{1-\tan\alpha\cdot\tan\beta}$
+- $\tan(\alpha-\beta)=\frac{\tan\alpha-\tan\beta}{1+\tan\alpha\cdot\tan\beta}$
