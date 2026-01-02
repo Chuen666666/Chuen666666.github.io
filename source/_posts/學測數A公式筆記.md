@@ -33,12 +33,11 @@ excerpt: 整理所出學測數 A 範圍（高一 + 高二）的所有公式和�
 - $a^3-b^3=(a-b)(a^2+ab+b^2)=(a-b)^3+3ab(a-b)$
 
 ### 分點公式
+- $P=\frac{na+mb}{m+n}$
 
 {% raw %}
 <iframe src="https://www.geogebra.org/geometry/qpwugu35?embed" width="800" height="600" allowfullscreen style="border: 1px solid #e4e4e4;border-radius: 4px;" frameborder="0"></iframe>
 {% endraw %}
-
-- $P=\frac{na+mb}{m+n}$
 
 ### 算幾不等式
 - $\frac{a+b}{2}\ge\sqrt{ab}$（算數平均數 &ge; 幾何平均數）
@@ -116,9 +115,7 @@ excerpt: 整理所出學測數 A 範圍（高一 + 高二）的所有公式和�
 ### 等比
 - 等比數列（G.P.）：$a\_n=a\_m\times r^{n-m}$
 - 等比中項：$b=\pm\sqrt{ac}$
-- 等比級數：
-  - $S\_n=n\times a\_1\text{, when }r=1$
-  - $S\_n=\frac{a\_1(1-r^n)}{1-r}=\frac{a\_1(r^n-1)}{r-1}\text{, when }r\ne1$
+- 等比級數：$S\_n=\begin{cases}n\times a\_1&\text{ if }r=1\\\frac{a\_1(1-r^n)}{1-r}&\text{ if }r\ne1\end{cases}$
 
 ### 本利和
 本金為 $x$、期利率為 $r\%$，求第 $n$ 期本利和
@@ -127,9 +124,9 @@ excerpt: 整理所出學測數 A 範圍（高一 + 高二）的所有公式和�
 - 複利本利和：$x\left(1+r\%\right)^n$
 
 ### 級數求和
-- $1+2+3+\cdots+n=\sum\_{i=1}^n i=\frac{n(n+1)}{2}$（梯形公式）
-- $1^2+2^2+3^2+\cdots+n^2=\sum\_{i=1}^n i^2=\frac{n(n+1)(2n+1)}{6}$
-- $1^3+2^3+3^3+\cdots+n^3=\sum\_{i=1}^n i^3=\left(\frac{n\left(n+1\right)}{2}\right)^2$
+- $1+2+3+\cdots+n=\displaystyle\sum\_{i=1}^n i=\frac{n(n+1)}{2}$（梯形公式）
+- $1^2+2^2+3^2+\cdots+n^2=\displaystyle\sum\_{i=1}^n i^2=\frac{n(n+1)(2n+1)}{6}$
+- $1^3+2^3+3^3+\cdots+n^3=\displaystyle\sum\_{i=1}^n i^3=\left(\frac{n\left(n+1\right)}{2}\right)^2$
 
 ### 數學歸納法（M.I.）
 1. B.S.：當 $n=1$ 時，原式成立
@@ -403,10 +400,12 @@ excerpt: 整理所出學測數 A 範圍（高一 + 高二）的所有公式和�
 - 某行（列）乘 $k$ 倍加到另一行（列），值不變
 
 ### 克拉瑪公式
-給定 $\begin{cases} & ax+by=p \\ & cx+dy=q\end{cases}$
+給定 $\begin{cases}ax+by=p \\ cx+dy=q\end{cases}$
 
 令 $\Delta=\begin{vmatrix} a&b \\ c&d \\ \end{vmatrix},\;\Delta\_x=\begin{vmatrix} p&b \\ q&d \\ \end{vmatrix},\;\Delta\_y=\begin{vmatrix} a&p \\ c&q \\ \end{vmatrix}$
 
 - $\Delta\ne0$：恰一解，$x=\frac{\Delta\_x}{\Delta},\;y=\frac{\Delta\_y}{\Delta}$
 - $\Delta=\Delta\_x=\Delta\_y=0$：無限解
 - $\Delta=0$ 且 $\Delta\_x,\Delta\_y$ 有一不為 0：無解
+
+##
