@@ -1,5 +1,5 @@
 ---
-title: 學測數A公式大全
+title: 學測數A公式筆記
 categories:
   - 筆記
   - 數學
