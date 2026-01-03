@@ -136,8 +136,8 @@ excerpt: 整理所出學測數 A 範圍（高一 + 高二）的所有公式和�
 
 ## 排列組合
 ### 笛摩根定律
-- $\left(A \cup B\right)\prime=A\prime\cap B\prime$
-- $\left(A \cap B\right)\prime=A\prime\cup B\prime$
+- $\left(A \cup B\right)'=A'\cap B'$
+- $\left(A \cap B\right)'=A'\cup B'$
 
 ### 取捨原理
 - $n\left( A\cup B\right)=n(A)+n(B)-n\left(A\cap B\right)$
@@ -220,15 +220,15 @@ excerpt: 整理所出學測數 A 範圍（高一 + 高二）的所有公式和�
 - $\sigma\_y=\left|a\right|\times\sigma\_x$（標準差伸縮斜率倍）
 
 ### 標準化
-- $x\_i\prime=\frac{x\_i-\mu}{\sigma}$
-- $\mu\prime=0;\;\sigma\prime=1$
+- $x\_i'=\frac{x\_i-\mu}{\sigma}$
+- $\mu'=0;\;\sigma'=1$
 
 ## 二維數據分析
 ### 相關係數
 - $S\_{xy}=(x\_1-\mu\_x)(y\_1-\mu\_y)+(x\_2-\mu\_x)(y\_2-\mu\_y)+\cdots+(x\_n-\mu\_x)(y\_n-\mu\_y)$
 - $S\_{xx}=(x\_1-\mu\_x)^2+(x\_2-\mu\_x)^2+\cdots+(x\_n-\mu\_x)^2$
 - $S_{yy}=(y\_1-\mu\_y)^2+(y\_2-\mu\_y)^2+\cdots+(y\_n-\mu\_y)^2$
-- 相關係數：$r=\frac{x\_1\prime y\_1\prime+x\_2\prime y\_2\prime+\cdots+x\_n\prime y\_n\prime}{n}=\frac{S\_{xy}}{\sqrt{S\_{xx}}\sqrt{S\_{yy}}}$（內積）
+- 相關係數：$r=\frac{x\_1' y\_1'+x\_2' y\_2'+\cdots+x\_n' y\_n'}{n}=\frac{S\_{xy}}{\sqrt{S\_{xx}}\sqrt{S\_{yy}}}$（內積）
 - 零相關：資料排列呈水平線、鉛直線、對稱，$r=0$
 - 兩組數據伸縮平移：只影響 $r$ 的正負號（係數同號則不變、異號則加負號）
 
@@ -240,8 +240,8 @@ excerpt: 整理所出學測數 A 範圍（高一 + 高二）的所有公式和�
   - $\Rightarrow L:\;y-\mu\_y=m(x-\mu\_x)$
 - 迴歸直線 VS 已標準化數據
   - $L$ 必過 $(0,0)$
-  - $m\prime=r$
-  - $\Rightarrow L:\;y\prime=rx\prime$
+  - $m'=r$
+  - $\Rightarrow L:\;y'=rx'$
 
 ## 指數與對數
 ### 指數律
@@ -477,7 +477,7 @@ excerpt: 整理所出學測數 A 範圍（高一 + 高二）的所有公式和�
 
 ### 空間體積公式
 - 平行六面體 {% raw %}$V=\left|\left(\vec a\times\vec b\right)\cdot\vec c\right|=\begin{vmatrix}a_1&a_2&a_3\\ b_1&b_2&b_3\\ c_1&c_2&c_3\end{vmatrix}${% endraw %}
-- 四面體 $V\prime=\frac16V$
+- 四面體 $V'=\frac16V$
 - $\vec a,\vec b,\vec c\text{ 共平面}\iff V=0$
 
 ## 空間中的平面與直線
@@ -546,3 +546,11 @@ excerpt: 整理所出學測數 A 範圍（高一 + 高二）的所有公式和�
 - 馬可夫鏈：初始狀態機率為 $P\_0$，狀態轉移的機率寫成轉移矩陣 $M$，則 $P\_n=MP\_{n-1}$；若 $MP=P$，則此時稱 $P$ 為穩定狀態
 
 ### 平面上的線性變換
+- 坐標平面上任一點 $P(x,y)$ 經 {% raw %}$A=\begin{bmatrix}a&b\\ c&d\end{bmatrix}$ 線性變換：$\begin{bmatrix}x'\\y'\end{bmatrix}=\begin{bmatrix}a&b\\ c&d\end{bmatrix}\begin{bmatrix}x\\y\end{bmatrix}${% endraw %}
+- 圖形經線性變換後，$新圖面積=\left|\det A\right|\cdot 原圖面積$
+- 常見的線性變換：
+  - 伸縮矩陣：{% raw %}$\begin{bmatrix}h&0\\ 0&k\end{bmatrix}${% endraw %}（$x$ 伸縮 $h$ 倍、$y$ 伸縮 $k$ 倍）
+  - 旋轉矩陣：{% raw %}$\begin{bmatrix}\cos\theta&-\sin\theta\\ \sin\theta&\cos\theta\end{bmatrix}${% endraw %}
+  - 鏡射矩陣：{% raw %}$\begin{bmatrix}\cos2\theta&\sin2\theta\\ \sin2\theta&-\cos2\theta\end{bmatrix}${% endraw %}
+  - 水平推移矩陣：{% raw %}$\begin{bmatrix}1&h\\ 0&1\end{bmatrix}${% endraw %}（沿 $x$ 軸方向推移 $y$ 的 $h$ 倍）
+  - 鉛直推移矩陣：{% raw %}$\begin{bmatrix}1&0\\ k&1\end{bmatrix}${% endraw %}（沿 $y$ 軸方向推移 $x$ 的 $k$ 倍）
