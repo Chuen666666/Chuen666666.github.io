@@ -115,7 +115,7 @@ excerpt: 整理所出學測數 A 範圍（高一 + 高二）的所有公式和�
 ### 等比
 - 等比數列（G.P.）：$a\_n=a\_m\times r^{n-m}$
 - 等比中項：$b=\pm\sqrt{ac}$
-- 等比級數：$S\_n=\begin{cases}n\times a\_1&\text{ if }r=1\\\frac{a\_1(1-r^n)}{1-r}&\text{ if }r\ne1\end{cases}$
+- 等比級數：$S\_n=\begin{cases}n\times a\_1&\text{, if }r=1\\ \frac{a\_1(1-r^n)}{1-r}&\text{, if }r\ne1\end{cases}$
 
 ### 本利和
 本金為 $x$、期利率為 $r\%$，求第 $n$ 期本利和
@@ -159,7 +159,7 @@ excerpt: 整理所出學測數 A 範圍（高一 + 高二）的所有公式和�
 - 從 $n$ 個完全相異物中，不重複的取 $r$ 個（$r \le n$），且不計排列次序，則有 $C\_r^n=\frac{P\_r^n}{r!}$ 種方法
 - $C\_r^n=C\_{n-r}^n$
 - 巴斯卡定理：$n$ 個相異物中取 $r$ 個，若討論物品 $a$ 是否被選 &rarr; 分為**有被選**和**沒被選**兩種情形討論，再相加
-- 分堆問題：$\frac{每堆分別處理後再相乘}{同堆數（因為會對調，要扣掉）!}$
+- 分堆問題：$\frac{每堆分別處理後再相乘}{同堆數!}$
 
 ### 二項式定理
 - $(x+y)^n=C\_0^nx^ny^0+C\_1^nx^{n-1}y^1+C\_2^nx^{n-2}y^2+\cdots+C\_n^nx^0y^n$
@@ -182,29 +182,29 @@ excerpt: 整理所出學測數 A 範圍（高一 + 高二）的所有公式和�
 
 ### 條件機率
 - 在 $A$ 事件下（$P(A)\ne0$），$B$ 發生的機率（條件機率）為 $P(B\mid A)=\frac{P\left(A \cap B\right)}{P(A)}=\frac{n\left(A \cap B\right)}{n(A)}$
-- $P\left(A \cap B\right)=P(A)\; P(B\mid A)$
-- $P\left(A \cap B \cap C\right)=P(A)\; P(B\mid A)\; P\left(C\mid A\cap B\right)$
+- $P\left(A \cap B\right)=P(A)\, P(B\mid A)$
+- $P\left(A \cap B \cap C\right)=P(A)\, P(B\mid A)\, P\left(C\mid A\cap B\right)$
 
 ### 獨立事件
 - $A$、$B$ 互不影響，即 $P\left(B\mid A\right)=P(B)$
-- 二獨立事件滿足 $P\left(A \cap B\right)=P(A)\;P(B)$
+- 二獨立事件滿足 $P\left(A \cap B\right)=P(A)\,P(B)$
 - 三獨立事件滿足
-  - $P\left(A \cap B\right)=P(A)\;P(B)$
-  - $P\left(B \cap C\right)=P(B)\;P(C)$
-  - $P\left(A \cap C\right)=P(A)\;P(C)$
-  - $P\left(A \cap B \cap C\right)=P(A)\;P(B)\;P(C)$
+  - $P\left(A \cap B\right)=P(A)\,P(B)$
+  - $P\left(B \cap C\right)=P(B)\,P(C)$
+  - $P\left(A \cap C\right)=P(A)\,P(C)$
+  - $P\left(A \cap B \cap C\right)=P(A)\,P(B)\,P(C)$
 
 ## 數據分析
 ### 集中趨勢
 - 算術平均數：$\mu=\frac1n\left(x\_1+x\_2+\cdots+x\_n\right)$
 - 加權平均數：$w=\frac{w\_1x\_1+w\_2x\_2+\cdots+w\_nx\_n}{w\_1+w\_2+\cdots+w\_n}$
-- 幾何平均數：$G=\sqrt[n]{x\_1x\_2\cdots x\_n}$
+- 幾何平均數：$G=\sqrt[n]{x\_1\,x\_2\,\cdots x\,\_n}$
 - 中位數：排列後，中間的數（偶數項則取中間兩數平均）
 - 眾數：出現最多次的數（可能不唯一）
 - 百分位：將 $n$ 個數據由小到大排為 $a\_1,a\_2,\cdots,a\_n$
   - 當 $m=n\times\frac{k}{100}$ 為整數，第 $k$ 百分位 $P\_k=\frac{a\_m+a\_{m+1}}{2}$
   - 當 $m=n\times\frac{k}{100}$ 不為整數，且 $l<n\times\frac{k}{100}<l+1$（$l$ 為整數），第 $k$ 百分位 $P\_k=a\_{l+1}$
-- 四分位數：$Q\_1=P\_{25}, Q\_2=P{50}, Q\_3=P\_{75}$
+- 四分位數：$Q\_1=P\_{25},\;Q\_2=P{50},\;Q\_3=P\_{75}$
 
 ### 分散趨勢
 - 全距：$R=\max-\min$
@@ -214,21 +214,21 @@ excerpt: 整理所出學測數 A 範圍（高一 + 高二）的所有公式和�
 ### 數據的伸縮平移
 設有 $n$ 個數據 $x\_1,x\_2,\cdots,x\_n$，其算數平均數為 $\mu\_x$，標準差為 $\sigma\_x$
 
-令 $y\_i=ax\_i+b\left(i=1,2,\cdots,n;a\ne0\right)$
+令 $y\_i=ax\_i+b\left(i=1,2,\cdots,n;\;a\ne0\right)$
 
 - $\mu\_y=a\mu\_x+b$（平均值一起變）
 - $\sigma\_y=\left|a\right|\times\sigma\_x$（標準差伸縮斜率倍）
 
 ### 標準化
 - $x\_i\prime=\frac{x\_i-\mu}{\sigma}$
-- $\mu\prime=0;\sigma\prime=1$
+- $\mu\prime=0;\;\sigma\prime=1$
 
 ## 二維數據分析
 ### 相關係數
-- $S_{xy}=(x_1-\mu_x)(y_1-\mu_y)+(x_2-\mu_x)(y_2-\mu_y)+\cdots+(x_n-\mu_x)(y_n-\mu_y)$
-- $S_{xx}=(x_1-\mu_x)^2+(x_2-\mu_x)^2+\cdots+(x_n-\mu_x)^2$
-- $S_{yy}=(y_1-\mu_y)^2+(y_2-\mu_y)^2+\cdots+(y_n-\mu_y)^2$
-- 相關係數：$r=\frac{x_1\prime y_1\prime+x_2\prime y_2\prime+\cdots+x_n\prime y_n\prime}{n}=\frac{S_{xy}}{\sqrt{S_{xx}}\sqrt{S_{yy}}}$（內積）
+- $S\_{xy}=(x\_1-\mu\_x)(y\_1-\mu\_y)+(x\_2-\mu\_x)(y\_2-\mu\_y)+\cdots+(x\_n-\mu\_x)(y\_n-\mu\_y)$
+- $S\_{xx}=(x\_1-\mu\_x)^2+(x\_2-\mu\_x)^2+\cdots+(x\_n-\mu\_x)^2$
+- $S_{yy}=(y\_1-\mu\_y)^2+(y\_2-\mu\_y)^2+\cdots+(y\_n-\mu\_y)^2$
+- 相關係數：$r=\frac{x\_1\prime y\_1\prime+x\_2\prime y\_2\prime+\cdots+x\_n\prime y\_n\prime}{n}=\frac{S\_{xy}}{\sqrt{S\_{xx}}\sqrt{S\_{yy}}}$（內積）
 - 零相關：資料排列呈水平線、鉛直線、對稱，$r=0$
 - 兩組數據伸縮平移：只影響 $r$ 的正負號（係數同號則不變、異號則加負號）
 
@@ -266,7 +266,7 @@ excerpt: 整理所出學測數 A 範圍（高一 + 高二）的所有公式和�
 
 ## 三角比
 ### 三角函數值
-- $\sin\theta=\frac{對}{斜},\cos\theta=\frac{鄰}{斜},\tan\theta=\frac{對}{鄰}$（口訣：**對斜鄰斜對鄰**）
+- $\sin\theta=\frac{對}{斜},\;\cos\theta=\frac{鄰}{斜},\;\tan\theta=\frac{對}{鄰}$（口訣：**對斜鄰斜對鄰**）
 - 求常見三角比：分母都是 $2$，分子為 $1,\sqrt2,\sqrt3$，畫單位圓看大小（單位圓上任一點 $P=(\cos\theta,\sin\theta)$）
 
 ### 基本關係式
@@ -335,11 +335,13 @@ excerpt: 整理所出學測數 A 範圍（高一 + 高二）的所有公式和�
 - $y=a\sin x+b\cos x=\sqrt{a^2+b^2}\sin(x+\theta)$（其中 $\cos\theta=\frac{a}{\sqrt{a^2+b^2}}$、$\sin\theta=\frac{b}{\sqrt{a^2+b^2}}$）
 
   {% fold info @ 完整推導過程 %}
+  {% raw %}
   $$
   y=a\sin x+b\cos x\\
   =\sqrt{a^2+b^2}(\sin x\cos\theta+\cos x\sin\theta)\\
   =\sqrt{a^2+b^2}\sin(x+\theta)
   $$
+  {% endraw %}
   {% endfold %}
 
 - 最值：不限 $x$ 範圍時，$y$ 的最值為 $\pm\sqrt{a^2+b^2}$
@@ -384,11 +386,11 @@ excerpt: 整理所出學測數 A 範圍（高一 + 高二）的所有公式和�
 
 ### 柯西不等式
 - 不等式 $\left|\vec a\right|\left|\vec b\right|\ge\left|\vec a\cdot\vec b\right|$ 恆成立，且等號成立於 $\vec a\parallel\vec b\Leftrightarrow\vec a=t\vec b\;(t\in\mathbb R)$
-- 設 $a\_1,a\_2,b\_1,b\_2\in\mathbb R$，不等式 $(a\_1^2+a\_2^2)(b\_1^2+b\_2^2)\ge(a\_1b\_1+a\_2b\_2)^2$ 恆成立，且等號成立於 $a\_1=tb\_1,a\_2=tb\_2\;(t\in\mathbb R)$（方和積 &ge; 積和方）
+- 不等式 $(a\_1^2+a\_2^2)(b\_1^2+b\_2^2)\ge(a\_1b\_1+a\_2b\_2)^2$ 恆成立，且等號成立於 $a\_1=tb\_1,a\_2=tb\_2\;(t\in\mathbb R)$（**方和積 &ge; 積和方**）
 
 ### 二階行列式
-- $\begin{vmatrix}a&b \\ c&d \\ \end{vmatrix}=ad-bc$
-- 由 $\vec{AB}=(p,q),\;\vec{AC}=(r,s)$ 決定的三角形面積 $[\triangle ABC]=\frac12\sqrt{\left|\vec{AB}\right|^2\left|\vec{AC}\right|^2-\left(\vec{AB}\cdot\vec{AC}\right)^2}=\frac12\begin{vmatrix}p&q \\ r&s \\ \end{vmatrix}$
+- {% raw %}$\begin{vmatrix}a&b \\ c&d \\ \end{vmatrix}=ad-bc${% endraw %}
+- 由 $\vec{AB}=(p,q),\;\vec{AC}=(r,s)$ 決定的三角形面積 {% raw %}$[\triangle ABC]=\frac12\sqrt{\left|\vec{AB}\right|^2\left|\vec{AC}\right|^2-\left(\vec{AB}\cdot\vec{AC}\right)^2}=\frac12\begin{vmatrix}p&q \\ r&s \\ \end{vmatrix}${% endraw %}
 
 ### 行列式性質
 - 行列對調，值不變
@@ -399,9 +401,9 @@ excerpt: 整理所出學測數 A 範圍（高一 + 高二）的所有公式和�
 - 某行（列）乘 $k$ 倍加到另一行（列），值不變
 
 ### 克拉瑪公式
-給定 $\begin{cases}ax+by=p \\ cx+dy=q\end{cases}$
+給定 {% raw %}$\begin{cases}ax+by=p \\ cx+dy=q\end{cases}${% endraw %}
 
-令 $\Delta=\begin{vmatrix} a&b \\ c&d \\ \end{vmatrix},\;\Delta\_x=\begin{vmatrix} p&b \\ q&d \\ \end{vmatrix},\;\Delta\_y=\begin{vmatrix} a&p \\ c&q \\ \end{vmatrix}$
+令 {% raw %}$\Delta=\begin{vmatrix} a&b \\ c&d \\ \end{vmatrix},\;\Delta\_x=\begin{vmatrix} p&b \\ q&d \\ \end{vmatrix},\;\Delta\_y=\begin{vmatrix} a&p \\ c&q \\ \end{vmatrix}${% endraw %}
 
 - $\Delta\ne0$：恰一解，$x=\frac{\Delta\_x}{\Delta},\;y=\frac{\Delta\_y}{\Delta}$
 - $\Delta=\Delta\_x=\Delta\_y=0$：無限解
@@ -441,10 +443,10 @@ excerpt: 整理所出學測數 A 範圍（高一 + 高二）的所有公式和�
 
 ### 柯西不等式
 - $\left|\vec a\right|\left|\vec b\right|\ge\left|\vec a\cdot\vec b\right|$，等號成立於 $\vec a\parallel\vec b$
-- 推廣方式同二維（方和積 &ge; 積和方）
+- 推廣方式同二維（**方和積 &ge; 積和方**）
 
 ### 外積
-- $\vec c=\vec a\times\vec b=\left(\begin{vmatrix}a\_2&a\_3\\ b\_2&b\_3\\ \end{vmatrix},\begin{vmatrix}a\_3&a\_1\\ b\_3&b\_1\\ \end{vmatrix},\begin{vmatrix}a\_1&a\_2\\ b\_1&b\_2\\ \end{vmatrix}\right)$（抄兩次，去頭尾，行列式）
+- {% raw %}$\vec c=\vec a\times\vec b=\left(\begin{vmatrix}a\_2&a\_3\\ b\_2&b\_3\\ \end{vmatrix},\begin{vmatrix}a\_3&a\_1\\ b\_3&b\_1\\ \end{vmatrix},\begin{vmatrix}a\_1&a\_2\\ b\_1&b\_2\\ \end{vmatrix}\right)${% endraw %}（抄兩次，去頭尾，行列式）
 - $\vec c$ 為 $\vec a$ 與 $\vec b$ 的公垂向量
 - 性質
   - $\vec a\times\vec b=-\left(\vec b\times\vec a\right)$
@@ -456,7 +458,7 @@ excerpt: 整理所出學測數 A 範圍（高一 + 高二）的所有公式和�
 - 平行四邊形 $[\text{▱}ABCD]=\left|\vec{AB}\right|\left|\vec{AC}\right|\sin\theta=\left|\vec{AB}\times\vec{AC}\right|$
 
 ### 三階行列式
-- $\begin{vmatrix}a&b&c\\ d&e&f\\ g&h&i\end{vmatrix}=(aei+bfg+cdh)-(ceg+bdi+afh)$ （左上右下 - 右上左下）
+- {% raw %}$\begin{vmatrix}a&b&c\\ d&e&f\\ g&h&i\end{vmatrix}=(aei+bfg+cdh)-(ceg+bdi+afh)${% endraw %} （左上右下 - 右上左下）
 - 性質與二階相同
 - 降階：
 
@@ -472,7 +474,7 @@ excerpt: 整理所出學測數 A 範圍（高一 + 高二）的所有公式和�
   {% endraw %}
 
 ### 空間體積公式
-- 平行六面體 $V=\left|\left(\vec a\times\vec b\right)\cdot\vec c\right|=\begin{vmatrix}a\_1&a\_2&a\_3\\ b\_1&b\_2&b\_3\\ c\_1&c\_2&c\_3\end{vmatrix}$
+- 平行六面體 {% raw %}$V=\left|\left(\vec a\times\vec b\right)\cdot\vec c\right|=\begin{vmatrix}a\_1&a\_2&a\_3\\ b\_1&b\_2&b\_3\\ c\_1&c\_2&c\_3\end{vmatrix}${% endraw %}
 - 四面體 $V\prime=\frac16V$
 - $\vec a,\vec b,\vec c\text{ 共平面}\Leftrightarrow V=0$
 
@@ -502,7 +504,7 @@ excerpt: 整理所出學測數 A 範圍（高一 + 高二）的所有公式和�
   - 任二列可互換，值不變
   - 某列乘 $t$ 倍加到另一列，值不變
   - 某列乘非 0 的數，值不變
-- 高斯消去法：用列運算將增廣矩陣整理成 $\left[\begin{array}{ccc|c}a\_1&b\_1&c\_1&d\_1 \\ 0&a\_2&b\_2&c\_2 \\ 0&0&c\_3&d\_3\end{array}\right]$
+- 高斯消去法：用列運算將增廣矩陣整理成 {% raw %}$\left[\begin{array}{ccc|c}a\_1&b\_1&c\_1&d\_1 \\ 0&a\_2&b\_2&c\_2 \\ 0&0&c\_3&d\_3\end{array}\right]${% endraw %}
 
 ### 矩陣運算
 設矩陣 $A,B,C$ 為同階矩陣，$r\in\mathbb R$
@@ -513,12 +515,4 @@ excerpt: 整理所出學測數 A 範圍（高一 + 高二）的所有公式和�
 - 若 $A$ 為 $n$ 階方陣，則 $\det(rA)=r^n\det(A)$（$\det(A)$ 表示 $A$ 的行列式值）
 
 ### 矩陣乘法
-
-{% raw %}
-$$
-\renewcommand{\arraystretch}{1.2}
-\left[\begin{array}{cc} a & b \\ \hline c & d \end{array}\right]
-\left[\begin{array}{c|c} p & q \\ r & s \end{array}\right]
-= \begin{bmatrix} ap+br & aq+bs \\ cp+dr & cq+ds \end{bmatrix}
-$$
-{% endraw %}
+- {% raw %}$\renewcommand{\arraystretch}{1.2}\left[\begin{array}{cc} a & b \\ \hline c & d \end{array}\right]\left[\begin{array}{c|c} p & q \\ r & s \end{array}\right]= \begin{bmatrix} ap+br & aq+bs \\ cp+dr & cq+ds \end{bmatrix}${% endraw %}
