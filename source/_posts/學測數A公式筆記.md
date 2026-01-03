@@ -332,20 +332,7 @@ excerpt: 整理所出學測數 A 範圍（高一 + 高二）的所有公式和�
 - $\tan\frac\theta2=\pm\sqrt{\frac{1-\cos\theta}{1+\cos\theta}}$
 
 ### 疊合
-- $y=a\sin x+b\cos x=\sqrt{a^2+b^2}\sin(x+\theta)$（其中 $\cos\theta=\frac{a}{\sqrt{a^2+b^2}}$、$\sin\theta=\frac{b}{\sqrt{a^2+b^2}}$）
-
-  {% fold info @ 完整推導過程 %}
-  {% raw %}
-  $$
-  \begin{aligned}
-  y &= a\sin x + b\cos x \\
-  &= \sqrt{a^2+b^2}(\sin x\cos\theta + \cos x\sin\theta) \\
-  &= \sqrt{a^2+b^2}\sin(x+\theta)
-  \end{aligned}
-  $$
-  {% endraw %}
-  {% endfold %}
-
+- $y=a\sin x+b\cos x=\sqrt{a^2+b^2}\,(\sin x\cos\theta+\cos x\sin\theta)=\sqrt{a^2+b^2}\sin(x+\theta)$（其中 $\cos\theta=\frac{a}{\sqrt{a^2+b^2}},\;\sin\theta=\frac{b}{\sqrt{a^2+b^2}}$）
 - 最值：不限 $x$ 範圍時，$y$ 的最值為 $\pm\sqrt{a^2+b^2}$
 
 ## 平面向量
