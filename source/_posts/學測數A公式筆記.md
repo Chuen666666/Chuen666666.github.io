@@ -27,10 +27,10 @@ excerpt: 整理所出學測數 A 範圍（高一 + 高二）的所有公式和�
 - $\sqrt{a+b-2\sqrt{ab}}=\left|\sqrt a-\sqrt b\right|$
 
 ### 乘法公式
-- $(a+b)^3=a^3+3a^2b+3ab^2+b^3=a^3+b^3+3ab(a+b)$
-- $(a-b)^3=a^3-3a^2b+3ab^2-b^3=a^3-b^3-3ab(a-b)$
-- $a^3+b^3=(a+b)(a^2-ab+b^2)=(a+b)^3-3ab(a+b)$
-- $a^3-b^3=(a-b)(a^2+ab+b^2)=(a-b)^3+3ab(a-b)$
+- $(a+b)^3=a^3+3a^2b+3ab^2+b^3=a^3+b^3+3ab\,(a+b)$
+- $(a-b)^3=a^3-3a^2b+3ab^2-b^3=a^3-b^3-3ab\,(a-b)$
+- $a^3+b^3=(a+b)(a^2-ab+b^2)=(a+b)^3-3ab\,(a+b)$
+- $a^3-b^3=(a-b)(a^2+ab+b^2)=(a-b)^3+3ab\,(a-b)$
 
 ### 分點公式
 - $P=\frac{na+mb}{m+n}$
@@ -475,3 +475,50 @@ excerpt: 整理所出學測數 A 範圍（高一 + 高二）的所有公式和�
 - 平行六面體 $V=\left|\left(\vec a\times\vec b\right)\cdot\vec c\right|=\begin{vmatrix}a\_1&a\_2&a\_3\\b\_1&b\_2&b\_3\\c\_1&c\_2&c\_3\end{vmatrix}$
 - 四面體 $V\prime=\frac16V$
 - $\vec a,\vec b,\vec c\text{ 共平面}\Leftrightarrow V=0$
+
+## 空間中的平面與直線
+### 平面
+- 一般式：$a(x-x\_0)+b(y-y\_0)+c(z-z\_0)=0\Rightarrow ax+by+cz=d$，其中 $\vec n=(a,b,c)$
+- 截距式：若 $x,y,z$ 截距分別為 $a,b,c$，則 $E:\;\frac xa+\frac yb+\frac zc=1$，其中 $\vec n=\left(\frac1a,\frac1b,\frac1c\right)$；平面與三軸圍成的四面體 $[OABC]=\frac16\left|abc\right|$
+
+### 兩平面夾角
+- 求出兩平面法向量 $\vec n\_1,\vec n\_2$，再用 $\cos\theta=\frac{\vec n\_1\cdot\vec n\_2}{\left|\vec n\_1\right|\left|\vec n\_2\right|},\;\cos(180^\circ-\theta)=-\cos\theta$
+
+### 距離
+- 點到平面：$d(A,E)=\frac{\left|點代入\right|}{法長度}$
+- 兩平行面：$d(E\_1,E\_2)=\frac{\left|常數差\right|}{法長度}$
+
+### 空間中的直線
+- 比例式（對稱比例式）：若 $L$ 過點 $A(x\_0,y\_0,z\_0)$，方向向量 $\vec v=(l,m,n)$
+  - 若 $lmn\ne0,\;L:\;\frac{x-x\_0}{l}=\frac{y-y\_0}{m}=\frac{z-z\_0}{n}$
+  - 若 $\vec v$ 分量有 0，如 $\vec v=(l,m,0),\;L:\;\frac{x-x\_0}{l}=\frac{y-y\_0}{m},\,y=y\_0$
+- 參數式：$L:\;\begin{cases}x=x_0+lt\\y=y_0+mt\\z=z_0+nt\end{cases}\;,t\in\mathbb R$
+- 兩面式：若兩平面相交於 $L,\;L:\;\begin{cases}a\_1x+b\_1y+c\_1z=d\_1 \\ a\_2x+b\_2y+c\_2z=d\_2\end{cases}$
+
+## 矩陣
+### 高斯消去法
+- 增廣矩陣：解聯立時，提出所有係數，放到矩陣中（常數項在等號右側）
+- 矩陣列運算
+  - 任二列可互換，值不變
+  - 某列乘 $t$ 倍加到另一列，值不變
+  - 某列乘非 0 的數，值不變
+- 高斯消去法：用列運算將增廣矩陣整理成 $\left[\begin{array}{ccc|c}a\_1&b\_1&c\_1&d\_1\\0&a\_2&b\_2&c\_2\\0&0&c\_3&d\_3\end{array}\right]$
+
+### 矩陣運算
+設矩陣 $A,B,C$ 為同階矩陣，$r\in\mathbb R$
+
+- $A+B=B+A$
+- $(A+B)+C=A+(B+C)$
+- $r(A+B)=rA+rB$
+- 若 $A$ 為 $n$ 階方陣，則 $\det(rA)=r^n\det(A)$（$\det(A)$ 表示 $A$ 的行列式值）
+
+### 矩陣乘法
+
+{% raw %}
+$$
+\renewcommand{\arraystretch}{1.2}
+\left[\begin{array}{cc} a & b \\ \hline c & d \end{array}\right]
+\left[\begin{array}{c|c} p & q \\ r & s \end{array}\right]
+= \begin{bmatrix} ap+br & aq+bs \\ cp+dr & cq+ds \end{bmatrix}
+$$
+{% endraw %}
