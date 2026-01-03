@@ -45,7 +45,7 @@ excerpt: 整理所出學測數 A 範圍（高一 + 高二）的所有公式和�
 
 ## 多項式
 ### 除法原理
-- $\frac{f(x)}{g(x)}=q(x)\cdots r(x) \Rightarrow f(x)=g(x)\;q(x)+r(x)$
+- $\frac{f(x)}{g(x)}=q(x)\cdots r(x) \implies f(x)=g(x)\;q(x)+r(x)$
 
 ### 綜合除法
 - 做一次 &rArr; 得商式和餘式
@@ -237,11 +237,11 @@ excerpt: 整理所出學測數 A 範圍（高一 + 高二）的所有公式和�
 - 迴歸直線 VS 未標準化數據
   - $L$ 必過 $(\mu\_x,\mu\_y)$
   - $m=r\times\frac{\sigma\_y}{\sigma\_x}=\frac{S\_{xy}}{S\_{xx}}$
-  - $\Rightarrow L:\;y-\mu\_y=m(x-\mu\_x)$
+  - $\implies L:\;y-\mu\_y=m(x-\mu\_x)$
 - 迴歸直線 VS 已標準化數據
   - $L$ 必過 $(0,0)$
   - $m'=r$
-  - $\Rightarrow L:\;y'=rx'$
+  - $\implies L:\;y'=rx'$
 
 ## 指數與對數
 ### 指數律
@@ -354,13 +354,13 @@ excerpt: 整理所出學測數 A 範圍（高一 + 高二）的所有公式和�
 - $\vec{OG}=\frac13(\vec{OA}+\vec{OB}+\vec{OC})$，其中 $O$ 為任意點
 
 ### 內積
-- $\vec a\cdot\vec b=\left|\vec a\right|\left|\vec b\right|\cos\theta=a\_1b\_1+a\_2b\_2$
+- $\vec a\cdot\vec b=\left|\vec a\right|\left|\vec b\right|\cos\theta=a\_1\,b\_1+a\_2\,b\_2$
 - 性質：
   - $\vec a\cdot\vec a=\left|\vec a\right|^2$
   - 交換律：$\vec a\cdot\vec b=\vec b\cdot\vec a$
   - 分配律：$\vec a\cdot(\vec b+\vec c)=\vec a\cdot\vec b+\vec a\cdot\vec c$
   - 乘法公式：
-    - $\left|\vec a+\vec b\right|^2=\left|\vec a\right|^2+2\vec a\cdot\vec b+\left|\vec b\right|^2$
+    - $\left|\vec a+\vec b\right|^2=\left|\vec a\right|^2+2\,\vec a\cdot\vec b+\left|\vec b\right|^2$
     - $(\vec a+\vec b)\cdot(\vec a-\vec b)=\left|\vec a\right|^2-\left|\vec b\right|^2$
 
 ### 內積的應用
@@ -369,12 +369,12 @@ excerpt: 整理所出學測數 A 範圍（高一 + 高二）的所有公式和�
 - 求兩線夾角：$\cos\theta=\frac{\vec n\_1\cdot\vec n\_2}{\left|\vec n\_1\right|\left|\vec n\_2\right|},\;\cos(180^\circ-\theta)=-\cos\theta$
 
 ### 正射影
-- $\vec{OB}$ 在 $\vec{OA}$ 上的正射影 $\vec{OC}=\left(\frac{\vec{OA}\cdot\vec{OB}}{\left|\vec{OA}\right|^2}\right)\vec{OA}$
-- $\vec{OB}$ 在 $\vec{OA}$ 上的正射影長 $\overline{OC}=\frac{\left|\vec{OA}\cdot\vec{OB}\right|}{\left|\vec{OA}\right|}$
+- $\vec b$ 在 $\vec a$ 上的正射影 $\vec c=\left(\frac{\vec a\cdot\vec b}{\left|\vec a\right|^2}\right)\vec a$
+- $\vec b$ 在 $\vec a$ 上的正射影長 $\left|\vec c\right|=\frac{\left|\vec a\cdot\vec b\right|}{\left|\vec a\right|}$
 
 ### 柯西不等式
 - 不等式 $\left|\vec a\right|\left|\vec b\right|\ge\left|\vec a\cdot\vec b\right|$ 恆成立，且等號成立於 $\vec a\parallel\vec b\iff\vec a=t\vec b\;(t\in\mathbb R)$
-- 不等式 $(a\_1^2+a\_2^2)(b\_1^2+b\_2^2)\ge(a\_1b\_1+a\_2b\_2)^2$ 恆成立，且等號成立於 $a\_1=tb\_1,a\_2=tb\_2\;(t\in\mathbb R)$（**方和積 &ge; 積和方**）
+- 不等式 $(a\_1^2+a\_2^2)(b\_1^2+b\_2^2)\ge(a\_1\,b\_1+a\_2\,b\_2)^2$ 恆成立，且等號成立於 $a\_1=t\,b\_1,a\_2=t\,b\_2\;(t\in\mathbb R)$（**方和積 &ge; 積和方**）
 
 ### 二階行列式
 - {% raw %}$\begin{vmatrix}a&b \\ c&d \\ \end{vmatrix}=ad-bc${% endraw %}
@@ -385,17 +385,17 @@ excerpt: 整理所出學測數 A 範圍（高一 + 高二）的所有公式和�
 - 兩行（列）對調，差負號
 - 某行（列）可提出 $k$ 倍
 - 某行（列）可分開
-- 某行（列）成比例，其值為 0
+- 某行（列）成比例，其值為 $0$
 - 某行（列）乘 $k$ 倍加到另一行（列），值不變
 
 ### 克拉瑪公式
 給定 {% raw %}$\begin{cases}ax+by=p \\ cx+dy=q\end{cases}${% endraw %}
 
-令 {% raw %}$\Delta=\begin{vmatrix} a&b \\ c&d \\ \end{vmatrix},\;\Delta\x=\begin{vmatrix} p&b \\ q&d \\ \end{vmatrix},\;\Delta\y=\begin{vmatrix} a&p \\ c&q \\ \end{vmatrix}${% endraw %}
+令 {% raw %}$\Delta=\begin{vmatrix} a&b \\ c&d \\ \end{vmatrix},\;\Delta_x=\begin{vmatrix} p&b \\ q&d \\ \end{vmatrix},\;\Delta_y=\begin{vmatrix} a&p \\ c&q \\ \end{vmatrix}${% endraw %}
 
-- $\Delta\ne0$：恰一解，$x=\frac{\Delta\_x}{\Delta},\;y=\frac{\Delta\_y}{\Delta}$
-- $\Delta=\Delta\_x=\Delta\_y=0$：無限解
-- $\Delta=0$ 且 $\Delta\_x,\Delta\_y$ 有一不為 0：無解
+- 恰一解：$\Delta\ne0,\;x=\frac{\Delta\_x}{\Delta},\;y=\frac{\Delta\_y}{\Delta}$
+- 無限解：$\Delta=\Delta\_x=\Delta\_y=0$
+- 無解：$\Delta=0$ 且 $\Delta\_x,\Delta\_y$ 有一不為 $0$
 
 ## 空間向量
 ### 二面角
@@ -413,7 +413,7 @@ excerpt: 整理所出學測數 A 範圍（高一 + 高二）的所有公式和�
 {% endraw %}
 
 ### 空間向量
-- $\left|\vec{AC}\right|=\sqrt{\Delta\_x^2+\Delta\_y^2+\Delta\_z^2}$
+- $\left|\vec{AB}\right|=\sqrt{\Delta\_x^2+\Delta\_y^2+\Delta\_z^2}$
 
 ### 分點公式
 - $\vec{OP}=\frac{n\vec{OA}+m\vec{OB}}{m+n}$（其中 $O$ 為任意點）
@@ -424,7 +424,7 @@ excerpt: 整理所出學測數 A 範圍（高一 + 高二）的所有公式和�
 {% endraw %}
 
 ### 空間向量的內積
-- $\vec a\cdot\vec b=\left|\vec a\right|\left|\vec b\right|\cos\theta=a\_1b\_1+a\_2b\_2+a\_3b\_3$
+- $\vec a\cdot\vec b=\left|\vec a\right|\left|\vec b\right|\cos\theta=a\_1\,b\_1+a\_2\,b\_2+a\_3\,b\_3$
 - $\vec a\perp\vec b\iff\vec a\cdot\vec b=0$
 - 特性皆與二維向量相同
 - 正射影與二維向量相同
@@ -468,7 +468,7 @@ excerpt: 整理所出學測數 A 範圍（高一 + 高二）的所有公式和�
 
 ## 空間中的平面與直線
 ### 平面
-- 一般式：$a(x-x\_0)+b(y-y\_0)+c(z-z\_0)=0\Rightarrow ax+by+cz=d$，其中 $\vec n=(a,b,c)$
+- 一般式：$a\,(x-x\_0)+b\,(y-y\_0)+c\,(z-z\_0)=0\implies ax+by+cz=d$，其中 $\vec n=(a,b,c)$
 - 截距式：若 $x,y,z$ 截距分別為 $a,b,c$，則 $E:\;\frac xa+\frac yb+\frac zc=1$，其中 $\vec n=\left(\frac1a,\frac1b,\frac1c\right)$；平面與三軸圍成的四面體 $[OABC]=\frac16\left|abc\right|$
 
 ### 兩平面夾角
@@ -481,9 +481,9 @@ excerpt: 整理所出學測數 A 範圍（高一 + 高二）的所有公式和�
 ### 空間中的直線
 - 比例式（對稱比例式）：若 $L$ 過點 $A(x\_0,y\_0,z\_0)$，方向向量 $\vec v=(l,m,n)$
   - 若 $lmn\ne0,\;L:\;\frac{x-x\_0}{l}=\frac{y-y\_0}{m}=\frac{z-z\_0}{n}$
-  - 若 $\vec v$ 分量有 0，如 $\vec v=(l,m,0),\;L:\;\frac{x-x\_0}{l}=\frac{y-y\_0}{m},\,y=y\_0$
-- 參數式：$L:\;\begin{cases}x=x_0+lt\\ y=y_0+mt\\ z=z_0+nt\end{cases}\;,t\in\mathbb R$
-- 兩面式：若兩平面相交於 $L,\;L:\;\begin{cases}a\_1x+b\_1y+c\_1z=d\_1 \\ a\_2x+b\_2y+c\_2z=d\_2\end{cases}$
+  - 若 $\vec v$ 分量有 $0$，如 $\vec v=(l,m,0),\;L:\;\frac{x-x\_0}{l}=\frac{y-y\_0}{m},\,y=y\_0$
+- 參數式：{% raw %}$L:\;\begin{cases}x=x_0+lt\\ y=y_0+mt\\ z=z_0+nt\end{cases}\;,t\in\mathbb R${% endraw %}
+- 兩面式：若兩平面相交於 {% raw %}$L,\;L:\;\begin{cases}a_1\,x+b_1\,y+c_1\,z=d_1\\ a_2\,x+b_2\,y+c_2\,z=d_2\end{cases}${% endraw %}
 
 ## 矩陣
 ### 高斯消去法
@@ -491,7 +491,7 @@ excerpt: 整理所出學測數 A 範圍（高一 + 高二）的所有公式和�
 - 矩陣列運算
   - 任二列可互換，值不變
   - 某列乘 $t$ 倍加到另一列，值不變
-  - 某列乘非 0 的數，值不變
+  - 某列乘非 $0$ 的數，值不變
 - 高斯消去法：用列運算將增廣矩陣整理成 {% raw %}$\left[\begin{array}{ccc|c}a_1&b_1&c_1&d_1 \\ 0&a_2&b_2&c_2 \\ 0&0&c_3&d_3\end{array}\right]${% endraw %}
 
 ### 矩陣運算
@@ -504,7 +504,7 @@ excerpt: 整理所出學測數 A 範圍（高一 + 高二）的所有公式和�
 
 ### 矩陣乘法
 - {% raw %}$\renewcommand{\arraystretch}{1.2}\left[\begin{array}{cc} a & b \\ \hline c & d \end{array}\right]\left[\begin{array}{c|c} p & q \\ r & s \end{array}\right]= \begin{bmatrix} ap+br & aq+bs \\ cp+dr & cq+ds \end{bmatrix}${% endraw %}
-- 單位方陣 $I$：左上到右下對角線皆 1，其餘皆 0
+- 單位方陣 $I$：左上到右下對角線皆 $1$，其餘皆 $0$
 - 性質：
   - 結合律
     - $(AB)C=A(BC)$
@@ -516,12 +516,12 @@ excerpt: 整理所出學測數 A 範圍（高一 + 高二）的所有公式和�
 
 ### 反方陣
 - $AB=BA=I\_n\implies B=A^{-1},\;A=B^{-1}$
-- {% raw %}$A^{-1}=\frac{1}{\det A}\begin{bmatrix}d&-b\\ -c&a\end{bmatrix}\;(\text{if}\det A=0,\,A^{-1}\nexists)${% endraw %}
+- {% raw %}$A^{-1}=\frac{1}{\det A}\begin{bmatrix}d&-b\\ -c&a\end{bmatrix}\;(\text{if}\det A=0,\,A^{-1}\,\nexists)${% endraw %}
 
 ### 轉移矩陣
 - 條件：
   - 每個元都是非負實數
-  - 每行之和皆為 1
+  - 每行之和皆為 $1$
 - 性質：
   - 轉移矩陣相乘也是轉移矩陣（$AB,BA,A^2,B^2$ 都是轉移矩陣）
   - 求平均後仍是轉移矩陣（$\frac12(A+B),\frac12(A^2+B^2)$ 也是轉移矩陣）
