@@ -1,5 +1,5 @@
 ---
-title: 學測數A公式筆記
+title: 學測數 A 公式筆記
 categories:
   - 筆記
   - 數學
@@ -508,7 +508,7 @@ excerpt: 整理所出學測數 A 範圍（高一 + 高二）的所有公式和�
 - 性質：
   - 結合律
     - $(AB)C=A(BC)$
-    - $(rA)(sB)=rs(AB),\;(r,s\in\mathbb R)$
+    - $(rA)(sB)=rs(AB)\;(r,s\in\mathbb R)$
   - 分配律
     - $A(B+C)=AB+AC$
     - $(A+B)C=AC+BC$
