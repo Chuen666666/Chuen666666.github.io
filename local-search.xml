@@ -50,7 +50,7 @@
     
     <categories>
       
-      <category>筆記</category>
+      <category>筆記與教學</category>
       
       <category>數學</category>
       
@@ -59,7 +59,11 @@
     
     <tags>
       
+      <tag>筆記</tag>
+      
       <tag>數學</tag>
+      
+      <tag>教學</tag>
       
       <tag>微積分</tag>
       
