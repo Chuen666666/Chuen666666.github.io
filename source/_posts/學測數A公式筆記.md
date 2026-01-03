@@ -444,7 +444,7 @@ excerpt: 整理所出學測數 A 範圍（高一 + 高二）的所有公式和�
 - 推廣方式同二維（方和積 &ge; 積和方）
 
 ### 外積
-- $\vec c=\vec a\times\vec b=\left(\begin{vmatrix}a\_2&a\_3\\b\_2&b\_3\\\end{vmatrix},\begin{vmatrix}a\_3&a\_1\\b\_3&b\_1\\\end{vmatrix},\begin{vmatrix}a\_1&a\_2\\b\_1&b\_2\\\end{vmatrix}\right)$（抄兩次，去頭尾，行列式）
+- $\vec c=\vec a\times\vec b=\left(\begin{vmatrix}a\_2&a\_3\\ b\_2&b\_3\\ \end{vmatrix},\begin{vmatrix}a\_3&a\_1\\ b\_3&b\_1\\ \end{vmatrix},\begin{vmatrix}a\_1&a\_2\\ b\_1&b\_2\\ \end{vmatrix}\right)$（抄兩次，去頭尾，行列式）
 - $\vec c$ 為 $\vec a$ 與 $\vec b$ 的公垂向量
 - 性質
   - $\vec a\times\vec b=-\left(\vec b\times\vec a\right)$
@@ -456,7 +456,7 @@ excerpt: 整理所出學測數 A 範圍（高一 + 高二）的所有公式和�
 - 平行四邊形 $[\text{▱}ABCD]=\left|\vec{AB}\right|\left|\vec{AC}\right|\sin\theta=\left|\vec{AB}\times\vec{AC}\right|$
 
 ### 三階行列式
-- $\begin{vmatrix}a&b&c\\d&e&f\\g&h&i\end{vmatrix}=(aei+bfg+cdh)-(ceg+bdi+afh)$ （左上右下 - 右上左下）
+- $\begin{vmatrix}a&b&c\\ d&e&f\\ g&h&i\end{vmatrix}=(aei+bfg+cdh)-(ceg+bdi+afh)$ （左上右下 - 右上左下）
 - 性質與二階相同
 - 降階：
 
@@ -472,7 +472,7 @@ excerpt: 整理所出學測數 A 範圍（高一 + 高二）的所有公式和�
   {% endraw %}
 
 ### 空間體積公式
-- 平行六面體 $V=\left|\left(\vec a\times\vec b\right)\cdot\vec c\right|=\begin{vmatrix}a\_1&a\_2&a\_3\\b\_1&b\_2&b\_3\\c\_1&c\_2&c\_3\end{vmatrix}$
+- 平行六面體 $V=\left|\left(\vec a\times\vec b\right)\cdot\vec c\right|=\begin{vmatrix}a\_1&a\_2&a\_3\\ b\_1&b\_2&b\_3\\ c\_1&c\_2&c\_3\end{vmatrix}$
 - 四面體 $V\prime=\frac16V$
 - $\vec a,\vec b,\vec c\text{ 共平面}\Leftrightarrow V=0$
 
@@ -492,7 +492,7 @@ excerpt: 整理所出學測數 A 範圍（高一 + 高二）的所有公式和�
 - 比例式（對稱比例式）：若 $L$ 過點 $A(x\_0,y\_0,z\_0)$，方向向量 $\vec v=(l,m,n)$
   - 若 $lmn\ne0,\;L:\;\frac{x-x\_0}{l}=\frac{y-y\_0}{m}=\frac{z-z\_0}{n}$
   - 若 $\vec v$ 分量有 0，如 $\vec v=(l,m,0),\;L:\;\frac{x-x\_0}{l}=\frac{y-y\_0}{m},\,y=y\_0$
-- 參數式：$L:\;\begin{cases}x=x_0+lt\\y=y_0+mt\\z=z_0+nt\end{cases}\;,t\in\mathbb R$
+- 參數式：$L:\;\begin{cases}x=x_0+lt\\ y=y_0+mt\\ z=z_0+nt\end{cases}\;,t\in\mathbb R$
 - 兩面式：若兩平面相交於 $L,\;L:\;\begin{cases}a\_1x+b\_1y+c\_1z=d\_1 \\ a\_2x+b\_2y+c\_2z=d\_2\end{cases}$
 
 ## 矩陣
@@ -502,7 +502,7 @@ excerpt: 整理所出學測數 A 範圍（高一 + 高二）的所有公式和�
   - 任二列可互換，值不變
   - 某列乘 $t$ 倍加到另一列，值不變
   - 某列乘非 0 的數，值不變
-- 高斯消去法：用列運算將增廣矩陣整理成 $\left[\begin{array}{ccc|c}a\_1&b\_1&c\_1&d\_1\\0&a\_2&b\_2&c\_2\\0&0&c\_3&d\_3\end{array}\right]$
+- 高斯消去法：用列運算將增廣矩陣整理成 $\left[\begin{array}{ccc|c}a\_1&b\_1&c\_1&d\_1 \\ 0&a\_2&b\_2&c\_2 \\ 0&0&c\_3&d\_3\end{array}\right]$
 
 ### 矩陣運算
 設矩陣 $A,B,C$ 為同階矩陣，$r\in\mathbb R$
