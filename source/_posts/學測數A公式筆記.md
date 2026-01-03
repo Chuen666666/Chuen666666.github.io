@@ -255,12 +255,12 @@ excerpt: 整理所出學測數 A 範圍（高一 + 高二）的所有公式和�
   - $\left(\frac ab\right)^n=\frac{a^n}{b^n}$
 
 ### 常用對數
-- $10^t=k \Leftrightarrow \log\_{10}k=t$
+- $10^t=k \iff \log\_{10}k=t$
 - $10^{\log k}=10^t=k,\log 10^t=\log k=t$
 
 ### 對數律
 - $a>0,\;a\ne1,\;b>a$，則方程式 $a^x=b$ 有唯一實根 $x=\log\_ab$
-- $a^t=b \Leftrightarrow t=\log\_ab$
+- $a^t=b \iff t=\log\_ab$
 - $b=a^{\log\_ab}$
 - $b=\log\_aa^b$
 
@@ -337,9 +337,11 @@ excerpt: 整理所出學測數 A 範圍（高一 + 高二）的所有公式和�
   {% fold info @ 完整推導過程 %}
   {% raw %}
   $$
-  y=a\sin x+b\cos x\\
-  =\sqrt{a^2+b^2}(\sin x\cos\theta+\cos x\sin\theta)\\
-  =\sqrt{a^2+b^2}\sin(x+\theta)
+  \begin{aligned}
+  y &= a\sin x + b\cos x \\
+  &= \sqrt{a^2+b^2}(\sin x\cos\theta + \cos x\sin\theta) \\
+  &= \sqrt{a^2+b^2}\sin(x+\theta)
+  \end{aligned}
   $$
   {% endraw %}
   {% endfold %}
@@ -385,7 +387,7 @@ excerpt: 整理所出學測數 A 範圍（高一 + 高二）的所有公式和�
 - $\vec{OB}$ 在 $\vec{OA}$ 上的正射影長 $\overline{OC}=\frac{\left|\vec{OA}\cdot\vec{OB}\right|}{\left|\vec{OA}\right|}$
 
 ### 柯西不等式
-- 不等式 $\left|\vec a\right|\left|\vec b\right|\ge\left|\vec a\cdot\vec b\right|$ 恆成立，且等號成立於 $\vec a\parallel\vec b\Leftrightarrow\vec a=t\vec b\;(t\in\mathbb R)$
+- 不等式 $\left|\vec a\right|\left|\vec b\right|\ge\left|\vec a\cdot\vec b\right|$ 恆成立，且等號成立於 $\vec a\parallel\vec b\iff\vec a=t\vec b\;(t\in\mathbb R)$
 - 不等式 $(a\_1^2+a\_2^2)(b\_1^2+b\_2^2)\ge(a\_1b\_1+a\_2b\_2)^2$ 恆成立，且等號成立於 $a\_1=tb\_1,a\_2=tb\_2\;(t\in\mathbb R)$（**方和積 &ge; 積和方**）
 
 ### 二階行列式
@@ -403,7 +405,7 @@ excerpt: 整理所出學測數 A 範圍（高一 + 高二）的所有公式和�
 ### 克拉瑪公式
 給定 {% raw %}$\begin{cases}ax+by=p \\ cx+dy=q\end{cases}${% endraw %}
 
-令 {% raw %}$\Delta=\begin{vmatrix} a&b \\ c&d \\ \end{vmatrix},\;\Delta\_x=\begin{vmatrix} p&b \\ q&d \\ \end{vmatrix},\;\Delta\_y=\begin{vmatrix} a&p \\ c&q \\ \end{vmatrix}${% endraw %}
+令 {% raw %}$\Delta=\begin{vmatrix} a&b \\ c&d \\ \end{vmatrix},\;\Delta\x=\begin{vmatrix} p&b \\ q&d \\ \end{vmatrix},\;\Delta\y=\begin{vmatrix} a&p \\ c&q \\ \end{vmatrix}${% endraw %}
 
 - $\Delta\ne0$：恰一解，$x=\frac{\Delta\_x}{\Delta},\;y=\frac{\Delta\_y}{\Delta}$
 - $\Delta=\Delta\_x=\Delta\_y=0$：無限解
@@ -437,7 +439,7 @@ excerpt: 整理所出學測數 A 範圍（高一 + 高二）的所有公式和�
 
 ### 空間向量的內積
 - $\vec a\cdot\vec b=\left|\vec a\right|\left|\vec b\right|\cos\theta=a\_1b\_1+a\_2b\_2+a\_3b\_3$
-- $\vec a\perp\vec b\Leftrightarrow\vec a\cdot\vec b=0$
+- $\vec a\perp\vec b\iff\vec a\cdot\vec b=0$
 - 特性皆與二維向量相同
 - 正射影與二維向量相同
 
@@ -446,7 +448,7 @@ excerpt: 整理所出學測數 A 範圍（高一 + 高二）的所有公式和�
 - 推廣方式同二維（**方和積 &ge; 積和方**）
 
 ### 外積
-- {% raw %}$\vec c=\vec a\times\vec b=\left(\begin{vmatrix}a\_2&a\_3\\ b\_2&b\_3\\ \end{vmatrix},\begin{vmatrix}a\_3&a\_1\\ b\_3&b\_1\\ \end{vmatrix},\begin{vmatrix}a\_1&a\_2\\ b\_1&b\_2\\ \end{vmatrix}\right)${% endraw %}（抄兩次，去頭尾，行列式）
+- {% raw %}$\vec c=\vec a\times\vec b=\left(\begin{vmatrix}a_2&a_3\\ b_2&b_3\\ \end{vmatrix},\begin{vmatrix}a_3&a_1\\ b_3&b_1\\ \end{vmatrix},\begin{vmatrix}a_1&a_2\\ b_1&b_2\\ \end{vmatrix}\right)${% endraw %}（抄兩次，去頭尾，行列式）
 - $\vec c$ 為 $\vec a$ 與 $\vec b$ 的公垂向量
 - 性質：
   - $\vec a\times\vec b=-\left(\vec b\times\vec a\right)$
@@ -474,9 +476,9 @@ excerpt: 整理所出學測數 A 範圍（高一 + 高二）的所有公式和�
   {% endraw %}
 
 ### 空間體積公式
-- 平行六面體 {% raw %}$V=\left|\left(\vec a\times\vec b\right)\cdot\vec c\right|=\begin{vmatrix}a\_1&a\_2&a\_3\\ b\_1&b\_2&b\_3\\ c\_1&c\_2&c\_3\end{vmatrix}${% endraw %}
+- 平行六面體 {% raw %}$V=\left|\left(\vec a\times\vec b\right)\cdot\vec c\right|=\begin{vmatrix}a_1&a_2&a_3\\ b_1&b_2&b_3\\ c_1&c_2&c_3\end{vmatrix}${% endraw %}
 - 四面體 $V\prime=\frac16V$
-- $\vec a,\vec b,\vec c\text{ 共平面}\Leftrightarrow V=0$
+- $\vec a,\vec b,\vec c\text{ 共平面}\iff V=0$
 
 ## 空間中的平面與直線
 ### 平面
@@ -504,7 +506,7 @@ excerpt: 整理所出學測數 A 範圍（高一 + 高二）的所有公式和�
   - 任二列可互換，值不變
   - 某列乘 $t$ 倍加到另一列，值不變
   - 某列乘非 0 的數，值不變
-- 高斯消去法：用列運算將增廣矩陣整理成 {% raw %}$\left[\begin{array}{ccc|c}a\_1&b\_1&c\_1&d\_1 \\ 0&a\_2&b\_2&c\_2 \\ 0&0&c\_3&d\_3\end{array}\right]${% endraw %}
+- 高斯消去法：用列運算將增廣矩陣整理成 {% raw %}$\left[\begin{array}{ccc|c}a_1&b_1&c_1&d_1 \\ 0&a_2&b_2&c_2 \\ 0&0&c_3&d_3\end{array}\right]${% endraw %}
 
 ### 矩陣運算
 設矩陣 $A,B,C$ 為同階矩陣，$r\in\mathbb R$
@@ -527,3 +529,20 @@ excerpt: 整理所出學測數 A 範圍（高一 + 高二）的所有公式和�
   - 無交換律：$AB=BA$ 不一定成立
 
 ### 反方陣
+- $AB=BA=I\_n\implies B=A^{-1},\;A=B^{-1}$
+- {% raw %}$A^{-1}=\frac{1}{\det A}\begin{bmatrix}d&-b\\ -c&a\end{bmatrix}\;(\text{if}\det A=0,\,A^{-1}\nexists)${% endraw %}
+
+### 轉移矩陣
+- 條件：
+  - 每個元都是非負實數
+  - 每行之和皆為 1
+- 性質：
+  - 轉移矩陣相乘也是轉移矩陣（$AB,BA,A^2,B^2$ 都是轉移矩陣）
+  - 求平均後仍是轉移矩陣（$\frac12(A+B),\frac12(A^2+B^2)$ 也是轉移矩陣）
+  - 轉移矩陣相減可能產生負元，故不一定是轉移矩陣（$\frac12(3A-B),\frac12(4A^2-2B^2)$ 不一定是轉移矩陣）
+- 機率矩陣：{% raw %}$P=\begin{bmatrix}x_1\\ x_2\end{bmatrix}${% endraw %} 滿足
+  - $0\le x\_1,x\_2\le1$
+  - $x\_1+x\_2=1$
+- 馬可夫鏈：初始狀態機率為 $P\_0$，狀態轉移的機率寫成轉移矩陣 $M$，則 $P\_n=MP\_{n-1}$；若 $MP=P$，則此時稱 $P$ 為穩定狀態
+
+### 平面上的線性變換
