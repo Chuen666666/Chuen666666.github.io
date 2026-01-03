@@ -1,7 +1,7 @@
 ---
 title: 從零開始用 Python 寫 Discord 機器人 + 免費 24 小時在線教學
 categories:
-  - 教學
+  - 筆記與教學
   - 程式
 tags:
   - 程式
