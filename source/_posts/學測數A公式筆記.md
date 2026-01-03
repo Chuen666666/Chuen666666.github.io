@@ -367,7 +367,7 @@ excerpt: 整理所出學測數 A 範圍（高一 + 高二）的所有公式和�
 ### 內積
 - $\vec{OA}\cdot\vec{OB}=\left|\vec{OA}\right|\left|\vec{OB}\right|\cos\theta$
 - $\vec a\cdot\vec b=a\_1b\_1+a\_2b\_2$
-- 性質
+- 性質：
   - $\vec a\cdot\vec a=\left|\vec a\right|^2$
   - 交換律：$\vec a\cdot\vec b=\vec b\cdot\vec a$
   - 分配律：$\vec a\cdot(\vec b+\vec c)=\vec a\cdot\vec b+\vec a\cdot\vec c$
@@ -448,7 +448,7 @@ excerpt: 整理所出學測數 A 範圍（高一 + 高二）的所有公式和�
 ### 外積
 - {% raw %}$\vec c=\vec a\times\vec b=\left(\begin{vmatrix}a\_2&a\_3\\ b\_2&b\_3\\ \end{vmatrix},\begin{vmatrix}a\_3&a\_1\\ b\_3&b\_1\\ \end{vmatrix},\begin{vmatrix}a\_1&a\_2\\ b\_1&b\_2\\ \end{vmatrix}\right)${% endraw %}（抄兩次，去頭尾，行列式）
 - $\vec c$ 為 $\vec a$ 與 $\vec b$ 的公垂向量
-- 性質
+- 性質：
   - $\vec a\times\vec b=-\left(\vec b\times\vec a\right)$
   - 若 $\vec n\perp\vec a$ 且 $\vec n\perp\vec b$，則 $\vec n\parallel\left(\vec a\times\vec b\right)$
   - $\left|\vec a\times\vec b\right|=\left|\vec a\right|\left|\vec b\right|\sin\theta$
@@ -516,3 +516,14 @@ excerpt: 整理所出學測數 A 範圍（高一 + 高二）的所有公式和�
 
 ### 矩陣乘法
 - {% raw %}$\renewcommand{\arraystretch}{1.2}\left[\begin{array}{cc} a & b \\ \hline c & d \end{array}\right]\left[\begin{array}{c|c} p & q \\ r & s \end{array}\right]= \begin{bmatrix} ap+br & aq+bs \\ cp+dr & cq+ds \end{bmatrix}${% endraw %}
+- 單位方陣 $I$：左上到右下對角線皆 1，其餘皆 0
+- 性質：
+  - 結合律
+    - $(AB)C=A(BC)$
+    - $(rA)(sB)=rs(AB),\;(r,s\in\mathbb R)$
+  - 分配律
+    - $A(B+C)=AB+AC$
+    - $(A+B)C=AC+BC$
+  - 無交換律：$AB=BA$ 不一定成立
+
+### 反方陣
