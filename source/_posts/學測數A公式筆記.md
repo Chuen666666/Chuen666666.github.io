@@ -354,8 +354,7 @@ excerpt: 整理所出學測數 A 範圍（高一 + 高二）的所有公式和�
 - $\vec{OG}=\frac13(\vec{OA}+\vec{OB}+\vec{OC})$，其中 $O$ 為任意點
 
 ### 內積
-- $\vec{OA}\cdot\vec{OB}=\left|\vec{OA}\right|\left|\vec{OB}\right|\cos\theta$
-- $\vec a\cdot\vec b=a\_1b\_1+a\_2b\_2$
+- $\vec a\cdot\vec b=\left|\vec a\right|\left|\vec b\right|\cos\theta=a\_1b\_1+a\_2b\_2$
 - 性質：
   - $\vec a\cdot\vec a=\left|\vec a\right|^2$
   - 交換律：$\vec a\cdot\vec b=\vec b\cdot\vec a$
