@@ -11,7 +11,7 @@ tags:
   - 數 A
 math: true
 mermaid: false
-hide: true
+hide: false
 date: 2026-01-02 10:05:53
 excerpt: 整理所出學測數 A 範圍（高一 + 高二）的所有公式和做法說明，此為筆記，故部分概念不會太深入展開
 ---
