@@ -141,8 +141,8 @@ excerpt: 整理所出學測數 A 範圍（高一 + 高二）的所有公式和�
 - $\left(A \cap B\right)'=A'\cup B'$
 
 ### 取捨原理
-- $n\left( A\cup B\right)=n(A)+n(B)-n\left(A\cap B\right)$
-- $n\left(A \cup B \cup C\right)=n(A)+n(B)+n(C)-n\left(A \cap B\right)-n\left(B \cap C\right)-n\left(A \cap C\right)+n\left(A \cap B \cap C\right)$
+- $n\left( A\cup B\right)=n\,(A)+n\,(B)-n\left(A\cap B\right)$
+- $n\left(A \cup B \cup C\right)=n\,(A)+n\,(B)+n\,(C)-n\left(A \cap B\right)-n\left(B \cap C\right)-n\left(A \cap C\right)+n\left(A \cap B \cap C\right)$
 
 ### 計數原理
 - 乘法原理：兩步驟分別有 $m$、$n$ 種方法，則完成該事件有 $m \times n$ 種方法
