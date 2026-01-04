@@ -34,7 +34,7 @@ excerpt: 整理所出學測數 A 範圍（高一 + 高二）的所有公式和�
 - $a^3-b^3=(a-b)(a^2+ab+b^2)=(a-b)^3+3ab\,(a-b)$
 
 ### 分點公式
-- $P=\frac{na+mb}{m+n}$
+- $P=\frac{na+mb}{m+n}$（乘以對面）
 
 {% raw %}
 <iframe src="https://www.geogebra.org/geometry/qpwugu35?embed" width="800" height="600" allowfullscreen style="border: 1px solid #e4e4e4;border-radius: 4px;" frameborder="0"></iframe>
