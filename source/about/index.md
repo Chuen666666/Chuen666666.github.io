@@ -10,7 +10,7 @@ layout: about
 - 網名：淳、Chuen666666、淳宇淳蠢
 - 姓別：男
 - 交往狀況：有女友
-- 生日：1 月 12 日
+- 生日：2008 年 1 月 12 日
 - 國籍與所在地：🇹🇼（台北市）
 - 興趣
   - 寫程式（Python、Markdown、LaTex）
@@ -30,5 +30,6 @@ layout: about
 - Discord: [chuen666666](http://discordapp.com/users/929138508772311150)
 - LINE: [chuen666666](https://line.me/ti/p/PIRT8GwtGk)
 - Email: [chunyutsai97@gmail.com](mailto:chunyutsai97@gmail.com)
+
 > 歡迎透過以上方式與我詢問事情、合作、交流、甚至打屁聊天！
 > 所有聯絡方式都確認開啟了陌生人訊息，加入後請直接傳訊息表明自己是從個網來的，否則可能被我誤以為是垃圾帳號而忽略

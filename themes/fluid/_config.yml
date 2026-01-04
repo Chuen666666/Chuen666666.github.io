@@ -994,6 +994,8 @@ about:
     - { class: "iconfont icon-github-fill", link: "https://github.com/Chuen666666", tip: "GitHub" }
     - { class: "iconfont icon-youtube-fill", link: "https://www.youtube.com/@Chuen666", tip: "YouTube" }
     - { class: "iconfont icon-twitch-fill", link: "https://www.twitch.tv/chuen666", tip: "Twitch" }
+    - { class: "iconfont icon-steam", link: "https://steamcommunity.com/id/Chuen666666/", tip: "Steam" }
+    - { class: "iconfont icon-plan", link: "https://specs.gg/Chuen666666", tip: "SPECS.GG" }
 
 
 #---------------------------
