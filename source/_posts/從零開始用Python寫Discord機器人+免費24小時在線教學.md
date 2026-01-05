@@ -129,7 +129,7 @@ Thumbs.db
 版本號不是必填，如果沒有寫，它會自動安裝最新版，不過為了穩定性，建議還是寫一個下限版本，如下
 
 ```txt
-discord.py>=2.3.0
+discord.py>=2.4.0
 python-dotenv>=1.0.0
 flask>=3.0.0
 ```
