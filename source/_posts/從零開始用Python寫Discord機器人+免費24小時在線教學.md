@@ -55,7 +55,7 @@ excerpt:
    3. 點擊 `建立虛擬環境…` &rarr; `Venv` &rarr; `Python 3.X`
 
 ## 檔案內容
-### .env
+### `.env`
 貼上先前複製的 Bot Token 到 `<Token>`（`<` 和 `>` 也不用留
 
 ```env
@@ -64,7 +64,7 @@ TOKEN=<Token>
 
 特別注意，ENV 檔不能加任何引號或空格，否則會讀不到
 
-### config.json
+### `config.json`
 為了讓程式好修改，我們會習慣將 Discord 頻道的 ID 都放到這裡
 
 ```json
@@ -80,4 +80,196 @@ TOKEN=<Token>
 
 要取得頻道 ID，請在 DC 的設定 `進階` &rarr; `開發者模式` 開啟選項，之後直接對著想要取值的頻道點擊右鍵，即可找到複製頻道 ID 的選項
 
+### `.gitignore`
+放這裡的檔案都不會被上傳到 Git，除了執行時可能產生的一些不需要的文件以外，也要放一些敏感資料，例如我們先前提過的 `.env`，以免把重要資料公開給大家知道，即使你的 Repo 設為 `Private`，這一步仍對資安而言很重要！
+
+```gitignore
+# Environment/Channel ID
+.env
+config.json
+
+# Venv
+venv/
+.venv/
+env/
+
+# Python
+__pycache__/
+*.pyc
+
+# Logs
+*.log
+logs/
+
+# Build
+build/
+dist/
+*.egg-info/
+
+# Tests
+.pytest_cache/
+.coverage
+htmlcov/
+
+# IDE/OS
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+```
+
+### `README.md`
+這會顯示在你 GitHub 專案首頁，通常會放介紹、安裝方式、功能說明等，依自己需求撰寫即可
+
+通常會提及 `config.json` 和 `.env` 的建置，因為它們已被放入 `.gitignore`，因此需額外說明
+
+### `requirements.txt`
+這是 Python Venv 安裝後，會需要安裝的套件，有了這個檔案，任何使用者都可以快速建立好一模一樣的環境
+
+版本號不是必填，如果沒有寫，它會自動安裝最新版，不過為了穩定性，建議還是寫一個下限版本，如下
+
+```txt
+discord.py>=2.3.0
+python-dotenv>=1.0.0
+flask>=3.0.0
+```
+
+寫好這個檔案後，除了給別人看以外，我們自己也得先執行一次，來安裝等等會用到的套件
+
+記得執行指令時，要在這個專案底下的 Terminal 才能找到 `requirements.txt`
+
+```bash
+pip install -r requirements.txt
+```
+
+## 推到 GitHub 上
+完成了剛才的工作後，我們就可以先來提交第一次的 GitHub 推送
+
+1. 回到先前創建的 Repo 頁，並找到下圖連結，點擊複製鈕
+
+{% img /img/github_link.png %}
+
+2. 回到專案所在的目錄底下，輸入以下指令：
+
+```bash
+git init
+git branch -M main
+git remote add origin <剛才複製的 Repo 連結>
+```
+
+3. 到 VS Code，點擊右側欄的「原始檔控制」（或使用 <kbd>Ctrl</kbd> <kbd>Shift</kbd> <kbd>G</kbd>），點擊「變更」字樣右邊的加號鈕，這一步相當於以下指令：
+
+```bash
+git add .
+```
+
+4. 在上方訊息欄中，輸入任意訊息（例如 `first commit`），這個訊息叫作「commit message」，是為了方便辨識每次的推送，此為必填項，填完後再點擊下方 `提交`，此步相當於以下指令：
+
+```bash
+git commit -m "first commit"
+```
+
+5. `提交` 點完後，若是第一次提交，按鈕會變為 ``
+
 ## 主程式
+這一章裡，我會把整個程式拆成好幾個不同步分來說，不過對程式檔本身而言，是有照順序的，因此可以放心從上到下一步步跟著操作
+
+### 匯入
+這裡是整個架構會用到的東西，如果你程式裡還會用到其他套件，記得一起放入這一區塊中（第三方套件也要記得一併放入 `requirements.txt` 中）
+
+```python
+import json
+import os
+from pathlib import Path
+
+import discord
+from discord.ext import commands
+from dotenv import load_dotenv
+from flask import Flask
+from threading import Thread
+```
+
+### 啟動迷你網頁
+雖然在本機跑程式時，這裡的功能跟本用不上，不過它其實是為了後面將 Bot 跑在線上的拖管平台時，能持續保持上線的關鍵之一
+
+其原理是透過創一個迷你網頁，加上自動訪問網頁的機器人，讓網頁保持活躍，使 `main.py` 能夠一直跑下去，從而讓 Bot 本身也保持著上線
+
+```python
+# 啟動迷你網頁，讓 Render 持續上線
+app = Flask(__name__)
+
+@app.route('/')
+def home():
+    return "I'm alive!"
+
+def run():
+    app.run(host='0.0.0.0', port=8080)
+
+def keep_alive():
+    t = Thread(target=run)
+    t.start()
+keep_alive()
+```
+
+### 讀取 `config.json` 和 `.env`
+這裡為了穩定性，我選擇使用 `pathlib.Path` 來設定目前所在的位置（`BASE_DIR`）
+
+可能有人不理解為什麼不用相對路徑寫，但其實是因為在不同操作系統間，路徑可能都會有些微差異，尤其對使用 Windows 的人而言，大多拖管平台都是 Linux，路徑上會有些差異，因此使用「變數湊成的絕對路徑」才是一個更穩定的方式
+
+而讀取 `config.json` 和 `.env` 的程式雖然看起來有點複雜，不過其實這樣的寫法都是為了在各操作系統間以及本機和線上拖管平台的環境差異而存在
+
+```python
+BASE_DIR = Path(__file__).resolve().parent
+
+# 讀取 config.json
+if os.path.exists('/etc/secrets/config.json'):
+    CONFIG_PATH = Path('/etc/secrets/config.json')
+elif (BASE_DIR / 'config.json').exists():
+    CONFIG_PATH = BASE_DIR / 'config.json'
+else:
+    CONFIG_PATH = Path('config.json')
+
+try:
+    with CONFIG_PATH.open('r', encoding='utf-8') as f:
+        config = json.load(f)
+    print(f'成功讀取設定檔：{CONFIG_PATH}')
+except Exception as e:
+    print(f'讀取設定檔失敗！路徑：{CONFIG_PATH}，錯誤：{e}')
+
+# 讀取 .env
+load_dotenv()
+TOKEN = os.getenv('TOKEN')
+```
+
+### 設定 intents
+這個設定是為了控制機器人「能夠收到哪些類型的事件」，若沒有顯示開啟，機器人將不能讀取或接收到那類型的事件
+
+```python
+intents = discord.Intents.default()
+intents.guilds = True
+intents.其他需要接收的事件 = True
+
+bot = commands.Bot(command_prefix='!', intents=intents)
+```
+
+{% fold info @ 所有事件一覽表 %}
+
+|事件（Intent）名稱|事件簡介|是否特權|
+|:-:|:-:|:-:|
+|`guilds`|伺服器相關事件（加入、刪除、更新）|否|
+|`members`|伺服器成員事件（加入、離開、更新、成員列表）|是|
+|`bans`|伺服器封禁／解除封禁事件|否|
+|`emojis_and_stickers`|伺服器表情符號與貼圖事件|否|
+|`integrations`|伺服器整合事件（如 Twitch、YouTube 整合）|否|
+|`webhooks`|webhook 更新事件|否|
+|`invites`|邀請建立／刪除事件|否|
+|`voice_states`|語音頻道狀態事件（成員加入／離開語音、靜音、說話狀態）|否|
+|`presences`|成員狀態事件（上線／離線／遊戲狀態）|是|
+|`messages`|訊息建立／刪除／編輯事件|否|
+|`message_content`|讀取訊息文字|是|
+|`reactions`|訊息反應事件（新增／移除表情反應）|否|
+|`typing`|使用者正在輸入事件|否|
+
+> **是否特權**指的是需要到 [Discord Dev](https://discord.com/developers/applications) 中的 `Bot` &rarr; `Gateway Intents` 特別開啟才能接收
+
+{% endfold %}
