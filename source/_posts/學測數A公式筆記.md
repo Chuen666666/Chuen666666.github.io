@@ -340,13 +340,6 @@ excerpt: 整理所出學測數 A 範圍（高一 + 高二）的所有公式和�
 ### 向量的運算
 - 三角不等式（恆成立）：$\left|\vec a\right|+\left|\vec b\right|\ge\left|\vec a+\vec b\right|$（等號成立於同方向或其一為零向量）
 
-### 分點公式
-- $P(x,y)=\left(\frac{nx\_1+mx\_2}{m+n},\frac{ny\_1+my\_2}{m+n}\right)$
-
-{% raw %}
-<iframe src="https://www.geogebra.org/geometry/j8grr8zf?embed" width="800" height="600" allowfullscreen style="border: 1px solid #e4e4e4;border-radius: 4px;" frameborder="0"></iframe>
-{% endraw %}
-
 ### 重心性質
 若 $G$ 為 $\triangle ABC$ 的重心
 
@@ -400,7 +393,7 @@ excerpt: 整理所出學測數 A 範圍（高一 + 高二）的所有公式和�
 
 ## 空間向量
 ### 二面角
-- 各取一條與交線垂直的向量 &rarr; 算兩向量夾角 $\theta,\;180^\circ-\theta$
+- 面上各取一條與交線垂直的向量 &rarr; 算兩向量夾角 $\theta,\;180^\circ-\theta$
 
 {% raw %}
 <iframe src="https://www.geogebra.org/3d/knq2tbne?embed" width="800" height="600" allowfullscreen style="border: 1px solid #e4e4e4;border-radius: 4px;" frameborder="0"></iframe>
@@ -415,14 +408,6 @@ excerpt: 整理所出學測數 A 範圍（高一 + 高二）的所有公式和�
 
 ### 空間向量
 - $\left|\vec{AB}\right|=\sqrt{\Delta\_x^2+\Delta\_y^2+\Delta\_z^2}$
-
-### 分點公式
-- $\vec{OP}=\frac{n\vec{OA}+m\vec{OB}}{m+n}$（其中 $O$ 為任意點）
-- $P\left(\frac{nx\_1+mx\_2}{m+n},\frac{ny\_1+my\_2}{m+n},\frac{nz\_1+mz\_2}{m+n}\right)$
-
-{% raw %}
-<iframe src="https://www.geogebra.org/geometry/pnjxdfg4?embed" width="800" height="600" allowfullscreen style="border: 1px solid #e4e4e4;border-radius: 4px;" frameborder="0"></iframe>
-{% endraw %}
 
 ### 空間向量的內積
 - $\vec a\cdot\vec b=\left|\vec a\right|\left|\vec b\right|\cos\theta=a\_1\,b\_1+a\_2\,b\_2+a\_3\,b\_3$
