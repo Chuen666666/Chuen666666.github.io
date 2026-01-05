@@ -32,7 +32,7 @@ excerpt:
   一旦發現任何外泄的可能，請立即回到 Discord Dev 中的 `Bot`，並點擊 `Reset Token` 以更新新的 Token
   {% endnote %}
 
-9.  【可選】在伺服器中建立一個 Bot 專用身分組（管理員權限），方便管理與排版的同時，也不會因為當初沒開到某個權限而讓 Bot 運作不了；但這也得承擔萬一 Bot 被盜，越高權限可能讓它的危害越大
+9.  【可選】在伺服器中建立一個 Bot 專用身分組（管理員權限），方便管理與排版的同時，也不會因為當初沒開到某個權限而讓 Bot 運作不了；但這樣的操作也得承擔萬一 Bot 被盜，越高權限可能讓它的危害越大
 
 ## 電腦環境
 1. Python：至少 3.8+，建議 3.10+
@@ -278,3 +278,61 @@ bot = commands.Bot(command_prefix='!', intents=intents)
 > **是否特權**指的是需要到 [Discord Dev](https://discord.com/developers/applications) 中的 `Bot` &rarr; `Gateway Intents` 特別開啟才能接收
 
 {% endfold %}
+
+### 主要程式
+先說，這個部分機乎不可能全講，因為真的多到爆炸，因此這裡只會示範幾個基本的事件和指令，至於具體要實現什麼功能，可參考[官方文檔](https://discordpy.readthedocs.io/en/stable/index.html)，或者直接問 AI
+
+這裡要特別注意，我們如果要取頻道 ID，請透過 `config['CHANNEL_ID']`
+
+程式中的函式主要結構是以一個裝飾器加上 `async def` 來寫，這種函數的名稱必須按照 Discord.py API 規定命名，才能被正確觸發；而操作的部分，會使用 `await` 來執行
+
+Discord.py 框架中，還有一個非常方便的寫法，也就是它會自動把引數透過類型註示（Type Hint）進行轉換，非常方便
+
+```python
+# 機器人上線事件
+@bot.event
+async def on_ready():
+    channel = bot.get_channel(config['UPDATE'])
+    try:
+        synced = await bot.tree.sync() # 自動同步指令（程式與 Bot 間的同步）
+        if channel:
+            print(f'自動同步成功！同步了 {len(synced)} 條指令！') # 顯示在終端機（除錯用）
+    except Exception as e:
+        if channel:
+            print(f'自動同步失敗：{e}')
+    finally:
+        update_member_count_loop.start()
+
+# 成員加入／離開事件
+@bot.event
+async def on_member_join(member):
+    channel = bot.get_channel(config['JOIN'])
+    await channel.send(f'**{member}** 加入了伺服器！') # 在指定頻道中傳送歡迎訊息
+@bot.event
+async def on_member_remove(member):
+    channel = bot.get_channel(config['LEAVE'])
+    await channel.send(f'**{member}** 離開了伺服器！') # 在指定頻道中傳送離開訊息
+
+# 斜線指令
+@bot.hybrid_command()
+async def greet(ctx): # ctx 代表指令的上下文，包含了許多有用的資訊
+    await ctx.send(f'你好，{ctx.author.mention}！') # ctx.author.mention 會提及發送指令的使用者
+
+@bot.hybrid_command()
+async def add(ctx, a: int, b: int): # 參數 a 和 b 會自動轉成整數
+    """計算兩數字和並回傳結果""" # 自動顯示在 DC 的指令說明中
+    result = a + b
+    await ctx.send(f'{a} + {b} = {result}') # 回傳計算結果
+```
+
+### 啟動 Bot
+最後，加上這一段程式碼，Bot 就能啟動了
+
+```python
+# 啟動 Bot
+if __name__ == '__main__':
+    if TOKEN:
+        bot.run(TOKEN)
+    else:
+        print('錯誤！找不到 TOKEN！')
+```
