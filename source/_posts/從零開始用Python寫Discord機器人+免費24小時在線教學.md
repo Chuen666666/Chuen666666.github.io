@@ -26,7 +26,7 @@ excerpt: 教你用完全免費的方式，從零開始建立一個 Discord 機�
 7. 滑到最下面，點擊 `Generated URL` 右邊的複製鈕，並貼到瀏覽器中，即可將 Bot 邀請進先前建立好的伺服器
 8. 回到 `Bot` 中，複製 `Token`；若只有 `Reset Token`，先按它，再複製即可
 
-  {% note warning %}
+  {% note danger %}
   Bot Token 相當於 Bot 的帳號密碼，任何擁有它的人都可以任意控制該 Bot，因此請妥善保管
   勿將 Token 公開出來，或上傳到 GitHub 中，或者直接寫進主要程式碼當中
   一旦發現任何外泄的可能，請立即回到 Discord Dev 中的 `Bot`，並點擊 `Reset Token` 以更新新的 Token
