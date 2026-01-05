@@ -79,23 +79,23 @@
   height: 600px;
   border: 1px solid #e0e0e0;
   border-radius: 8px;
-  overflow: hidden; /* 確保縮放內容不超出框線 */
+  overflow: hidden;
 }
 /* 右下角縮放控制面板 */
 .sheet-control-panel {
   position: absolute;
   bottom: 15px;
   right: 15px;
-  z-index: 10; /* 確保在 iframe 上方 */
+  z-index: 10;
 
   display: flex;
   align-items: center;
   gap: 10px;
 
-  background: rgba(255, 255, 255, 0.85); /* 半透明白色 */
-  backdrop-filter: blur(4px);            /* 毛玻璃效果 */
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(4px);
   padding: 6px 12px;
-  border-radius: 20px;                   /* 膠囊造型 */
+  border-radius: 20px;
   border: 1px solid rgba(0, 0, 0, 0.1);
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   transition: opacity 0.3s;
@@ -126,12 +126,12 @@ kbd {
   border-radius: 3px;
   padding: 0.1em 0.4em;
   font-family: inherit;
-  transition: all 0.3s; /* 讓切換模式時有平滑效果 */
+  transition: all 0.3s;
 }
 /* 暗色模式 <kbd> 自動適配 */
 [data-user-color-scheme='dark'] kbd {
-  background-color: #333;      /* 暗色背景 */
-  color: #ddd;                 /* 亮色文字 */
-  border-color: #555;          /* 深色邊框 */
-  border-bottom-color: #111;   /* 模擬按鍵陰影 */
+  background-color: #333;
+  color: #ddd;
+  border-color: #555;
+  border-bottom-color: #111;
 }
