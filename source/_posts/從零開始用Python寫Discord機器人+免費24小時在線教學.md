@@ -157,7 +157,7 @@ git branch -M main
 git remote add origin <剛才複製的 Repo 連結>
 ```
 
-3. 到 VS Code，點擊右側欄的「原始檔控制」（或使用 <kbd>Ctrl</kbd> <kbd>Shift</kbd> <kbd>G</kbd>），點擊「變更」字樣右邊的加號鈕，這一步相當於以下指令：
+3. 到 VS Code，點擊右側欄的「原始檔控制」（或使用 <kbd>Ctrl</kbd> <kbd>Shift</kbd> <kbd>G</kbd>），點擊「變更」字樣右邊的加號鈕，此步相當於以下指令：
 
 ```bash
 git add .
@@ -169,7 +169,12 @@ git add .
 git commit -m "first commit"
 ```
 
-5. `提交` 點完後，若是第一次提交，按鈕會變為 ``
+5. `提交` 點完後，若是第一次提交，按鈕會變為 `發佈 Branch`；若已建立追踪，則按鈕會叫作 `同步變更`，點擊它，即可完成上傳，此步相當於以下指令：
+
+```bash
+git push -u origin main # 第一次推送
+git push # 已建立追踪後推送
+```
 
 ## 主程式
 這一章裡，我會把整個程式拆成好幾個不同步分來說，不過對程式檔本身而言，是有照順序的，因此可以放心從上到下一步步跟著操作
