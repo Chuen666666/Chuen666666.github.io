@@ -33,3 +33,7 @@ layout: about
 
 > 歡迎透過以上方式與我詢問事情、合作、交流、甚至打屁聊天！
 > 所有聯絡方式都確認開啟了陌生人訊息，加入後請直接傳訊息表明自己是從個網來的，否則可能被我誤以為是垃圾帳號而忽略
+
+{% raw %}
+<link rel="stylesheet" href="https://at.alicdn.com/t/c/font_1736178_k526ubmyhba.css">
+{% endraw %}
