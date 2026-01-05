@@ -29,7 +29,7 @@
 <meta property="og:image" content="https://chuen666666.github.io/img/github_link.png">
 <meta property="og:image" content="https://chuen666666.github.io/img/render_url.png">
 <meta property="article:published_time" content="2026-01-03T14:56:43.000Z">
-<meta property="article:modified_time" content="2026-01-05T17:30:19.443Z">
+<meta property="article:modified_time" content="2026-01-05T17:46:27.595Z">
 <meta property="article:author" content="淳">
 <meta property="article:tag" content="Discord Bot">
 <meta property="article:tag" content="Python">
@@ -338,7 +338,7 @@
               <p id="updated-time" class="note note-light" style="display: none">
                 
                   
-                    本文最後更新於：2026-01-06T01:30:19+08:00
+                    本文最後更新於：2026-01-06T01:46:27+08:00
                   
                   
 
@@ -435,7 +435,7 @@
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> json<br><span class="hljs-keyword">import</span> os<br><span class="hljs-keyword">from</span> pathlib <span class="hljs-keyword">import</span> Path<br><br><span class="hljs-keyword">import</span> discord<br><span class="hljs-keyword">from</span> discord.ext <span class="hljs-keyword">import</span> commands<br><span class="hljs-keyword">from</span> dotenv <span class="hljs-keyword">import</span> load_dotenv<br><span class="hljs-keyword">from</span> flask <span class="hljs-keyword">import</span> Flask<br><span class="hljs-keyword">from</span> threading <span class="hljs-keyword">import</span> Thread<br></code></pre></td></tr></table></figure>
 <h3 id="啟動迷你網頁"><a href="#啟動迷你網頁" class="headerlink" title="啟動迷你網頁"></a>啟動迷你網頁</h3><p>雖然在本機跑程式時，這裡的功能跟本用不上，不過它其實是為了後面將 Bot 跑在線上的托管平台時，能持續保持上線的關鍵之一</p>
 <p>其原理是透過創一個迷你網頁，加上自動訪問網頁的機器人，讓網頁保持活躍，使 <code>main.py</code> 能夠一直跑下去，從而讓 Bot 本身也保持著上線</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-comment"># 啟動迷你網頁，讓 Render 持續上線</span><br>app = Flask(__name__)<br><br><span class="hljs-meta">@app.route(<span class="hljs-params"><span class="hljs-string">&#x27;/&#x27;</span></span>)</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">home</span>():<br>    <span class="hljs-keyword">return</span> <span class="hljs-string">&quot;I&#x27;m alive!&quot;</span><br><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">run</span>():<br>    app.run(host=<span class="hljs-string">&#x27;0.0.0.0&#x27;</span>, port=<span class="hljs-number">8080</span>)<br><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">keep_alive</span>():<br>    t = Thread(target=run)<br>    t.start()<br>keep_alive()<br></code></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-comment"># 啟動迷你網頁，讓 Render 持續上線</span><br>app = Flask(__name__)<br><br><span class="hljs-meta">@app.route(<span class="hljs-params"><span class="hljs-string">&#x27;/&#x27;</span></span>)</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">home</span>():<br>    <span class="hljs-keyword">return</span> <span class="hljs-string">&quot;I&#x27;m alive!&quot;</span><br><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">run</span>():<br>    app.run(host=<span class="hljs-string">&#x27;0.0.0.0&#x27;</span>, port=<span class="hljs-number">8080</span>)<br><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">keep_alive</span>():<br>    t = Thread(target=run)<br>    t.daemon = <span class="hljs-literal">True</span><br>    t.start()<br>keep_alive()<br></code></pre></td></tr></table></figure>
 <h3 id="讀取-config-json-和-env"><a href="#讀取-config-json-和-env" class="headerlink" title="讀取 config.json 和 .env"></a>讀取 <code>config.json</code> 和 <code>.env</code></h3><p>這裡為了穩定性，我選擇使用 <code>pathlib.Path</code> 來設定目前所在的位置（<code>BASE_DIR</code>）</p>
 <p>可能有人不理解為什麼不用相對路徑寫，但其實是因為在不同操作系統間，路徑可能都會有些微差異，尤其對使用 Windows 的人而言，大多托管平台都是 Linux，路徑上會有些差異，因此使用「變數湊成的絕對路徑」才是一個更穩定的方式</p>
 <p>而讀取 <code>config.json</code> 和 <code>.env</code> 的程式雖然看起來有點複雜，不過其實這樣的寫法都是為了在各操作系統間以及本機和線上托管平台的環境差異而存在</p>
@@ -577,7 +577,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>更新於</div>
-          <div>2026-01-06 01:30</div>
+          <div>2026-01-06 01:46</div>
         </div>
       
       
