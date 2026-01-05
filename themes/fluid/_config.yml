@@ -1259,6 +1259,12 @@ links:
       link: https://leinuoawa.xyz/,
       avatar: /avatar/leinuo.png
     }
+    - {
+      title: "TC",
+      intro: "一個特選特不上頂大的菜逼",
+      link: https://github.com/TC-sudo-dps,
+      avatar: /avatar/TC.jpg
+    }
 
   # 當成員頭像加載失敗時，替換為指定圖片
   # When the member avatar fails to load, replace the specified image
