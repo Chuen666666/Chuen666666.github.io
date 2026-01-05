@@ -55,7 +55,7 @@ excerpt: 教你用完全免費的方式，從零開始建立一個 Discord 機�
    3. 點擊 `建立虛擬環境…` &rarr; `Venv` &rarr; `Python 3.X`
 
 ## 檔案內容
-### `.env`
+### .env
 貼上先前複製的 Bot Token 到 `<Token>`（`<` 和 `>` 也不用留）
 
 ```env
@@ -64,7 +64,7 @@ TOKEN=<Token>
 
 特別注意，ENV 檔不能加任何引號或空格，否則會讀不到
 
-### `config.json`
+### config.json
 為了讓程式好修改，我們會習慣將 Discord 頻道的 ID 都放到這裡
 
 ```json
@@ -80,7 +80,7 @@ TOKEN=<Token>
 
 要取得頻道 ID，請在 DC 的設定 `進階` &rarr; `開發者模式` 開啟選項，之後直接對著想要取值的頻道點擊右鍵，即可找到複製頻道 ID 的選項
 
-### `.gitignore`
+### .gitignore
 放這裡的檔案都不會被上傳到 Git，除了執行時可能產生的一些不需要的文件以外，也要放一些敏感資料，例如我們先前提過的 `.env`，以免把重要資料公開給大家知道，即使你的 Repo 設為 `Private`，這一步仍對資安而言很重要！
 
 ```gitignore
@@ -118,12 +118,12 @@ Thumbs.db
 .idea/
 ```
 
-### `README.md`
+### README.md
 這會顯示在你 GitHub 專案首頁，通常會放介紹、安裝方式、功能說明等，依自己需求撰寫即可
 
 通常會提及 `config.json` 和 `.env` 的建置，因為它們已被放入 `.gitignore`，因此需額外說明
 
-### `requirements.txt`
+### requirements.txt
 這是 Python Venv 安裝後，會需要安裝的套件，有了這個檔案，任何使用者都可以快速建立好一模一樣的環境
 
 版本號不是必填，如果沒有寫，它會自動安裝最新版，不過為了穩定性，建議還是寫一個下限版本，如下
