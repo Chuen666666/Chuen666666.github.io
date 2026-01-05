@@ -353,7 +353,7 @@ navbar:
   # 導航欄毛玻璃特效，實驗性功能，可能會造成頁面滾動掉幀和抖動，部分瀏覽器不支援會自動不生效
   # Navigation bar frosted glass special animation. It is an experimental feature
   ground_glass:
-    enable: false
+    enable: true
 
     # 模糊像素，只能為數字，數字越大模糊度越高
     # Number of blurred pixel. the larger the number, the higher the blur
