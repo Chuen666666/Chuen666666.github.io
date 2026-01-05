@@ -377,5 +377,5 @@ git push
 
 1. 到 [UptimeRobot](https://dashboard.uptimerobot.com/login?ref=header)，使用 GitHub 登入
 2. 點擊 `New`
-3. 在 `URL to monitor` 中，貼上剛才複製的 Render 網址（不要刪掉 `https://`）
+3. 在 `URL to monitor` 中，貼上剛才複製的 Render 網址
 4. 其他設定保持預設，點擊 `Create Monitor`，一切應該就大功告成了！
