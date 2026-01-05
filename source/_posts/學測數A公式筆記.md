@@ -46,7 +46,7 @@ excerpt: 整理所出學測數 A 範圍（高一 + 高二）的所有公式和�
 
 ## 多項式
 ### 除法原理
-- $\frac{f(x)}{g(x)}=q(x)\cdots r(x) \implies f(x)=g(x)\;q(x)+r(x)$
+- $f(x)\div g(x)=q(x)\cdots r(x) \implies f(x)=g(x)\;q(x)+r(x)$
 
 ### 綜合除法
 - 做一次 &rArr; 得商式和餘式
