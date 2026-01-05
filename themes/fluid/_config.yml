@@ -357,12 +357,12 @@ navbar:
 
     # 模糊像素，只能為數字，數字越大模糊度越高
     # Number of blurred pixel. the larger the number, the higher the blur
-    px: 3
+    px: 10
 
     # 不透明度，數字越大透明度越低，注意透明過度可能看不清菜單字體
     # Ratio of opacity, 1.0 is completely opaque
     # available: 0 - 1.0
-    alpha: 0.7
+    alpha: 0.6
 
   # 導航欄菜單，可自行增減，key 用來關聯 languages/*.yml，如不存在關聯則顯示 key 本身的值；icon 是 css class，可以省略；增加 name 可以強制顯示指定名稱
   # Navigation bar menu. `key` is used to associate languages/*.yml. If there is no association, the value of `key` itself will be displayed; if `icon` is a css class, it can be omitted; adding `name` can force the display of the specified name
