@@ -360,7 +360,7 @@ excerpt: 整理所出學測數 A 範圍（高一 + 高二）的所有公式和�
 ### 內積的應用
 - 求兩向量長度：用公式 $\left|向量\right|^2=自己的內積$
 - 求兩向量夾角：$\cos\theta=\frac{\vec a\cdot\vec b}{\left|\vec a\right|\left|\vec b\right|}\;(0^\circ\le\theta\le180^\circ)$
-- 求兩線夾角：$\cos\theta=\frac{\vec n\_1\cdot\vec n\_2}{\left|\vec n\_1\right|\left|\vec n\_2\right|},\;\cos(180^\circ-\theta)=-\cos\theta$
+- 求兩線夾角：$\cos\theta=\frac{\vec{n\_1}\cdot\vec{n\_2}}{\left|\vec{n\_1}\right|\left|\vec{n\_2}\right|},\;\cos(180^\circ-\theta)=-\cos\theta$
 
 ### 正射影
 - $\vec b$ 在 $\vec a$ 上的正射影 $\vec c=\left(\frac{\vec a\cdot\vec b}{\left|\vec a\right|^2}\right)\vec a$
@@ -458,7 +458,7 @@ excerpt: 整理所出學測數 A 範圍（高一 + 高二）的所有公式和�
 - 截距式：若 $x,y,z$ 截距分別為 $a,b,c$，則 $E:\;\frac xa+\frac yb+\frac zc=1$，其中 $\vec n=\left(\frac1a,\frac1b,\frac1c\right)$；平面與三軸圍成的四面體 $[OABC]=\frac16\left|abc\right|$
 
 ### 兩平面夾角
-- 求出兩平面法向量 $\vec n\_1,\vec n\_2$，再用 $\cos\theta=\frac{\vec n\_1\cdot\vec n\_2}{\left|\vec n\_1\right|\left|\vec n\_2\right|},\;\cos(180^\circ-\theta)=-\cos\theta$
+- 求出兩平面法向量 $\vec{n\_1},\vec{n\_2}$，再用 $\cos\theta=\frac{\vec{n\_1}\cdot\vec{n\_2}}{\left|\vec{n\_1}\right|\left|\vec{n\_2}\right|},\;\cos(180^\circ-\theta)=-\cos\theta$
 
 ### 距離
 - 點到平面：$d(A,E)=\frac{\left|點代入\right|}{法長度}$
