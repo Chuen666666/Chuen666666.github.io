@@ -216,7 +216,6 @@ def keep_alive():
     t = Thread(target=run)
     t.daemon = True
     t.start()
-keep_alive()
 ```
 
 ### 讀取 `config.json` 和 `.env`
@@ -337,6 +336,7 @@ async def add(ctx, a: int, b: int): # 參數 a 和 b 會自動轉成整數
 # 啟動 Bot
 if __name__ == '__main__':
     if TOKEN:
+        keep_alive()
         bot.run(TOKEN)
     else:
         print('錯誤！找不到 TOKEN！')
