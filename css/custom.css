@@ -116,3 +116,22 @@
   color: #31a5d9;
   min-width: 35px;
 }
+
+/* 亮色模式 <kbd> 樣式 */
+kbd {
+  background-color: #f7f7f7;
+  color: #333;
+  border: 1px solid #ccc;
+  border-bottom-width: 3px;
+  border-radius: 3px;
+  padding: 0.1em 0.4em;
+  font-family: inherit;
+  transition: all 0.3s; /* 讓切換模式時有平滑效果 */
+}
+/* 暗色模式 <kbd> 自動適配 */
+[data-user-color-scheme='dark'] kbd {
+  background-color: #333;      /* 暗色背景 */
+  color: #ddd;                 /* 亮色文字 */
+  border-color: #555;          /* 深色邊框 */
+  border-bottom-color: #111;   /* 模擬按鍵陰影 */
+}
