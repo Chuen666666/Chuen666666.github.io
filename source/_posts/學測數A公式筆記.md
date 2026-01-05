@@ -37,11 +37,11 @@ excerpt: 整理所出學測數 A 範圍（高一 + 高二）的所有公式和�
 - $P=\frac{na+mb}{m+n}$（乘以對面）
 
 {% raw %}
-<iframe src="https://www.geogebra.org/geometry/qpwugu35?embed" width="800" height="600" allowfullscreen style="border: 1px solid #e4e4e4;border-radius: 4px;" frameborder="0"></iframe>
+<iframe src="https://www.geogebra.org/geometry/qpwugu35?embed" width="800" height="600" loading="lazy" allowfullscreen style="border: 1px solid #e4e4e4;border-radius: 4px;" frameborder="0"></iframe>
 {% endraw %}
 
 ### 算幾不等式
-- $\frac{a+b}{2}\ge\sqrt{ab}$（算數平均數 &ge; 幾何平均數）
+- $\frac{a+b}{2}\ge\sqrt{ab}$（**算數平均數 &ge; 幾何平均數**）
 - 會微分，此章可不學
 
 ## 多項式
@@ -396,14 +396,14 @@ excerpt: 整理所出學測數 A 範圍（高一 + 高二）的所有公式和�
 - 面上各取一條與交線垂直的向量 &rarr; 算兩向量夾角 $\theta,\;180^\circ-\theta$
 
 {% raw %}
-<iframe src="https://www.geogebra.org/3d/knq2tbne?embed" width="800" height="600" allowfullscreen style="border: 1px solid #e4e4e4;border-radius: 4px;" frameborder="0"></iframe>
+<iframe src="https://www.geogebra.org/3d/knq2tbne?embed" width="800" height="600" loading="lazy" allowfullscreen style="border: 1px solid #e4e4e4;border-radius: 4px;" frameborder="0"></iframe>
 {% endraw %}
 
 ### 三垂線定理
 - $\overline{AB}$ 垂直平面 $E$ 於 $B$ 點，直線 $L$ 在平面 $E$ 上，若 $\overline{BC}$ 垂直 $L$ 於 $C$，則 $\overline{AC}$ 與 $L$ 垂直
 
 {% raw %}
-<iframe src="https://www.geogebra.org/3d/h8b28duu?embed" width="800" height="600" allowfullscreen style="border: 1px solid #e4e4e4;border-radius: 4px;" frameborder="0"></iframe>
+<iframe src="https://www.geogebra.org/3d/h8b28duu?embed" width="800" height="600" loading="lazy" allowfullscreen style="border: 1px solid #e4e4e4;border-radius: 4px;" frameborder="0"></iframe>
 {% endraw %}
 
 ### 空間向量
