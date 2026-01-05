@@ -56,7 +56,7 @@ excerpt: 教你用完全免費的方式，從零開始建立一個 Discord 機�
 
 ## 檔案內容
 ### `.env`
-貼上先前複製的 Bot Token 到 `<Token>`（`<` 和 `>` 也不用留
+貼上先前複製的 Bot Token 到 `<Token>`（`<` 和 `>` 也不用留）
 
 ```env
 TOKEN=<Token>
@@ -138,6 +138,8 @@ flask>=3.0.0
 
 記得執行指令時，要在這個專案底下的 Terminal 才能找到 `requirements.txt`
 
+在 VS Code 中，可以點擊左上角 三條線 &rarr; `終端機` &rarr; `新增終端機` 來打開 Terminal，並且可以使用 `cd <資料夾路徑>` 切換到專案所在的目錄
+
 ```bash
 pip install -r requirements.txt
 ```
@@ -195,7 +197,7 @@ from threading import Thread
 ```
 
 ### 啟動迷你網頁
-雖然在本機跑程式時，這裡的功能跟本用不上，不過它其實是為了後面將 Bot 跑在線上的拖管平台時，能持續保持上線的關鍵之一
+雖然在本機跑程式時，這裡的功能跟本用不上，不過它其實是為了後面將 Bot 跑在線上的托管平台時，能持續保持上線的關鍵之一
 
 其原理是透過創一個迷你網頁，加上自動訪問網頁的機器人，讓網頁保持活躍，使 `main.py` 能夠一直跑下去，從而讓 Bot 本身也保持著上線
 
@@ -219,9 +221,9 @@ keep_alive()
 ### 讀取 `config.json` 和 `.env`
 這裡為了穩定性，我選擇使用 `pathlib.Path` 來設定目前所在的位置（`BASE_DIR`）
 
-可能有人不理解為什麼不用相對路徑寫，但其實是因為在不同操作系統間，路徑可能都會有些微差異，尤其對使用 Windows 的人而言，大多拖管平台都是 Linux，路徑上會有些差異，因此使用「變數湊成的絕對路徑」才是一個更穩定的方式
+可能有人不理解為什麼不用相對路徑寫，但其實是因為在不同操作系統間，路徑可能都會有些微差異，尤其對使用 Windows 的人而言，大多托管平台都是 Linux，路徑上會有些差異，因此使用「變數湊成的絕對路徑」才是一個更穩定的方式
 
-而讀取 `config.json` 和 `.env` 的程式雖然看起來有點複雜，不過其實這樣的寫法都是為了在各操作系統間以及本機和線上拖管平台的環境差異而存在
+而讀取 `config.json` 和 `.env` 的程式雖然看起來有點複雜，不過其實這樣的寫法都是為了在各操作系統間以及本機和線上托管平台的環境差異而存在
 
 ```python
 BASE_DIR = Path(__file__).resolve().parent
@@ -248,6 +250,8 @@ TOKEN = os.getenv('TOKEN')
 
 ### 設定 intents
 這個設定是為了控制機器人「能夠收到哪些類型的事件」，若沒有顯示開啟，機器人將不能讀取或接收到那類型的事件
+
+另外，在 `command_prefix='!'` 的部分，可以將 `!` 改為任何想要的指令前綴，不過這部分不影響斜線指令（且勿將它設為斜線）
 
 ```python
 intents = discord.Intents.default()
@@ -326,7 +330,7 @@ async def add(ctx, a: int, b: int): # 參數 a 和 b 會自動轉成整數
 ```
 
 ### 啟動 Bot
-最後，加上這一段程式碼，Bot 就能啟動了
+最後，加上這一段，讓 Bot 能夠跑起來
 
 ```python
 # 啟動 Bot
@@ -336,3 +340,41 @@ if __name__ == '__main__':
     else:
         print('錯誤！找不到 TOKEN！')
 ```
+
+完成整個程式碼後，我們可以先在自己電腦上測試看看，執行 `main.py` 後，Bot 是否有順利上線，並且能夠正常回應指令，一切都沒問題後，我們記得把它推上 GitHub（`原始檔控制` &rarr; `變更` 右邊的 `+` &rarr; 輸入 commit message &rarr; `提交` &rarr; `同步變更`，或用以下指令）
+
+```bash
+git add .
+git commit -m "寫自己的 commit message 在這個引號中"
+git push
+```
+
+## 線上托管
+在自己電腦上執行 `main.py` 後，理論上 Bot 就會上線，不過為了讓它能夠 24 小時都在線上，我們需要把它放到線上的托管平台跑
+
+1. 到 [Render](https://dashboard.render.com/login)，使用 GitHub 登入
+2. 點擊 `Create new project` &rarr; `New service` &rarr; `Web Service` &rarr; Discord Bot 的 Repo
+3. 進行以下設定：
+   - `Language`：選擇 `Python3`（應為預設值）
+   - `Branch`：選擇 `main`（應為預設值）
+   - `Build Command`：`pip install -r requirements.txt`（應為預設值）
+   - `Start Command`：輸入 `python main.py`
+   - `Instance Type`：選擇免費的 `Free`
+   - `Environment Variables`：名稱填入 `TOKEN`，值則貼上你的 Bot Token
+   - `Advanced`
+     - `Select Files`：點擊 `Add Secret File`，名稱填入 `config.json`，內容則貼上 `config.json` 內容
+     - `Health Check Path`：填入 `/`
+4. 點擊 `Create Web Service`，它就會自動開始部署，並且未來若有編輯任何程式並推送到 GitHub 上，它也會自動重新部署；若希望手動重新部署，可點擊 `Manual Deploy` &rarr; `Clear build cache & deploy`
+5. 如下圖，將 Render 連結複製起來
+
+{% img /img/render_url.png %}
+
+## 讓 Bot 24 小時上線
+雖然我們已把 Bot 放到 Render 上，但免費方案在 15 分鐘內若沒有任何流量，它就會自動休眠，Bot 也就離線了
+
+為了讓它持續有流量，我們可以設定一個機器人，每五分鐘就定期訪問一次 Render 網址，讓它保持活躍，這也正是我們前面寫的迷你網頁的用途
+
+1. 到 [UptimeRobot](https://dashboard.uptimerobot.com/login?ref=header)，使用 GitHub 登入
+2. 點擊 `New`
+3. 在 `URL to monitor` 中，貼上剛才複製的 Render 網址（不要刪掉 `https://`）
+4. 其他設定保持預設，點擊 `Create Monitor`，一切應該就大功告成了！
