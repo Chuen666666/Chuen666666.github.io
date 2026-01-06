@@ -29,7 +29,7 @@ excerpt: 教你用完全免費的方式，從零開始建立一個 Discord 機�
   {% note danger %}
   Bot Token 相當於 Bot 的帳號密碼，任何擁有它的人都可以任意控制該 Bot，因此請妥善保管
   勿將 Token 公開出來，或上傳到 GitHub 中，或者直接寫進主要程式碼當中
-  一旦發現任何外泄的可能，請立即回到 Discord Dev 中的 `Bot`，並點擊 `Reset Token` 以更新新的 Token
+  一旦發現任何外泄的可能，請立即回到 [Discord Dev](https://discord.com/developers/applications) 中的 `Bot`，並點擊 `Reset Token` 以更新新的 Token
   {% endnote %}
 
 9.  【可選】在伺服器中建立一個 Bot 專用身分組（管理員權限），方便管理與排版的同時，也不會因為當初沒開到某個權限而讓 Bot 運作不了；但這樣的操作也得承擔萬一 Bot 被盜，越高權限可能讓它的危害越大
