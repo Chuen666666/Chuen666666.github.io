@@ -11,7 +11,7 @@ tags:
   - Python
 math: false
 mermaid: false
-hide: true
+hide: false
 date: 2026-01-03 22:56:43
 excerpt: 教你用完全免費的方式，從零開始建立一個 Discord 機器人，並且讓它 24 小時在線上運作
 ---
