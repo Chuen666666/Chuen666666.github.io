@@ -13,19 +13,20 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout source
-        uses: actions/checkout@v4 # 升級到 v4 更穩定
+        uses: actions/checkout@v4
         with:
-          submodules: true
+          submodules: 'recursive'
+          fetch-depth: 0
 
       - name: Setup Node.js
-        uses: actions/setup-node@v4 # 升級到 v4
+        uses: actions/setup-node@v4
         with:
-          node-version: '20' # 嘗試使用最新的穩定版
-          cache: 'npm' # 開啟快取功能，下次編譯會更快
+          node-version: '20'
+          cache: 'npm'
 
       - name: Install Dependencies
         run: |
-          npm install --no-audit --no-fund
+          npm install --force
 
       - name: Generate Files
         run: |
