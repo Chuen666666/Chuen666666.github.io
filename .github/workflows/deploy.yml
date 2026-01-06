@@ -25,7 +25,7 @@ jobs:
 
       - name: Install Dependencies
         run: |
-          npm install --no-audit --no-fund # 快速安裝
+          npm install --no-audit --no-fund
 
       - name: Generate Files
         run: |
