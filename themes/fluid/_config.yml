@@ -1265,6 +1265,12 @@ links:
       link: https://github.com/TC-sudo-dps,
       avatar: /avatar/TC.jpg
     }
+    - {
+      title: "Syuan",
+      intro: "蛤",
+      link: https://syansyan.vercel.app/,
+      avatar: /avatar/Syuan.jpg
+    }
 
   # 當成員頭像加載失敗時，替換為指定圖片
   # When the member avatar fails to load, replace the specified image
