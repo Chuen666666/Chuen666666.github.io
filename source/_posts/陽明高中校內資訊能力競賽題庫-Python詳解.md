@@ -1,5 +1,5 @@
 ---
-title: 陽明高中校內賽題庫 - Python 詳解
+title: 陽明高中校內資訊能力競賽題庫 - Python 詳解
 categories:
   - 筆記與教學
   - 程式
