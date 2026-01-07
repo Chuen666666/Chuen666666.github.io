@@ -126,8 +126,7 @@ for i in sorted(arr):
 不過事實上，它並非效率最高的解法，真正要做到最佳效率，還是得使用 DFS 配合剪枝來達成
 
 ```python
-s = input().strip()
-s = sorted(s)
+s = sorted(input().strip())
 n = len(s)
 
 result = []
@@ -143,19 +142,17 @@ while stack:
         continue
 
     # 反向 push，維持與遞迴相同的順序
-    for i in range(n - 1, -1, -1):
+    for i in range(n-1, -1, -1):
         if used[i]:
             continue
-        if i > 0 and s[i] == s[i - 1] and not used[i - 1]:
+        if i > 0 and s[i] == s[i-1] and not used[i-1]:
             continue  # 去重剪枝
 
         new_used = used[:] # 複製 used 狀態
         new_used[i] = True
         stack.append((path + [s[i]], new_used))
 
-print(len(result))
-for p in result:
-    print(p)
+print(len(result), *result, sep='\n')
 ```
 
 ## F. 蛋餅想吃蛋餅
