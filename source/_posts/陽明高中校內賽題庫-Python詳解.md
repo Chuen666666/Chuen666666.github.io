@@ -146,7 +146,7 @@ while stack:
         if used[i]:
             continue
         if i > 0 and s[i] == s[i-1] and not used[i-1]:
-            continue  # 去重剪枝
+            continue # 去重剪枝
 
         new_used = used[:] # 複製 used 狀態
         new_used[i] = True
