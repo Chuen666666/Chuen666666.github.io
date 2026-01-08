@@ -68,21 +68,7 @@ for _ in range(int(input())):
             break
 ```
 
-## C. Sword Art Online
-> [題目連結](https://codeforces.com/gym/629558/problem/C)
-
-這題對於寫過國中數學題的你我而言，應該一眼就能看出來是要求最小公倍數對吧？如果真的看不出來，其實題目底下的「計算」也已經自爆解法了
-
-在 Python 中，我們可以直接用內建的 `math.lcm()` 函式來計算最小公倍數
-
-```python
-from math import lcm
-
-input() # 跳過第一行 n 的輸入
-print(lcm(*map(int, input().split()))) # 用 *（unpack）展開 map() 並傳入 lcm()
-```
-
-## D. 跑到哪了
+## C. 跑到哪了
 > [題目連結](https://codeforces.com/gym/629558/problem/D)
 
 這題甚至比上一題還簡單，應該很容易就能看出來，這題只需要將趟數除以 2 取餘數（即 $n \bmod 2$），再看原始點在哪，就能秒知道答案了
@@ -96,6 +82,20 @@ if n % 2 == 0:
     print(s)
 else:
     print('A' if s == 'B' else 'B')
+```
+
+## D. Sword Art Online
+> [題目連結](https://codeforces.com/gym/629558/problem/C)
+
+這題對於寫過國中數學題的你我而言，應該一眼就能看出來是要求最小公倍數對吧？如果真的看不出來，其實題目底下的「計算」也已經自爆解法了
+
+在 Python 中，我們可以直接用內建的 `math.lcm()` 函式來計算最小公倍數
+
+```python
+from math import lcm
+
+input() # 跳過第一行 n 的輸入
+print(lcm(*map(int, input().split()))) # 用 *（unpack）展開 map() 並傳入 lcm()
 ```
 
 ## E. 國王的請求
