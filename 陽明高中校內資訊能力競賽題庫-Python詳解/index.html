@@ -27,7 +27,7 @@
 <meta property="og:description" content="所有由 @郭10 出的陽明高中校內資訊能力競賽題目的 Python 詳解">
 <meta property="og:locale" content="zh_TW">
 <meta property="article:published_time" content="2026-01-06T07:34:24.000Z">
-<meta property="article:modified_time" content="2026-01-08T08:21:50.302Z">
+<meta property="article:modified_time" content="2026-01-08T19:25:56.273Z">
 <meta property="article:author" content="淳">
 <meta property="article:tag" content="Python">
 <meta property="article:tag" content="教學">
@@ -337,7 +337,7 @@
               <p id="updated-time" class="note note-light" style="display: none">
                 
                   
-                    本文最後更新於：2026-01-08T16:21:50+08:00
+                    本文最後更新於：2026-01-09T03:25:56+08:00
                   
                   
 
@@ -365,17 +365,17 @@
 <p>除了這個標準做法，我們也可以想一種邪門外道的解法，因為它出現在第二題，題目出成這個難度實在不合理，因此理論上應該要有更簡單直覺的做法，也就是暴力硬炸</p>
 <p>這裡只要注意它暴力取的範圍即可，因為題目說了 $1\le a\le 2^{63}-1$，因此直接取到 64 即可，不過其實因為必然會在某個時刻找到答案，所以其實你把迴圈開超大（甚至用 while-loop 無限迴圈）也不會錯就是了</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">for</span> _ <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-built_in">int</span>(<span class="hljs-built_in">input</span>())):<br>    n = <span class="hljs-built_in">int</span>(<span class="hljs-built_in">input</span>())<br> <br>    <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-number">64</span>):<br>        <span class="hljs-keyword">if</span> <span class="hljs-number">2</span>**i &gt;= n:<br>            <span class="hljs-built_in">print</span>(i)<br>            <span class="hljs-keyword">break</span><br></code></pre></td></tr></table></figure>
-<h2 id="C-Sword-Art-Online"><a href="#C-Sword-Art-Online" class="headerlink" title="C. Sword Art Online"></a>C. Sword Art Online</h2><blockquote>
+<h2 id="C-跑到哪了"><a href="#C-跑到哪了" class="headerlink" title="C. 跑到哪了"></a>C. 跑到哪了</h2><blockquote>
+<p><a target="_blank" rel="noopener" href="https://codeforces.com/gym/629558/problem/D">題目連結</a></p>
+</blockquote>
+<p>這題甚至比上一題還簡單，應該很容易就能看出來，這題只需要將趟數除以 2 取餘數（即 $n \bmod 2$），再看原始點在哪，就能秒知道答案了</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs python">s = <span class="hljs-built_in">input</span>().split()<br>n = <span class="hljs-built_in">int</span>(s[<span class="hljs-number">1</span>])<br>s = s[<span class="hljs-number">0</span>]<br><br><span class="hljs-keyword">if</span> n % <span class="hljs-number">2</span> == <span class="hljs-number">0</span>:<br>    <span class="hljs-built_in">print</span>(s)<br><span class="hljs-keyword">else</span>:<br>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;A&#x27;</span> <span class="hljs-keyword">if</span> s == <span class="hljs-string">&#x27;B&#x27;</span> <span class="hljs-keyword">else</span> <span class="hljs-string">&#x27;B&#x27;</span>)<br></code></pre></td></tr></table></figure>
+<h2 id="D-Sword-Art-Online"><a href="#D-Sword-Art-Online" class="headerlink" title="D. Sword Art Online"></a>D. Sword Art Online</h2><blockquote>
 <p><a target="_blank" rel="noopener" href="https://codeforces.com/gym/629558/problem/C">題目連結</a></p>
 </blockquote>
 <p>這題對於寫過國中數學題的你我而言，應該一眼就能看出來是要求最小公倍數對吧？如果真的看不出來，其實題目底下的「計算」也已經自爆解法了</p>
 <p>在 Python 中，我們可以直接用內建的 <code>math.lcm()</code> 函式來計算最小公倍數</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">from</span> math <span class="hljs-keyword">import</span> lcm<br><br><span class="hljs-built_in">input</span>() <span class="hljs-comment"># 跳過第一行 n 的輸入</span><br><span class="hljs-built_in">print</span>(lcm(*<span class="hljs-built_in">map</span>(<span class="hljs-built_in">int</span>, <span class="hljs-built_in">input</span>().split()))) <span class="hljs-comment"># 用 *（unpack）展開 map() 並傳入 lcm()</span><br></code></pre></td></tr></table></figure>
-<h2 id="D-跑到哪了"><a href="#D-跑到哪了" class="headerlink" title="D. 跑到哪了"></a>D. 跑到哪了</h2><blockquote>
-<p><a target="_blank" rel="noopener" href="https://codeforces.com/gym/629558/problem/D">題目連結</a></p>
-</blockquote>
-<p>這題甚至比上一題還簡單，應該很容易就能看出來，這題只需要將趟數除以 2 取餘數（即 $n \bmod 2$），再看原始點在哪，就能秒知道答案了</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs python">s = <span class="hljs-built_in">input</span>().split()<br>n = <span class="hljs-built_in">int</span>(s[<span class="hljs-number">1</span>])<br>s = s[<span class="hljs-number">0</span>]<br><br><span class="hljs-keyword">if</span> n % <span class="hljs-number">2</span> == <span class="hljs-number">0</span>:<br>    <span class="hljs-built_in">print</span>(s)<br><span class="hljs-keyword">else</span>:<br>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;A&#x27;</span> <span class="hljs-keyword">if</span> s == <span class="hljs-string">&#x27;B&#x27;</span> <span class="hljs-keyword">else</span> <span class="hljs-string">&#x27;B&#x27;</span>)<br></code></pre></td></tr></table></figure>
 <h2 id="E-國王的請求"><a href="#E-國王的請求" class="headerlink" title="E. 國王的請求"></a>E. 國王的請求</h2><blockquote>
 <p><a target="_blank" rel="noopener" href="https://codeforces.com/gym/629558/problem/E">題目連結</a></p>
 </blockquote>
@@ -438,13 +438,13 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
+        <a href="/tags/%E7%AD%86%E8%A8%98/" class="print-no-link">#筆記</a>
+      
         <a href="/tags/%E7%A8%8B%E5%BC%8F/" class="print-no-link">#程式</a>
       
         <a href="/tags/%E6%95%99%E5%AD%B8/" class="print-no-link">#教學</a>
       
         <a href="/tags/Python/" class="print-no-link">#Python</a>
-      
-        <a href="/tags/%E7%AD%86%E8%A8%98/" class="print-no-link">#筆記</a>
       
         <a href="/tags/%E9%A1%8C%E8%A7%A3/" class="print-no-link">#題解</a>
       
@@ -479,7 +479,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>更新於</div>
-          <div>2026-01-08 16:21</div>
+          <div>2026-01-09 03:25</div>
         </div>
       
       
