@@ -109,216 +109,216 @@ hexo s
 ## 部署到 GitHub Pages
 1. 在根目錄（`my-blog`）下創建一個檔案 `.gitignore`（若有則免創），並貼上以下內容：
 
-```gitignore
-.DS_Store
-Thumbs.db
-db.json
-*.log
-node_modules/
-public/
-.deploy*/
-_multiconfig.yml
-```
+  ```gitignore
+  .DS_Store
+  Thumbs.db
+  db.json
+  *.log
+  node_modules/
+  public/
+  .deploy*/
+  _multiconfig.yml
+  ```
 
 2. 下載部署的插件 `hexo-deployer-git`：
 
-```bash
-npm install hexo-deployer-git --save
-```
+  ```bash
+  npm install hexo-deployer-git --save
+  ```
 
 3. 去 Hexo 的 [Themes](https://hexo.io/themes/) 頁面，找一個自己喜歡的網站模板（主題），點進去後，依下圖複製其網址，再用指令 clone 到自己電腦中
 
-{% img /img/fluid_github.png %}
+  {% img /img/fluid_github.png %}
 
-```bash
-git submodule add <貼上剛 GitHub 複製的東西>
-```
+  ```bash
+  git submodule add <貼上剛 GitHub 複製的東西>
+  ```
 
-> 未來若在其他電腦下載你的 Repo，記得執行 `git submodule update --init --recursive` 才能抓回主題檔案
+  > 未來若在其他電腦下載你的 Repo，記得執行 `git submodule update --init --recursive` 才能抓回主題檔案
 
-> 請注意，雖然整體 Hexo 架構是用 MD 寫文章，但許多不同模板仍可能會加入額外（不屬於標準 MD）的語法，因此請謹慎選擇主題，否則日後若要換主題，那些主題獨有語法會失效，更改的時間成本會隨文章數日漸變多而變高
+  > 請注意，雖然整體 Hexo 架構是用 MD 寫文章，但許多不同模板仍可能會加入額外（不屬於標準 MD）的語法，因此請謹慎選擇主題，否則日後若要換主題，那些主題獨有語法會失效，更改的時間成本會隨文章數日漸變多而變高
 
-> 因為會有部分語法不被原生 MD 支援，故 IDE 的 MD 預覽也可能與最終效果不合
+  > 因為會有部分語法不被原生 MD 支援，故 IDE 的 MD 預覽也可能與最終效果不合
 
 4. 打開 `/my-blog/_config.yml` 文件，你可以先將文件取代成以下這一份，再依以下文件內的指示（所有中文字的部分，分別為第 6, 7, 8, 10, 16, 108 行）填入自己的資訊：
 
-```yml
-# Hexo Configuration
-## Docs: https://hexo.io/docs/configuration.html
-## Source: https://github.com/hexojs/hexo/
+  ```yml
+  # Hexo Configuration
+  ## Docs: https://hexo.io/docs/configuration.html
+  ## Source: https://github.com/hexojs/hexo/
 
-# Site
-title: "網站標題"
-subtitle: "網站副標題"
-description: "網站簡介"
-keywords:
-author: "你的名字"
-language: zh-TW
-timezone: Asia/Taipei
+  # Site
+  title: "網站標題"
+  subtitle: "網站副標題"
+  description: "網站簡介"
+  keywords:
+  author: "你的名字"
+  language: zh-TW
+  timezone: Asia/Taipei
 
-# URL
-## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
-url: https://你的名字.github.io
-root: /
-permalink: :title/
-permalink_defaults:
-pretty_urls:
-  trailing_index: true # Set to false to remove trailing 'index.html' from permalinks
-  trailing_html: true # Set to false to remove trailing '.html' from permalinks
+  # URL
+  ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
+  url: https://你的名字.github.io
+  root: /
+  permalink: :title/
+  permalink_defaults:
+  pretty_urls:
+    trailing_index: true # Set to false to remove trailing 'index.html' from permalinks
+    trailing_html: true # Set to false to remove trailing '.html' from permalinks
 
-# Directory
-source_dir: source
-public_dir: public
-tag_dir: tags
-archive_dir: archives
-category_dir: categories
-code_dir: downloads/code
-i18n_dir: :lang
-skip_render:
+  # Directory
+  source_dir: source
+  public_dir: public
+  tag_dir: tags
+  archive_dir: archives
+  category_dir: categories
+  code_dir: downloads/code
+  i18n_dir: :lang
+  skip_render:
 
-# Writing
-new_post_name: :title.md # File name of new posts
-default_layout: post
-titlecase: false # Transform title into titlecase
-external_link:
-  enable: true # Open external links in new tab
-  field: site # Apply to the whole site
-  exclude: ''
-filename_case: 0
-render_drafts: false
-post_asset_folder: false
-relative_link: false
-future: true
-syntax_highlighter: highlight.js
-highlight:
-  enable: false
-  line_number: true
-  auto_detect: false
-  tab_replace: ''
-  wrap: true
-  hljs: false
-prismjs:
-  enable: false
-  preprocess: true
-  line_number: true
-  tab_replace: ''
+  # Writing
+  new_post_name: :title.md # File name of new posts
+  default_layout: post
+  titlecase: false # Transform title into titlecase
+  external_link:
+    enable: true # Open external links in new tab
+    field: site # Apply to the whole site
+    exclude: ''
+  filename_case: 0
+  render_drafts: false
+  post_asset_folder: false
+  relative_link: false
+  future: true
+  syntax_highlighter: highlight.js
+  highlight:
+    enable: false
+    line_number: true
+    auto_detect: false
+    tab_replace: ''
+    wrap: true
+    hljs: false
+  prismjs:
+    enable: false
+    preprocess: true
+    line_number: true
+    tab_replace: ''
 
-# Home page setting
-# path: Root path for your blogs index page. (default = '')
-# per_page: Posts displayed per page. (0 = disable pagination)
-# order_by: Posts order. (Order by date descending by default)
-index_generator:
-  path: ''
+  # Home page setting
+  # path: Root path for your blogs index page. (default = '')
+  # per_page: Posts displayed per page. (0 = disable pagination)
+  # order_by: Posts order. (Order by date descending by default)
+  index_generator:
+    path: ''
+    per_page: 10
+    order_by: -date
+
+  # Category & Tag
+  default_category: 未分類
+  category_map:
+  tag_map:
+
+  # Metadata elements
+  ## https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta
+  meta_generator: true
+
+  # Date / Time format
+  ## Hexo uses Moment.js to parse and display date
+  ## You can customize the date format as defined in
+  ## http://momentjs.com/docs/#/displaying/format/
+  date_format: YYYY-MM-DD
+  time_format: HH:mm
+  ## updated_option supports 'mtime', 'date', 'empty'
+  updated_option: mtime
+
+  # Pagination
+  ## Set per_page to 0 to disable pagination
   per_page: 10
-  order_by: -date
+  pagination_dir: page
 
-# Category & Tag
-default_category: 未分類
-category_map:
-tag_map:
+  # Include / Exclude file(s)
+  ## include:/exclude: options only apply to the 'source/' folder
+  include:
+  exclude:
+  ignore:
 
-# Metadata elements
-## https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta
-meta_generator: true
+  # Extensions
+  ## Plugins: https://hexo.io/plugins/
+  ## Themes: https://hexo.io/themes/
+  theme: 主題名稱
 
-# Date / Time format
-## Hexo uses Moment.js to parse and display date
-## You can customize the date format as defined in
-## http://momentjs.com/docs/#/displaying/format/
-date_format: YYYY-MM-DD
-time_format: HH:mm
-## updated_option supports 'mtime', 'date', 'empty'
-updated_option: mtime
+  # Deployment
+  ## Docs: https://hexo.io/docs/one-command-deployment
+  deploy:
+    type: git
+    repo: https://github.com/你的名字/你的名字.github.io.git
+    branch: main
+  ```
 
-# Pagination
-## Set per_page to 0 to disable pagination
-per_page: 10
-pagination_dir: page
-
-# Include / Exclude file(s)
-## include:/exclude: options only apply to the 'source/' folder
-include:
-exclude:
-ignore:
-
-# Extensions
-## Plugins: https://hexo.io/plugins/
-## Themes: https://hexo.io/themes/
-theme: 主題名稱
-
-# Deployment
-## Docs: https://hexo.io/docs/one-command-deployment
-deploy:
-  type: git
-  repo: https://github.com/你的名字/你的名字.github.io.git
-  branch: main
-```
-
-> 小提醒：YAML 檔對空格相當敏感，`:` 的後面一定要加一個空格（除非沒東西）
+  > 小提醒：YAML 檔對空格相當敏感，`:` 的後面一定要加一個空格（除非沒東西）
 
 5. 根據不同主題，你可能需要去設定那個主題自己的 `_config.主題.yml` 或各頁 `index.md` 等，這部分會因各主題而有所不同，所以推薦直接用 AI（我推薦 Gemini，它架站效率比 ChatGPT 好很多），你可以用以下的 prompt，並依自己的需求更改：
 
-```text
-我在使用 Hexo 架設網站，目前我進行到設定主題，我使用的主題是 {主題名稱}，我已經將它 clone 下來，也在 _config.yml 中設置好了，除此之外就沒做任何其他多餘的設定了。
-請帶我一步步設定各個頁面（about, archives, tags, categories, links, etc.）的 index.md，包含 front-matter 和主題的 _config.yml（完整內容，你也可以叫我去某個網站先載範本後再教我改）。
-過程中若有不同設定或偏好要向我確認，你可以先向我問清楚。
-```
+  ```text
+  我在使用 Hexo 架設網站，目前我進行到設定主題，我使用的主題是 {主題名稱}，我已經將它 clone 下來，也在 _config.yml 中設置好了，除此之外就沒做任何其他多餘的設定了。
+  請帶我一步步設定各個頁面（about, archives, tags, categories, links, etc.）的 index.md，包含 front-matter 和主題的 _config.yml（完整內容，你也可以叫我去某個網站先載範本後再教我改）。
+  過程中若有不同設定或偏好要向我確認，你可以先向我問清楚。
+  ```
 
 6. 到 GitHub 個網 Repo 中，`Settings` &rarr; `Actions` &rarr; `General` &rarr; `Workflow permissions` 將權限改為 `Read and write permissions`
 
 7. 在根目錄（`my-blog`）下，創一個資料夾 `.github`（若已存在則免創），再在裡面創建另一個資料夾 `workflows`（若已存在則免創），最後再在裡面創建檔案 `deploy.yml` 並貼上以下內容：
 
-```yml
-name: Hexo Deploy
+  ```yml
+  name: Hexo Deploy
 
-on:
-  push:
-    branches:
-      - main
+  on:
+    push:
+      branches:
+        - main
 
-permissions:
-  contents: write
+  permissions:
+    contents: write
 
-jobs:
-  build_and_deploy:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout source
-        uses: actions/checkout@v4
-        with:
-          submodules: recursive
-          fetch-depth: 0
+  jobs:
+    build_and_deploy:
+      runs-on: ubuntu-latest
+      steps:
+        - name: Checkout source
+          uses: actions/checkout@v4
+          with:
+            submodules: recursive
+            fetch-depth: 0
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: "20"
-          cache: "npm"
+        - name: Setup Node.js
+          uses: actions/setup-node@v4
+          with:
+            node-version: "20"
+            cache: "npm"
 
-      - name: Install Dependencies
-        run: npm ci || npm install
+        - name: Install Dependencies
+          run: npm ci || npm install
 
-      - name: Generate Files
-        run: |
-          npx hexo clean
-          npx hexo generate
+        - name: Generate Files
+          run: |
+            npx hexo clean
+            npx hexo generate
 
-      - name: Deploy to gh-pages
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./public
-          publish_branch: gh-pages
-```
+        - name: Deploy to gh-pages
+          uses: peaceiris/actions-gh-pages@v3
+          with:
+            github_token: ${{ secrets.GITHUB_TOKEN }}
+            publish_dir: ./public
+            publish_branch: gh-pages
+  ```
 
 8. 試將以上程式碼推到 GitHub 上
 
-```bash
-git init
-git remote add origin <Repo 網址>
-git branch -M main
-git push -u origin main
-```
+  ```bash
+  git init
+  git remote add origin <Repo 網址>
+  git branch -M main
+  git push -u origin main
+  ```
 
 9. 到 GitHub 的那個網站 Repo 中，`Settings` &rarr; `Pages` &rarr; `Build and deployment` 中，確認 `Source` 是選到 `Deploy from a branch`，並且底下 `Branch` 的部分從 `main` 改為 `gh-pages`
 10. 到 `Settings` &rarr; `Environments` 中有一個 `Allow administrators to bypass configured protection rules` 選項打勾
@@ -331,9 +331,9 @@ git push -u origin main
 這個插件是用來支援 LaTeX 的強大工具。
 
 1. 安裝插件
-```bash
-npm install hexo-filter-mathjax --save
-```
+  ```bash
+  npm install hexo-filter-mathjax --save
+  ```
 
 2. 這裡分為兩種情況
 
@@ -363,20 +363,20 @@ npm install hexo-filter-mathjax --save
    - 現代化主題
      1. 打開主題設定檔 `_config.主題.yml`
      2. 搜尋 `giscus`，將對應的參數從剛才的網頁複製過來：
-    ```yml
-    comments:
-      enable: true
-      type: giscus
+      ```yml
+      comments:
+        enable: true
+        type: giscus
 
-    giscus:
-      repo: "你的帳號/儲存庫名稱"
-      repo_id: "網頁上的 data-repo-id"
-      category: "Announcements"
-      category_id: "網頁上的 data-category-id"
-      mapping: "pathname" # 或 title
-      theme: "light"
-      lang: "zh-TW"
-    ```
+      giscus:
+        repo: "你的帳號/儲存庫名稱"
+        repo_id: "網頁上的 data-repo-id"
+        category: "Announcements"
+        category_id: "網頁上的 data-category-id"
+        mapping: "pathname" # 或 title
+        theme: "light"
+        lang: "zh-TW"
+      ```
 
    - 極簡主題
     若找不到任何 `comments` 字樣，代表主題不支援，那就只能暴力嵌入了
@@ -393,97 +393,97 @@ npm install hexo-filter-mathjax --save
    - Secret：貼上剛才複製的 Webhook 網址
 
 4. 在 `/.github/workflows/` 下建立 `notify.yml`，貼上以下內容，並按需修改第 39, 41, 48, 53, 56 行
-```yml
-name: Discord Notification
+  ```yml
+  name: Discord Notification
 
-on:
-  push:
-    branches:
-      - main
+  on:
+    push:
+      branches:
+        - main
 
-jobs:
-  notify:
-    if: startsWith(github.event.head_commit.message, 'publish')
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
-        with:
-          fetch-depth: 2
+  jobs:
+    notify:
+      if: startsWith(github.event.head_commit.message, 'publish')
+      runs-on: ubuntu-latest
+      steps:
+        - name: Checkout code
+          uses: actions/checkout@v3
+          with:
+            fetch-depth: 2
 
-      - name: Get New Post Filename
-        id: get_file
-        run: |
-          git config --global core.quotepath false
-          
-          NEW_POST=$(git diff --name-only HEAD^ HEAD | grep "source/_posts/" | grep ".md" | head -n 1)
-          
-          if [ -z "$NEW_POST" ]; then
-            echo "post_name=" >> $GITHUB_OUTPUT
-          else
-            POST_NAME=$(basename "$NEW_POST" .md)
-            echo "post_name=$POST_NAME" >> $GITHUB_OUTPUT
-          fi
+        - name: Get New Post Filename
+          id: get_file
+          run: |
+            git config --global core.quotepath false
+            
+            NEW_POST=$(git diff --name-only HEAD^ HEAD | grep "source/_posts/" | grep ".md" | head -n 1)
+            
+            if [ -z "$NEW_POST" ]; then
+              echo "post_name=" >> $GITHUB_OUTPUT
+            else
+              POST_NAME=$(basename "$NEW_POST" .md)
+              echo "post_name=$POST_NAME" >> $GITHUB_OUTPUT
+            fi
 
-      - name: Send Message to Discord
-        run: |
-          POST_PATH="${{ steps.get_file.outputs.post_name }}"
-          ENCODED_PATH=$(python3 -c "import urllib.parse; print(urllib.parse.quote('$POST_PATH'))")
-          
-          if [ -z "$POST_PATH" ]; then
-            FINAL_URL="https://名稱.github.io/"
-            DISPLAY_TITLE="前往 網站名稱"
-          else
-            FINAL_URL="https://名稱.github.io/$ENCODED_PATH/"
-            DISPLAY_TITLE="$POST_PATH"
-          fi
+        - name: Send Message to Discord
+          run: |
+            POST_PATH="${{ steps.get_file.outputs.post_name }}"
+            ENCODED_PATH=$(python3 -c "import urllib.parse; print(urllib.parse.quote('$POST_PATH'))")
+            
+            if [ -z "$POST_PATH" ]; then
+              FINAL_URL="https://名稱.github.io/"
+              DISPLAY_TITLE="前往 網站名稱"
+            else
+              FINAL_URL="https://名稱.github.io/$ENCODED_PATH/"
+              DISPLAY_TITLE="$POST_PATH"
+            fi
 
-          curl -H "Content-Type: application/json" \
-          -X POST \
-          -d "{
-            \"content\": \"通知訊息\",
-            \"embeds\": [{
-              \"title\": \"$DISPLAY_TITLE\",
-              \"url\": \"$FINAL_URL\",
-              \"color\": 5814783,
-              \"description\": \"點擊上方連結閱讀全文內容\",
-              \"timestamp\": \"$(date -u +%Y-%m-%dT%H:%M:%SZ)\"
-            }],
-            \"allowed_mentions\": { \"roles\": [\"被提及的身分組 ID\"] }
-          }" \
-          ${{ secrets.DISCORD_WEBHOOK }}
-```
+            curl -H "Content-Type: application/json" \
+            -X POST \
+            -d "{
+              \"content\": \"通知訊息\",
+              \"embeds\": [{
+                \"title\": \"$DISPLAY_TITLE\",
+                \"url\": \"$FINAL_URL\",
+                \"color\": 5814783,
+                \"description\": \"點擊上方連結閱讀全文內容\",
+                \"timestamp\": \"$(date -u +%Y-%m-%dT%H:%M:%SZ)\"
+              }],
+              \"allowed_mentions\": { \"roles\": [\"被提及的身分組 ID\"] }
+            }" \
+            ${{ secrets.DISCORD_WEBHOOK }}
+  ```
 
 5. 以後每次寫完文章後，在 commit message 中以 `publish` 作為開頭（前綴），即可發送通知
 
 ## 寫文章
 1. 可以到 `/scaffolds/post.md` 中修改想要的 front-matter（即被 `---` 包住的部分）的模板，不會修改的話也可以問問看 AI，以下放上我的作為參考（可刪註解後再使用）：
-```md
----
-title: {{ title }} # 會自動代入，不用改
-date: {{ date }} # 會自動代入，不用改
-excerpt: "" # 文章說明
-categories:
-  - 筆記與教學
-  - 程式
-tags:
-  - 筆記
-  - 教學
-  - 程式
-math: false # 會用到 MathJax 時開啟
-mermaid: false # 繪製流程圖用的語法
-hide: true # 發布文章時設為 false
----
+  ```md
+  ---
+  title: {{ title }} # 會自動代入，不用改
+  date: {{ date }} # 會自動代入，不用改
+  excerpt: "" # 文章說明
+  categories:
+    - 筆記與教學
+    - 程式
+  tags:
+    - 筆記
+    - 教學
+    - 程式
+  math: false # 會用到 MathJax 時開啟
+  mermaid: false # 繪製流程圖用的語法
+  hide: true # 發布文章時設為 false
+  ---
 
-```
+  ```
 
 > `hide` 那一項主要是用於隱藏還沒寫完的文章，該項為 `true` 時，文章不會顯示在文章們中，也無法被搜尋功能找到，只能以網址開啟
 > 發佈公開文章時，請記得將它設為 `false`
 
 2. 建立一篇新文章，用指令建立時會自動複製樣板（`/scaffolds/post.md`）
-```bash
-hexo new "文章標題"
-```
+  ```bash
+  hexo new "文章標題"
+  ```
 
 3. 使用 MD 語法來撰寫整篇文章，若要使用 AI，請先和它說明你用的主題名稱；若想自己寫，也可以先問 AI 來學你用的主題有沒有什麼特殊語法
 
@@ -493,12 +493,12 @@ hexo new "文章標題"
 
 > 所有檔案名稱盡量不要有中文、特殊符號和空格（最好只用英文、數字和底線命名）
 
-1. 寫完後，可以使用以下指令建立本機預覽，並可在 `http://localhost:4000` 中看到網站預覽
-```bash
-hexo cl && hexo g && hexo s
-```
+5. 寫完後，可以使用以下指令建立本機預覽，並可在 `http://localhost:4000` 中看到網站預覽
+  ```bash
+  hexo cl && hexo g && hexo s
+  ```
 
-> 使用 Windows CMD 者請改用 `;` 取代 `&&`
+  > 使用 Windows CMD 者請改用 `;` 取代 `&&`
 
 6. 文章寫完後，只需要將文章推到 GitHub 上即可
 ```bash
