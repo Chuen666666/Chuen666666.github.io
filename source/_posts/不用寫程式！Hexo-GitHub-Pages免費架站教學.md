@@ -45,8 +45,8 @@ excerpt: 從零開始教你怎麼免費且不寫任何一行程式碼就架設�
 ### Git/GitHub
 其實 Git 和 GitHub 是兩個完全不同的東西，GitHub 只不過是其中一個用 Git 架構開發的程式碼放置與公開網站，其他還有如 GitLab、Bitbucket 等，不過這裡會以 GitHub 為主來講解。
 
-- Git：專門用來做版本控制的好用工具，我們可以用它來建立倉庫（Repository、Repo），並方便地在不同版本間切換，讓回溯版本變得簡單。
-- GitHub：一個遠端數據庫，可以用來放自己的程式碼上去，它是我們的這次架站的主角之一。
+- Git：專門用來做版本控制的好用工具，我們可以用它來建立倉庫（Repository、Repo），並方便地在不同版本間切換，讓回溯版本變得簡單
+- GitHub：一個遠端數據庫，可以用來放自己的程式碼上去，它是我們的這次架站的主角之一
 
 ### GitHub Pages
 GitHub 的功能之一，用託管自己的靜態網站（也就是不會用到資料庫和後端的網站）上去，並產生一個免費的公開網址。需要特別注意，Pages 架個網時，需把 Repo 名稱設為 `username.github.io`（`username` 換成 GitHub 帳號名）。
@@ -84,7 +84,7 @@ sudo apt install -y nodejs
 ```
 
 ### GitHub
-去到 GitHub，創建一個新 Repo，並將名稱設為 `username.github.io`（`username` 換成自己 GitHub 的帳號名），記得將 `Visibility` 設為 `Public`，因為只有付費帳號才享有 `Private` 的 Pages 功能（免費帳號設為 `Private` 的話，Pages 託管的網站會直接 _404 NOT FOUND_）
+去到 GitHub，創建一個新 Repo，並將名稱設為 `username.github.io`（`username` 換成自己 GitHub 的帳號名），記得將 `Visibility` 設為 `Public`，因為只有付費帳號才享有 `Private` 的 Pages 功能（免費帳號設為 `Private` 的話，Pages 託管的網站會直接 _404 NOT FOUND_）。
 
 ### Hexo
 此步請在完成 Node.js 安裝後才能執行。
@@ -136,11 +136,17 @@ hexo s
   git submodule add <貼上剛 GitHub 複製的東西>
   ```
 
-  > 未來若在其他電腦下載你的 Repo，記得執行 `git submodule update --init --recursive` 才能抓回主題檔案
+  {% note info %}
+  未來若在其他電腦下載你的 Repo，記得執行 `git submodule update --init --recursive` 才能抓回主題檔案
+  {% endnote %}
 
-  > 請注意，雖然整體 Hexo 架構是用 MD 寫文章，但許多不同模板仍可能會加入額外（不屬於標準 MD）的語法，因此請謹慎選擇主題，否則日後若要換主題，那些主題獨有語法會失效，更改的時間成本會隨文章數日漸變多而變高
+  {% note warning %}
+  請注意，雖然整體 Hexo 架構是用 MD 寫文章，但許多不同模板仍可能會加入額外（不屬於標準 MD）的語法，因此請謹慎選擇主題，否則日後若要換主題，那些主題獨有語法會失效，更改的時間成本會隨文章數日漸變多而變高
+  {% endnote %}
 
-  > 因為會有部分語法不被原生 MD 支援，故 IDE 的 MD 預覽也可能與最終效果不合
+  {% note default %}
+  因為會有部分語法不被原生 MD 支援，故 IDE 的 MD 預覽也可能與最終效果不合
+  {% endnote %}
 
 4. 打開 `/my-blog/_config.yml` 文件，你可以先將文件取代成以下這一份，再依以下文件內的指示（所有中文字的部分，分別為第 6, 7, 8, 10, 16, 108 行）填入自己的資訊：
 
@@ -256,7 +262,9 @@ hexo s
     branch: main
   ```
 
-  > 小提醒：YAML 檔對空格相當敏感，`:` 的後面一定要加一個空格（除非沒東西）
+  {% note warning %}
+  YAML 檔對空格相當敏感，`:` 的後面一定要加一個空格（除非沒東西）
+  {% endnote %}
 
 5. 根據不同主題，你可能需要去設定那個主題自己的 `_config.主題.yml` 或各頁 `index.md` 等，這部分會因各主題而有所不同，所以推薦直接用 AI（我推薦 Gemini，它架站效率比 ChatGPT 好很多），你可以用以下的 prompt，並依自己的需求更改：
 
@@ -456,7 +464,6 @@ hexo s
             ${{ secrets.DISCORD_WEBHOOK }}
   ```
 
-
 5. 以後每次寫完文章後，在 commit message 中以 `publish` 作為開頭（前綴），即可發送通知
 
   {% note warning %}
@@ -485,8 +492,10 @@ hexo s
 
   ```
 
-  > `hide` 那一項主要是用於隱藏還沒寫完的文章，該項為 `true` 時，文章不會顯示在文章們中，也無法被搜尋功能找到，只能以網址開啟
-  > 發布公開文章時，請記得將它設為 `false`
+  {% note primary %}
+  `hide` 那一項主要是用於隱藏還沒寫完的文章，該項為 `true` 時，文章不會顯示在文章們中，也無法被搜尋功能找到，只能以網址開啟
+  發布公開文章時，請記得將它設為 `false`
+  {% endnote %}
 
   {% note danger %}
   請勿發布含有敏感資訊或不合法內容，即使 `hide: true`，因為 GitHub Repo 是 `Public`，其他人仍有辦法透過原始碼來看到那些 hide 起來的內容
@@ -497,15 +506,21 @@ hexo s
   hexo new "文章標題"
   ```
 
-  > 你可以到 `/source/_posts` 中將模板的 `hello-world.md` 刪除，但網站中必須至少存在一篇文章，否則連「關於我」頁都會報 _404 NOT FOUND_
+  {% note success %}
+  你可以到 `/source/_posts` 中將模板的 `hello-world.md` 刪除，但網站中必須至少存在一篇文章，否則連「關於我」頁都會報 _404 NOT FOUND_
+  {% endnote %}
 
 3. 使用 MD 語法來撰寫整篇文章，若要使用 AI，請先和它說明你用的主題名稱；若想自己寫，也可以先問 AI 來學你用的主題有沒有什麼特殊語法
 
-  > 因為標題已經交給 front-matter 了，因此文章從 H2（`##`）標題寫起即可
+  {% note default %}
+  因為標題已經交給 front-matter 了，因此文章從 H2（`##`）標題寫起即可
+  {% endnote %}
 
 4. 若有插入檔案的需求，可以將檔案放到 `/source/資料夾（可自創）` 裡面，並在文章內以 `/資料夾` 來指定，但具體嵌入檔案語法會因不同主題而不同，故此部分可問 AI
 
-  > 所有檔案名稱盡量不要有中文、特殊符號和空格（最好只用英文、數字和底線命名）
+  {% note info %}
+  所有檔案名稱盡量不要有中文、特殊符號和空格（最好只用英文、數字和底線命名）
+  {% endnote %}
 
 5. 寫完後，可以使用以下指令建立本機預覽，並可在 `http://localhost:4000` 中看到網站預覽
   ```bash
