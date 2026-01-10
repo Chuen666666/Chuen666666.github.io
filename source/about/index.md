@@ -13,7 +13,7 @@ layout: about
 - 生日：2008 年 1 月 12 日
 - 國籍與所在地：🇹🇼（台北市）
 - 興趣
-  - 寫程式（Python、Markdown、LaTex）
+  - 寫程式（Python、Markdown、LaTeX）
   - 酷酷的科技產品（機械手臂）
   - 剪片（Adobe Premiere Pro）
   - 運動（羽球、路跑、溜冰、扯鈴）
@@ -33,6 +33,9 @@ layout: about
 
 > 歡迎透過以上方式與我詢問事情、合作、交流、甚至打屁聊天！
 > 所有聯絡方式都確認開啟了陌生人訊息，加入後請直接傳訊息表明自己是從個網來的，否則可能被我誤以為是垃圾帳號而忽略
+
+## 我的 DC 伺服器
+若想接收到發文通知，可以考慮加入我的 DC 伺服器：[淳の天地](https://discord.gg/KcPVwPvqx2)
 
 {% raw %}
 <link rel="stylesheet" href="https://at.alicdn.com/t/c/font_1736178_k526ubmyhba.css">
