@@ -8,7 +8,7 @@ tags:
   - 教學
   - 程式
   - 個人網站
-math: false
+math: true
 mermaid: false
 hide: true
 date: 2026-01-10 00:43:32
