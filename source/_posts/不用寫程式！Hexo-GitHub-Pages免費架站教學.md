@@ -501,9 +501,9 @@ hexo s
   > 使用 Windows CMD 者請改用 `;` 取代 `&&`
 
 6. 文章寫完後，只需要將文章推到 GitHub 上即可
-```bash
-git add .
-git commit "填寫自己的 commit message"
-git push
-```
-> 若你有照我先前教的設定通知的 DC Bot，則 commit message 請以 `publish` 開頭（限發文章時，若是 push 修改其他設定，則不可以它開頭）
+  ```bash
+  git add .
+  git commit "填寫自己的 commit message"
+  git push
+  ```
+  > 若你有照我先前教的設定通知的 DC Bot，則 commit message 請以 `publish` 開頭（限發文章時，若是 push 修改其他設定，則不可以它開頭）
