@@ -28,7 +28,7 @@
 <meta property="og:locale" content="zh_TW">
 <meta property="og:image" content="https://chuen666666.github.io/img/fluid_github.png">
 <meta property="article:published_time" content="2026-01-09T16:43:32.000Z">
-<meta property="article:modified_time" content="2026-01-10T08:02:51.235Z">
+<meta property="article:modified_time" content="2026-01-10T08:12:31.266Z">
 <meta property="article:author" content="淳">
 <meta property="article:tag" content="個人網站">
 <meta property="article:tag" content="教學">
@@ -272,7 +272,7 @@
         
         
         
-          94 分鐘
+          95 分鐘
         
       </span>
     
@@ -336,7 +336,7 @@
               <p id="updated-time" class="note note-light" style="display: none">
                 
                   
-                    本文最後更新於：2026-01-10T16:02:51+08:00
+                    本文最後更新於：2026-01-10T16:12:31+08:00
                   
                   
 
@@ -356,6 +356,7 @@
 <h3 id="LaTeX"><a href="#LaTeX" class="headerlink" title="LaTeX"></a>LaTeX</h3><p>另一種標記語言，上手相當難，但排板非常規範，<del>根本論文人惡夢</del>。</p>
 <p>它的專長是用來寫數學、物理、化學的各種符號或公式。</p>
 <p>當然，我們這裡不會用到整篇的那種 LaTeX，只會在用要寫數學公式時用到一點點，其他的排板部分就交給 MD 吧。</p>
+<h3 id="YAML"><a href="#YAML" class="headerlink" title="YAML"></a>YAML</h3><p>一種文件，副檔名為 <code>.yaml</code> 或 <code>.yml</code>，在架站時，它主要是用來作為各種設定檔的檔案。要注意的是，這種檔案對於空格極為敏感，故從其他地方複製時請小心。</p>
 <h3 id="IDE"><a href="#IDE" class="headerlink" title="IDE"></a>IDE</h3><p>中文叫「整合開發環境」，<del>我沒聽過任何一個資工人會稱它的中文就是了</del>。例如我們在寫一個 Python 程式，其實我們只需要有 Python 環境，建一個以 <code>.py</code> 為副檔名的檔案，再直接用記事本來寫，理論上也是可行的，但相信我，沒有人會這麼做的，<span class="spoiler" onclick="this.classList.add('open')">除了我第一次去參加 APCS 時不知道他們電腦裡有 IDE 以外</span>，用記事本可以寫到你懷疑人生。</p>
 <p>那為了方便開發者寫程式，就有了 IDE 的出現，它除了會有各種語法高亮、靜態錯誤提示（即程式執行前先預測並標記出可能報錯的地方的功能）、一鍵編譯程式、各種好用的 GUI（圖形介面）以外，現在甚至有一些整合了 LLM（大語言模型）。目前最紅的 IDE 就是由微軟推出的 Visual Studio Code（VS Code、VSC），<del>微軟為數不多獲得高度好評的軟體</del>。</p>
 <h3 id="Git-GitHub"><a href="#Git-GitHub" class="headerlink" title="Git/GitHub"></a>Git/GitHub</h3><p>其實 Git 和 GitHub 是兩個完全不同的東西，GitHub 只不過是其中一個用 Git 架構開發的程式碼放置與公開網站，其他還有如 GitLab、Bitbucket 等，不過這裡會以 GitHub 為主來講解。</p>
@@ -496,7 +497,7 @@
 </ol>
 <h2 id="寫文章"><a href="#寫文章" class="headerlink" title="寫文章"></a>寫文章</h2><ol>
 <li><p>可以到 <code>/scaffolds/post.md</code> 中修改想要的 front-matter（即被 <code>---</code> 包住的部分）的模板，不會修改的話也可以問問看 AI，以下放上我的作為參考（可刪註解後再使用）：</p>
-<figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><code class="hljs md">---<br>title: &#123;&#123; title &#125;&#125; # 會自動代入，不用改<br>date: &#123;&#123; date &#125;&#125; # 會自動代入，不用改<br>excerpt: &quot;&quot; # 文章說明<br>categories:<br><span class="hljs-bullet">  -</span> 筆記與教學<br><span class="hljs-bullet">  -</span> 程式<br>tags:<br><span class="hljs-bullet">  -</span> 筆記<br><span class="hljs-bullet">  -</span> 教學<br><span class="hljs-bullet">  -</span> 程式<br>math: false # 會用到 MathJax 時開啟<br>mermaid: false # 繪製流程圖用的語法<br><span class="hljs-section">hide: true # 發布文章時設為 false</span><br><span class="hljs-section">---</span><br><br></code></pre></td></tr></table></figure>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><code class="hljs yml"><span class="hljs-meta">---</span><br><span class="hljs-attr">title:</span> &#123;&#123; <span class="hljs-string">title</span> &#125;&#125; <span class="hljs-comment"># 會自動代入，不用改</span><br><span class="hljs-attr">date:</span> &#123;&#123; <span class="hljs-string">date</span> &#125;&#125; <span class="hljs-comment"># 會自動代入，不用改</span><br><span class="hljs-attr">excerpt:</span> <span class="hljs-string">&quot;&quot;</span> <span class="hljs-comment"># 文章說明</span><br><span class="hljs-attr">categories:</span><br>  <span class="hljs-bullet">-</span> <span class="hljs-string">筆記與教學</span><br>  <span class="hljs-bullet">-</span> <span class="hljs-string">程式</span><br><span class="hljs-attr">tags:</span><br>  <span class="hljs-bullet">-</span> <span class="hljs-string">筆記</span><br>  <span class="hljs-bullet">-</span> <span class="hljs-string">教學</span><br>  <span class="hljs-bullet">-</span> <span class="hljs-string">程式</span><br><span class="hljs-attr">math:</span> <span class="hljs-literal">false</span> <span class="hljs-comment"># 會用到 MathJax 時開啟</span><br><span class="hljs-attr">mermaid:</span> <span class="hljs-literal">false</span> <span class="hljs-comment"># 繪製流程圖用的語法</span><br><span class="hljs-attr">hide:</span> <span class="hljs-literal">true</span> <span class="hljs-comment"># 發布文章時設為 false</span><br><span class="hljs-meta">---</span><br><span class="hljs-meta"></span><br></code></pre></td></tr></table></figure>
 <div class="note note-primary">
             <p><code>hide</code> 那一項主要是用於隱藏還沒寫完的文章，該項為 <code>true</code> 時，文章不會顯示在文章們中，也無法被搜尋功能找到，只能以網址開啟<br>發布公開文章時，請記得將它設為 <code>false</code></p> 
           </div>
@@ -582,9 +583,9 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/%E6%95%99%E5%AD%B8/" class="print-no-link">#教學</a>
-      
         <a href="/tags/%E7%A8%8B%E5%BC%8F/" class="print-no-link">#程式</a>
+      
+        <a href="/tags/%E6%95%99%E5%AD%B8/" class="print-no-link">#教學</a>
       
         <a href="/tags/%E5%80%8B%E4%BA%BA%E7%B6%B2%E7%AB%99/" class="print-no-link">#個人網站</a>
       
@@ -617,7 +618,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>更新於</div>
-          <div>2026-01-10 16:02</div>
+          <div>2026-01-10 16:12</div>
         </div>
       
       
