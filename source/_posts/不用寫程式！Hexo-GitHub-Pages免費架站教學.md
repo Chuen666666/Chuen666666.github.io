@@ -94,19 +94,19 @@ sudo apt install -y nodejs
 npm install -g hexo-cli
 ```
 
-3. 建立部落格資料夾（放原檔內容）
+2. 建立部落格資料夾（放原檔內容）
 ```bash
 hexo init my-blog
 cd my-blog
 npm install
 ```
 
-4. 預覽測試
+3. 預覽測試
 ```bash
 hexo s
 ```
 
-5. 在瀏覽器中打開 `http://localhost:4000`，理論上，若以上安裝沒有任何問題，你應該會看到一個預設的網站，並且開著一篇名為「Hello World」的文章
+4. 在瀏覽器中打開 `http://localhost:4000`，理論上，若以上安裝沒有任何問題，你應該會看到一個預設的網站，並且開著一篇名為「Hello World」的文章
 
 ## 部署到 GitHub Pages
 1. 在根目錄（`my-blog`）下創建一個檔案 `.gitignore`（若有則免創），並貼上以下內容：
