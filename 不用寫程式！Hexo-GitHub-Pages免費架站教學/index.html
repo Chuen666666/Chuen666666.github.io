@@ -28,7 +28,7 @@
 <meta property="og:locale" content="zh_TW">
 <meta property="og:image" content="https://chuen666666.github.io/img/fluid_github.png">
 <meta property="article:published_time" content="2026-01-09T16:43:32.000Z">
-<meta property="article:modified_time" content="2026-01-10T07:34:27.209Z">
+<meta property="article:modified_time" content="2026-01-10T07:40:56.058Z">
 <meta property="article:author" content="淳">
 <meta property="article:tag" content="個人網站">
 <meta property="article:tag" content="教學">
@@ -336,7 +336,7 @@
               <p id="updated-time" class="note note-light" style="display: none">
                 
                   
-                    本文最後更新於：2026-01-10T15:34:27+08:00
+                    本文最後更新於：2026-01-10T15:40:56+08:00
                   
                   
 
@@ -354,7 +354,7 @@
 <h3 id="HTML-CSS-JS"><a href="#HTML-CSS-JS" class="headerlink" title="HTML/CSS/JS"></a>HTML/CSS/JS</h3><p>這是一般網頁（前端）構成的三大要素，以一顆按鈕的例子來說：HTML 負責定義<strong>這個按鈕的出現以及位置</strong>、CSS 負責控制<strong>這個按鈕要長怎樣</strong>、JavaScript (JS) 則控制<strong>這個按鈕按下去會發生什麼</strong>（功能）</p>
 <h3 id="Markdown-MD"><a href="#Markdown-MD" class="headerlink" title="Markdown (MD)"></a>Markdown (MD)</h3><p>我目前為止學過最簡單的標記語言，它可以用相當簡單和直觀的方式來寫出好看的文章，且遠比 LaTeX 和 HTML 好學，<del>連 <a target="_blank" rel="noopener" href="https://yilinguo121.github.io/">@郭10</a> 都學得會，問題應該是不大</del>。</p>
 <h3 id="LaTeX"><a href="#LaTeX" class="headerlink" title="LaTeX"></a>LaTeX</h3><p>另一種標記語言，上手相當難，但排板非常規範，<del>根本論文人惡夢</del>。</p>
-<p>它的專長是用來寫數學、物理、化學的各種符號或公式，例如 $x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}$。</p>
+<p>它的專長是用來寫數學、物理、化學的各種符號或公式。</p>
 <p>當然，我們這裡不會用到整篇的那種 LaTeX，只會在用要寫數學公式時用到一點點，其他的排板部分就交給 MD 吧。</p>
 <h3 id="IDE"><a href="#IDE" class="headerlink" title="IDE"></a>IDE</h3><p>中文叫「整合開發環境」，<del>我沒聽過任何一個資工人會稱它的中文就是了</del>。例如我們在寫一個 Python 程式，其實我們只需要有 Python 環境，建一個以 <code>.py</code> 為副檔名的檔案，再直接用記事本來寫，理論上也是可行的，但相信我，沒有人會這麼做的，<span class="spoiler" onclick="this.classList.add('open')">除了我第一次去參加 APCS 時不知道他們電腦裡有 IDE 以外</span>，用記事本可以寫到你懷疑人生。</p>
 <p>那為了方便開發者寫程式，就有了 IDE 的出現，它除了會有各種語法高亮、靜態錯誤提示（即程式執行前先預測並標記出可能報錯的地方的功能）、一鍵編譯程式、各種好用的 GUI（圖形介面）以外，現在甚至有一些整合了 LLM（大語言模型）。目前最紅的 IDE 就是由微軟推出的 Visual Studio Code（VS Code、VSC），<del>微軟為數不多獲得高度好評的軟體</del>。</p>
@@ -616,7 +616,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>更新於</div>
-          <div>2026-01-10 15:34</div>
+          <div>2026-01-10 15:40</div>
         </div>
       
       
@@ -723,12 +723,6 @@
 
 
   
-
-
-  
-  
-
-
 
 
 
@@ -974,49 +968,6 @@
 
 
   <script>Fluid.plugins.imageCaption();</script>
-
-  
-      <script>
-        if (!window.MathJax) {
-          window.MathJax = {
-            tex    : {
-              inlineMath: { '[+]': [['$', '$']] }
-            },
-            loader : {
-              load: ['ui/lazy']
-            },
-            options: {
-              renderActions: {
-                insertedScript: [200, () => {
-                  document.querySelectorAll('mjx-container').forEach(node => {
-                    let target = node.parentNode;
-                    if (target.nodeName.toLowerCase() === 'li') {
-                      target.parentNode.classList.add('has-jax');
-                    }
-                  });
-                }, '', false]
-              }
-            }
-          };
-        } else {
-          MathJax.startup.document.state(0);
-          MathJax.texReset();
-          MathJax.typeset();
-          MathJax.typesetPromise();
-        }
-
-        Fluid.events.registerRefreshCallback(function() {
-          if ('MathJax' in window && MathJax.startup.document && typeof MathJax.startup.document.state === 'function') {
-            MathJax.startup.document.state(0);
-            MathJax.texReset();
-            MathJax.typeset();
-            MathJax.typesetPromise();
-          }
-        });
-      </script>
-    
-
-  <script  src="https://lib.baomitu.com/mathjax/3.2.2/es5/tex-mml-chtml.js" ></script>
 
   <script  src="/js/local-search.js" ></script>
 
