@@ -542,6 +542,7 @@ hexo s
   ```
   {% note info %}
   若你有照我先前教的設定通知的 DC Bot，則 commit message 請以 `publish` 開頭（限發文章時，若是修改其他設定的 commit，則不可以它開頭）
+  （commit message 對大小寫敏感，因此 `Publish` 並不能觸發通知的流程）
   {% endnote %}
 
   {% note success %}
