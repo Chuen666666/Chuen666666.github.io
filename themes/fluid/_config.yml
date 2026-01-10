@@ -1271,6 +1271,12 @@ links:
       link: https://5yu4n.github.io/,
       avatar: /avatar/Syuan.jpg
     }
+    - {
+      title: "Qarchue",
+      intro: "一個遊戲很爛的外星人...",
+      link: https://qarchue.github.io/,
+      avatar: /avatar/Qarchue.png
+    }
 
   # 當成員頭像加載失敗時，替換為指定圖片
   # When the member avatar fails to load, replace the specified image
