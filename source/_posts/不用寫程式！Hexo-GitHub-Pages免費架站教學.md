@@ -63,17 +63,17 @@ Hexo 框架也有許多現存的模板可以直接套，對於不會寫 CSS ~~�
 ### Git
 1. 使用 Windows 和 macOS 者，可以到[官網](https://git-scm.com/)用 GUI 安裝，就和安裝其他軟體流程差不多；用 Linux 者，可以使用以下指令安裝：
 
-```bash
-sudo apt update
-sudo apt install git
-```
+  ```bash
+  sudo apt update
+  sudo apt install git
+  ```
 
 2. 下載完 Git 後，可以打開 Terminal，並輸入：
 
-```bash
-git config --global user.name "你的 GitHub username"
-git config --global user.email "你的 Email"
-```
+  ```bash
+  git config --global user.name "你的 GitHub username"
+  git config --global user.email "你的 Email"
+  ```
 
 ### Node.js
 用 Windows 和 macOS 者，可以到[官網](https://nodejs.org/zh-tw)用 GUI 安裝；用 Linux 者，可使用以下指令安裝：
@@ -456,7 +456,13 @@ hexo s
             ${{ secrets.DISCORD_WEBHOOK }}
   ```
 
+
 5. 以後每次寫完文章後，在 commit message 中以 `publish` 作為開頭（前綴），即可發送通知
+
+  {% note warning %}
+  CI/CD 腳本只會抓取第一篇修改過的 MD 內容，因此一次只能上傳一篇
+  依我的習慣，會單獨將「把 front-matter 的 `hide` 改為 `true`」作為單獨一次 commit/push
+  {% endnote %}
 
 ## 寫文章
 1. 可以到 `/scaffolds/post.md` 中修改想要的 front-matter（即被 `---` 包住的部分）的模板，不會修改的話也可以問問看 AI，以下放上我的作為參考（可刪註解後再使用）：
