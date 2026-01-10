@@ -535,6 +535,10 @@ hexo s
   git commit "填寫自己的 commit message"
   git push
   ```
-  > 若你有照我先前教的設定通知的 DC Bot，則 commit message 請以 `publish` 開頭（限發文章時，若是 push 修改其他設定，則不可以它開頭）
+  {% note info %}
+  若你有照我先前教的設定通知的 DC Bot，則 commit message 請以 `publish` 開頭（限發文章時，若是修改其他設定的 commit，則不可以它開頭）
+  {% endnote %}
 
-  > 推到 GitHub 後，需等個一、兩分鐘，等它 CI/CD 流程跑完後網站才會更新，因此請耐心等候
+  {% note success %}
+  推到 GitHub 後，需等個一、兩分鐘，等它 CI/CD 流程跑完後網站才會更新，因此請耐心等候
+  {% endnote %}
