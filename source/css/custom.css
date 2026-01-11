@@ -20,7 +20,7 @@
 }
 /* 點開後的狀態 */
 .spoiler.open {
-  background-color: rgba(255, 255, 255, 0.1) !important;
+  background-color: rgba(128, 128, 128, 0.15) !important;
   color: inherit !important;
   cursor: default;
   user-select: text;
