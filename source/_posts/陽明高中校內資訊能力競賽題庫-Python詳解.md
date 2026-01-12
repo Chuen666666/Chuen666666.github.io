@@ -253,6 +253,7 @@ distR = [[-1]*m for _ in range(n)]
 
 q = deque() # 每次都會清空，故可重複使用
 
+# 標記初始狀態
 for i in range(n):
     for j in range(m):
         if grid[i][j] == 'F':
