@@ -69,7 +69,7 @@ for _ in range(int(input())):
 ```
 
 ## C. 跑到哪了
-> [題目連結](https://codeforces.com/gym/629558/problem/D)
+> [題目連結](https://codeforces.com/gym/629558/problem/C)
 
 這題甚至比上一題還簡單，應該很容易就能看出來，這題只需要將趟數除以 2 取餘數（即 $n \bmod 2$），再看原始點在哪，就能秒知道答案了
 
@@ -85,7 +85,7 @@ else:
 ```
 
 ## D. Sword Art Online
-> [題目連結](https://codeforces.com/gym/629558/problem/C)
+> [題目連結](https://codeforces.com/gym/629558/problem/D)
 
 這題對於寫過國中數學題的你我而言，應該一眼就能看出來是要求最小公倍數對吧？如果真的看不出來，其實題目底下的「計算」也已經自爆解法了
 
@@ -220,4 +220,76 @@ for a, b in course:
         last_end = b
 
 print(ans)
+```
+
+## H. 課程安排
+> [題目連結](https://codeforces.com/gym/629558/problem/H)
+
+這份解答是校內賽前寫的，我大膽預言一波，這題沒人會解，我也是參考 AI 寫的才有思路。首先，想到最短路徑，至少也得直覺想起 BFS，這步若都沒想到，這題直接不用玩。
+
+題目沒說 FBI 和~~ㄌㄌㄎ~~ Raymond 大大怎麼走，若你看到 _Note_，其實可以想到，你應該要考慮的是雙方的**最佳路徑**，我們的思路可以是這樣：把 FBI 和 Raymond 走到每一格的時間都算出來，只要 FBI 到某格的時間 < Raymond 到該格的時間，那格就不能走（會被抓）。
+
+為了求出 FBI 和 Raymond 到每格的最短時間（路徑），我們分別需要針對兩個角色做兩次 BFS。Raymond 的 BFS 相對單純，因為他只有一人，直接讓它尋一遍路即可；FBI 因為有好幾隻，我們需要計算「最快到達該位置的 FBI 距離多遠」，使用多源 BFS，思路大概是先把每個 FBI 距離設成 0，並且一次全部丟到 queue 裡處理，讓他們一起 BFS 擴散出去。
+
+具體實現邏輯是這樣的：
+- FBI BFS：如上所述，先將每個 FBI 都設為 0，再每個去試**上／下／左／右**擴散，我們利用非負整數代表距離（時間），`-1` 代表被牆隔開（永遠到不了）
+- Raymond BFS：起點設為 0，再擴散，過程中會有的情況：
+  - 目前格子是 `X`（出口）
+    - FBI 到不了（`-1`）：安全
+    - Raymond 比 FBI 早到（`<`）：安全
+  - 其餘狀況：依與 FBI 同邏輯 BFS，但若 FBI 能先到，也不能算做「能往那裡走」的選項
+
+遇到任何一個安全時，直接輸出 `Yes` 並結束程式；否則（全程跑完也沒有安全），最後輸出 `No`。
+
+```python
+from collections import deque
+
+n, m = map(int, input().split())
+grid = [input() for _ in range(n)]
+
+# 先都標記成 -1，等等再算能走的距離
+distF = [[-1]*m for _ in range(n)]
+distR = [[-1]*m for _ in range(n)]
+
+q = deque() # 每次都會清空，故可重複使用
+
+for i in range(n):
+    for j in range(m):
+        if grid[i][j] == 'F':
+            distF[i][j] = 0
+            q.append((i, j))
+        elif grid[i][j] == 'R':
+            sr, sc = i, j
+
+# FBI BFS
+while q:
+    r, c = q.popleft()
+    for dr, dc in ((1,0),(-1,0),(0,1),(0,-1)):
+        nr, nc = r+dr, c+dc
+        if 0 <= nr < n and 0 <= nc < m:
+            if grid[nr][nc] != '#' and distF[nr][nc] == -1:
+                distF[nr][nc] = distF[r][c] + 1
+                q.append((nr, nc))
+
+# Raymond BFS
+q = deque([(sr, sc)])
+distR[sr][sc] = 0
+
+while q:
+    r, c = q.popleft()
+    if grid[r][c] == 'X':
+        if distF[r][c] == -1 or distR[r][c] < distF[r][c]:
+            print('Yes')
+            exit()
+
+    for dr, dc in ((1,0),(-1,0),(0,1),(0,-1)):
+        nr, nc = r+dr, c+dc
+        nt = distR[r][c] + 1
+        if 0 <= nr < n and 0 <= nc < m:
+            if grid[nr][nc] != '#' and distR[nr][nc] == -1:
+                if distF[nr][nc] == -1 or nt < distF[nr][nc]:
+                    distR[nr][nc] = nt
+                    q.append((nr, nc))
+
+print('No')
 ```
