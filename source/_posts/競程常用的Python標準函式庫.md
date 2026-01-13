@@ -70,6 +70,8 @@ excerpt: 整理競程或程式測驗常會用到的 Python 標準函式庫
 - `heapreplace(heap, x)`：將最小值取出，再放入新值 $x$（比 `heappop()`+`heappust()` 快）
 
 {% note info %}
+若想要做出最大堆，只要將原 list 每個值取負，轉成 heap 後，取值時再取一次負即可
+{% endnote %}
 
 ## bisect - 二分搜
 [官網連結](https://docs.python.org/zh-tw/3.13/library/bisect.html)
@@ -78,4 +80,6 @@ excerpt: 整理競程或程式測驗常會用到的 Python 標準函式庫
 - `bisect_right(list, x)`：回傳 $x$ 插入 list 的位置（從右開始找）
 - `insort(list, x)`：插入 $x$ 並保持有序
 
-> 二分搜傳入的所有清單必須已經經過排序
+{% note warning %}
+二分搜傳入的所有清單必須已經經過排序
+{% endnote %}
