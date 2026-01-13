@@ -11,9 +11,6 @@ concurrency:
 
 permissions:
   contents: write
-  deployments: write
-  pages: write
-  id-token: write
 
 jobs:
   build_and_deploy:

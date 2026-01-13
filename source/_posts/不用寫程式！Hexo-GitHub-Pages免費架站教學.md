@@ -290,19 +290,17 @@ hexo s
   ```yml
   name: Hexo Deploy
 
-  concurrency:
-    group: hexo-deploy
-    cancel-in-progress: true
-
   on:
     push:
       branches:
         - main
 
+  concurrency:
+    group: hexo-deployment-${{ github.head_ref || github.ref }}
+    cancel-in-progress: true
+
   permissions:
     contents: write
-    pages: write
-    id-token: write
 
   jobs:
     build_and_deploy:
@@ -329,7 +327,7 @@ hexo s
             npx hexo generate
 
         - name: Deploy to gh-pages
-          uses: peaceiris/actions-gh-pages@v3
+          uses: peaceiris/actions-gh-pages@v4
           with:
             github_token: ${{ secrets.GITHUB_TOKEN }}
             publish_dir: ./public
