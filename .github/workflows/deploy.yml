@@ -1,8 +1,7 @@
 name: Hexo Deploy
 
 concurrency:
-  group: hexo-deploy
-  cancel-in-progress: true
+
 
 on:
   push:
