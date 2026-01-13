@@ -1,6 +1,5 @@
 name: Hexo Deploy
 
-concurrency:
 
 
 on:
