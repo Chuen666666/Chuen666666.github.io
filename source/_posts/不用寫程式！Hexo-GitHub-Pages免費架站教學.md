@@ -301,6 +301,8 @@ hexo s
 
   permissions:
     contents: write
+    pages: write
+    id-token: write
 
   jobs:
     build_and_deploy:
