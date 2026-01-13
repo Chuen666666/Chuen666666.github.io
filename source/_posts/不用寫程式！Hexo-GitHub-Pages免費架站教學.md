@@ -332,6 +332,8 @@ hexo s
             github_token: ${{ secrets.GITHUB_TOKEN }}
             publish_dir: ./public
             publish_branch: gh-pages
+            enable_jekyll: false
+            force_orphan: true
   ```
 
 8. 試將以上程式碼推到 GitHub 上
