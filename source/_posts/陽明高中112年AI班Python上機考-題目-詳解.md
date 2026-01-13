@@ -164,7 +164,7 @@ print(m)
 ans, a, b = 0, 1, 2
 
 while b <= 400_0000:
-    if b % 2 == 0: # 偶相值的和
+    if b % 2 == 0: # 偶值項的和
         ans += b
     a, b = b, a + b
 
