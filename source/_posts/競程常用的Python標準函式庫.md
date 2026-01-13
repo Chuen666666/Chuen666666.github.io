@@ -21,6 +21,7 @@ excerpt: 整理競程或程式測驗常會用到的 Python 標準函式庫
 [官網連結](https://docs.python.org/zh-tw/3.14/library/sys.html)
 
 - `stdin.readline()`：高速輸入（取代 `input()`）
+- `stdin.read()`：一次讀完整輸入（超大量輸入時）
 - `stdout.write()`：高速輸出（取代 `print()`）
 
 ## math - 數學工具
@@ -37,6 +38,7 @@ excerpt: 整理競程或程式測驗常會用到的 Python 標準函式庫
 - `floor(x)`：向下取整（$\lfloor x \rfloor$）
 - `dist(p, q)`：計算歐幾里德距離（點座標可以 tuple 表示，接受多維）
 - `hypot(x, y)`：計算 $\sqrt{x^2+y^2}$（接受無限多 argument）
+- `log(x)`、`log2(x)`、`log10(x)`、`log1p(x)`：計算對數，依序表示 $\ln x$、$\log\_2 x$、$\log x$、$\ln(1+x)$（浮點數較精確）
 
 ## itertools - 疊代工具
 [官網連結](https://docs.python.org/zh-tw/3.14/library/itertools.html)
