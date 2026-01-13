@@ -291,7 +291,7 @@ hexo s
   name: Hexo Deploy
 
   concurrency:
-    group: pages
+    group: hexo-deploy
     cancel-in-progress: true
 
   on:
