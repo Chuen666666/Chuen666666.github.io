@@ -157,7 +157,7 @@ hexo s
   因為會有部分語法不被原生 MD 支援，故 IDE 的 MD 預覽也可能與最終效果不合
   {% endnote %}
 
-4. 打開 `/my-blog/_config.yml` 文件，你可以先將文件取代成以下這一份，再依以下文件內的指示（所有中文字的部分，分別為第 6, 7, 8, 10, 16, 108 行）填入自己的資訊：
+4. 打開 `/my-blog/_config.yml` 文件，你可以先將文件取代成以下這一份，再依以下文件內的指示（所有中文字的部分，分別為第 6, 7, 8, 9, 10, 16, 108 行）填入自己的資訊：
 
   ```yml
   # Hexo Configuration
@@ -168,7 +168,7 @@ hexo s
   title: "網站標題"
   subtitle: "網站副標題"
   description: "網站簡介"
-  keywords:
+  keywords: 關鍵字1, 關鍵字2, ...
   author: "你的名字"
   language: zh-TW
   timezone: Asia/Taipei
