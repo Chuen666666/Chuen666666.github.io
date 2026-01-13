@@ -290,6 +290,10 @@ hexo s
   ```yml
   name: Hexo Deploy
 
+  concurrency:
+    group: pages
+    cancel-in-progress: true
+
   on:
     push:
       branches:
