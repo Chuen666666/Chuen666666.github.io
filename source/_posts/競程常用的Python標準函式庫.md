@@ -37,7 +37,7 @@ excerpt: 整理競程或程式測驗常會用到的 Python 標準函式庫
 - `ceil(x)`：向上取整（$\lceil x \rceil$）
 - `floor(x)`：向下取整（$\lfloor x \rfloor$）
 - `dist(p, q)`：計算歐幾里德距離（點座標可以 tuple 表示，接受多維）
-- `hypot(x, y)`：計算 $\sqrt{x^2+y^2}$（接受無限多 argument）
+- `hypot(a1, a2, ...)`：計算 $\sqrt{a\_1^2+a\_2^2+\cdots+a\_n^2}$（接受無限多 argument）
 - `log(x)`、`log2(x)`、`log10(x)`、`log1p(x)`：計算對數，依序表示 $\ln x$、$\log\_2 x$、$\log x$、$\ln(1+x)$（浮點數較精確）
 
 ## itertools - 疊代工具
