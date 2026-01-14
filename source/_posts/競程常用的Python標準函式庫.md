@@ -41,6 +41,15 @@ excerpt: 整理競程或程式測驗常會用到的 Python 標準函式庫
 - `hypot(a1, a2, ...)`：計算 $\sqrt{a\_1^2+a\_2^2+\cdots}$
 - `log(x)`、`log2(x)`、`log10(x)`、`log1p(x)`：計算對數，依序表示 $\ln x$、$\log\_2 x$、$\log x$、$\ln(1+x)$（浮點數較精確）
 
+## string - 字串工具
+> [官網連結](https://docs.python.org/zh-tw/3.14/library/string.html)
+
+- `ascii_lowercase`：a~z
+- `ascii_uppercase`：A~Z
+- `ascii_letters`：a~z  + A~Z
+- `digits`：0~9
+- `whitespace`：包含空格（space）、製表符號（tab）、換行符號（linefeed）、return、換頁符號（formfeed）和垂直製表符號（vertical tab）這些字元（` \t\n\r\x0b\x0c`）
+
 ## itertools - 疊代工具
 > [官網連結](https://docs.python.org/zh-tw/3.14/library/itertools.html)
 
@@ -68,6 +77,9 @@ excerpt: 整理競程或程式測驗常會用到的 Python 標準函式庫
 
 - `deque(iterable)`：雙端佇列（類似取頭尾值效率較高的 list，可用 `pop()`、`append()`、`popleft()`、`appendleft()` 取、放值進佇列）
 - `Counter(iterable)`：計每個 element 出現的次數（操作方式同 dict）
+  - `most_common(k)`：前 k 多
+  - `c & d`：交集（取最小次數）
+  - `c | d`：聯集（取最大次數）
 - `defaultdict(type)`：自動初始化字典
 - `namedtuple`：輕量資料結構（比 class 簡潔）
 
