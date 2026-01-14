@@ -12,7 +12,7 @@ tags:
   - 標準函式庫
 math: true
 mermaid: false
-hide: true
+hide: false
 date: 2026-01-13 16:12:44
 excerpt: 整理競程或程式測驗常會用到的 Python 標準函式庫
 ---
