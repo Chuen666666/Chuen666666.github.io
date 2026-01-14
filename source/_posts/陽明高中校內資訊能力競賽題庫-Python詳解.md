@@ -309,31 +309,48 @@ print('No')
 第二部分則是碎裂，這兩人的目標也就是，老娘要用 DP 去找出切在哪一段時可以贏最多分；老子則是會選擇把切開來的兩部分中，自己可以領先最多分的那一段保留
 
 ```python
-n = int(input())
+n = int(input().strip())
 a = list(map(int, input().split()))
 
+# 1) 變成 2n，處理圓環破口
 A = a + a
 m = 2 * n
 
-# prefix sum
+# 2) prefix sum，區間和 O(1)
 pre = [0] * (m + 1)
 for i in range(m):
-    pre[i + 1] = pre[i] + A[i]
+    pre[i+1] = pre[i] + A[i]
 
-def s(l, r):
-    return pre[r + 1] - pre[l]
+def range_sum(l, r):
+    # l, r are inclusive, 0-indexed
+    return pre[r+1] - pre[l]
 
+# 3) dp[l][r]：輪到當前玩家面對 A[l..r] 時，能保證的最大分差
+# 只需要長度 <= n 的區間
 dp = [[0] * m for _ in range(m)]
 
-for length in range(2, n + 1):
-    for l in range(m - length + 1):
+# len = 2 .. n
+for length in range(2, n+1):
+    for l in range(0, m-length+1):
         r = l + length - 1
-        best = -10**30
+        best = -float('inf')
+
         for k in range(l, r):
-            gain = abs(s(l, k) - s(k + 1, r))
-            best = max(best, gain - max(dp[l][k], dp[k + 1][r]))
+            left_sum = range_sum(l, k)
+            right_sum = range_sum(k+1, r)
+            gain = abs(left_sum - right_sum)
+
+            # 對手會留下對你最不利的那段 => 讓你扣最多
+            cand = gain - max(dp[l][k], dp[k+1][r])
+            if cand > best:
+                best = cand
+
         dp[l][r] = best
 
-ans = max(dp[i][i + n - 1] for i in range(n))
+# 4) 枚舉破口起點 s
+ans = -float('inf')
+for s in range(n):
+    ans = max(ans, dp[s][s+n-1])
+
 print(ans)
 ```
