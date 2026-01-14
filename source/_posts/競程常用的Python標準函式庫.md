@@ -48,7 +48,7 @@ excerpt: 整理競程或程式測驗常會用到的 Python 標準函式庫
 - `ascii_uppercase`：A~Z
 - `ascii_letters`：a~z + A~Z
 - `digits`：0~9
-- `whitespace`：包含空格（space）、製表符號（tab）、換行符號（linefeed）、return、換頁符號（formfeed）和垂直製表符號（vertical tab）這些字元（` \t\n\r\x0b\x0c`）
+- `whitespace`：包含空格（space）、製表符號（tab）、換行符號（linefeed）、return、換頁符號（formfeed）和垂直製表符號（vertical tab）這些字元（`' \t\n\r\x0b\x0c'`）
 
 ## itertools - 疊代工具
 > [官網連結](https://docs.python.org/zh-tw/3.14/library/itertools.html)
