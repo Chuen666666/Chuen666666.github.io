@@ -1289,6 +1289,13 @@ links:
       link: https://bryan0324.github.io/,
       avatar: /avatar/bryan0324.png
     }
+    - {
+      title: "zackzheng",
+      intro: "只是個學生的業餘Dev<br>可能會資安",
+      link: https://zack.siiway.org/,
+      avatar: /avatar/zack.png
+    }
+
 
   # 當成員頭像加載失敗時，替換為指定圖片
   # When the member avatar fails to load, replace the specified image
