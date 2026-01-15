@@ -1301,6 +1301,12 @@ links:
     #   link: https://github.com/yakura-OWO,
     #   avatar: /avatar/
     # }
+    # - {
+    #   title: "",
+    #   intro: "",
+    #   link: https://www.instagram.com/hello_aqurielle.213/,
+    #   avatar: /avatar/
+    # }
 
   # 當成員頭像加載失敗時，替換為指定圖片
   # When the member avatar fails to load, replace the specified image

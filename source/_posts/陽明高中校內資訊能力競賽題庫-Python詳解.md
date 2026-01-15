@@ -68,6 +68,10 @@ for _ in range(int(input())):
             break
 ```
 
+上面兩個做法的時間複雜度一看就知道差很多，若有 $T$ 筆測資，則做法 1 的算法涉及 `bin_length()` 的實做方法，它實際上是計算 bit 數的，故複雜度 $O(\text{bit 數})=O(\log x)$，整個算法共 $O(T\log x)$；而暴力法則是 $O(nT)$
+
+但注意到，題目保證 $a\le2^{63}-1$，所以 $\max(\log x)=63$、$\max(n)=64$，那麼兩者 $O(63)=O(64)=O(1)$，故上二者總複雜度都是 $O(T)$
+
 ## C. 跑到哪了
 > [題目連結](https://codeforces.com/gym/629558/problem/C)
 
@@ -98,61 +102,49 @@ input() # 跳過第一行 n 的輸入
 print(lcm(*map(int, input().split()))) # 用 *（unpack）展開 map() 並傳入 lcm()
 ```
 
-## E. 國王的請求
+## E. 還能暴言不
 > [題目連結](https://codeforces.com/gym/629558/problem/E)
 
-這題開始難度就突然增加了不少，本題其實要的就是「輸入字串的所有排列」，如果研究過 Python 的 `itertools` 模組的話，會發現它有一個 `permutations()` 函式可以直接幫我們列出所有排列，我們可以使用 set 來去除重複的排列組合，再用 `sorted()` 排序 ASCII 後輸出
+這題我的第一想法其實也是暴力搜尋，從 1 開始往上找，找到就停下來，但一提交後你就會發現，拿不了滿分，好多測資都拿了個 TLE，因此，這題又是要有一點技巧的題，那講到**搜尋**，第一個想到的應該要是二分搜（binary search），沒錯，這也正是這題的最大考點
+
+有幾件直覺的事情我們可以先理解：
+1. 隨著 $H$ 增加，總怒氣值單調不減
+2. 第二，因為怒氣只會在 $H-a\_i$ 時計算，因此只需要理 $a\_i<H$ 的值
+3. 我們可以事先將話題的忍耐度 $a$ 排好，那我們再看 $a_i$時，就可以直接把前面小於 $H$ 的部分一次丟掉
+4. 如果有 $k$ 個 $a\_i<H$，算 $\sum_{i=1}^{n}(H-a\_i)$ 時，我們可以把 $H$ 提出，變成 $k \cdot H-\sum\_{i=1}^{k}a\_i$，故可先算前綴和（prefix sum）
+5. 二分搜什麼？最大 $H$，使得 $總怒氣 \le X$，那它會產生一個分界點（由 1. 可知），在它前面都不被踢，在它之後都必然會被踢
+
+那這裡我們可以來思考下一個問題，我們既然都知道是二分搜了，那它的上下界怎麼找？下界根本不用找，一定是從頭嘛，但上界呢？怎麼找出那個「最大可能的答案」？
+
+我們先來想想看，怎樣的情況一定不行？如果 $H-\max(a\_i)>X$ 表示單單這一個話題就讓怒氣超過 $X$ 了，就算其他都不看也一定爆，移項一下就能知道 $\max(H) \le \max(a\_i)+X$，也就求出我們的上界了，因此二分搜要搜的就是 $[0,\,\max(a)+X+1)$
+
+在這樣的操作下，我們成功從原本線性搜的 $O(n\cdot H^*)$（$H^*=1,2,\cdots,H$；最壞大約是 $10^{18}）$，改成了二分搜的 $O(n\log n)$（排序和前綴和 $O(n)$、二分搜 $O(\log n)$）
 
 ```python
-# 最少程式碼解
-from itertools import permutations
- 
-ans = sorted(set(''.join(i) for i in permutations(input())))
-print(len(ans), *ans, sep='\n')
-```
+from bisect import bisect_left
+from itertools import accumulate
 
-```python
-# 可讀性佳解
-from itertools import permutations
- 
-s = input()
-arr = set(permutations(s))
- 
-print(len(arr))
-for i in sorted(arr):
-    print(*i, sep='')
-```
+n, X = map(int, input().split())
+a = list(map(int, input().split()))
+a.sort()
 
-不過事實上，它並非效率最高的解法，真正要做到最佳效率，還是得使用 DFS 配合剪枝來達成
+ps = [0] + list(accumulate(a)) # prefix sum
 
-```python
-s = sorted(input().strip())
-n = len(s)
+def anger(H):
+    k = bisect_left(a, H)
+    return k*H - ps[k]
 
-result = []
+lo = 0
+hi = a[-1]+X + 1 # 因為答案在 [lo, hi) 中，所以要 +1
 
-# stack 裡存 (path, used)
-stack = [([], [False] * n)]
+while lo + 1 < hi:
+    mid = (lo + hi) // 2
+    if anger(mid) <= X:
+        lo = mid
+    else:
+        hi = mid
 
-while stack:
-    path, used = stack.pop()
-
-    if len(path) == n:
-        result.append(''.join(path))
-        continue
-
-    # 反向 push，維持與遞迴相同的順序
-    for i in range(n-1, -1, -1):
-        if used[i]:
-            continue
-        if i > 0 and s[i] == s[i-1] and not used[i-1]:
-            continue # 去重剪枝
-
-        new_used = used[:] # 複製 used 狀態
-        new_used[i] = True
-        stack.append((path + [s[i]], new_used))
-
-print(len(result), *result, sep='\n')
+print(lo)
 ```
 
 ## F. 蛋餅想吃蛋餅
@@ -161,6 +153,8 @@ print(len(result), *result, sep='\n')
 這題乍看之下會覺得好像很簡單，直接去把範圍內的值取 `sum()` 不就行了嗎？但如果你真的這樣做，就會收到一個大大的 TLE
 
 這題實際上的考點是前綴和（prefix sum），我們可以先建立一個前綴和的 list，也就是把每一項設定為自己加上前面所有元素的和，如此，當我們求一個區間和 $[l, r]$ 時，就可以用 `prefix[r] - prefix[l-1]` 來快速計算，相對於每查詢一次就計算一次的做法，這樣的效率會高上不少
+
+若查詢 $q$ 次，暴力算區間的做法為 $O(n\times q)$，而前綴和建表則是 $O(n+q)$
 
 ```python
 n, q = map(int, input().split())
