@@ -1277,6 +1277,12 @@ links:
       link: https://qarchue.github.io/,
       avatar: /avatar/Qarchue.png
     }
+    - {
+      title: "Flashingtw",
+      intro: "正在研究演算法，喜歡程式(￣∇￣)",
+      link: https://www.threads.com/@flash.zcx?igshid=NTc4MTIwNjQ2YQ==,
+      avatar: /avatar/Flashingtw.jpg
+    }
 
   # 當成員頭像加載失敗時，替換為指定圖片
   # When the member avatar fails to load, replace the specified image
