@@ -1283,6 +1283,12 @@ links:
       link: https://www.threads.com/@flash.zcx?igshid=NTc4MTIwNjQ2YQ==,
       avatar: /avatar/Flashingtw.jpg
     }
+    - {
+      title: "草貓",
+      intro: "草貓不是貓草",
+      link: https://bryan0324.github.io/,
+      avatar: /avatar/bryan0324.png
+    }
 
   # 當成員頭像加載失敗時，替換為指定圖片
   # When the member avatar fails to load, replace the specified image
