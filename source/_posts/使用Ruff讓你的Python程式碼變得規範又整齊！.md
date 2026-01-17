@@ -38,9 +38,26 @@ Formatter 是用來把一些風格上的問題統一化的，例如哪裡應該�
 舉個例子，以 PEP 8 的規範來說，數學運算應該只把空格加在**最後進行運算的符號**前後，像是 `a*b+c*d` 因為先乘除後加減，加號是最後運算的，故應寫為 `a*b + c*d`。但如果你實際去跑一次 Ruff，你會發現它給你整理成了 `a + b * c + d`，而這其實是 Python 社區目前比較盛行和鼓勵的寫法。
 
 ## 安裝 VS Code 套件
+在 VS Code 中按下 <kbd>Ctrl</kbd> <kbd>Shift</kbd> <kbd>X</kbd>，並安裝（或檢查是否安裝）以下擴充套件（Extension）：
+
 - Python：~~寫 Python 不裝這個，你就是這個 👍~~
 - Pylance：通常裝 Python 的 VS Code 套件時就會一起安裝了，它會用來做基礎的程式碼補全和靜態檢查
 - Ruff：我們今天的主角，一款 Linter + Formatter 工具
 
 ## 設定 Ruff
 1. 在 VS Code 中，按下 <kbd>Ctrl</kbd> <kbd>Shift</kbd> <kbd>P</kbd>，並輸入（或找到）`Preferences: Open User Settings (JSON)`
+2. 找到 `"[python]"`，並加上（或替換）成以下 JSON 內容：
+
+  ```json
+    "[python]": {
+      "editor.defaultFormatter": "charliermarsh.ruff",
+      "editor.formatOnSave": true,
+      "editor.codeActionsOnSave": {
+        "source.fixAll.ruff": "explicit",
+        "source.organizeImports.ruff": "explicit"
+      }
+    },
+  ```
+  （若整個 JSON 檔是空的，記得在首和尾行加上 `{` 和 `}`）
+
+3. 
