@@ -26,11 +26,11 @@ excerpt: Ruff 是一個超好用的 Linter + Formatter，讓你的程式碼可�
 ### PEP 8
 在 Python 的官方文件中，其實有一套很知名的規範，定義了程式碼的**推薦風格**，這套風格就是很著名的 [PEP 8](https://peps.python.org/pep-0008/)，它不是程式碼的硬性要求，實務上也不會全然按它寫的做，但它是一個經典的基礎，後來很多風格的變化都是從它而來的。
 
-### Linter
-Linter 相對來說比 Formatter 更重視語法而不是語義，它會檢查各種可能出問題的部分，並且警告你，減低因為一些小小的錯誤而會讓你 debug 半天的那種問題。
-
-### Formatter
-Formatter 是用來把一些風格上的問題統一化的，例如哪裡應該加空格、哪種寫法不被鼓勵、什麼地方應該空幾行等等，這種東西不影響程式運作，但可以讓維護和 code review 更容易一些，也能讓一個團隊寫出來的風格都一致。
+### Linter VS Formatter
+|工具|關注點|舉例|行為|
+|:-:|:-:|:-:|:-:|
+|Linter|語法問題（邏輯與錯誤）|變數未定義、引入了沒用的模組、代碼太複雜|在 IDE 中以黃、紅線標註，並提供修復建議|
+|Formatter|語義問題（視覺與格式）|縮排空格數、單雙引號、換行位置|存檔時直接自動修正，確保全專案風格統一|
 
 ### Ruff
 這是一款工具，結合了 Linter 和 Formatter 的功能於一體，雖然它也可以用 CLI 來控制，但更方便的功能則是在 VS Code 按下 <kbd>Ctrl</kbd> <kbd>S</kbd> 存檔時會自動 format，並且用黃或紅色底線來標記一些可能存在的語法問題。
@@ -143,13 +143,13 @@ Formatter 是用來把一些風格上的問題統一化的，例如哪裡應該�
       - id: ruff-format
   ```
 
-2. 在同目錄的終端機（Terminal）中，輸入：
+3. 在同目錄的終端機（Terminal）中，輸入：
 
   ```bash
   pre-commit install
   ```
 
-3. 試著 commit：
+4. 試著 commit：
 
   ```bash
   git add .
@@ -160,7 +160,7 @@ Formatter 是用來把一些風格上的問題統一化的，例如哪裡應該�
   若有其中一個（或多個檔案）顯示 `Failed`，表示 pre-commit 啟作用並自動幫你修復了，不用修改任何東西，再去執行一次上方 `add` 和 `commit` 即可；若全都是 `Passed` 或 `Skipped`，表示無檔案需要修復
   {% endnote %}
 
-4. 將改動推上 GitHub
+5. 將改動推上 GitHub
 
   ```bash
   git push
