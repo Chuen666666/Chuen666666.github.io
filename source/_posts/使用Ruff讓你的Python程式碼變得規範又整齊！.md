@@ -13,7 +13,7 @@ tags:
   - Ruff
 math: false
 mermaid: false
-hide: true
+hide: false
 date: 2026-01-16 08:45:23
 excerpt: Ruff 是一個超好用的 Linter + Formatter，讓你的程式碼可以整齊又規範
 ---
