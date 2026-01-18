@@ -112,3 +112,65 @@ Formatter 是用來把一些風格上的問題統一化的，例如哪裡應該�
   {% endnote %}
 
 ## Pre-commit
+它其實並不是 Ruff 專屬的，任何 Linter 或 Formatter 都可以用這東西。它會在使用者 commit 程式碼時，自動跑一次 Linter 或 Formatter，並檢查是否有任何錯誤（不符合設定處）。
+
+### 安裝
+1. 在終端機（Terminal）中使用 `pip` 指令（或其他 Python 套件安裝工具）安裝 pre-commit：
+
+  ```bash
+  pip install pre-commit
+  ```
+
+2. 在與 `pyproject.toml` 同層級目錄下創建 `.pre-commit-config.yaml`，並貼上以下內容：
+
+  ```yaml
+  repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.5.0
+    hooks:
+      - id: trailing-whitespace
+      - id: end-of-file-fixer
+      - id: check-yaml
+      - id: check-added-large-files
+
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.1.9
+    hooks:
+      - id: ruff
+        args: [ --fix ]
+      - id: ruff-format
+  ```
+
+2. 在同目錄的終端機（Terminal）中，輸入：
+
+  ```bash
+  pre-commit install
+  ```
+
+3. 試著 commit：
+
+  ```bash
+  git add .
+  git commit -m "隨便打一個 commit message"
+  ```
+
+  {% note info %}
+  若有其中一個（或多個檔案）顯示 `Failed`，表示 pre-commit 啟作用並自動幫你修復了，不用修改任何東西，再去執行一次上方 `add` 和 `commit` 即可；若全都是 `Passed` 或 `Skipped`，表示無檔案需要修復
+  {% endnote %}
+
+4. 將改動推上 GitHub
+
+  ```bash
+  git push
+  ```
+
+{% note info %}
+若在 `git add .` 時看到提示訊息中有提及「CRLF」或「LF」
+是因為你使用 Windows 系統使用 CRLF（`\r\n`）作換行符；而 Linux/macOS 用 LF（`\n`）
+通常情況下，Git 或 Ruff 會自動處理此問題，可忽略
+但若你想讓自己專案更完整和健壯，也可以問問 AI 如何處理它們的轉換問題
+{% endnote %}
+
+### 程式專案
+1. 為了讓大家都能依同一套 Linter 和 Formatter 規則來寫程式，可以將 `pre-commit` 加到 `requirements.txt` 中，並在 `README.md` 中提及它
+2. 有裝好 `pre-commit` 的環境，會自動讀取專案中的 `pyproject.toml`，且在每次 commit 時自動檢查和修正風格，就如上[安裝](#安裝)章節的第 `3.` 、 `4.` 點所述
