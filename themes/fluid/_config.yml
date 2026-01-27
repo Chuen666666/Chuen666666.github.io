@@ -1068,6 +1068,12 @@ links:
       avatar: /avatar/YX.jpg
     }
     - {
+      title: "Charlie",
+      intro: "早安?",
+      link: https://www.instagram.com/yuchen6365/,
+      avatar: /avatar/charlie.webp
+    }
+    - {
       title: "o1987aoppp",
       intro: "問就是還在練車",
       link: https://www.instagram.com/o1987aoppp/?__pwa=1,
