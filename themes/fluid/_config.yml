@@ -1295,12 +1295,12 @@ links:
       link: https://zack.siiway.org/,
       avatar: /avatar/zack.png
     }
-    # - {
-    #   title: "yakura",
-    #   intro: "深度學習，網路安全",
-    #   link: https://github.com/yakura-OWO,
-    #   avatar: /avatar/
-    # }
+    - {
+      title: "yakura",
+      intro: "深度學習，網路安全",
+      link: https://github.com/yakura-OWO,
+      avatar: /avatar/yakura.jpg
+    }
     # - {
     #   title: "",
     #   intro: "",
