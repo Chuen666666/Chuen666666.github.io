@@ -102,8 +102,8 @@ input() # 跳過第一行 n 的輸入
 print(lcm(*map(int, input().split()))) # 用 *（unpack）展開 map() 並傳入 lcm()
 ```
 
-## E. 還能暴言不
-> [題目連結](https://codeforces.com/gym/629558/problem/E)
+## G. 還能暴言不
+> [題目連結](https://codeforces.com/gym/629558/problem/G)
 
 這題我的第一想法其實也是暴力搜尋，從 1 開始往上找，找到就停下來，但一提交後你就會發現，拿不了滿分，好多測資都拿了個 TLE，因此，這題又是要有一點技巧的題，那講到**搜尋**，第一個想到的應該要是二分搜（binary search），沒錯，這也正是這題的最大考點
 
@@ -147,8 +147,8 @@ while lo + 1 < hi:
 print(lo)
 ```
 
-## F. 蛋餅想吃蛋餅
-> [題目連結](https://codeforces.com/gym/629558/problem/F)
+## E. 蛋餅想吃蛋餅
+> [題目連結](https://codeforces.com/gym/629558/problem/E)
 
 這題乍看之下會覺得好像很簡單，直接去把範圍內的值取 `sum()` 不就行了嗎？但如果你真的這樣做，就會收到一個大大的 TLE
 
@@ -186,8 +186,8 @@ for _ in range(q):
         print(arr[r-1] - arr[l-2])
 ```
 
-## G. 課程安排
-> [題目連結](https://codeforces.com/gym/629558/problem/G)
+## F. 課程安排
+> [題目連結](https://codeforces.com/gym/629558/problem/F)
 
 ~~欸媽我上電視（被出進題裡）了~~
 
