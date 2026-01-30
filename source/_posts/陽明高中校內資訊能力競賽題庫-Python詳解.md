@@ -102,51 +102,6 @@ input() # 跳過第一行 n 的輸入
 print(lcm(*map(int, input().split()))) # 用 *（unpack）展開 map() 並傳入 lcm()
 ```
 
-## G. 還能暴言不
-> [題目連結](https://codeforces.com/gym/629558/problem/G)
-
-這題我的第一想法其實也是暴力搜尋，從 1 開始往上找，找到就停下來，但一提交後你就會發現，拿不了滿分，好多測資都拿了個 TLE，因此，這題又是要有一點技巧的題，那講到**搜尋**，第一個想到的應該要是二分搜（binary search），沒錯，這也正是這題的最大考點
-
-有幾件直覺的事情我們可以先理解：
-1. 隨著 $H$ 增加，總怒氣值單調不減
-2. 第二，因為怒氣只會在 $H-a\_i$ 時計算，因此只需要理 $a\_i<H$ 的值
-3. 我們可以事先將話題的忍耐度 $a$ 排好，那我們再看 $a_i$時，就可以直接把前面小於 $H$ 的部分一次丟掉
-4. 如果有 $k$ 個 $a\_i<H$，算 $\sum\_{i=1}^{n}(H-a\_i)$ 時，我們可以把 $H$ 提出，變成 $k \cdot H-\sum\_{i=1}^{k}a\_i$，故可先算前綴和（prefix sum）
-5. 二分搜什麼？最大 $H$，使得 $總怒氣 \le X$，那它會產生一個分界點（由 1. 可知），在它前面都不被踢，在它之後都必然會被踢
-
-那這裡我們可以來思考下一個問題，我們既然都知道是二分搜了，那它的上下界怎麼找？下界根本不用找，一定是從頭嘛，但上界呢？怎麼找出那個「最大可能的答案」？
-
-我們先來想想看，怎樣的情況一定不行？如果 $H-\max(a\_i)>X$ 表示單單這一個話題就讓怒氣超過 $X$ 了，就算其他都不看也一定爆，移項一下就能知道 $\max(H) \le \max(a\_i)+X$，也就求出我們的上界了，因此二分搜要搜的就是 $[0,\,\max(a)+X+1)$
-
-在這樣的操作下，我們成功從原本線性搜的 $O(n\cdot H^\*)$（$H^\*=1,2,\cdots,H$；最壞大約是 $10^{18}$），改成了二分搜的 $O(n\log n)$（排序和前綴和 $O(n)$、二分搜 $O(\log n)$）
-
-```python
-from bisect import bisect_left
-from itertools import accumulate
-
-n, X = map(int, input().split())
-a = list(map(int, input().split()))
-a.sort()
-
-ps = [0] + list(accumulate(a)) # prefix sum
-
-def anger(H):
-    k = bisect_left(a, H)
-    return k*H - ps[k]
-
-lo = 0
-hi = a[-1]+X + 1 # 因為答案在 [lo, hi) 中，所以要 +1
-
-while lo + 1 < hi:
-    mid = (lo + hi) // 2
-    if anger(mid) <= X:
-        lo = mid
-    else:
-        hi = mid
-
-print(lo)
-```
-
 ## E. 蛋餅想吃蛋餅
 > [題目連結](https://codeforces.com/gym/629558/problem/E)
 
@@ -214,6 +169,51 @@ for a, b in course:
         last_end = b
 
 print(ans)
+```
+
+## G. 還能暴言不
+> [題目連結](https://codeforces.com/gym/629558/problem/G)
+
+這題我的第一想法其實也是暴力搜尋，從 1 開始往上找，找到就停下來，但一提交後你就會發現，拿不了滿分，好多測資都拿了個 TLE，因此，這題又是要有一點技巧的題，那講到**搜尋**，第一個想到的應該要是二分搜（binary search），沒錯，這也正是這題的最大考點
+
+有幾件直覺的事情我們可以先理解：
+1. 隨著 $H$ 增加，總怒氣值單調不減
+2. 第二，因為怒氣只會在 $H-a\_i$ 時計算，因此只需要理 $a\_i<H$ 的值
+3. 我們可以事先將話題的忍耐度 $a$ 排好，那我們再看 $a_i$時，就可以直接把前面小於 $H$ 的部分一次丟掉
+4. 如果有 $k$ 個 $a\_i<H$，算 $\sum\_{i=1}^{n}(H-a\_i)$ 時，我們可以把 $H$ 提出，變成 $k \cdot H-\sum\_{i=1}^{k}a\_i$，故可先算前綴和（prefix sum）
+5. 二分搜什麼？最大 $H$，使得 $總怒氣 \le X$，那它會產生一個分界點（由 1. 可知），在它前面都不被踢，在它之後都必然會被踢
+
+那這裡我們可以來思考下一個問題，我們既然都知道是二分搜了，那它的上下界怎麼找？下界根本不用找，一定是從頭嘛，但上界呢？怎麼找出那個「最大可能的答案」？
+
+我們先來想想看，怎樣的情況一定不行？如果 $H-\max(a\_i)>X$ 表示單單這一個話題就讓怒氣超過 $X$ 了，就算其他都不看也一定爆，移項一下就能知道 $\max(H) \le \max(a\_i)+X$，也就求出我們的上界了，因此二分搜要搜的就是 $[0,\,\max(a)+X+1)$
+
+在這樣的操作下，我們成功從原本線性搜的 $O(n\cdot H^\*)$（$H^\*=1,2,\cdots,H$；最壞大約是 $10^{18}$），改成了二分搜的 $O(n\log n)$（排序和前綴和 $O(n)$、二分搜 $O(\log n)$）
+
+```python
+from bisect import bisect_left
+from itertools import accumulate
+
+n, X = map(int, input().split())
+a = list(map(int, input().split()))
+a.sort()
+
+ps = [0] + list(accumulate(a)) # prefix sum
+
+def anger(H):
+    k = bisect_left(a, H)
+    return k*H - ps[k]
+
+lo = 0
+hi = a[-1]+X + 1 # 因為答案在 [lo, hi) 中，所以要 +1
+
+while lo + 1 < hi:
+    mid = (lo + hi) // 2
+    if anger(mid) <= X:
+        lo = mid
+    else:
+        hi = mid
+
+print(lo)
 ```
 
 ## H. 逃脫升天
