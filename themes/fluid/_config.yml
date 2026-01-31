@@ -1307,6 +1307,12 @@ links:
       link: https://github.com/yakura-OWO,
       avatar: /avatar/yakura.jpg
     }
+    - {
+      title: "Ling",
+      intro: "喜歡寫程式但很菜的一個人",
+      link: https://www.instagram.com/lxl._.0212?igsh=MTZmbGJuOHg4d2JzZw==,
+      avatar: /avatar/Ling.jpg
+    }
     # - {
     #   title: "",
     #   intro: "",
