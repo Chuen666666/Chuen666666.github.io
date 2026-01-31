@@ -10,7 +10,7 @@ tags:
   - 程式
 math: false
 mermaid: false
-hide: true
+hide: false
 date: 2026-01-30 15:13:58
 excerpt: 整理並說明基礎的 Mrakdown 語法
 ---
