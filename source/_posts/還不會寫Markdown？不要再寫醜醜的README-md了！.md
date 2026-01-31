@@ -201,3 +201,11 @@ Markdown 支援直接嵌入 HTML 標籤，非常好用，以下列出常見的�
 {% note info %}
 更多資訊可以參考 [w3schools](https://www.w3schools.com/html/)
 {% endnote %}
+
+```md
+<span style="color:red">RED</span> &rarr; <span style="color:green">GREEN</span> &rarr; <span style="color:blue">BLUE</span>
+```
+
+&darr;
+
+<span style="color:red">RED</span> &rarr; <span style="color:green">GREEN</span> &rarr; <span style="color:blue">BLUE</span>
