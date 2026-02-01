@@ -18,6 +18,7 @@ excerpt: 整理競程或程式測驗常會用到的 Python 標準函式庫
 ---
 
 ## sys - 系統控制
+
 > [官網連結](https://docs.python.org/zh-tw/3.14/library/sys.html)
 
 - `stdin.readline()`：高速輸入（取代 `input()`，記得 `.rstrip()` 去除換行）
@@ -26,6 +27,7 @@ excerpt: 整理競程或程式測驗常會用到的 Python 標準函式庫
 - `setrecursionlimit(n)`：調高遞迴深度上限（深度 $n$）
 
 ## math - 數學工具
+
 > [官網連結](https://docs.python.org/zh-tw/3/library/math.html)
 
 - `gcd(a, b)`：最大公因數
@@ -42,6 +44,7 @@ excerpt: 整理競程或程式測驗常會用到的 Python 標準函式庫
 - `log(x)`、`log2(x)`、`log10(x)`、`log1p(x)`：計算對數，依序表示 $\ln x$、$\log\_2 x$、$\log x$、$\ln(1+x)$（浮點數較精確）
 
 ## string - 字串工具
+
 > [官網連結](https://docs.python.org/zh-tw/3.14/library/string.html)
 
 - `ascii_lowercase`：a~z
@@ -51,6 +54,7 @@ excerpt: 整理競程或程式測驗常會用到的 Python 標準函式庫
 - `whitespace`：包含空格（space）、製表符號（tab）、換行符號（linefeed）、return、換頁符號（formfeed）和垂直製表符號（vertical tab）這些字元（`' \t\n\r\x0b\x0c'`）
 
 ## itertools - 疊代工具
+
 > [官網連結](https://docs.python.org/zh-tw/3.14/library/itertools.html)
 
 - `permutations(iterable, r)`：排列（`r` 為選填）
@@ -67,12 +71,14 @@ excerpt: 整理競程或程式測驗常會用到的 Python 標準函式庫
 - `pairwise(iterable)`：相鄰元素配對（Python 3.10+）
 
 ## functools - 函式優化工具
+
 > [官網連結](https://docs.python.org/zh-tw/3/library/functools.html)
 
 - `lru_cache(maxsize=None)`：記憶化遞迴（DP 常用）
 - `cmp_to_key(func)`：自訂比較函式，轉為 `sort()` 可用的 key
 
 ## collections - 資料結構
+
 > [官網連結](https://docs.python.org/zh-tw/3/library/collections.html)
 
 - `deque(iterable)`：雙端佇列（類似取頭尾值效率較高的 list，可用 `pop()`、`append()`、`popleft()`、`appendleft()` 取、放值進佇列）
@@ -84,6 +90,7 @@ excerpt: 整理競程或程式測驗常會用到的 Python 標準函式庫
 - `namedtuple`：輕量資料結構（比 class 簡潔）
 
 ## heapq - 最小堆（優先隊列）
+
 > [官網連結](https://docs.python.org/zh-tw/3/library/heapq.html)
 
 - `heapify(list)`：將 list 轉為最小堆
@@ -100,6 +107,7 @@ excerpt: 整理競程或程式測驗常會用到的 Python 標準函式庫
 {% endnote %}
 
 ## bisect - 二分搜
+
 > [官網連結](https://docs.python.org/zh-tw/3.13/library/bisect.html)
 
 - `bisect_left(list, x)`：回傳 $x$ 插入 list 的位置（從左開始找）

@@ -95,11 +95,13 @@ sudo apt install -y nodejs
 此步請在完成 Node.js 安裝後才能執行。
 
 1. 安裝 Hexo 主程式
+
 ```bash
 npm install -g hexo-cli
 ```
 
 2. 建立部落格資料夾（放原檔內容）
+
 ```bash
 hexo init my-blog
 cd my-blog
@@ -107,11 +109,13 @@ npm install # 若無法執行，可改用管理員權限的 Terminal
 ```
 
 3. 預覽測試
+
 ```bash
 hexo s
 ```
 
 4. 在瀏覽器中打開 `http://localhost:4000`，你應該會看到一個預設的網站，並且出現一篇名為「Hello World」的文章，代表前面的安裝步驟都沒問題，確認完後即可關閉瀏覽器視窗；若網站無法正常顯示，表示先前安裝有問題，~~那就只好自求多福啦~~，你可以檢查：
+
    1. GitHub Repo 是否為公開（`Public`）
    2. Hexo 和套件（`npm install` 指令裝的東西）是否安裝在網站（`my-blog`）同目錄
    3. `_config.yml` 中的 `url` 有沒有填錯
@@ -347,15 +351,18 @@ hexo s
 
 9. 到 GitHub 的那個網站 Repo 中，`Settings` &rarr; `Pages` &rarr; `Build and deployment` 中，確認 `Source` 是選到 `Deploy from a branch`，並且底下 `Branch` 的部分從 `main` 改為 `gh-pages`
 10. 到 `Settings` &rarr; `Environments` 中有一個 `Allow administrators to bypass configured protection rules` 選項打勾
-11. 等它 CI/CD 過了後，可以打開 https://你的名字.github.io/ 看看網站是否正常上線了
+11. 等它 CI/CD 過了後，可以打開 `https://你的名字.github.io/` 看看網站是否正常上線了
 
 ## （可選）加上插件
+
 插件的種類有非常多，具體要用什麼就看你自己的需求，具體怎麼設定可以問問 AI，這章節我會說我裝的兩個我覺得最實用的功能插件。
 
 ### MathJax
+
 這個插件是用來支援 LaTeX 的強大工具。
 
 1. 安裝插件
+
   ```bash
   npm install hexo-filter-mathjax --save
   ```
@@ -369,6 +376,7 @@ hexo s
 
    - 極簡主題
       若完全搜尋不到 `math` 或 `mathjax` 關鍵字，則打開根目錄的 `_config.yml`（不是主題的），在最後面加入以下配置：
+
       ```bash
       # 寫在根目錄的 _config.yml 最下方
       math:
@@ -378,6 +386,7 @@ hexo s
       ```
 
 ### Giscus
+
 這是用來啟用留言功能的，其原理是直接串接你這個 GitHub Repo 的 Discussions。
 
 1. 先到自己 GitHub Repo 中，`Settings` &rarr; `General` &rarr; `Features` &rarr; 勾選 `Discussions`
@@ -388,6 +397,7 @@ hexo s
    - 現代化主題
      1. 打開主題設定檔 `_config.主題.yml`
      2. 搜尋 `giscus`，將對應的參數從剛才的網頁複製過來：
+
       ```yml
       comments:
         enable: true
@@ -409,6 +419,7 @@ hexo s
     直接在每篇文章（或頁面，例如 `about/index.md`）最後面貼上那個網站裡 `啟用 giscus` 下方 code block 的內容
 
 ## （可選）設定 Discord 發文自動提醒
+
 你可以指定一個 DC 伺服器的某個特定頻道，在你每次發文時，自動發送通知。
 
 1. 進入你的 DC 伺服器，選擇一個想要接收通知的頻道，進入 頻道設定 &rarr; `整合` &rarr; `Webhook` &rarr; `新 Webhook`，展開後可設定發文機器人的名稱和頭貼
@@ -418,6 +429,7 @@ hexo s
    - Secret：貼上剛才複製的 Webhook 網址
 
 4. 在 `/.github/workflows/` 下建立 `notify.yml`，貼上以下內容，並按需修改第 39, 41, 48, 53, 56 行
+
   ```yml
   name: Discord Notification
 
@@ -487,7 +499,9 @@ hexo s
   {% endnote %}
 
 ## 寫文章
+
 1. 可以到 `/scaffolds/post.md` 中修改想要的 front-matter（即被 `---` 包住的部分）的模板，不會修改的話也可以問問看 AI，以下放上我的作為參考（可刪註解後再使用）：
+
   ```yml
   ---
   title: {{ title }} # 會自動代入，不用改
@@ -517,12 +531,13 @@ hexo s
   {% endnote %}
 
 2. 建立一篇新文章，用指令建立時會自動複製樣板（`/scaffolds/post.md`）
+
   ```bash
   hexo new "文章標題"
   ```
 
   {% note success %}
-  你可以到 `/source/_posts` 中將模板的 `hello-world.md` 刪除，但網站中必須至少存在一篇文章，否則連「關於我」頁都會報 _404 NOT FOUND_
+  你可以到 `/source/_posts` 中將模板的 `hello-world.md` 刪除，但網站中必須至少存在一篇文章，否則連「關於我」頁都會報 *404 NOT FOUND*
   {% endnote %}
 
 3. 使用 MD 語法來撰寫整篇文章，若要使用 AI，請先和它說明你用的主題名稱；若想自己寫，也可以先問 AI 來學你用的主題有沒有什麼特殊語法
@@ -540,6 +555,7 @@ hexo s
   {% endnote %}
 
 5. 寫完後，可以使用以下指令建立本機預覽，並可在 `http://localhost:4000` 中看到網站預覽
+
   ```bash
   hexo cl && hexo g && hexo s
   ```
@@ -547,11 +563,13 @@ hexo s
   > 使用 Windows CMD 者請改用 `;` 取代 `&&`
 
 6. 文章寫完後，只需要將文章推到 GitHub 上即可
+
   ```bash
   git add .
   git commit "填寫自己的 commit message"
   git push
   ```
+
   {% note info %}
   若你有照我先前教的設定通知的 DC Bot，則 commit message 請以 `publish` 開頭（限發文章時，若是修改其他設定的 commit，則不可以它開頭）
   （commit message 對大小寫敏感，因此 `Publish` 並不能觸發通知的流程）

@@ -23,20 +23,24 @@ Markdown（MD）作為一個極輕量化的標記語言，對於寫程式的人�
 {% endnote %}
 
 ## 一般文字
+
 在 MD 中，若想寫兩行文字，則在寫 MD 時需要在兩行中間多空一行，否則它只會以空格的形式呈現。
 
-
 例如：
+
 - 錯誤示範
+
   ```md
   第一行
   第二行
   ```
+
   &darr;
 
   {% img /img/MD_sameline.png 行間沒空一行 %}
 
 - 正確示範
+
   ```md
   第一行
 
@@ -48,6 +52,7 @@ Markdown（MD）作為一個極輕量化的標記語言，對於寫程式的人�
   {% img /img/MD_newline.png 行間有空一行 %}
 
 ## 大標
+
 一般來說，MD 的大標有六個層級，從最大的 H1（`#`）到最小的 H6（`######`）。不過少部分環境可能只會有
 
 這裡需要特別注意的是，一般來說整篇文章只會有一個 H1 的大標，且放在首行，作為整篇文章的標題（GitHub 的 `README.md` 可放 Repo 名或自取作品名），其餘大標都是從 H2 開始，且中間不能突然跳過一個層級（如 H3 直接跳 H5）。但也有例外，例如用 Hexo 寫文章時，因為有 Front-matter 設標題，整篇就都不會有 H1 層級的標題出現了。
@@ -62,6 +67,7 @@ Markdown（MD）作為一個極輕量化的標記語言，對於寫程式的人�
 ```
 
 ## 行內文字效果
+
 ```md
 **粗體** 或 __粗體__
 
@@ -83,7 +89,8 @@ Markdown（MD）作為一個極輕量化的標記語言，對於寫程式的人�
 `行內程式碼`
 
 ## 清單
-```
+
+```md
 - 無序（也可以用 `*` 或 `+`，效果一樣）
   - 子清單
     - 子的子清單
@@ -108,6 +115,7 @@ Markdown（MD）作為一個極輕量化的標記語言，對於寫程式的人�
 3. ...
 
 ## 引用與連結
+
 - 引用：`> 引用文字`
 - 連結：`[顯示文字](URL)`
 - 圖片：`![替代文字](圖片URL)`
@@ -163,7 +171,7 @@ Markdown（MD）作為一個極輕量化的標記語言，對於寫程式的人�
 
 ## 程式碼區塊
 
-使用三個反引號（Backticks）包裹，並在第一組反引號後方加上語言名稱（如 `python`, `javascript`, `html`），即可實現語法高亮（Syntax Highlighting）。
+使用三個反引號（Backticks）包裹，並在第一組反引號後方加上語言名稱（如 `python`、`javascript`、`html`），即可實現語法高亮（Syntax Highlighting）。
 
 ````md
 ```python
@@ -178,6 +186,7 @@ print('Hello World')
 ```
 
 ## 常用 HTML
+
 Markdown 支援直接嵌入 HTML 標籤，非常好用，以下列出常見的幾種效果：
 
 | 功能 | 語法 | 效果 |
@@ -209,3 +218,10 @@ Markdown 支援直接嵌入 HTML 標籤，非常好用，以下列出常見的�
 &darr;
 
 <span style="color:red">RED</span> &rarr; <span style="color:green">GREEN</span> &rarr; <span style="color:blue">BLUE</span>
+
+## VS Code 擴充套件
+
+如果希望在 VS Code 中可以更方便地寫 MD 檔的話，可以考慮去安裝擴充套件：
+
+- [Markdown All in One](https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one)
+- [markdownlint](https://marketplace.visualstudio.com/items?itemName=DavidAnson.vscode-markdownlint)
