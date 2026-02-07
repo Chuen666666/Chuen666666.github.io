@@ -1319,6 +1319,12 @@ links:
       link: https://github.com/Xiancode207585,
       avatar: /avatar/Xiancode.png
     }
+    - {
+      title: "西瓜",
+      intro: "一個只有4+1的可憐高三牲",
+      link: https://github.com/watermelen63,
+      avatar: /avatar/watermelen.jpg
+    }
     # - {
     #   title: "",
     #   intro: "",
