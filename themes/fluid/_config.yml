@@ -1326,11 +1326,24 @@ links:
       avatar: /avatar/watermelen.jpg
     }
     # - {
+    #   title: "陳奕嘉",
+    #   intro: "",
+    #   link: https://github.com/Chen1Plus,
+    #   avatar: /avatar/Aaron_Chen.jpg
+    #   }
+    - {
+      title: "貓p",
+      intro: "尼們好 我是貓p：3<br>是一隻對民航跟資訊類有點興趣的貓咪<br>請多指教捏喵",
+      link: https://www.instagram.com/neko._.p_rcss_roc.tw,
+      avatar: /avatar/cat_p.png
+      }
+    # - {
     #   title: "",
     #   intro: "",
     #   link: https://www.instagram.com/hello_aqurielle.213/,
     #   avatar: /avatar/
     # }
+
 
   # 當成員頭像加載失敗時，替換為指定圖片
   # When the member avatar fails to load, replace the specified image
