@@ -1355,6 +1355,24 @@ links:
     #   link: ,
     #   avatar: /avatar/hansz.png
     #   }
+    - {
+      title: "蜜蜂機器人",
+      intro: "",
+      link: https://www.facebook.com/share/1DmaG6SzYw/?mibextid=wwXIfr,
+      avatar: /avatar/bee.jpg
+      }
+    - {
+      title: "s0323010",
+      intro: "懂音樂的軟體工程師 | 個網爛爛的不想修",
+      link: https://devs0323010.github.io/,
+      avatar: /avatar/s.png
+      }
+    - {
+      title: "Brian Duan",
+      intro: "一般路過史萊姆",
+      link: https://www.justaslime.dev/,
+      avatar: /avatar/slime.jpg
+      }
 
 
   # 當成員頭像加載失敗時，替換為指定圖片
