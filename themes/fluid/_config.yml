@@ -1343,6 +1343,12 @@ links:
     #   link: https://www.instagram.com/hello_aqurielle.213/,
     #   avatar: /avatar/
     # }
+    - {
+      title: "Myster",
+      intro: "不太會寫程式的人類",
+      link: https://myster7494.github.io/,
+      avatar: /avatar/Myster.png
+      }
 
 
   # 當成員頭像加載失敗時，替換為指定圖片
