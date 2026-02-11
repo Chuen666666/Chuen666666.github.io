@@ -1333,7 +1333,7 @@ links:
     #   }
     - {
       title: "貓p",
-      intro: "尼們好 我是貓p：3<br>是一隻對民航跟資訊類有點興趣的貓咪<br>請多指教捏喵",
+      intro: "一隻民航跟資訊貓<br>請多指教：3",
       link: https://www.instagram.com/neko._.p_rcss_roc.tw,
       avatar: /avatar/cat_p.png
       }
@@ -1349,6 +1349,12 @@ links:
       link: https://myster7494.github.io/,
       avatar: /avatar/Myster.png
       }
+    # - {
+    #   title: "n10955165",
+    #   intro: "被現實蹂躪的小男娘",
+    #   link: ,
+    #   avatar: /avatar/hansz.png
+    #   }
 
 
   # 當成員頭像加載失敗時，替換為指定圖片
