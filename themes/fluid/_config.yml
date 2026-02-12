@@ -1373,6 +1373,12 @@ links:
       link: https://www.justaslime.dev/,
       avatar: /avatar/slime.jpg
       }
+    - {
+      title: "YD",
+      intro: "一名創新者、網頁工程師，想構建讓社會更好的系統",
+      link: https://www.kuang-ti.com/,
+      avatar: /avatar/yd.png
+      }
 
 
   # 當成員頭像加載失敗時，替換為指定圖片
