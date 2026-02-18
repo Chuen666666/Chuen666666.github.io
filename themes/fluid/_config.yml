@@ -1379,6 +1379,12 @@ links:
       link: https://www.kuang-ti.com/,
       avatar: /avatar/yd.png
       }
+    - {
+      title: "Kukusa",
+      intro: "可愛男娘私我",
+      link: https://www.instagram.com/kukusa7274/,
+      avatar: /avatar/Kukusa.png
+      }
 
 
   # 當成員頭像加載失敗時，替換為指定圖片
