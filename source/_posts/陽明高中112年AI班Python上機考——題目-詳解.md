@@ -1,5 +1,5 @@
 ---
-title: 陽明高中 112 年 AI 班 Python 上機考 - 題目 + 詳解
+title: 陽明高中 112 年 AI 班 Python 上機考——題目 + 詳解
 categories:
   - 筆記與教學
   - 程式
