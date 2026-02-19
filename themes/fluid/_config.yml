@@ -1385,6 +1385,12 @@ links:
       link: https://www.instagram.com/kukusa7274/,
       avatar: /avatar/Kukusa.png
       }
+    - {
+      title: "Liquan",
+      intro: "擺爛中的大學生",
+      link: https://www.instagram.com/liquan_.0127?igsh=MXFudGo2N2I5NWdjbg%3D%3D&utm_source=qr,
+      avatar: /avatar/Liquan.jpg
+      }
 
 
   # 當成員頭像加載失敗時，替換為指定圖片
