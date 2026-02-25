@@ -1325,12 +1325,12 @@ links:
       link: https://github.com/watermelen63,
       avatar: /avatar/watermelen.jpg
     }
-    # - {
-    #   title: "陳奕嘉",
-    #   intro: "",
-    #   link: https://github.com/Chen1Plus,
-    #   avatar: /avatar/Aaron_Chen.jpg
-    #   }
+    - {
+      title: "陳奕嘉",
+      intro: "一個喜歡學東學西的不務正業工程師",
+      link: https://github.com/Chen1Plus,
+      avatar: /avatar/Aaron_Chen.jpg
+      }
     - {
       title: "貓p",
       intro: "一隻民航跟資訊貓<br>請多指教：3",
