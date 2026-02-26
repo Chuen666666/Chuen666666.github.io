@@ -1392,6 +1392,12 @@ links:
       avatar: /avatar/Liquan.jpg
       }
     - {
+      title: "陌語",
+      intro: "Doing the right thing may not always earn praise, but why should we betray our own principles just to please others ?",
+      link: https://github.com/Moyu0730,
+      avatar: /avatar/moyu.png
+      }
+    - {
       title: "泫霄",
       intro: "一个普通的人",
       link: https://github.com/xxuanXiao,
