@@ -1391,6 +1391,12 @@ links:
       link: https://www.instagram.com/liquan_.0127?igsh=MXFudGo2N2I5NWdjbg%3D%3D&utm_source=qr,
       avatar: /avatar/Liquan.jpg
       }
+    - {
+      title: "泫霄",
+      intro: "一个普通的人",
+      link: https://github.com/xxuanXiao,
+      avatar: /avatar/xuo_azure.webp
+      }
 
 
   # 當成員頭像加載失敗時，替換為指定圖片
