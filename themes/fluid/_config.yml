@@ -1104,6 +1104,12 @@ links:
       avatar: /avatar/moon.jpg
     }
     - {
+      title: "馮蛋餅",
+      intro: "蛋餅沒有保存期限，因為神話不會過期",
+      link: https://www.instagram.com/fyc_1940/,
+      avatar: /avatar/egg_pancake.jpg
+    }
+    - {
       title: "睏貓",
       intro: "愛睡覺的大壞貓，片師，重度咖啡因成癮，歡迎合作喵~",
       link: https://www.instagram.com/sleepycat.1201?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==,
