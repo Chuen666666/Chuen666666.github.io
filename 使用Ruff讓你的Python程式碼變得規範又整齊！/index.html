@@ -1,0 +1,925 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-TW" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/avatar.jpg">
+  <link rel="icon" href="/img/avatar.jpg">
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="">
+  <meta name="author" content="淳">
+  <meta name="keywords" content="Python, 程式, 專案, 筆記, 教學, 心得, 考證照, 比賽, 競程, 淳, 淳宇, Chuen666666, 淳宇淳蠢">
+  
+    <meta name="description" content="Ruff 是一個超好用的 Linter + Formatter，讓你的程式碼可以整齊又規範">
+<meta property="og:type" content="article">
+<meta property="og:title" content="使用 Ruff 讓你的 Python 程式碼變得規範又整齊！">
+<meta property="og:url" content="https://chuen666666.github.io/%E4%BD%BF%E7%94%A8Ruff%E8%AE%93%E4%BD%A0%E7%9A%84Python%E7%A8%8B%E5%BC%8F%E7%A2%BC%E8%AE%8A%E5%BE%97%E8%A6%8F%E7%AF%84%E5%8F%88%E6%95%B4%E9%BD%8A%EF%BC%81/index.html">
+<meta property="og:site_name" content="淳の神奇小網站">
+<meta property="og:description" content="Ruff 是一個超好用的 Linter + Formatter，讓你的程式碼可以整齊又規範">
+<meta property="og:locale" content="zh_TW">
+<meta property="article:published_time" content="2026-01-16T00:45:23.000Z">
+<meta property="article:modified_time" content="2026-03-01T16:01:58.714Z">
+<meta property="article:author" content="淳">
+<meta property="article:tag" content="Formatter">
+<meta property="article:tag" content="Linter">
+<meta property="article:tag" content="Python">
+<meta property="article:tag" content="Ruff">
+<meta property="article:tag" content="教學">
+<meta property="article:tag" content="程式">
+<meta name="twitter:card" content="summary_large_image">
+  
+  
+    <meta name="referrer" content="no-referrer-when-downgrade">
+  
+  
+  <title>使用 Ruff 讓你的 Python 程式碼變得規範又整齊！ - 淳の神奇小網站</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1749284_5i9bdhy70f8.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1735173_0756783m6t5.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+  
+<link rel="stylesheet" href="/css/custom.css">
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"chuen666666.github.io","root":"/","version":"1.9.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3","placement":"left","visible":"hover","icon":"❡"},"progressbar":{"enable":true,"height_px":3,"color":null,"options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"left","headingSelector":"h1,h2,h3","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+  
+<meta name="generator" content="Hexo 8.1.1"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>淳の網站</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首頁</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>歸檔</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分類</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>標籤</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>關於</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/links/" target="_self">
+                <i class="iconfont icon-link-fill"></i>
+                <span>友站</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/default.png') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="使用 Ruff 讓你的 Python 程式碼變得規範又整齊！"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-author" aria-hidden="true"></i>
+        淳
+      </span>
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2026-01-16 08:45" pubdate>
+          2026-01-16 08:45
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          4.1k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          35 分鐘
+        
+      </span>
+    
+
+    
+    
+      
+        <span id="busuanzi_container_page_pv" style="display: none">
+          <i class="iconfont icon-eye" aria-hidden="true"></i>
+          <span id="busuanzi_value_page_pv"></span> 次
+        </span>
+        
+
+      
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="padding-left: 2rem; margin-right: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目錄</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">使用 Ruff 讓你的 Python 程式碼變得規範又整齊！</h1>
+            
+              <p id="updated-time" class="note note-light" style="display: none">
+                
+                  
+                    本文最後更新於：2026-03-02T00:01:58+08:00
+                  
+                  
+
+                
+              </p>
+            
+            
+              <div class="markdown-body">
+                
+                <p>首先先說，這篇文章並不會教你怎麼用命令行（CLI）來執行 Ruff，而是以 VS Code 為例，示範怎麼把 Ruff 設定在 IDE 中，並在每次存檔程式時執行。</p>
+<p>文章的最後，也會教你如何設定 pre-commit，讓程式在被 commit 時，自動執行 Ruff 檢查和修正 Python 程式，甚至也會檢查和修正除了 Python 以外的檔案的一些簡單格式問題（如尾行 newline 等）。</p>
+<h2 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h2><h3 id="PEP-8"><a href="#PEP-8" class="headerlink" title="PEP 8"></a>PEP 8</h3><p>在 Python 的官方文件中，其實有一套很知名的規範，定義了程式碼的<strong>推薦風格</strong>，這套風格就是很著名的 <a target="_blank" rel="noopener" href="https://peps.python.org/pep-0008/">PEP 8</a>，它不是程式碼的硬性要求，實務上也不會全然按它寫的做，但它是一個經典的基礎，後來很多風格的變化都是從它而來的。</p>
+<h3 id="Linter-VS-Formatter"><a href="#Linter-VS-Formatter" class="headerlink" title="Linter VS Formatter"></a>Linter VS Formatter</h3><div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:center">工具</th>
+<th style="text-align:center">關注點</th>
+<th style="text-align:center">舉例</th>
+<th style="text-align:center">行為</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">Linter</td>
+<td style="text-align:center"><span style="white-space:nowrap">語法問題（邏輯與錯誤）</span></td>
+<td style="text-align:center">變數未定義、引入了沒用的模組、代碼太複雜</td>
+<td style="text-align:center">在 IDE 中以黃、紅線標註，並提供修復建議</td>
+</tr>
+<tr>
+<td style="text-align:center">Formatter</td>
+<td style="text-align:center"><span style="white-space:nowrap">語義問題（視覺與格式）</span></td>
+<td style="text-align:center">縮排空格數、單雙引號、換行位置</td>
+<td style="text-align:center">存檔時直接自動修正，確保全專案風格統一</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3 id="Ruff"><a href="#Ruff" class="headerlink" title="Ruff"></a>Ruff</h3><p>這是一款工具，結合了 Linter 和 Formatter 的功能於一體，雖然它也可以用 CLI 來控制，但更方便的功能則是在 VS Code 按下 <kbd>Ctrl</kbd> <kbd>S</kbd> 存檔時會自動 format，並且用黃或紅色底線來標記一些可能存在的語法問題。</p>
+<p>程式碼的風格其實最重要的就是<strong>統一</strong>，因此其實 Formatter 也不一定會完全按 PEP 8 的規範來走，有些反而選擇以 Python 社區的習慣來走。</p>
+<p>舉個例子，以 PEP 8 的規範來說，數學運算應該只把空格加在<strong>最後進行運算的符號</strong>前後，像是 <code>a*b+c*d</code> 因為先乘除後加減，加號是最後運算的，故應寫為 <code>a*b + c*d</code>。但如果你實際去跑一次 Ruff，你會發現它給你整理成了 <code>a + b * c + d</code>，而這其實是 Python 社區目前比較盛行和鼓勵的寫法。</p>
+<h2 id="安裝-VS-Code-套件"><a href="#安裝-VS-Code-套件" class="headerlink" title="安裝 VS Code 套件"></a>安裝 VS Code 套件</h2><p>在 VS Code 中按下 <kbd>Ctrl</kbd> <kbd>Shift</kbd> <kbd>X</kbd>，並安裝（或檢查是否安裝）以下擴充套件（Extension）：</p>
+<ul>
+<li>Python：<del>寫 Python 不裝這個，你就是這個 👍</del></li>
+<li>Pylance：通常裝 Python 的 VS Code 套件時就會一起安裝了，它會用來做基礎的程式碼補全和靜態檢查</li>
+<li>Ruff：我們今天的主角，一款 Linter + Formatter 工具</li>
+</ul>
+<h2 id="設定-Ruff"><a href="#設定-Ruff" class="headerlink" title="設定 Ruff"></a>設定 Ruff</h2><ol>
+<li>在 VS Code 中，按下 <kbd>Ctrl</kbd> <kbd>Shift</kbd> <kbd>P</kbd>，並輸入（或找到）<code>Preferences: Open User Settings (JSON)</code></li>
+<li><p>找到 <code>&quot;[python]&quot;</code>，並加上（或替換）成以下 JSON 內容：</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs json"><span class="hljs-attr">&quot;[python]&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">&#123;</span><br>  <span class="hljs-attr">&quot;editor.defaultFormatter&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;charliermarsh.ruff&quot;</span><span class="hljs-punctuation">,</span><br>  <span class="hljs-attr">&quot;editor.formatOnSave&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-literal"><span class="hljs-keyword">true</span></span><span class="hljs-punctuation">,</span><br>  <span class="hljs-attr">&quot;editor.codeActionsOnSave&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">&#123;</span><br>    <span class="hljs-attr">&quot;source.fixAll.ruff&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;explicit&quot;</span><span class="hljs-punctuation">,</span><br>    <span class="hljs-attr">&quot;source.organizeImports.ruff&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;explicit&quot;</span><br>  <span class="hljs-punctuation">&#125;</span><br><span class="hljs-punctuation">&#125;</span><span class="hljs-punctuation">,</span><br></code></pre></td></tr></table></figure>
+<p>（若整個 JSON 檔是空的，記得在首和尾行加上 <code>&#123;</code> 和 <code>&#125;</code>，並依 IDE 指示刪掉多餘 <code>,</code>）</p>
+</li>
+<li><p>在想要自動執行 Ruff 的地方創建 <code>pyproject.toml</code>，並貼上以下內容：</p>
+<figure class="highlight toml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><code class="hljs toml"><span class="hljs-section">[tool.ruff]</span><br><span class="hljs-attr">line-length</span> = <span class="hljs-number">88</span> <span class="hljs-comment"># 一行最多 88 個字</span><br><span class="hljs-attr">target-version</span> = <span class="hljs-string">&quot;py310&quot;</span> <span class="hljs-comment"># 改掉較舊語法，以新語法取代（可換成專案用的 Python 版本）</span><br><br><span class="hljs-section">[tool.ruff.lint]</span><br><span class="hljs-attr">select</span> = [<span class="hljs-string">&quot;E&quot;</span>, <span class="hljs-string">&quot;F&quot;</span>, <span class="hljs-string">&quot;I&quot;</span>, <span class="hljs-string">&quot;W&quot;</span>, <span class="hljs-string">&quot;N&quot;</span>, <span class="hljs-string">&quot;UP&quot;</span>, <span class="hljs-string">&quot;FLY&quot;</span>, <span class="hljs-string">&quot;B&quot;</span>, <span class="hljs-string">&quot;RUF&quot;</span>, <span class="hljs-string">&quot;SIM&quot;</span>, <span class="hljs-string">&quot;PIE&quot;</span>, <span class="hljs-string">&quot;ARG&quot;</span>] <span class="hljs-comment"># 啟用的規則</span><br><span class="hljs-attr">ignore</span> = [<span class="hljs-string">&quot;E501&quot;</span>, <span class="hljs-string">&quot;T201&quot;</span>, <span class="hljs-string">&quot;D100&quot;</span>, <span class="hljs-string">&quot;RUF001&quot;</span>, <span class="hljs-string">&quot;RUF002&quot;</span>, <span class="hljs-string">&quot;RUF003&quot;</span>] <span class="hljs-comment"># 禁用的規則</span><br><br><span class="hljs-attr">fixable</span> = [<span class="hljs-string">&quot;ALL&quot;</span>] <span class="hljs-comment"># 啟用自動修正（推薦全開，Ruff 預設可修已經很保守了）</span><br><span class="hljs-attr">unfixable</span> = [] <span class="hljs-comment"># 禁用自動修正（可以上面設全開後，這裡再加入想要忽略的自動修正設定）</span><br><span class="hljs-attr">extend-safe-fixes</span> = [<span class="hljs-string">&quot;UP006&quot;</span>, <span class="hljs-string">&quot;UP007&quot;</span>] <span class="hljs-comment"># 額外允許一些 Ruff 預設比較保守的修正</span><br><br><span class="hljs-section">[tool.ruff.format]</span><br><span class="hljs-attr">quote-style</span> = <span class="hljs-string">&quot;single&quot;</span> <span class="hljs-comment"># 慣用引號（單引號）</span><br><span class="hljs-attr">docstring-code-format</span> = <span class="hljs-literal">true</span> <span class="hljs-comment"># docstring 一樣改用回雙引號</span><br><span class="hljs-attr">skip-magic-trailing-comma</span> = <span class="hljs-literal">true</span> <span class="hljs-comment"># 關掉「魔法尾逗號」的強制換行行為</span><br><br><span class="hljs-section">[tool.ruff.lint.isort]</span><br><span class="hljs-attr">combine-as-imports</span> = <span class="hljs-literal">true</span> <span class="hljs-comment"># 合併 `import x as y` 類型的 import（讓同一模組的別名 import 更集中）</span><br><span class="hljs-attr">lines-after-imports</span> = <span class="hljs-number">2</span> <span class="hljs-comment"># import 區塊後保留 2 行空白（更明顯分隔 import 與程式本文）</span><br><br><span class="hljs-section">[tool.ruff.lint.mccabe]</span><br><span class="hljs-attr">max-complexity</span> = <span class="hljs-number">10</span> <span class="hljs-comment"># 圈複雜度上限：超過 10 會被標記（提醒拆函式/簡化分支）</span><br></code></pre></td></tr></table></figure>
+</li>
+<li><p>客制化自己的 <code>pyproject.toml</code>：你可以依不同專案和不同個人（或團隊）習慣，在每個專案用不同的 <code>pyproject.toml</code>，你可以依照上面我寫的註解來改，以及參考 AI 或<a target="_blank" rel="noopener" href="https://docs.astral.sh/ruff/">官方文件</a>來客制化</p>
+<p>用 AI 者，可以參考這個 prompt：</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs text">我在 VSC 中想使用 Ruff，我已經設定好了 JSON 檔（不用再改），並且用了別人的範例 pyproject.toml，如下：<br><br>（請貼上先前提供的 pyproject.toml 並替換掉這行文字）<br><br>我希望我可以依自己的喜好和專案狀況來修改成我自己的版本，因為我是新手，請你透過向我提問的方式和我確認程式碼風格喜好和專案目前情況，並且每個設定都大概說明一下會影響到什麼，以及 PEP 8 和社區習慣。客制化設定時，不要只依上面那個 TOML 來改，而是同時改到上面的設定，以及確認有沒有什麼其他設定我也用得上，但上面沒特別寫到的。<br><br>另外，我不使用 CLI，而是只用 VSC 的 Ruff Extension 配合存檔操作來自動執行 Ruff。<br></code></pre></td></tr></table></figure>
+</li>
+</ol>
+<h2 id="撰寫程式碼時"><a href="#撰寫程式碼時" class="headerlink" title="撰寫程式碼時"></a>撰寫程式碼時</h2><ol>
+<li>在 VS Code 中，寫完程式碼後，按下存檔（<kbd>Ctrl</kbd> <kbd>S</kbd>）時，程式將會自動 format（有開啟自動存檔者也不用擔心，手動按存檔才會執行 format）</li>
+<li><p>撰寫過程，IDE 也會自動在不符合規範的程式碼下以黃或紅色底線標記，將滑鼠移到它上面時，還會顯示詳細提示錯誤或不符合 Linter 規範的說明，也可以按下 <code>快速修復</code> 來看看有沒有內建的解決方法</p>
+<div class="note note-info">
+            <p>若解決方法只是加上一個註解，說明問題沒有被解決，它只是可以讓 IDE 不再警報<br>你可以依自己的想法來決定倒底是要依建議修復問題，或者留著忽略警告的註解</p> 
+          </div>
+</li>
+</ol>
+<h2 id="Pre-commit"><a href="#Pre-commit" class="headerlink" title="Pre-commit"></a>Pre-commit</h2><p>它其實並不是 Ruff 專屬的，任何 Linter 或 Formatter 都可以用這東西。它會在使用者 commit 程式碼時，自動跑一次 Linter 或 Formatter，並檢查是否有任何錯誤（不符合設定處）。</p>
+<h3 id="安裝"><a href="#安裝" class="headerlink" title="安裝"></a>安裝</h3><ol>
+<li><p>在終端機（Terminal）中使用 <code>pip</code> 指令（或其他 Python 套件安裝工具）安裝 pre-commit：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">pip install pre-commit<br></code></pre></td></tr></table></figure>
+</li>
+<li><p>在與 <code>pyproject.toml</code> 同層級目錄下創建 <code>.pre-commit-config.yaml</code>，並貼上以下內容：</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-attr">repos:</span><br><span class="hljs-bullet">-</span> <span class="hljs-attr">repo:</span> <span class="hljs-string">https://github.com/pre-commit/pre-commit-hooks</span><br>  <span class="hljs-attr">rev:</span> <span class="hljs-string">v4.5.0</span><br>  <span class="hljs-attr">hooks:</span><br>    <span class="hljs-bullet">-</span> <span class="hljs-attr">id:</span> <span class="hljs-string">trailing-whitespace</span><br>    <span class="hljs-bullet">-</span> <span class="hljs-attr">id:</span> <span class="hljs-string">end-of-file-fixer</span><br>    <span class="hljs-bullet">-</span> <span class="hljs-attr">id:</span> <span class="hljs-string">check-yaml</span><br>    <span class="hljs-bullet">-</span> <span class="hljs-attr">id:</span> <span class="hljs-string">check-added-large-files</span><br><br><span class="hljs-bullet">-</span> <span class="hljs-attr">repo:</span> <span class="hljs-string">https://github.com/astral-sh/ruff-pre-commit</span><br>  <span class="hljs-attr">rev:</span> <span class="hljs-string">v0.1.9</span><br>  <span class="hljs-attr">hooks:</span><br>    <span class="hljs-bullet">-</span> <span class="hljs-attr">id:</span> <span class="hljs-string">ruff</span><br>      <span class="hljs-attr">args:</span> [ <span class="hljs-string">--fix</span> ]<br>    <span class="hljs-bullet">-</span> <span class="hljs-attr">id:</span> <span class="hljs-string">ruff-format</span><br></code></pre></td></tr></table></figure>
+</li>
+<li><p>在同目錄的終端機（Terminal）中，輸入：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">pre-commit install<br></code></pre></td></tr></table></figure>
+</li>
+<li><p>試著 commit：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">git add .<br>git commit -m <span class="hljs-string">&quot;隨便打一個 commit message&quot;</span><br></code></pre></td></tr></table></figure>
+<div class="note note-info">
+            <p>若有其中一個（或多個檔案）顯示 <code>Failed</code>，表示 pre-commit 啟作用並自動幫你修復了，不用修改任何東西，再去執行一次上方 <code>add</code> 和 <code>commit</code> 即可；若全都是 <code>Passed</code> 或 <code>Skipped</code>，表示無檔案需要修復</p> 
+          </div>
+</li>
+<li><p>將改動推上 GitHub</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">git push<br></code></pre></td></tr></table></figure>
+</li>
+</ol>
+<div class="note note-info">
+            <p>若在 <code>git add .</code> 時看到提示訊息中有提及「CRLF」或「LF」<br>是因為你使用 Windows 系統使用 CRLF（<code>\r\n</code>）作換行符；而 Linux/macOS 用 LF（<code>\n</code>）<br>通常情況下，Git 或 Ruff 會自動處理此問題，可忽略<br>但若你想讓自己專案更完整和健壯，也可以問問 AI 如何處理它們的轉換問題</p> 
+          </div>
+<h3 id="程式專案"><a href="#程式專案" class="headerlink" title="程式專案"></a>程式專案</h3><ol>
+<li>為了讓大家都能依同一套 Linter 和 Formatter 規則來寫程式，可以將 <code>pre-commit</code> 加到 <code>requirements.txt</code> 中，並在 <code>README.md</code> 中提及它</li>
+<li>有裝好 <code>pre-commit</code> 的環境，會自動讀取專案中的 <code>pyproject.toml</code>，且在每次 commit 時自動檢查和修正風格，就如上<a href="#安裝">安裝</a>章節的第 <code>3.</code> 、 <code>4.</code> 點所述</li>
+</ol>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E7%AD%86%E8%A8%98%E8%88%87%E6%95%99%E5%AD%B8/" class="category-chain-item">筆記與教學</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/%E7%AD%86%E8%A8%98%E8%88%87%E6%95%99%E5%AD%B8/%E7%A8%8B%E5%BC%8F/" class="category-chain-item">程式</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/%E7%AD%86%E8%A8%98%E8%88%87%E6%95%99%E5%AD%B8/%E7%A8%8B%E5%BC%8F/%E5%B0%88%E6%A1%88/" class="category-chain-item">專案</a>
+  
+  
+
+  
+
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/%E6%95%99%E5%AD%B8/" class="print-no-link">#教學</a>
+      
+        <a href="/tags/%E7%A8%8B%E5%BC%8F/" class="print-no-link">#程式</a>
+      
+        <a href="/tags/Python/" class="print-no-link">#Python</a>
+      
+        <a href="/tags/Linter/" class="print-no-link">#Linter</a>
+      
+        <a href="/tags/Formatter/" class="print-no-link">#Formatter</a>
+      
+        <a href="/tags/Ruff/" class="print-no-link">#Ruff</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>使用 Ruff 讓你的 Python 程式碼變得規範又整齊！</div>
+      <div>https://chuen666666.github.io/使用Ruff讓你的Python程式碼變得規範又整齊！/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>淳</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>發布於</div>
+          <div>2026-01-16 08:45</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>更新於</div>
+          <div>2026-03-02 00:01</div>
+        </div>
+      
+      
+        <div class="license-meta-item">
+          <div>許可協議</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 姓名標示">
+                    <i class="iconfont icon-cc-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/%E4%B8%96%E7%95%8C%E4%B8%8A%E6%9C%80%E9%A0%82%E7%9A%84%E4%BA%A4%E5%A5%B3%E5%8F%8B%E6%95%99%E5%AD%B8/" title="世界上最頂的交女友教學">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">世界上最頂的交女友教學</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/%E7%AB%B6%E7%A8%8B%E5%B8%B8%E7%94%A8%E7%9A%84Python%E6%A8%99%E6%BA%96%E5%87%BD%E5%BC%8F%E5%BA%AB/" title="競程常用的 Python 標準函式庫">
+                        <span class="hidden-mobile">競程常用的 Python 標準函式庫</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+  
+  
+    <article id="comments" lazyload>
+      
+    <div id="giscus" class="giscus"></div>
+    <script type="text/javascript">
+      Fluid.utils.loadComments('#giscus', function() {
+        var options = {"repo":"Chuen666666/Chuen666666.github.io","repo-id":"R_kgDOPtWSPw","category":"General","category-id":"DIC_kwDOPtWSP84C0IRu","mapping":"pathname","reactions-enabled":1,"emit-metadata":0,"input-position":"top","theme-light":"light","theme-dark":"dark","lang":"zh-TW"};
+        var attributes = {};
+        for (let option in options) {
+          if (!option.startsWith('theme-')) {
+            var key = option.startsWith('data-') ? option : 'data-' + option;
+            attributes[key] = options[option];
+          }
+        }
+        var light = 'light';
+        var dark = 'dark';
+        window.GiscusThemeLight = light;
+        window.GiscusThemeDark = dark;
+        attributes['data-theme'] = document.documentElement.getAttribute('data-user-color-scheme') === 'dark' ? dark : light;
+        for (let attribute in attributes) {
+          var value = attributes[attribute];
+          if (value === undefined || value === null || value === '') {
+            delete attributes[attribute];
+          }
+        }
+        var s = document.createElement('script');
+        s.setAttribute('src', 'https://giscus.app/client.js');
+        s.setAttribute('crossorigin', 'anonymous');
+        for (let attribute in attributes) {
+          s.setAttribute(attribute, attributes[attribute]);
+        }
+        var ss = document.getElementsByTagName('script');
+        var e = ss.length > 0 ? ss[ss.length - 1] : document.head || document.documentElement;
+        e.parentNode.insertBefore(s, e.nextSibling);
+      });
+    </script>
+    <noscript>Please enable JavaScript to view the comments</noscript>
+
+
+    </article>
+  
+
+
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜尋</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">關鍵字</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <span>© 2025 淳</span> <br> <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+    <div class="statistics">
+  
+  
+
+  
+    
+      <span id="busuanzi_container_site_pv" style="display: none">
+        總訪問量 
+        <span id="busuanzi_value_site_pv"></span>
+         次
+      </span>
+    
+    
+      <span id="busuanzi_container_site_uv" style="display: none">
+        總訪客數 
+        <span id="busuanzi_value_site_uv"></span>
+         人
+      </span>
+    
+    
+
+  
+
+</div>
+
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  var relativeDate = function() {
+    var updatedTime = document.getElementById('updated-time');
+    if (updatedTime) {
+      var text = updatedTime.textContent;
+      var reg = /\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(?:Z|[+-]\d{2}:\d{2})/;
+      var matchs = text.match(reg);
+      if (matchs) {
+        var relativeTime = moment(matchs[0]).fromNow();
+        updatedTime.textContent = text.replace(reg, relativeTime);
+      }
+      updatedTime.style.display = '';
+    }
+  };
+  Fluid.utils.createScript('https://lib.baomitu.com/moment.js/2.29.4/moment.min.js', function() {
+    if (!'zh-tw'.startsWith('en')) {
+      Fluid.utils.createScript('https://lib.baomitu.com/moment.js/2.29.4/locale/zh-tw.min.js', function() {
+        relativeDate();
+      });
+    } else {
+      relativeDate();
+    }
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/5.0.0/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/js/local-search.js" ></script>
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+
+
+  
+<script src="/js/custom.js"></script>
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">部落格在允許 JavaScript 執行的環境下瀏覽效果更佳</div>
+  </noscript>
+</body>
+</html>

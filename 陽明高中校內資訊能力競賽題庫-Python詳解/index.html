@@ -1,0 +1,949 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-TW" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/avatar.jpg">
+  <link rel="icon" href="/img/avatar.jpg">
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="">
+  <meta name="author" content="淳">
+  <meta name="keywords" content="Python, 程式, 專案, 筆記, 教學, 心得, 考證照, 比賽, 競程, 淳, 淳宇, Chuen666666, 淳宇淳蠢">
+  
+    <meta name="description" content="所有由 @郭10 出的陽明高中校內資訊能力競賽題目的 Python 詳解">
+<meta property="og:type" content="article">
+<meta property="og:title" content="陽明高中校內資訊能力競賽題庫 - Python 詳解">
+<meta property="og:url" content="https://chuen666666.github.io/%E9%99%BD%E6%98%8E%E9%AB%98%E4%B8%AD%E6%A0%A1%E5%85%A7%E8%B3%87%E8%A8%8A%E8%83%BD%E5%8A%9B%E7%AB%B6%E8%B3%BD%E9%A1%8C%E5%BA%AB-Python%E8%A9%B3%E8%A7%A3/index.html">
+<meta property="og:site_name" content="淳の神奇小網站">
+<meta property="og:description" content="所有由 @郭10 出的陽明高中校內資訊能力競賽題目的 Python 詳解">
+<meta property="og:locale" content="zh_TW">
+<meta property="article:published_time" content="2026-01-06T07:34:24.000Z">
+<meta property="article:modified_time" content="2026-03-01T16:01:58.714Z">
+<meta property="article:author" content="淳">
+<meta property="article:tag" content="Python">
+<meta property="article:tag" content="教學">
+<meta property="article:tag" content="程式">
+<meta property="article:tag" content="筆記">
+<meta property="article:tag" content="資訊能力競賽">
+<meta property="article:tag" content="題解">
+<meta name="twitter:card" content="summary_large_image">
+  
+  
+    <meta name="referrer" content="no-referrer-when-downgrade">
+  
+  
+  <title>陽明高中校內資訊能力競賽題庫 - Python 詳解 - 淳の神奇小網站</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1749284_5i9bdhy70f8.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1735173_0756783m6t5.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+  
+<link rel="stylesheet" href="/css/custom.css">
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"chuen666666.github.io","root":"/","version":"1.9.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3","placement":"left","visible":"hover","icon":"❡"},"progressbar":{"enable":true,"height_px":3,"color":null,"options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"left","headingSelector":"h1,h2,h3","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+  
+<meta name="generator" content="Hexo 8.1.1"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>淳の網站</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首頁</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>歸檔</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分類</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>標籤</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>關於</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/links/" target="_self">
+                <i class="iconfont icon-link-fill"></i>
+                <span>友站</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/default.png') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="陽明高中校內資訊能力競賽題庫 - Python 詳解"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-author" aria-hidden="true"></i>
+        淳
+      </span>
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2026-01-06 15:34" pubdate>
+          2026-01-06 15:34
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          6.8k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          57 分鐘
+        
+      </span>
+    
+
+    
+    
+      
+        <span id="busuanzi_container_page_pv" style="display: none">
+          <i class="iconfont icon-eye" aria-hidden="true"></i>
+          <span id="busuanzi_value_page_pv"></span> 次
+        </span>
+        
+
+      
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="padding-left: 2rem; margin-right: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目錄</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">陽明高中校內資訊能力競賽題庫 - Python 詳解</h1>
+            
+              <p id="updated-time" class="note note-light" style="display: none">
+                
+                  
+                    本文最後更新於：2026-03-02T00:01:58+08:00
+                  
+                  
+
+                
+              </p>
+            
+            
+              <div class="markdown-body">
+                
+                <p>這份題解是關於由 <a target="_blank" rel="noopener" href="https://yilinguo121.github.io/">@郭10</a> 所出的<a target="_blank" rel="noopener" href="https://codeforces.com/gym/629558/">陽明高中校內資訊能力競賽題庫</a>的 Python 詳解</p>
+<p>如有任何錯誤或疑問，歡迎於下方留言或主動與我聯繫討論</p>
+<h2 id="A-要出什麼題"><a href="#A-要出什麼題" class="headerlink" title="A. 要出什麼題"></a>A. 要出什麼題</h2><blockquote>
+<p><a target="_blank" rel="noopener" href="https://codeforces.com/gym/629558/problem/A">題目連結</a></p>
+</blockquote>
+<p>這題直接用暴力的 if-statement 就能解決，值得注意的是，Python 字串是支援用大於／小於符號進行比較的，它會自動比較其 ASCII/Unicode</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">for</span> _ <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-built_in">int</span>(<span class="hljs-built_in">input</span>())):<br>    s = <span class="hljs-built_in">input</span>()<br><br>    <span class="hljs-keyword">if</span> <span class="hljs-string">&#x27;A&#x27;</span> &lt;= s &lt;= <span class="hljs-string">&#x27;D&#x27;</span>:<br>        <span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;Basic Syntax and Function Calls&#x27;</span>)<br>    <span class="hljs-keyword">elif</span> s &lt;= <span class="hljs-string">&#x27;H&#x27;</span>:<br>        <span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;Basic algorithms and data structures&#x27;</span>)<br>    <span class="hljs-keyword">else</span>:<br>        <span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;Insanely difficult advanced algorithms&#x27;</span>)<br></code></pre></td></tr></table></figure>
+<h2 id="B-解決內部碎片化"><a href="#B-解決內部碎片化" class="headerlink" title="B. 解決內部碎片化"></a>B. 解決內部碎片化</h2><blockquote>
+<p><a target="_blank" rel="noopener" href="https://codeforces.com/gym/629558/problem/B">題目連結</a></p>
+</blockquote>
+<p>這題對於二進制不熟悉的人可能比較困難，不過這題的解題思路也不只一種，我們先來看最標準的解法</p>
+<p>我們可以嘗試用二進制的概念來想它，先來想想我們最熟悉的十進制，假設有一個三位數字 $abc$，它的數值可以表示為 $a\times10^2+b\times10^1+c\times10^0$，注意到，每一位的位置都能用 10 的冪次方來表示</p>
+<p>類推到二進制也一樣，假設一個二進制數 $101$，它的數值其實就是 $1\times2^2+0\times2^1+1\times2^0$，也就是說，若我們想找到最小的 $x$ 使得 $2^x\ge a$，實際上就可以表示成 $a$ 的二進制表示法中最高位元的位置，也就是整個數字轉為二進制後的字串長度，在 Python 中可以直接用內建的 <code>bit_length()</code> 函式</p>
+<p>不過目前還有一個問題，如果我們想找的數字剛好是 2 的次方時，二進制中會多進一位，例如 $8$ 的二進制是 $1000$，長度是 $4$，但實際上我們想要的答案應該是 $3$（$2^3=8$），因此我們可以先將 $a$ 減去 $1$ 再計算</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">for</span> _ <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-built_in">int</span>(<span class="hljs-built_in">input</span>())):<br>    <span class="hljs-built_in">print</span>((<span class="hljs-built_in">int</span>(<span class="hljs-built_in">input</span>()) - <span class="hljs-number">1</span>).bit_length())<br></code></pre></td></tr></table></figure>
+<p>除了這個標準做法，我們也可以想一種邪門外道的解法，因為它出現在第二題，題目出成這個難度實在不合理，因此理論上應該要有更簡單直覺的做法，也就是暴力硬炸</p>
+<p>這裡只要注意它暴力取的範圍即可，因為題目說了 $1\le a\le 2^{63}-1$，因此直接取到 64 即可，不過其實因為必然會在某個時刻找到答案，所以其實你把迴圈開超大（甚至用 while-loop 無限迴圈）也不會錯就是了</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">for</span> _ <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-built_in">int</span>(<span class="hljs-built_in">input</span>())):<br>    n = <span class="hljs-built_in">int</span>(<span class="hljs-built_in">input</span>())<br> <br>    <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-number">64</span>):<br>        <span class="hljs-keyword">if</span> <span class="hljs-number">2</span>**i &gt;= n:<br>            <span class="hljs-built_in">print</span>(i)<br>            <span class="hljs-keyword">break</span><br></code></pre></td></tr></table></figure>
+<p>上面兩個做法的時間複雜度一看就知道差很多，若有 $T$ 筆測資，則做法 1 的算法涉及 <code>bin_length()</code> 的實做方法，它實際上是計算 bit 數的，故複雜度 $O(\text{bit 數})=O(\log x)$，整個算法共 $O(T\log x)$；而暴力法則是 $O(nT)$</p>
+<p>但注意到，題目保證 $a\le2^{63}-1$，所以 $\max(\log x)=63$、$\max(n)=64$，那麼兩者 $O(63)=O(64)=O(1)$，故上二者總複雜度都是 $O(T)$</p>
+<h2 id="C-跑到哪了"><a href="#C-跑到哪了" class="headerlink" title="C. 跑到哪了"></a>C. 跑到哪了</h2><blockquote>
+<p><a target="_blank" rel="noopener" href="https://codeforces.com/gym/629558/problem/C">題目連結</a></p>
+</blockquote>
+<p>這題甚至比上一題還簡單，應該很容易就能看出來，這題只需要將趟數除以 2 取餘數（即 $n \bmod 2$），再看原始點在哪，就能秒知道答案了</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs python">s = <span class="hljs-built_in">input</span>().split()<br>n = <span class="hljs-built_in">int</span>(s[<span class="hljs-number">1</span>])<br>s = s[<span class="hljs-number">0</span>]<br><br><span class="hljs-keyword">if</span> n % <span class="hljs-number">2</span> == <span class="hljs-number">0</span>:<br>    <span class="hljs-built_in">print</span>(s)<br><span class="hljs-keyword">else</span>:<br>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;A&#x27;</span> <span class="hljs-keyword">if</span> s == <span class="hljs-string">&#x27;B&#x27;</span> <span class="hljs-keyword">else</span> <span class="hljs-string">&#x27;B&#x27;</span>)<br></code></pre></td></tr></table></figure>
+<h2 id="D-Sword-Art-Online"><a href="#D-Sword-Art-Online" class="headerlink" title="D. Sword Art Online"></a>D. Sword Art Online</h2><blockquote>
+<p><a target="_blank" rel="noopener" href="https://codeforces.com/gym/629558/problem/D">題目連結</a></p>
+</blockquote>
+<p>這題對於寫過國中數學題的你我而言，應該一眼就能看出來是要求最小公倍數對吧？如果真的看不出來，其實題目底下的「計算」也已經自爆解法了</p>
+<p>在 Python 中，我們可以直接用內建的 <code>math.lcm()</code> 函式來計算最小公倍數</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">from</span> math <span class="hljs-keyword">import</span> lcm<br><br><span class="hljs-built_in">input</span>() <span class="hljs-comment"># 跳過第一行 n 的輸入</span><br><span class="hljs-built_in">print</span>(lcm(*<span class="hljs-built_in">map</span>(<span class="hljs-built_in">int</span>, <span class="hljs-built_in">input</span>().split()))) <span class="hljs-comment"># 用 *（unpack）展開 map() 並傳入 lcm()</span><br></code></pre></td></tr></table></figure>
+<h2 id="E-蛋餅想吃蛋餅"><a href="#E-蛋餅想吃蛋餅" class="headerlink" title="E. 蛋餅想吃蛋餅"></a>E. 蛋餅想吃蛋餅</h2><blockquote>
+<p><a target="_blank" rel="noopener" href="https://codeforces.com/gym/629558/problem/E">題目連結</a></p>
+</blockquote>
+<p>這題乍看之下會覺得好像很簡單，直接去把範圍內的值取 <code>sum()</code> 不就行了嗎？但如果你真的這樣做，就會收到一個大大的 TLE</p>
+<p>這題實際上的考點是前綴和（prefix sum），我們可以先建立一個前綴和的 list，也就是把每一項設定為自己加上前面所有元素的和，如此，當我們求一個區間和 $[l, r]$ 時，就可以用 <code>prefix[r] - prefix[l-1]</code> 來快速計算，相對於每查詢一次就計算一次的做法，這樣的效率會高上不少</p>
+<p>若查詢 $q$ 次，暴力算區間的做法為 $O(n\times q)$，而前綴和建表則是 $O(n+q)$</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs python">n, q = <span class="hljs-built_in">map</span>(<span class="hljs-built_in">int</span>, <span class="hljs-built_in">input</span>().split())<br>a = <span class="hljs-built_in">list</span>(<span class="hljs-built_in">map</span>(<span class="hljs-built_in">int</span>, <span class="hljs-built_in">input</span>().split()))<br> <br>pre_sum = [<span class="hljs-number">0</span>]<br> <br><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> a:<br>    pre_sum.append(pre_sum[-<span class="hljs-number">1</span>] + i)<br> <br><span class="hljs-keyword">for</span> _ <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(q):<br>    l, r = <span class="hljs-built_in">map</span>(<span class="hljs-built_in">int</span>, <span class="hljs-built_in">input</span>().split())<br>    <span class="hljs-built_in">print</span>(pre_sum[r] - pre_sum[l-<span class="hljs-number">1</span>])<br></code></pre></td></tr></table></figure>
+<p>不過，其實 Python 為了前綴和的場景，也提供了一個內建的 <code>itertools.accumulate()</code> 函式，可以直接幫我們計算前綴和</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">from</span> itertools <span class="hljs-keyword">import</span> accumulate<br> <br>n, q = <span class="hljs-built_in">map</span>(<span class="hljs-built_in">int</span>, <span class="hljs-built_in">input</span>().split())<br>arr = <span class="hljs-built_in">list</span>(accumulate(<span class="hljs-built_in">map</span>(<span class="hljs-built_in">int</span>, <span class="hljs-built_in">input</span>().split())))<br> <br><span class="hljs-keyword">for</span> _ <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(q):<br>    l, r = <span class="hljs-built_in">map</span>(<span class="hljs-built_in">int</span>, <span class="hljs-built_in">input</span>().split())<br>    <span class="hljs-keyword">if</span> l == <span class="hljs-number">1</span>:<br>        <span class="hljs-built_in">print</span>(arr[r-<span class="hljs-number">1</span>])<br>    <span class="hljs-keyword">else</span>:<br>        <span class="hljs-built_in">print</span>(arr[r-<span class="hljs-number">1</span>] - arr[l-<span class="hljs-number">2</span>])<br></code></pre></td></tr></table></figure>
+<h2 id="F-課程安排"><a href="#F-課程安排" class="headerlink" title="F. 課程安排"></a>F. 課程安排</h2><blockquote>
+<p><a target="_blank" rel="noopener" href="https://codeforces.com/gym/629558/problem/F">題目連結</a></p>
+</blockquote>
+<p><del>欸媽我上電視（被出進題裡）了</del></p>
+<p>說實話，這種分配問題我第一次看到都會直覺想到 DP，不過如果順著 DP 的思路走下去，會發現其實它就是貪心法（Greedy）</p>
+<p>Greedy 的想法就是，每次都盡可能選結束時間最早的課，因此這樣就能盡量減少卡到後面課程的時間，預留最多時間給後續排課</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><code class="hljs python">n = <span class="hljs-built_in">int</span>(<span class="hljs-built_in">input</span>())<br>course = [] <span class="hljs-comment"># 也可以用 list comprehension 寫</span><br><br><span class="hljs-keyword">for</span> _ <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(n):<br>    a, b = <span class="hljs-built_in">map</span>(<span class="hljs-built_in">int</span>, <span class="hljs-built_in">input</span>().split())<br>    course.append((a, b)) <span class="hljs-comment"># (開始時間, 結束時間)</span><br><br>course.sort(key=<span class="hljs-keyword">lambda</span> x: x[<span class="hljs-number">1</span>]) <span class="hljs-comment"># 按結束時間排序</span><br><br>ans = <span class="hljs-number">0</span><br>last_end = <span class="hljs-number">0</span><br><br><span class="hljs-keyword">for</span> a, b <span class="hljs-keyword">in</span> course:<br>    <span class="hljs-keyword">if</span> a &gt;= last_end:<br>        ans += <span class="hljs-number">1</span><br>        last_end = b<br><br><span class="hljs-built_in">print</span>(ans)<br></code></pre></td></tr></table></figure>
+<h2 id="G-還能暴言不"><a href="#G-還能暴言不" class="headerlink" title="G. 還能暴言不"></a>G. 還能暴言不</h2><blockquote>
+<p><a target="_blank" rel="noopener" href="https://codeforces.com/gym/629558/problem/G">題目連結</a></p>
+</blockquote>
+<p>這題我的第一想法其實也是暴力搜尋，從 1 開始往上找，找到就停下來，但一提交後你就會發現，拿不了滿分，好多測資都拿了個 TLE，因此，這題又是要有一點技巧的題，那講到<strong>搜尋</strong>，第一個想到的應該要是二分搜（binary search），沒錯，這也正是這題的最大考點</p>
+<p>有幾件直覺的事情我們可以先理解：</p>
+<ol>
+<li>隨著 $H$ 增加，總怒氣值單調不減</li>
+<li>第二，因為怒氣只會在 $H-a_i$ 時計算，因此只需要理 $a_i&lt;H$ 的值</li>
+<li>我們可以事先將話題的忍耐度 $a$ 排好，那我們再看 $a_i$時，就可以直接把前面小於 $H$ 的部分一次丟掉</li>
+<li>如果有 $k$ 個 $a_i&lt;H$，算 $\sum_{i=1}^{n}(H-a_i)$ 時，我們可以把 $H$ 提出，變成 $k \cdot H-\sum_{i=1}^{k}a_i$，故可先算前綴和（prefix sum）</li>
+<li>二分搜什麼？最大 $H$，使得 $總怒氣 \le X$，那它會產生一個分界點（由 1. 可知），在它前面都不被踢，在它之後都必然會被踢</li>
+</ol>
+<p>那這裡我們可以來思考下一個問題，我們既然都知道是二分搜了，那它的上下界怎麼找？下界根本不用找，一定是從頭嘛，但上界呢？怎麼找出那個「最大可能的答案」？</p>
+<p>我們先來想想看，怎樣的情況一定不行？如果 $H-\max(a_i)&gt;X$ 表示單單這一個話題就讓怒氣超過 $X$ 了，就算其他都不看也一定爆，移項一下就能知道 $\max(H) \le \max(a_i)+X$，也就求出我們的上界了，因此二分搜要搜的就是 $[0,\,\max(a)+X+1)$</p>
+<p>在這樣的操作下，我們成功從原本線性搜的 $O(n\cdot H^*)$（$H^*=1,2,\cdots,H$；最壞大約是 $10^{18}$），改成了二分搜的 $O(n\log n)$（排序和前綴和 $O(n)$、二分搜 $O(\log n)$）</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">from</span> bisect <span class="hljs-keyword">import</span> bisect_left<br><span class="hljs-keyword">from</span> itertools <span class="hljs-keyword">import</span> accumulate<br><br>n, X = <span class="hljs-built_in">map</span>(<span class="hljs-built_in">int</span>, <span class="hljs-built_in">input</span>().split())<br>a = <span class="hljs-built_in">list</span>(<span class="hljs-built_in">map</span>(<span class="hljs-built_in">int</span>, <span class="hljs-built_in">input</span>().split()))<br>a.sort()<br><br>ps = [<span class="hljs-number">0</span>] + <span class="hljs-built_in">list</span>(accumulate(a)) <span class="hljs-comment"># prefix sum</span><br><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">anger</span>(<span class="hljs-params">H</span>):<br>    k = bisect_left(a, H)<br>    <span class="hljs-keyword">return</span> k*H - ps[k]<br><br>lo = <span class="hljs-number">0</span><br>hi = a[-<span class="hljs-number">1</span>]+X + <span class="hljs-number">1</span> <span class="hljs-comment"># 因為答案在 [lo, hi) 中，所以要 +1</span><br><br><span class="hljs-keyword">while</span> lo + <span class="hljs-number">1</span> &lt; hi:<br>    mid = (lo + hi) // <span class="hljs-number">2</span><br>    <span class="hljs-keyword">if</span> anger(mid) &lt;= X:<br>        lo = mid<br>    <span class="hljs-keyword">else</span>:<br>        hi = mid<br><br><span class="hljs-built_in">print</span>(lo)<br></code></pre></td></tr></table></figure>
+<h2 id="H-逃脫升天"><a href="#H-逃脫升天" class="headerlink" title="H. 逃脫升天"></a>H. 逃脫升天</h2><blockquote>
+<p><a target="_blank" rel="noopener" href="https://codeforces.com/gym/629558/problem/H">題目連結</a></p>
+</blockquote>
+<p>這份解答是校內賽前寫的，我大膽預言一波，這題沒人會解，我也是參考 AI 寫的才有思路。首先，想到最短路徑，至少也得直覺想起 BFS，這步若都沒想到，這題直接不用玩。</p>
+<p>題目沒說 FBI 和<del>ㄌㄌㄎ</del> Raymond 大大怎麼走，若你看到 <em>Note</em>，其實可以想到，你應該要考慮的是雙方的<strong>最佳路徑</strong>，我們的思路可以是這樣：把 FBI 和 Raymond 走到每一格的時間都算出來，只要 FBI 到某格的時間 &lt; Raymond 到該格的時間，那格就不能走（會被抓）。</p>
+<p>為了求出 FBI 和 Raymond 到每格的最短時間（路徑），我們分別需要針對兩個角色做兩次 BFS。Raymond 的 BFS 相對單純，因為他只有一人，直接讓它尋一遍路即可；FBI 因為有好幾隻，我們需要計算「最快到達該位置的 FBI 距離多遠」，使用多源 BFS，思路大概是先把每個 FBI 距離設成 0，並且一次全部丟到 queue 裡處理，讓他們一起 BFS 擴散出去。</p>
+<p>具體實現邏輯是這樣的：</p>
+<ul>
+<li>FBI BFS：如上所述，先將每個 FBI 都設為 0，再每個去試<strong>上／下／左／右</strong>擴散，我們利用非負整數代表距離（時間），<code>-1</code> 代表被牆隔開（永遠到不了）</li>
+<li>Raymond BFS：起點設為 0，再擴散，過程中會有的情況：<ul>
+<li>目前格子是 <code>X</code>（出口）<ul>
+<li>FBI 到不了（<code>-1</code>）：安全</li>
+<li>Raymond 比 FBI 早到（<code>&lt;</code>）：安全</li>
+</ul>
+</li>
+<li>其餘狀況：依與 FBI 同邏輯 BFS，但若 FBI 能先到，也不能算做「能往那裡走」的選項</li>
+</ul>
+</li>
+</ul>
+<p>遇到任何一個安全時，直接輸出 <code>Yes</code> 並結束程式；否則（全程跑完也沒有安全），最後輸出 <code>No</code>。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">from</span> collections <span class="hljs-keyword">import</span> deque<br><br>n, m = <span class="hljs-built_in">map</span>(<span class="hljs-built_in">int</span>, <span class="hljs-built_in">input</span>().split())<br>grid = [<span class="hljs-built_in">input</span>() <span class="hljs-keyword">for</span> _ <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(n)]<br><br><span class="hljs-comment"># 先都標記成 -1，等等再算能走的距離</span><br>distF = [[-<span class="hljs-number">1</span>]*m <span class="hljs-keyword">for</span> _ <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(n)]<br>distR = [[-<span class="hljs-number">1</span>]*m <span class="hljs-keyword">for</span> _ <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(n)]<br><br>q = deque() <span class="hljs-comment"># 每次都會清空，故可重複使用</span><br><br><span class="hljs-comment"># 標記初始狀態</span><br><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(n):<br>    <span class="hljs-keyword">for</span> j <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(m):<br>        <span class="hljs-keyword">if</span> grid[i][j] == <span class="hljs-string">&#x27;F&#x27;</span>:<br>            distF[i][j] = <span class="hljs-number">0</span><br>            q.append((i, j))<br>        <span class="hljs-keyword">elif</span> grid[i][j] == <span class="hljs-string">&#x27;R&#x27;</span>:<br>            sr, sc = i, j<br><br><span class="hljs-comment"># FBI BFS</span><br><span class="hljs-keyword">while</span> q:<br>    r, c = q.popleft()<br>    <span class="hljs-keyword">for</span> dr, dc <span class="hljs-keyword">in</span> ((<span class="hljs-number">1</span>,<span class="hljs-number">0</span>),(-<span class="hljs-number">1</span>,<span class="hljs-number">0</span>),(<span class="hljs-number">0</span>,<span class="hljs-number">1</span>),(<span class="hljs-number">0</span>,-<span class="hljs-number">1</span>)):<br>        nr, nc = r+dr, c+dc<br>        <span class="hljs-keyword">if</span> <span class="hljs-number">0</span> &lt;= nr &lt; n <span class="hljs-keyword">and</span> <span class="hljs-number">0</span> &lt;= nc &lt; m:<br>            <span class="hljs-keyword">if</span> grid[nr][nc] != <span class="hljs-string">&#x27;#&#x27;</span> <span class="hljs-keyword">and</span> distF[nr][nc] == -<span class="hljs-number">1</span>:<br>                distF[nr][nc] = distF[r][c] + <span class="hljs-number">1</span><br>                q.append((nr, nc))<br><br><span class="hljs-comment"># Raymond BFS</span><br>q = deque([(sr, sc)])<br>distR[sr][sc] = <span class="hljs-number">0</span><br><br><span class="hljs-keyword">while</span> q:<br>    r, c = q.popleft()<br>    <span class="hljs-keyword">if</span> grid[r][c] == <span class="hljs-string">&#x27;X&#x27;</span>:<br>        <span class="hljs-keyword">if</span> distF[r][c] == -<span class="hljs-number">1</span> <span class="hljs-keyword">or</span> distR[r][c] &lt; distF[r][c]:<br>            <span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;Yes&#x27;</span>)<br>            exit()<br><br>    <span class="hljs-keyword">for</span> dr, dc <span class="hljs-keyword">in</span> ((<span class="hljs-number">1</span>,<span class="hljs-number">0</span>),(-<span class="hljs-number">1</span>,<span class="hljs-number">0</span>),(<span class="hljs-number">0</span>,<span class="hljs-number">1</span>),(<span class="hljs-number">0</span>,-<span class="hljs-number">1</span>)):<br>        nr, nc = r+dr, c+dc<br>        nt = distR[r][c] + <span class="hljs-number">1</span><br>        <span class="hljs-keyword">if</span> <span class="hljs-number">0</span> &lt;= nr &lt; n <span class="hljs-keyword">and</span> <span class="hljs-number">0</span> &lt;= nc &lt; m:<br>            <span class="hljs-keyword">if</span> grid[nr][nc] != <span class="hljs-string">&#x27;#&#x27;</span> <span class="hljs-keyword">and</span> distR[nr][nc] == -<span class="hljs-number">1</span>:<br>                <span class="hljs-keyword">if</span> distF[nr][nc] == -<span class="hljs-number">1</span> <span class="hljs-keyword">or</span> nt &lt; distF[nr][nc]:<br>                    distR[nr][nc] = nt<br>                    q.append((nr, nc))<br><br><span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;No&#x27;</span>)<br></code></pre></td></tr></table></figure>
+<h2 id="I-斷環儀式"><a href="#I-斷環儀式" class="headerlink" title="I. 斷環儀式"></a>I. 斷環儀式</h2><blockquote>
+<p><a target="_blank" rel="noopener" href="https://codeforces.com/gym/629558/problem/I">題目連結</a></p>
+</blockquote>
+<p>好啦，最後三題應該都是沒人會的啦，校內賽出 DP，<a target="_blank" rel="noopener" href="https://yilinguo121.github.io/">@郭10</a> 你是這個 👍</p>
+<p>看到最佳策略 + 感覺就有超多種可能的這種問題，如果跟圖無關（非圖論），第一反應應該就會想到 DP，<span class="spoiler" onclick="this.classList.add('open')"><del>接著就可以開始咒罵出題者全家了</del></span></p>
+<p>如果不會的話就直接先寫第一子題，然後下面一位（題）就好</p>
+<p>這題是典型區間博弈 DP，我們依題意將它拆成兩個部分。第一部分（破口），只要把圓環複製一次，頭尾相接，再 DP 看區間最大值即可</p>
+<p>第二部分則是碎裂，這兩人的目標也就是，老娘要用 DP 去找出切在哪一段時可以贏最多分；老子則是會選擇把切開來的兩部分中，自己可以領先最多分的那一段保留</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><code class="hljs python">n = <span class="hljs-built_in">int</span>(<span class="hljs-built_in">input</span>().strip())<br>a = <span class="hljs-built_in">list</span>(<span class="hljs-built_in">map</span>(<span class="hljs-built_in">int</span>, <span class="hljs-built_in">input</span>().split()))<br><br><span class="hljs-comment"># 1) 變成 2n，處理圓環破口</span><br>A = a + a<br>m = <span class="hljs-number">2</span> * n<br><br><span class="hljs-comment"># 2) prefix sum，區間和 O(1)</span><br>pre = [<span class="hljs-number">0</span>] * (m + <span class="hljs-number">1</span>)<br><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(m):<br>    pre[i+<span class="hljs-number">1</span>] = pre[i] + A[i]<br><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">range_sum</span>(<span class="hljs-params">l, r</span>):<br>    <span class="hljs-comment"># l, r are inclusive, 0-indexed</span><br>    <span class="hljs-keyword">return</span> pre[r+<span class="hljs-number">1</span>] - pre[l]<br><br><span class="hljs-comment"># 3) dp[l][r]：輪到當前玩家面對 A[l..r] 時，能保證的最大分差</span><br><span class="hljs-comment"># 只需要長度 &lt;= n 的區間</span><br>dp = [[<span class="hljs-number">0</span>] * m <span class="hljs-keyword">for</span> _ <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(m)]<br><br><span class="hljs-comment"># len = 2 .. n</span><br><span class="hljs-keyword">for</span> length <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-number">2</span>, n+<span class="hljs-number">1</span>):<br>    <span class="hljs-keyword">for</span> l <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-number">0</span>, m-length+<span class="hljs-number">1</span>):<br>        r = l + length - <span class="hljs-number">1</span><br>        best = -<span class="hljs-built_in">float</span>(<span class="hljs-string">&#x27;inf&#x27;</span>)<br><br>        <span class="hljs-keyword">for</span> k <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(l, r):<br>            left_sum = range_sum(l, k)<br>            right_sum = range_sum(k+<span class="hljs-number">1</span>, r)<br>            gain = <span class="hljs-built_in">abs</span>(left_sum - right_sum)<br><br>            <span class="hljs-comment"># 對手會留下對你最不利的那段 =&gt; 讓你扣最多</span><br>            cand = gain - <span class="hljs-built_in">max</span>(dp[l][k], dp[k+<span class="hljs-number">1</span>][r])<br>            <span class="hljs-keyword">if</span> cand &gt; best:<br>                best = cand<br><br>        dp[l][r] = best<br><br><span class="hljs-comment"># 4) 枚舉破口起點 s</span><br>ans = -<span class="hljs-built_in">float</span>(<span class="hljs-string">&#x27;inf&#x27;</span>)<br><span class="hljs-keyword">for</span> s <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(n):<br>    ans = <span class="hljs-built_in">max</span>(ans, dp[s][s+n-<span class="hljs-number">1</span>])<br><br><span class="hljs-built_in">print</span>(ans)<br></code></pre></td></tr></table></figure>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E7%AD%86%E8%A8%98%E8%88%87%E6%95%99%E5%AD%B8/" class="category-chain-item">筆記與教學</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/%E7%AD%86%E8%A8%98%E8%88%87%E6%95%99%E5%AD%B8/%E7%A8%8B%E5%BC%8F/" class="category-chain-item">程式</a>
+  
+  
+
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/%E7%AD%86%E8%A8%98/" class="print-no-link">#筆記</a>
+      
+        <a href="/tags/%E6%95%99%E5%AD%B8/" class="print-no-link">#教學</a>
+      
+        <a href="/tags/%E7%A8%8B%E5%BC%8F/" class="print-no-link">#程式</a>
+      
+        <a href="/tags/Python/" class="print-no-link">#Python</a>
+      
+        <a href="/tags/%E9%A1%8C%E8%A7%A3/" class="print-no-link">#題解</a>
+      
+        <a href="/tags/%E8%B3%87%E8%A8%8A%E8%83%BD%E5%8A%9B%E7%AB%B6%E8%B3%BD/" class="print-no-link">#資訊能力競賽</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>陽明高中校內資訊能力競賽題庫 - Python 詳解</div>
+      <div>https://chuen666666.github.io/陽明高中校內資訊能力競賽題庫-Python詳解/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>淳</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>發布於</div>
+          <div>2026-01-06 15:34</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>更新於</div>
+          <div>2026-03-02 00:01</div>
+        </div>
+      
+      
+        <div class="license-meta-item">
+          <div>許可協議</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 姓名標示">
+                    <i class="iconfont icon-cc-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+            </div>
+
+            
+  
+  
+    <article id="comments" lazyload>
+      
+    <div id="giscus" class="giscus"></div>
+    <script type="text/javascript">
+      Fluid.utils.loadComments('#giscus', function() {
+        var options = {"repo":"Chuen666666/Chuen666666.github.io","repo-id":"R_kgDOPtWSPw","category":"General","category-id":"DIC_kwDOPtWSP84C0IRu","mapping":"pathname","reactions-enabled":1,"emit-metadata":0,"input-position":"top","theme-light":"light","theme-dark":"dark","lang":"zh-TW"};
+        var attributes = {};
+        for (let option in options) {
+          if (!option.startsWith('theme-')) {
+            var key = option.startsWith('data-') ? option : 'data-' + option;
+            attributes[key] = options[option];
+          }
+        }
+        var light = 'light';
+        var dark = 'dark';
+        window.GiscusThemeLight = light;
+        window.GiscusThemeDark = dark;
+        attributes['data-theme'] = document.documentElement.getAttribute('data-user-color-scheme') === 'dark' ? dark : light;
+        for (let attribute in attributes) {
+          var value = attributes[attribute];
+          if (value === undefined || value === null || value === '') {
+            delete attributes[attribute];
+          }
+        }
+        var s = document.createElement('script');
+        s.setAttribute('src', 'https://giscus.app/client.js');
+        s.setAttribute('crossorigin', 'anonymous');
+        for (let attribute in attributes) {
+          s.setAttribute(attribute, attributes[attribute]);
+        }
+        var ss = document.getElementsByTagName('script');
+        var e = ss.length > 0 ? ss[ss.length - 1] : document.head || document.documentElement;
+        e.parentNode.insertBefore(s, e.nextSibling);
+      });
+    </script>
+    <noscript>Please enable JavaScript to view the comments</noscript>
+
+
+    </article>
+  
+
+
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜尋</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">關鍵字</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <span>© 2025 淳</span> <br> <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+    <div class="statistics">
+  
+  
+
+  
+    
+      <span id="busuanzi_container_site_pv" style="display: none">
+        總訪問量 
+        <span id="busuanzi_value_site_pv"></span>
+         次
+      </span>
+    
+    
+      <span id="busuanzi_container_site_uv" style="display: none">
+        總訪客數 
+        <span id="busuanzi_value_site_uv"></span>
+         人
+      </span>
+    
+    
+
+  
+
+</div>
+
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  var relativeDate = function() {
+    var updatedTime = document.getElementById('updated-time');
+    if (updatedTime) {
+      var text = updatedTime.textContent;
+      var reg = /\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(?:Z|[+-]\d{2}:\d{2})/;
+      var matchs = text.match(reg);
+      if (matchs) {
+        var relativeTime = moment(matchs[0]).fromNow();
+        updatedTime.textContent = text.replace(reg, relativeTime);
+      }
+      updatedTime.style.display = '';
+    }
+  };
+  Fluid.utils.createScript('https://lib.baomitu.com/moment.js/2.29.4/moment.min.js', function() {
+    if (!'zh-tw'.startsWith('en')) {
+      Fluid.utils.createScript('https://lib.baomitu.com/moment.js/2.29.4/locale/zh-tw.min.js', function() {
+        relativeDate();
+      });
+    } else {
+      relativeDate();
+    }
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/5.0.0/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  
+      <script>
+        if (!window.MathJax) {
+          window.MathJax = {
+            tex    : {
+              inlineMath: { '[+]': [['$', '$']] }
+            },
+            loader : {
+              load: ['ui/lazy']
+            },
+            options: {
+              renderActions: {
+                insertedScript: [200, () => {
+                  document.querySelectorAll('mjx-container').forEach(node => {
+                    let target = node.parentNode;
+                    if (target.nodeName.toLowerCase() === 'li') {
+                      target.parentNode.classList.add('has-jax');
+                    }
+                  });
+                }, '', false]
+              }
+            }
+          };
+        } else {
+          MathJax.startup.document.state(0);
+          MathJax.texReset();
+          MathJax.typeset();
+          MathJax.typesetPromise();
+        }
+
+        Fluid.events.registerRefreshCallback(function() {
+          if ('MathJax' in window && MathJax.startup.document && typeof MathJax.startup.document.state === 'function') {
+            MathJax.startup.document.state(0);
+            MathJax.texReset();
+            MathJax.typeset();
+            MathJax.typesetPromise();
+          }
+        });
+      </script>
+    
+
+  <script  src="https://lib.baomitu.com/mathjax/3.2.2/es5/tex-mml-chtml.js" ></script>
+
+  <script  src="/js/local-search.js" ></script>
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+
+
+  
+<script src="/js/custom.js"></script>
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">部落格在允許 JavaScript 執行的環境下瀏覽效果更佳</div>
+  </noscript>
+</body>
+</html>

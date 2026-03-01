@@ -1,0 +1,987 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-TW" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/avatar.jpg">
+  <link rel="icon" href="/img/avatar.jpg">
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="">
+  <meta name="author" content="淳">
+  <meta name="keywords" content="Python, 程式, 專案, 筆記, 教學, 心得, 考證照, 比賽, 競程, 淳, 淳宇, Chuen666666, 淳宇淳蠢">
+  
+    <meta name="description" content="整理競程或程式測驗常會用到的 Python 標準函式庫">
+<meta property="og:type" content="article">
+<meta property="og:title" content="競程常用的 Python 標準函式庫">
+<meta property="og:url" content="https://chuen666666.github.io/%E7%AB%B6%E7%A8%8B%E5%B8%B8%E7%94%A8%E7%9A%84Python%E6%A8%99%E6%BA%96%E5%87%BD%E5%BC%8F%E5%BA%AB/index.html">
+<meta property="og:site_name" content="淳の神奇小網站">
+<meta property="og:description" content="整理競程或程式測驗常會用到的 Python 標準函式庫">
+<meta property="og:locale" content="zh_TW">
+<meta property="article:published_time" content="2026-01-13T08:12:44.000Z">
+<meta property="article:modified_time" content="2026-03-01T16:01:58.714Z">
+<meta property="article:author" content="淳">
+<meta property="article:tag" content="Python">
+<meta property="article:tag" content="標準函式庫">
+<meta property="article:tag" content="程式">
+<meta property="article:tag" content="競程">
+<meta property="article:tag" content="筆記">
+<meta name="twitter:card" content="summary_large_image">
+  
+  
+    <meta name="referrer" content="no-referrer-when-downgrade">
+  
+  
+  <title>競程常用的 Python 標準函式庫 - 淳の神奇小網站</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1749284_5i9bdhy70f8.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1735173_0756783m6t5.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+  
+<link rel="stylesheet" href="/css/custom.css">
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"chuen666666.github.io","root":"/","version":"1.9.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3","placement":"left","visible":"hover","icon":"❡"},"progressbar":{"enable":true,"height_px":3,"color":null,"options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"left","headingSelector":"h1,h2,h3","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+  
+<meta name="generator" content="Hexo 8.1.1"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>淳の網站</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首頁</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>歸檔</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分類</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>標籤</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>關於</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/links/" target="_self">
+                <i class="iconfont icon-link-fill"></i>
+                <span>友站</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/default.png') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="競程常用的 Python 標準函式庫"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-author" aria-hidden="true"></i>
+        淳
+      </span>
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2026-01-13 16:12" pubdate>
+          2026-01-13 16:12
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          2.3k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          20 分鐘
+        
+      </span>
+    
+
+    
+    
+      
+        <span id="busuanzi_container_page_pv" style="display: none">
+          <i class="iconfont icon-eye" aria-hidden="true"></i>
+          <span id="busuanzi_value_page_pv"></span> 次
+        </span>
+        
+
+      
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="padding-left: 2rem; margin-right: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目錄</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">競程常用的 Python 標準函式庫</h1>
+            
+              <p id="updated-time" class="note note-light" style="display: none">
+                
+                  
+                    本文最後更新於：2026-03-02T00:01:58+08:00
+                  
+                  
+
+                
+              </p>
+            
+            
+              <div class="markdown-body">
+                
+                <h2 id="sys-系統控制"><a href="#sys-系統控制" class="headerlink" title="sys - 系統控制"></a>sys - 系統控制</h2><blockquote>
+<p><a target="_blank" rel="noopener" href="https://docs.python.org/zh-tw/3.14/library/sys.html">官網連結</a></p>
+</blockquote>
+<ul>
+<li><code>stdin.readline()</code>：高速輸入（取代 <code>input()</code>，記得 <code>.rstrip()</code> 去除換行）</li>
+<li><code>stdin.read()</code>：一次讀完整輸入（超大量輸入時）</li>
+<li><code>stdout.write()</code>：高速輸出（取代 <code>print()</code>）</li>
+<li><code>setrecursionlimit(n)</code>：調高遞迴深度上限（深度 $n$）</li>
+</ul>
+<h2 id="math-數學工具"><a href="#math-數學工具" class="headerlink" title="math - 數學工具"></a>math - 數學工具</h2><blockquote>
+<p><a target="_blank" rel="noopener" href="https://docs.python.org/zh-tw/3/library/math.html">官網連結</a></p>
+</blockquote>
+<ul>
+<li><code>gcd(a, b)</code>：最大公因數</li>
+<li><code>lcm(a, b)</code>：最小公倍數</li>
+<li><code>factorial(n)</code>：階乘（$n!$）</li>
+<li><code>isqrt(n)</code>：平方根取整</li>
+<li><code>comb(n, k)</code>：組合數（$C_k^n$ ／ $\binom{n}{k}$）</li>
+<li><code>perm(n, k)</code>：排列數（$P_k^n$）</li>
+<li><code>prod(iterable)</code>：序列連乘積（把 iterable 內所有東西相乘的積）</li>
+<li><code>ceil(x)</code>：向上取整（$\lceil x \rceil$）</li>
+<li><code>floor(x)</code>：向下取整（$\lfloor x \rfloor$）</li>
+<li><code>dist(p, q)</code>：計算歐幾里德距離（點座標可以 tuple 表示，接受多維）</li>
+<li><code>hypot(a1, a2, ...)</code>：計算 $\sqrt{a_1^2+a_2^2+\cdots}$</li>
+<li><code>log(x)</code>、<code>log2(x)</code>、<code>log10(x)</code>、<code>log1p(x)</code>：計算對數，依序表示 $\ln x$、$\log_2 x$、$\log x$、$\ln(1+x)$（浮點數較精確）</li>
+</ul>
+<h2 id="string-字串工具"><a href="#string-字串工具" class="headerlink" title="string - 字串工具"></a>string - 字串工具</h2><blockquote>
+<p><a target="_blank" rel="noopener" href="https://docs.python.org/zh-tw/3.14/library/string.html">官網連結</a></p>
+</blockquote>
+<ul>
+<li><code>ascii_lowercase</code>：a~z</li>
+<li><code>ascii_uppercase</code>：A~Z</li>
+<li><code>ascii_letters</code>：a~z + A~Z</li>
+<li><code>digits</code>：0~9</li>
+<li><code>whitespace</code>：包含空格（space）、製表符號（tab）、換行符號（linefeed）、return、換頁符號（formfeed）和垂直製表符號（vertical tab）這些字元（<code>&#39; \t\n\r\x0b\x0c&#39;</code>）</li>
+</ul>
+<h2 id="itertools-疊代工具"><a href="#itertools-疊代工具" class="headerlink" title="itertools - 疊代工具"></a>itertools - 疊代工具</h2><blockquote>
+<p><a target="_blank" rel="noopener" href="https://docs.python.org/zh-tw/3.14/library/itertools.html">官網連結</a></p>
+</blockquote>
+<ul>
+<li><code>permutations(iterable, r)</code>：排列（<code>r</code> 為選填）</li>
+<li><code>combinations(iterable, r)</code>：組合（<code>r</code> 為選填）<ul>
+<li><code>combinations_with_replacement(iterable, r)</code> 用法相同，但接受重複</li>
+</ul>
+</li>
+<li><code>product(iterable, repeat)</code>：笛卡兒積（<code>repeat</code> 為選填，只能用 keyword argument）</li>
+<li><code>accumulate(iterable, func)</code>：前綴和（<code>func</code> 為選填，只能用 keyword argument，可用 <code>func=math.prod</code> 來改為前綴積）</li>
+<li><code>cycle(iterable)</code>：無限循環疊代</li>
+<li><code>chain(iterable1, iterable2, iterable3)</code>：將多個 iterable 串在一起</li>
+<li><code>groupby(iterable)</code>：分組（須先排序）</li>
+<li><code>islice(iterable, start, stop, step)</code>：切 iterable（不用轉 list）</li>
+<li><code>repeat(x, n)</code>：重複值（初始化用）</li>
+<li><code>count(start=0, step=1)</code>：無限遞增計數器</li>
+<li><code>pairwise(iterable)</code>：相鄰元素配對（Python 3.10+）</li>
+</ul>
+<h2 id="functools-函式優化工具"><a href="#functools-函式優化工具" class="headerlink" title="functools - 函式優化工具"></a>functools - 函式優化工具</h2><blockquote>
+<p><a target="_blank" rel="noopener" href="https://docs.python.org/zh-tw/3/library/functools.html">官網連結</a></p>
+</blockquote>
+<ul>
+<li><code>lru_cache(maxsize=None)</code>：記憶化遞迴（DP 常用）</li>
+<li><code>cmp_to_key(func)</code>：自訂比較函式，轉為 <code>sort()</code> 可用的 key</li>
+</ul>
+<h2 id="collections-資料結構"><a href="#collections-資料結構" class="headerlink" title="collections - 資料結構"></a>collections - 資料結構</h2><blockquote>
+<p><a target="_blank" rel="noopener" href="https://docs.python.org/zh-tw/3/library/collections.html">官網連結</a></p>
+</blockquote>
+<ul>
+<li><code>deque(iterable)</code>：雙端佇列（類似取頭尾值效率較高的 list，可用 <code>pop()</code>、<code>append()</code>、<code>popleft()</code>、<code>appendleft()</code> 取、放值進佇列）</li>
+<li><code>Counter(iterable)</code>：計每個 element 出現的次數（操作方式同 dict）<ul>
+<li><code>most_common(k)</code>：前 k 多</li>
+<li><code>c &amp; d</code>：交集（取最小次數）</li>
+<li><code>c | d</code>：聯集（取最大次數）</li>
+</ul>
+</li>
+<li><code>defaultdict(type)</code>：自動初始化字典</li>
+<li><code>namedtuple</code>：輕量資料結構（比 class 簡潔）</li>
+</ul>
+<h2 id="heapq-最小堆（優先隊列）"><a href="#heapq-最小堆（優先隊列）" class="headerlink" title="heapq - 最小堆（優先隊列）"></a>heapq - 最小堆（優先隊列）</h2><blockquote>
+<p><a target="_blank" rel="noopener" href="https://docs.python.org/zh-tw/3/library/heapq.html">官網連結</a></p>
+</blockquote>
+<ul>
+<li><code>heapify(list)</code>：將 list 轉為最小堆</li>
+<li><code>heappush(heap, x)</code>：將 $x$ 插入最小堆</li>
+<li><code>heappop(heap)</code>：將最小值從最小堆中取出</li>
+<li><code>heapq.nlargest(n, iterable, key)</code>：從 iterable 中找出最大的 $n$ 個元素（<code>key</code> 為選填，只能用 keyword argument 指定排序方式）</li>
+<li><code>heapq.nsmallest(n, iterable, key)</code>：從 iterable 中找出最小的 $n$ 個元素（<code>key</code> 為選填，只能用 keyword argument 指定排序方式）</li>
+<li><code>heapreplace(heap, x)</code>：取出最小值並放入新值 $x$（等價於 <code>heappop()</code> + <code>heappush()</code> 但更快，用於<strong>固定 heap 大小</strong>）</li>
+<li><code>heappushpop(heap, x)</code>：嘗試將 $x$ 放入 heap，並回傳被擠出的值（等價於 <code>heappush()</code> + <code>heappop()</code> 但更快，用於<strong>維持前 $k$ 名</strong>）</li>
+</ul>
+<div class="note note-info">
+            <p>若想要做出最大堆，只要將原 list 每個值取負，轉成 heap 後，取值時再取一次負即可<br><code>(priority, value)</code> tuple：利用 tuple[0] 來作為優先數值</p> 
+          </div>
+<h2 id="bisect-二分搜"><a href="#bisect-二分搜" class="headerlink" title="bisect - 二分搜"></a>bisect - 二分搜</h2><blockquote>
+<p><a target="_blank" rel="noopener" href="https://docs.python.org/zh-tw/3.13/library/bisect.html">官網連結</a></p>
+</blockquote>
+<ul>
+<li><code>bisect_left(list, x)</code>：回傳 $x$ 插入 list 的位置（從左開始找）</li>
+<li><code>bisect_right(list, x)</code>：回傳 $x$ 插入 list 的位置（從右開始找）</li>
+<li><code>insort(list, x)</code>：插入 $x$ 並保持有序</li>
+<li><code>insort_left(list, x)</code>：從左插入 $x$ 至已排序 list</li>
+<li><code>insort_right(list, x)</code>：從右插入 $x$ 至已排序 list</li>
+</ul>
+<div class="note note-warning">
+            <p>二分搜傳入的所有 list 必須已經經過排序</p> 
+          </div>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E7%AD%86%E8%A8%98%E8%88%87%E6%95%99%E5%AD%B8/" class="category-chain-item">筆記與教學</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/%E7%AD%86%E8%A8%98%E8%88%87%E6%95%99%E5%AD%B8/%E7%A8%8B%E5%BC%8F/" class="category-chain-item">程式</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/%E7%AD%86%E8%A8%98%E8%88%87%E6%95%99%E5%AD%B8/%E7%A8%8B%E5%BC%8F/%E7%AB%B6%E7%A8%8B/" class="category-chain-item">競程</a>
+  
+  
+
+  
+
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/%E7%AD%86%E8%A8%98/" class="print-no-link">#筆記</a>
+      
+        <a href="/tags/%E7%A8%8B%E5%BC%8F/" class="print-no-link">#程式</a>
+      
+        <a href="/tags/Python/" class="print-no-link">#Python</a>
+      
+        <a href="/tags/%E7%AB%B6%E7%A8%8B/" class="print-no-link">#競程</a>
+      
+        <a href="/tags/%E6%A8%99%E6%BA%96%E5%87%BD%E5%BC%8F%E5%BA%AB/" class="print-no-link">#標準函式庫</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>競程常用的 Python 標準函式庫</div>
+      <div>https://chuen666666.github.io/競程常用的Python標準函式庫/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>淳</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>發布於</div>
+          <div>2026-01-13 16:12</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>更新於</div>
+          <div>2026-03-02 00:01</div>
+        </div>
+      
+      
+        <div class="license-meta-item">
+          <div>許可協議</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 姓名標示">
+                    <i class="iconfont icon-cc-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/%E4%BD%BF%E7%94%A8Ruff%E8%AE%93%E4%BD%A0%E7%9A%84Python%E7%A8%8B%E5%BC%8F%E7%A2%BC%E8%AE%8A%E5%BE%97%E8%A6%8F%E7%AF%84%E5%8F%88%E6%95%B4%E9%BD%8A%EF%BC%81/" title="使用 Ruff 讓你的 Python 程式碼變得規範又整齊！">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">使用 Ruff 讓你的 Python 程式碼變得規範又整齊！</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/%E4%B8%8D%E7%94%A8%E5%AF%AB%E7%A8%8B%E5%BC%8F%EF%BC%81Hexo-GitHub-Pages%E5%85%8D%E8%B2%BB%E6%9E%B6%E7%AB%99%E6%95%99%E5%AD%B8/" title="不用寫程式！Hexo + GitHub Pages 免費架站教學">
+                        <span class="hidden-mobile">不用寫程式！Hexo + GitHub Pages 免費架站教學</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+  
+  
+    <article id="comments" lazyload>
+      
+    <div id="giscus" class="giscus"></div>
+    <script type="text/javascript">
+      Fluid.utils.loadComments('#giscus', function() {
+        var options = {"repo":"Chuen666666/Chuen666666.github.io","repo-id":"R_kgDOPtWSPw","category":"General","category-id":"DIC_kwDOPtWSP84C0IRu","mapping":"pathname","reactions-enabled":1,"emit-metadata":0,"input-position":"top","theme-light":"light","theme-dark":"dark","lang":"zh-TW"};
+        var attributes = {};
+        for (let option in options) {
+          if (!option.startsWith('theme-')) {
+            var key = option.startsWith('data-') ? option : 'data-' + option;
+            attributes[key] = options[option];
+          }
+        }
+        var light = 'light';
+        var dark = 'dark';
+        window.GiscusThemeLight = light;
+        window.GiscusThemeDark = dark;
+        attributes['data-theme'] = document.documentElement.getAttribute('data-user-color-scheme') === 'dark' ? dark : light;
+        for (let attribute in attributes) {
+          var value = attributes[attribute];
+          if (value === undefined || value === null || value === '') {
+            delete attributes[attribute];
+          }
+        }
+        var s = document.createElement('script');
+        s.setAttribute('src', 'https://giscus.app/client.js');
+        s.setAttribute('crossorigin', 'anonymous');
+        for (let attribute in attributes) {
+          s.setAttribute(attribute, attributes[attribute]);
+        }
+        var ss = document.getElementsByTagName('script');
+        var e = ss.length > 0 ? ss[ss.length - 1] : document.head || document.documentElement;
+        e.parentNode.insertBefore(s, e.nextSibling);
+      });
+    </script>
+    <noscript>Please enable JavaScript to view the comments</noscript>
+
+
+    </article>
+  
+
+
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜尋</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">關鍵字</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <span>© 2025 淳</span> <br> <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+    <div class="statistics">
+  
+  
+
+  
+    
+      <span id="busuanzi_container_site_pv" style="display: none">
+        總訪問量 
+        <span id="busuanzi_value_site_pv"></span>
+         次
+      </span>
+    
+    
+      <span id="busuanzi_container_site_uv" style="display: none">
+        總訪客數 
+        <span id="busuanzi_value_site_uv"></span>
+         人
+      </span>
+    
+    
+
+  
+
+</div>
+
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  var relativeDate = function() {
+    var updatedTime = document.getElementById('updated-time');
+    if (updatedTime) {
+      var text = updatedTime.textContent;
+      var reg = /\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(?:Z|[+-]\d{2}:\d{2})/;
+      var matchs = text.match(reg);
+      if (matchs) {
+        var relativeTime = moment(matchs[0]).fromNow();
+        updatedTime.textContent = text.replace(reg, relativeTime);
+      }
+      updatedTime.style.display = '';
+    }
+  };
+  Fluid.utils.createScript('https://lib.baomitu.com/moment.js/2.29.4/moment.min.js', function() {
+    if (!'zh-tw'.startsWith('en')) {
+      Fluid.utils.createScript('https://lib.baomitu.com/moment.js/2.29.4/locale/zh-tw.min.js', function() {
+        relativeDate();
+      });
+    } else {
+      relativeDate();
+    }
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/5.0.0/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  
+      <script>
+        if (!window.MathJax) {
+          window.MathJax = {
+            tex    : {
+              inlineMath: { '[+]': [['$', '$']] }
+            },
+            loader : {
+              load: ['ui/lazy']
+            },
+            options: {
+              renderActions: {
+                insertedScript: [200, () => {
+                  document.querySelectorAll('mjx-container').forEach(node => {
+                    let target = node.parentNode;
+                    if (target.nodeName.toLowerCase() === 'li') {
+                      target.parentNode.classList.add('has-jax');
+                    }
+                  });
+                }, '', false]
+              }
+            }
+          };
+        } else {
+          MathJax.startup.document.state(0);
+          MathJax.texReset();
+          MathJax.typeset();
+          MathJax.typesetPromise();
+        }
+
+        Fluid.events.registerRefreshCallback(function() {
+          if ('MathJax' in window && MathJax.startup.document && typeof MathJax.startup.document.state === 'function') {
+            MathJax.startup.document.state(0);
+            MathJax.texReset();
+            MathJax.typeset();
+            MathJax.typesetPromise();
+          }
+        });
+      </script>
+    
+
+  <script  src="https://lib.baomitu.com/mathjax/3.2.2/es5/tex-mml-chtml.js" ></script>
+
+  <script  src="/js/local-search.js" ></script>
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+
+
+  
+<script src="/js/custom.js"></script>
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">部落格在允許 JavaScript 執行的環境下瀏覽效果更佳</div>
+  </noscript>
+</body>
+</html>

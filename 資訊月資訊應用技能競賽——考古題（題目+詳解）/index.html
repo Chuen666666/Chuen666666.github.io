@@ -1,0 +1,1316 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-TW" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/avatar.jpg">
+  <link rel="icon" href="/img/avatar.jpg">
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="">
+  <meta name="author" content="淳">
+  <meta name="keywords" content="Python, 程式, 專案, 筆記, 教學, 心得, 考證照, 比賽, 競程, 淳, 淳宇, Chuen666666, 淳宇淳蠢">
+  
+    <meta name="description" content="資訊月資訊應用技能競賽的考古題，題目、答案、解題思路">
+<meta property="og:type" content="article">
+<meta property="og:title" content="資訊月資訊應用技能競賽——考古題（題目 + 詳解）">
+<meta property="og:url" content="https://chuen666666.github.io/%E8%B3%87%E8%A8%8A%E6%9C%88%E8%B3%87%E8%A8%8A%E6%87%89%E7%94%A8%E6%8A%80%E8%83%BD%E7%AB%B6%E8%B3%BD%E2%80%94%E2%80%94%E8%80%83%E5%8F%A4%E9%A1%8C%EF%BC%88%E9%A1%8C%E7%9B%AE+%E8%A9%B3%E8%A7%A3%EF%BC%89/index.html">
+<meta property="og:site_name" content="淳の神奇小網站">
+<meta property="og:description" content="資訊月資訊應用技能競賽的考古題，題目、答案、解題思路">
+<meta property="og:locale" content="zh_TW">
+<meta property="og:image" content="https://chuen666666.github.io/img/infomonth1.png">
+<meta property="og:image" content="https://chuen666666.github.io/img/infomonth2.png">
+<meta property="og:image" content="https://chuen666666.github.io/img/infomonth3.png">
+<meta property="og:image" content="https://chuen666666.github.io/img/infomonth4.png">
+<meta property="og:image" content="https://chuen666666.github.io/img/infomonth5.png">
+<meta property="article:published_time" content="2025-12-29T03:44:51.000Z">
+<meta property="article:modified_time" content="2026-03-01T16:01:58.714Z">
+<meta property="article:author" content="淳">
+<meta property="article:tag" content="Python">
+<meta property="article:tag" content="教學">
+<meta property="article:tag" content="程式">
+<meta property="article:tag" content="筆記">
+<meta property="article:tag" content="資訊月資訊應用技能競賽">
+<meta property="article:tag" content="題解">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://chuen666666.github.io/img/infomonth1.png">
+  
+  
+    <meta name="referrer" content="no-referrer-when-downgrade">
+  
+  
+  <title>資訊月資訊應用技能競賽——考古題（題目 + 詳解） - 淳の神奇小網站</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1749284_5i9bdhy70f8.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1735173_0756783m6t5.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+  
+<link rel="stylesheet" href="/css/custom.css">
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"chuen666666.github.io","root":"/","version":"1.9.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3","placement":"left","visible":"hover","icon":"❡"},"progressbar":{"enable":true,"height_px":3,"color":null,"options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"left","headingSelector":"h1,h2,h3","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+  
+<meta name="generator" content="Hexo 8.1.1"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>淳の網站</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首頁</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>歸檔</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分類</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>標籤</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>關於</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/links/" target="_self">
+                <i class="iconfont icon-link-fill"></i>
+                <span>友站</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/default.png') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="資訊月資訊應用技能競賽——考古題（題目 + 詳解）"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-author" aria-hidden="true"></i>
+        淳
+      </span>
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2025-12-29 11:44" pubdate>
+          2025-12-29 11:44
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          12k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          104 分鐘
+        
+      </span>
+    
+
+    
+    
+      
+        <span id="busuanzi_container_page_pv" style="display: none">
+          <i class="iconfont icon-eye" aria-hidden="true"></i>
+          <span id="busuanzi_value_page_pv"></span> 次
+        </span>
+        
+
+      
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="padding-left: 2rem; margin-right: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目錄</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">資訊月資訊應用技能競賽——考古題（題目 + 詳解）</h1>
+            
+              <p id="updated-time" class="note note-light" style="display: none">
+                
+                  
+                    本文最後更新於：2026-03-02T00:01:58+08:00
+                  
+                  
+
+                
+              </p>
+            
+            
+              <div class="markdown-body">
+                
+                <p>此為歷屆「資訊月資訊應用技能競賽」Python 組的題目與解答<br>我會盡量以「效率最高」與「保證可讀性的條件下盡量簡潔」<br>詳解與解答程式碼為可收放格子，想練習者可先自行思考過後，再打開看解答</p>
+<p>題目來源：<a target="_blank" rel="noopener" href="https://www.tlhc.ylc.edu.tw/ischool/publish_page/24/?cid=827">斗六高中官網</a></p>
+<p>若有任何錯誤、修改建議、疑問、想學 Python 者，歡迎與我聯繫<br><strong>若試題有侵權，請聯繫刪除！</strong></p>
+<h2 id="108"><a href="#108" class="headerlink" title="108"></a>108</h2><h3 id="一、公里英哩換算"><a href="#一、公里英哩換算" class="headerlink" title="一、公里英哩換算"></a>一、公里英哩換算</h3><h4 id="題目"><a href="#題目" class="headerlink" title="題目"></a>題目</h4><p>假設一賽跑選手在 $x$ 分 $y$ 秒的時間跑完 $z$ 公里，請撰寫一程式，輸入 $x$、$y$、$z$ 數值，最後顯示此選手每小時的平均英哩速度（1 英哩等於 1.6 公里）。<br>（提示：輸出浮點數到小數點後第一位。）</p>
+<h4 id="輸入說明"><a href="#輸入說明" class="headerlink" title="輸入說明"></a>輸入說明</h4><p>$x$（min）、$y$（sec）、$z$（km）數值</p>
+<h4 id="輸出說明"><a href="#輸出說明" class="headerlink" title="輸出說明"></a>輸出說明</h4><p>速度</p>
+<h4 id="範例輸入"><a href="#範例輸入" class="headerlink" title="範例輸入"></a>範例輸入</h4><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs text">10<br>25<br>3<br></code></pre></td></tr></table></figure>
+<h4 id="範例輸出"><a href="#範例輸出" class="headerlink" title="範例輸出"></a>範例輸出</h4><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs text">Speed = 10.8<br></code></pre></td></tr></table></figure>
+<h4 id="題解"><a href="#題解" class="headerlink" title="題解"></a>題解</h4>
+    <div class="fold">
+      <div class="fold-title fold-info collapsed" data-toggle="collapse" href="#collapse-fb89b913" role="button" aria-expanded="false" aria-controls="collapse-fb89b913">
+        <div class="fold-arrow">▶</div> 解答
+      </div>
+      <div class="fold-collapse collapse" id="collapse-fb89b913">
+        <div class="fold-content">
+          <p>算速度 &rarr; 用公式 $v=\frac{\Delta x}{\Delta t}$<br>再轉換單位（1 mi = 1.6 km &rarr; 1 km = 0.625 mi）<br>輸出到小數點後一位的部分，可以使用 f-string 的格式化方法</p> <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs python">x, y = <span class="hljs-built_in">int</span>(<span class="hljs-built_in">input</span>()), <span class="hljs-built_in">int</span>(<span class="hljs-built_in">input</span>())<br>z = <span class="hljs-built_in">int</span>(<span class="hljs-built_in">input</span>()) * <span class="hljs-number">0.625</span><br><br>ans = z / (x/<span class="hljs-number">60</span> + y/<span class="hljs-number">3600</span>) <span class="hljs-comment">#也可以直接把這串丟到答案（不設變數）</span><br><span class="hljs-built_in">print</span>(<span class="hljs-string">f&#x27;Speed = <span class="hljs-subst">&#123;ans:<span class="hljs-number">.1</span>f&#125;</span>&#x27;</span>)<br></code></pre></td></tr></table></figure> 
+        </div>
+      </div>
+    </div>
+<h3 id="二、迴圈公式計算（變化）"><a href="#二、迴圈公式計算（變化）" class="headerlink" title="二、迴圈公式計算（變化）"></a>二、迴圈公式計算（變化）</h3><h4 id="題目-1"><a href="#題目-1" class="headerlink" title="題目"></a>題目</h4><p>請使用迴圈敘述撰寫一程式，讓使用者輸入正整數 $n$（$1 &lt; n$），計算以下公式的總和並顯示結果：</p>
+<script type="math/tex; mode=display">
+4(1-\frac13+\frac15-\frac17+...+\frac{(-1)^{n+1}}{2n-1})</script><p>（提示：輸出結果至小數點後四位。）</p>
+<h4 id="輸入說明-1"><a href="#輸入說明-1" class="headerlink" title="輸入說明"></a>輸入說明</h4><p>一個正整數</p>
+<h4 id="輸出說明-1"><a href="#輸出說明-1" class="headerlink" title="輸出說明"></a>輸出說明</h4><p>代入公式計算結果</p>
+<h4 id="範例輸入1"><a href="#範例輸入1" class="headerlink" title="範例輸入1"></a>範例輸入1</h4><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs text">5<br></code></pre></td></tr></table></figure>
+<h4 id="範例輸出1"><a href="#範例輸出1" class="headerlink" title="範例輸出1"></a>範例輸出1</h4><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs text">3.3397<br></code></pre></td></tr></table></figure>
+<h4 id="範例輸入2"><a href="#範例輸入2" class="headerlink" title="範例輸入2"></a>範例輸入2</h4><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs text">20<br></code></pre></td></tr></table></figure>
+<h4 id="範例輸出2"><a href="#範例輸出2" class="headerlink" title="範例輸出2"></a>範例輸出2</h4><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs text">3.0916<br></code></pre></td></tr></table></figure>
+<h4 id="題解-1"><a href="#題解-1" class="headerlink" title="題解"></a>題解</h4>
+    <div class="fold">
+      <div class="fold-title fold-info collapsed" data-toggle="collapse" href="#collapse-05c60685" role="button" aria-expanded="false" aria-controls="collapse-05c60685">
+        <div class="fold-arrow">▶</div> 解答
+      </div>
+      <div class="fold-collapse collapse" id="collapse-05c60685">
+        <div class="fold-content">
+          <p>若我們將題目給的公式改寫成求連加的等價形式：</p> <script type="math/tex; mode=display">4\sum_{k=1}^{n}\frac{(-1)^{k+1}}{2k-1}</script><p>那麼 for-loop 的寫法也就呼之欲出了<br>（還沒學過連加符號的話，簡單來說，它就是用來表示從 $k=1$ 到 $k=n$ 時，所有代入後面那個公式的結果的加和）</p> <p>這裡只要注意 <code>range()</code> 的尾部不會被跑到，因此要記得寫範圈時是 <code>(1, n+1)</code></p> <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs python">n = <span class="hljs-built_in">int</span>(<span class="hljs-built_in">input</span>())<br><br>ans = <span class="hljs-number">0</span><br><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-number">1</span>, n+<span class="hljs-number">1</span>):<br>    ans += (-<span class="hljs-number">1</span>)**(i+<span class="hljs-number">1</span>) / (<span class="hljs-number">2</span>*i - <span class="hljs-number">1</span>) <span class="hljs-comment">#題目給的公式，累加到答案上，以達成連加的效果</span><br><br><span class="hljs-built_in">print</span>(<span class="hljs-string">f&#x27;<span class="hljs-subst">&#123;<span class="hljs-number">4</span>*ans:<span class="hljs-number">.4</span>f&#125;</span>&#x27;</span>) <span class="hljs-comment">#記得把公式最前面的 4 乘回去</span><br></code></pre></td></tr></table></figure> 
+        </div>
+      </div>
+    </div>
+<h3 id="三、倍數總和計算（變化）"><a href="#三、倍數總和計算（變化）" class="headerlink" title="三、倍數總和計算（變化）"></a>三、倍數總和計算（變化）</h3><h4 id="題目-2"><a href="#題目-2" class="headerlink" title="題目"></a>題目</h4><p>請撰寫一程式，讓使用者輸入兩個正整數 $a$、$b$（$a \le b$），輸出從 $a$ 到 $b$（包含 $a$ 和 $b$）之間 $4$ 或 $6$ 的倍數（但不包括 $4$ 和 $6$ 的公倍數），以及倍數之個數、總和。</p>
+<h4 id="輸入說明-2"><a href="#輸入說明-2" class="headerlink" title="輸入說明"></a>輸入說明</h4><p>兩個正整數（$a$、$b$，且 $a&lt;b$）</p>
+<h4 id="輸出說明-2"><a href="#輸出說明-2" class="headerlink" title="輸出說明"></a>輸出說明</h4><ul>
+<li>輸出兩個正整數之間 $4$ 或 $6$ 的倍數（但不包括 $4$ 和 $6$ 的公倍數），格式規定：<ul>
+<li>輸出格式為一列輸出十個數字</li>
+<li>欄寬為 4</li>
+<li>靠左對齊</li>
+</ul>
+</li>
+<li>倍數個數</li>
+<li>倍數總合</li>
+</ul>
+<h4 id="範例輸入1-1"><a href="#範例輸入1-1" class="headerlink" title="範例輸入1"></a>範例輸入1</h4><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs text">5<br>55<br></code></pre></td></tr></table></figure>
+<h4 id="範例輸出1-1"><a href="#範例輸出1-1" class="headerlink" title="範例輸出1"></a>範例輸出1</h4><p>（下圖中的 <code>.</code> 為 <code>空格</code>）<br><img src="/img/infomonth1.png" srcset="/img/loading.gif" lazyload class=""></p>
+<h4 id="範例輸入2-1"><a href="#範例輸入2-1" class="headerlink" title="範例輸入2"></a>範例輸入2</h4><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs text">4<br>41<br></code></pre></td></tr></table></figure>
+<h4 id="範例輸出2-1"><a href="#範例輸出2-1" class="headerlink" title="範例輸出2"></a>範例輸出2</h4><p>（下圖中的 <code>.</code> 為 <code>空格</code>）<br><img src="/img/infomonth2.png" srcset="/img/loading.gif" lazyload class=""></p>
+<h4 id="題解-2"><a href="#題解-2" class="headerlink" title="題解"></a>題解</h4>
+    <div class="fold">
+      <div class="fold-title fold-info collapsed" data-toggle="collapse" href="#collapse-715582ae" role="button" aria-expanded="false" aria-controls="collapse-715582ae">
+        <div class="fold-arrow">▶</div> 解答
+      </div>
+      <div class="fold-collapse collapse" id="collapse-715582ae">
+        <div class="fold-content">
+          <p>首先，本題程式邏輯並不困難，因為題目未提及限時，我打算直接暴力破解</p> <p>我們可以跑一個迴圈，從 $a$ 檢查到 $b$，看看它是否同時符合「4 或 6 的倍數」與「非 4 或 6 的公倍數」<br>（對應程式邏輯：可被 4 或 6 整除，且不可被 12 整除）<br>我們把答案存入一個容器（list 或 set 皆可），以利格式化輸出</p> <p>為了滿足輸出格式要求，我們有幾件事要做：</p> <ol> <li>每個數字靠左佔四格<ul> <li>f-string 中，<code>&lt;n</code> 可靠左 n 格、<code>&gt;n</code> 可靠右 n 格</li> </ul> </li> <li>每輸出十個數字就換行<ul> <li>以一變數 <code>tmp</code> 來計數，達到 10 項時換行；平時的輸出記得改 <code>end=</code>）</li> </ul> </li> <li>但如果剛好十個數字，就不用換行<ul> <li>先寫換行判斷，再寫 <code>tmp += 1</code>，即「第 11 次才執行換行」</li> </ul> </li> <li>尾部再輸出符合的數量與加總<ul> <li>以 <code>len()</code> 和 <code>sum()</code> 計算之</li> </ul> </li> </ol> <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><code class="hljs python">a, b = <span class="hljs-built_in">int</span>(<span class="hljs-built_in">input</span>()), <span class="hljs-built_in">int</span>(<span class="hljs-built_in">input</span>())<br>ans = []<br><br><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(a, b+<span class="hljs-number">1</span>):<br>    <span class="hljs-keyword">if</span> (i%<span class="hljs-number">4</span>==<span class="hljs-number">0</span> <span class="hljs-keyword">or</span> i%<span class="hljs-number">6</span>==<span class="hljs-number">0</span>) <span class="hljs-keyword">and</span> (i%<span class="hljs-number">12</span>!=<span class="hljs-number">0</span>):<br>        ans.append(i)<br><br>tmp = <span class="hljs-number">1</span><br><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> ans:<br>    <span class="hljs-keyword">if</span> tmp &gt; <span class="hljs-number">10</span>: <span class="hljs-comment">#先判斷換行再加，以免剛好 10 項時會多輸出一行空行</span><br>        <span class="hljs-built_in">print</span>()<br>        tmp = <span class="hljs-number">0</span> <span class="hljs-comment">#因為下面馬上就要+1，所以這裡寫 0</span><br>    <span class="hljs-built_in">print</span>(<span class="hljs-string">f&#x27;<span class="hljs-subst">&#123;i:&lt;<span class="hljs-number">4</span>&#125;</span>&#x27;</span>, end=<span class="hljs-string">&#x27;&#x27;</span>)<br>    tmp += <span class="hljs-number">1</span><br><span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;&#x27;</span>, <span class="hljs-built_in">len</span>(ans), <span class="hljs-built_in">sum</span>(ans), sep=<span class="hljs-string">&#x27;\n&#x27;</span>) <span class="hljs-comment">#以一空字串來多換一行（也可用 f-string 輸出）</span><br></code></pre></td></tr></table></figure> 
+        </div>
+      </div>
+    </div>
+<h3 id="四、最大片段和"><a href="#四、最大片段和" class="headerlink" title="四、最大片段和"></a>四、最大片段和</h3><h4 id="題目-3"><a href="#題目-3" class="headerlink" title="題目"></a>題目</h4><p>讓使用者輸入不固定數量的整數（輸入 <code>-9999</code> 結束），對於使用者輸入的整數數列，請取出一組連續片段的整數，使得該片段的整數和為輸入整數數列中所有連續片段整數和中最大。<br>例如：輸入整數數列為 <code>num = [-5, 5, -1, 3, 4, -3]</code>，則連續片段的整數和最大為 <code>11</code>（<code>[5, -1, 3, 4]</code>）。</p>
+<h4 id="輸入說明-3"><a href="#輸入說明-3" class="headerlink" title="輸入說明"></a>輸入說明</h4><p>不固定數量的整數，直至輸入 <code>-9999</code> 結束</p>
+<h4 id="輸出說明-3"><a href="#輸出說明-3" class="headerlink" title="輸出說明"></a>輸出說明</h4><p>最大的連續片段整數和</p>
+<h4 id="範例輸入1-2"><a href="#範例輸入1-2" class="headerlink" title="範例輸入1"></a>範例輸入1</h4><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs text">-5<br>5<br>-1<br>3<br>4<br>-3<br>-9999<br></code></pre></td></tr></table></figure>
+<h4 id="範例輸出1-2"><a href="#範例輸出1-2" class="headerlink" title="範例輸出1"></a>範例輸出1</h4><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs text">11<br></code></pre></td></tr></table></figure>
+<h4 id="範例輸出2-2"><a href="#範例輸出2-2" class="headerlink" title="範例輸出2"></a>範例輸出2</h4><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs text">-3<br>5<br>-2<br>1<br>-4<br>-9999<br></code></pre></td></tr></table></figure>
+<h5 id="範例輸出2-3"><a href="#範例輸出2-3" class="headerlink" title="範例輸出2"></a>範例輸出2</h5><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs text">5<br></code></pre></td></tr></table></figure>
+<h4 id="題解-3"><a href="#題解-3" class="headerlink" title="題解"></a>題解</h4>
+    <div class="fold">
+      <div class="fold-title fold-info collapsed" data-toggle="collapse" href="#collapse-df030588" role="button" aria-expanded="false" aria-controls="collapse-df030588">
+        <div class="fold-arrow">▶</div> 解答
+      </div>
+      <div class="fold-collapse collapse" id="collapse-df030588">
+        <div class="fold-content">
+          <p>這是一題經典的「<a target="_blank" rel="noopener" href="https://youtube.com/shorts/lrH2sw-FmD4?si=Nh-tDYXekPDGQZI4">Kadane 演算法</a>」題<br>具體操作請看上方連結的影片</p> <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><code class="hljs python">arr = []<br><span class="hljs-keyword">while</span> <span class="hljs-literal">True</span>:<br>    i = <span class="hljs-built_in">int</span>(<span class="hljs-built_in">input</span>())<br>    <span class="hljs-keyword">if</span> i == -<span class="hljs-number">9999</span>:<br>        <span class="hljs-keyword">break</span><br>    arr.append(i)<br><br>cs = <span class="hljs-number">0</span> <span class="hljs-comment">#current sum</span><br>ms = <span class="hljs-built_in">float</span>(<span class="hljs-string">&#x27;-inf&#x27;</span>) <span class="hljs-comment">#max sum</span><br><br><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-built_in">len</span>(arr)):<br>    cs += arr[i]<br>    ms = <span class="hljs-built_in">max</span>(ms, cs)<br>    cs = <span class="hljs-built_in">max</span>(cs, <span class="hljs-number">0</span>)<br><br><span class="hljs-built_in">print</span>(ms)<br></code></pre></td></tr></table></figure> 
+        </div>
+      </div>
+    </div>
+<h3 id="五、迴文質數"><a href="#五、迴文質數" class="headerlink" title="五、迴文質數"></a>五、迴文質數</h3><h4 id="題目-4"><a href="#題目-4" class="headerlink" title="題目"></a>題目</h4><p>請撰寫一程式，讓使用者輸入正整數 $n$，輸出小於 $n$ 的迴文質數，以及其總和。<br>迴文質數：既是質數又是迴文數的整數<br>質數：在大於 $1$ 的自然數中，除了 $1$ 和該數本身外，無法被其他自然數整除的數<br>迴文數：將該數的數字按相反的順序重新排列後，所得到的數和原來的數<br>一樣，例如 3、33、303。</p>
+<h4 id="輸入說明-4"><a href="#輸入說明-4" class="headerlink" title="輸入說明"></a>輸入說明</h4><p>一個正整數 $n$</p>
+<h4 id="輸出說明-4"><a href="#輸出說明-4" class="headerlink" title="輸出說明"></a>輸出說明</h4><ul>
+<li>格式化輸出小於 $n$ 的迴文質數，格式規定：<ul>
+<li>數字欄寬為 4、靠左對齊</li>
+<li>第一列一個數字，第二列兩個數字，依此類推</li>
+<li>若符合的數字不夠，最後一列可不填滿</li>
+</ul>
+</li>
+<li>迴文質數總合</li>
+</ul>
+<h4 id="範例輸入1-3"><a href="#範例輸入1-3" class="headerlink" title="範例輸入1"></a>範例輸入1</h4><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs text">100<br></code></pre></td></tr></table></figure>
+<h4 id="範例輸出1-3"><a href="#範例輸出1-3" class="headerlink" title="範例輸出1"></a>範例輸出1</h4><p>（下圖中的 <code>.</code> 為 <code>空格</code>）<br><img src="/img/infomonth3.png" srcset="/img/loading.gif" lazyload class=""></p>
+<h4 id="範例輸入2-2"><a href="#範例輸入2-2" class="headerlink" title="範例輸入2"></a>範例輸入2</h4><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs text">200<br></code></pre></td></tr></table></figure>
+<h4 id="範例輸出2-4"><a href="#範例輸出2-4" class="headerlink" title="範例輸出2"></a>範例輸出2</h4><p>（下圖中的 <code>.</code> 為 <code>空格</code>）<br><img src="/img/infomonth4.png" srcset="/img/loading.gif" lazyload class=""></p>
+<h4 id="題解-4"><a href="#題解-4" class="headerlink" title="題解"></a>題解</h4>
+    <div class="fold">
+      <div class="fold-title fold-info collapsed" data-toggle="collapse" href="#collapse-d3c00709" role="button" aria-expanded="false" aria-controls="collapse-d3c00709">
+        <div class="fold-arrow">▶</div> 解答
+      </div>
+      <div class="fold-collapse collapse" id="collapse-d3c00709">
+        <div class="fold-content">
+          <p>這題我認為難點不在邏輯上，而是輸出格式<br>但總體而言，它的難度還不如上一題</p> <p>首先，因為是找到「區間內所有符合條件者」<br>我們可以跑一迴圈，一項項檢查，符合者再放入 <code>ans</code><br>為此，我們針對「質數」及「迴文」各設一個檢查的函式</p> <p>迴文相對簡單，所以先講迴文的邏輯<br>將數字轉為字串後，直接比較字串本身與其左右翻轉後是否相同，即可</p> <p>質數的部分<br>最簡單的方法是，把 $2$ 到 $n-1$ 之間所有數都檢查一遍，看看它是否可以整除 $n$<br>但這是效率最差的方法<br>實際上，在數學上可以<a target="_blank" rel="noopener" href="https://youtu.be/u40sQDBrGLs?si=T27mHEvvrxeIJgbE">證明</a>：若 $n$ 為合數，則必然能找到一個因數 $k$，且 $1&lt;k\le\sqrt{n}$<br>利用這個原理，我們便可以把檢查範圍縮至 $\sqrt{n}$，令程式效率高上許多</p> <p><code>ans</code> 中，我們可以直接開始檢查 $2$ 到 $n$ 間所有整數，將符合條件者放入<br>（此以 list comprehension 實作）</p> <p>輸出邏輯的部分最為麻煩<br>為了使輸出可以以「1 &rarr; 2 &rarr; 3 &rarr; …」的順序排下去<br>我們維護兩變數 <code>t</code> 和 <code>g</code><br><code>g</code> 負責計算「目前行應該要有幾個數」；<code>t</code> 負責計算「目前跑到第幾個數」</p> <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">def</span> <span class="hljs-title function_">is_prime</span>(<span class="hljs-params">n</span>):<br>    <span class="hljs-keyword">if</span> n &lt; <span class="hljs-number">2</span>:<br>        <span class="hljs-keyword">return</span> <span class="hljs-literal">False</span><br>    <br>    <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-number">2</span>, <span class="hljs-built_in">int</span>(n**<span class="hljs-number">0.5</span>)+<span class="hljs-number">1</span>):<br>        <span class="hljs-keyword">if</span> n % i == <span class="hljs-number">0</span>:<br>            <span class="hljs-keyword">return</span> <span class="hljs-literal">False</span><br>    <span class="hljs-keyword">return</span> <span class="hljs-literal">True</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">is_pal</span>(<span class="hljs-params">s</span>):<br>    s = <span class="hljs-built_in">str</span>(s)<br>    <span class="hljs-keyword">return</span> s == s[::-<span class="hljs-number">1</span>]<br><br>n = <span class="hljs-built_in">int</span>(<span class="hljs-built_in">input</span>())<br>ans = [i <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-number">2</span>, n) <span class="hljs-keyword">if</span> is_prime(i) <span class="hljs-keyword">and</span> is_pal(i)]<br><br>t, g = <span class="hljs-number">0</span>, <span class="hljs-number">1</span><br><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> ans:<br>    <span class="hljs-built_in">print</span>(<span class="hljs-string">f&#x27;<span class="hljs-subst">&#123;i:&lt;<span class="hljs-number">4</span>&#125;</span>&#x27;</span>, end=<span class="hljs-string">&#x27;&#x27;</span>)<br>    t += <span class="hljs-number">1</span> <span class="hljs-comment">#目前行數+1</span><br>    <span class="hljs-keyword">if</span> t &gt;= g: <span class="hljs-comment">#到目標行數，換行，目標行數+1，目前行數歸零</span><br>        <span class="hljs-built_in">print</span>()<br>        g += <span class="hljs-number">1</span><br>        t = <span class="hljs-number">0</span><br><span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;&#x27;</span> <span class="hljs-keyword">if</span> t == <span class="hljs-number">0</span> <span class="hljs-keyword">else</span> <span class="hljs-string">&#x27;\n&#x27;</span>, <span class="hljs-built_in">sum</span>(ans), sep=<span class="hljs-string">&#x27;&#x27;</span>) <span class="hljs-comment"># t == 0 代表剛換行完，此情形下跳過換行，否則多換一行</span><br></code></pre></td></tr></table></figure> 
+        </div>
+      </div>
+    </div>
+<h2 id="109"><a href="#109" class="headerlink" title="109"></a>109</h2><h3 id="一、數值計算"><a href="#一、數值計算" class="headerlink" title="一、數值計算"></a>一、數值計算</h3><h4 id="題目-5"><a href="#題目-5" class="headerlink" title="題目"></a>題目</h4><p>請撰寫一程式，讓使用者輸入四個數字，計算並輸出這四個數字之數值、總和以及平均數。<br>（提示：總和與平均數皆輸出到小數點後第二位。）</p>
+<h4 id="輸入說明-5"><a href="#輸入說明-5" class="headerlink" title="輸入說明"></a>輸入說明</h4><p>四個數字</p>
+<h4 id="輸出說明-5"><a href="#輸出說明-5" class="headerlink" title="輸出說明"></a>輸出說明</h4><p>輸出四個數字<br>總和<br>平均數</p>
+<h4 id="範例輸入1-4"><a href="#範例輸入1-4" class="headerlink" title="範例輸入1"></a>範例輸入1</h4><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs text">20<br>40<br>60<br>80<br></code></pre></td></tr></table></figure>
+<h4 id="範例輸出1-4"><a href="#範例輸出1-4" class="headerlink" title="範例輸出1"></a>範例輸出1</h4><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs text">20 40 60 80<br>Sum = 200.00<br>Average = 50.00<br></code></pre></td></tr></table></figure>
+<h4 id="範例輸入2-3"><a href="#範例輸入2-3" class="headerlink" title="範例輸入2"></a>範例輸入2</h4><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs text">88.7<br>12<br>56<br>132.55<br></code></pre></td></tr></table></figure>
+<h4 id="範例輸出2-5"><a href="#範例輸出2-5" class="headerlink" title="範例輸出2"></a>範例輸出2</h4><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs text">88.7 12 56 132.55<br>Sum = 289.25<br>Average = 72.31<br></code></pre></td></tr></table></figure>
+<h4 id="題解-5"><a href="#題解-5" class="headerlink" title="題解"></a>題解</h4>
+    <div class="fold">
+      <div class="fold-title fold-info collapsed" data-toggle="collapse" href="#collapse-994b4ecd" role="button" aria-expanded="false" aria-controls="collapse-994b4ecd">
+        <div class="fold-arrow">▶</div> 解答
+      </div>
+      <div class="fold-collapse collapse" id="collapse-994b4ecd">
+        <div class="fold-content">
+          <p>因為輸入有整數也有浮點數，還要依照原樣輸出<br>因此這裡我寫了一個函式，專門把文數字換成數字形式</p> <p>首先，直接把輸入的值原地輸出，是最保險的做法<br>再來，使用 <code>map()</code> 來把每項字串都換成數字<br>計算出總和 <code>total</code> 後，輸出和與平均（用 f-string 格式化輸出）</p> <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">def</span> <span class="hljs-title function_">tonum</span>(<span class="hljs-params">s</span>):<br>    <span class="hljs-keyword">try</span>:<br>        <span class="hljs-keyword">return</span> <span class="hljs-built_in">int</span>(s)<br>    <span class="hljs-keyword">except</span>:<br>        <span class="hljs-keyword">return</span> <span class="hljs-built_in">float</span>(s)<br><br>nums = [<span class="hljs-built_in">input</span>() <span class="hljs-keyword">for</span> _ <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-number">4</span>)]<br><span class="hljs-built_in">print</span>(*nums)<br><br>total = <span class="hljs-built_in">sum</span>(<span class="hljs-built_in">map</span>(tonum, nums))<br><span class="hljs-built_in">print</span>(<span class="hljs-string">f&#x27;Sum = <span class="hljs-subst">&#123;total:<span class="hljs-number">.2</span>f&#125;</span>\nAverage = <span class="hljs-subst">&#123;total/<span class="hljs-number">4</span>:<span class="hljs-number">.2</span>f&#125;</span>&#x27;</span>)<br></code></pre></td></tr></table></figure> 
+        </div>
+      </div>
+    </div>
+<h3 id="二、等級判斷"><a href="#二、等級判斷" class="headerlink" title="二、等級判斷"></a>二、等級判斷</h3><h4 id="題目-6"><a href="#題目-6" class="headerlink" title="題目"></a>題目</h4><p>請使用選擇敘述撰寫一程式，根據使用者輸入的分數顯示對應的等級。<br>標準如下表所示：</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:center">分數</th>
+<th style="text-align:center">等級</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">80 ~ 100</td>
+<td style="text-align:center">A</td>
+</tr>
+<tr>
+<td style="text-align:center">70 ~ 79</td>
+<td style="text-align:center">B</td>
+</tr>
+<tr>
+<td style="text-align:center">60 ~ 69</td>
+<td style="text-align:center">C</td>
+</tr>
+<tr>
+<td style="text-align:center">&le; 59</td>
+<td style="text-align:center">F</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h4 id="輸入說明-6"><a href="#輸入說明-6" class="headerlink" title="輸入說明"></a>輸入說明</h4><p>一個整數</p>
+<h4 id="輸出說明-6"><a href="#輸出說明-6" class="headerlink" title="輸出說明"></a>輸出說明</h4><p>判斷數值所對應的等級</p>
+<h4 id="範例輸入-1"><a href="#範例輸入-1" class="headerlink" title="範例輸入"></a>範例輸入</h4><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs text">79<br></code></pre></td></tr></table></figure>
+<h4 id="範例輸出-1"><a href="#範例輸出-1" class="headerlink" title="範例輸出"></a>範例輸出</h4><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs text">B<br></code></pre></td></tr></table></figure>
+<h4 id="題解-6"><a href="#題解-6" class="headerlink" title="題解"></a>題解</h4>
+    <div class="fold">
+      <div class="fold-title fold-info collapsed" data-toggle="collapse" href="#collapse-3f8ddb9c" role="button" aria-expanded="false" aria-controls="collapse-3f8ddb9c">
+        <div class="fold-arrow">▶</div> 解答
+      </div>
+      <div class="fold-collapse collapse" id="collapse-3f8ddb9c">
+        <div class="fold-content">
+          <p>非常簡單的範圍判斷，可以順便練習一下三元運算子（把 if-else 寫在同一行的寫法）<br>小提醒，因為值範圍是從高判到低，不用特別寫 $n &lt; 某數$</p> <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs python">n = <span class="hljs-built_in">int</span>(<span class="hljs-built_in">input</span>())<br><span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;A&#x27;</span> <span class="hljs-keyword">if</span> n &gt; <span class="hljs-number">80</span> <span class="hljs-keyword">else</span> <span class="hljs-string">&#x27;B&#x27;</span> <span class="hljs-keyword">if</span> n &gt; <span class="hljs-number">70</span> <span class="hljs-keyword">else</span> <span class="hljs-string">&#x27;C&#x27;</span> <span class="hljs-keyword">if</span> n &gt; <span class="hljs-number">60</span> <span class="hljs-keyword">else</span> <span class="hljs-string">&#x27;F&#x27;</span>)<br></code></pre></td></tr></table></figure> 
+        </div>
+      </div>
+    </div>
+<h3 id="三、遞迴公式計算"><a href="#三、遞迴公式計算" class="headerlink" title="三、遞迴公式計算"></a>三、遞迴公式計算</h3><h4 id="題目-7"><a href="#題目-7" class="headerlink" title="題目"></a>題目</h4><p>請使用迴圈敘述撰寫一程式，讓使用者輸入正整數 $n$（$1&lt;n$），計算以下公式的總和並顯示結果：</p>
+<script type="math/tex; mode=display">
+\frac{1}{1+\sqrt2}+\frac{1}{\sqrt2+\sqrt3}+\frac{1}{\sqrt3+\sqrt4}+...+\frac{1}{\sqrt{n-1}+\sqrt{n}}</script><p>（提示：輸出結果至小數點後四位。）</p>
+<h4 id="輸入說明-7"><a href="#輸入說明-7" class="headerlink" title="輸入說明"></a>輸入說明</h4><p>一個正整數</p>
+<h4 id="輸出說明-7"><a href="#輸出說明-7" class="headerlink" title="輸出說明"></a>輸出說明</h4><p>代入公式計算結果</p>
+<h4 id="範例輸入-2"><a href="#範例輸入-2" class="headerlink" title="範例輸入"></a>範例輸入</h4><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs text">8<br></code></pre></td></tr></table></figure>
+<h4 id="範例輸出-2"><a href="#範例輸出-2" class="headerlink" title="範例輸出"></a>範例輸出</h4><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs text">1.8284<br></code></pre></td></tr></table></figure>
+<h4 id="題解-7"><a href="#題解-7" class="headerlink" title="題解"></a>題解</h4>
+    <div class="fold">
+      <div class="fold-title fold-info collapsed" data-toggle="collapse" href="#collapse-d8f9f3c8" role="button" aria-expanded="false" aria-controls="collapse-d8f9f3c8">
+        <div class="fold-arrow">▶</div> 解答
+      </div>
+      <div class="fold-collapse collapse" id="collapse-d8f9f3c8">
+        <div class="fold-content">
+          <p>這題的最後也給了一個一般化的公式，我們可以將此題改寫為：</p> <script type="math/tex; mode=display"> \sum_{k=2}^{n}\frac{1}{\sqrt{k-1}+\sqrt{k}}</script><p>那麼程式碼也就很好想了</p> <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs python">n = <span class="hljs-built_in">int</span>(<span class="hljs-built_in">input</span>())<br>ans = <span class="hljs-number">0</span><br><br><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-number">2</span>, n+<span class="hljs-number">1</span>):<br>    ans += <span class="hljs-number">1</span> / ((i-<span class="hljs-number">1</span>)**<span class="hljs-number">0.5</span> + i**<span class="hljs-number">0.5</span>)<br><br><span class="hljs-built_in">print</span>(<span class="hljs-string">f&#x27;<span class="hljs-subst">&#123;ans:<span class="hljs-number">.4</span>f&#125;</span>&#x27;</span>)<br></code></pre></td></tr></table></figure> 
+        </div>
+      </div>
+    </div>
+<h3 id="四、哥德巴赫猜想"><a href="#四、哥德巴赫猜想" class="headerlink" title="四、哥德巴赫猜想"></a>四、哥德巴赫猜想</h3><h4 id="題目-8"><a href="#題目-8" class="headerlink" title="題目"></a>題目</h4><p>哥德巴赫猜想（Goldbach’s conjecture）的一般性敘述為「任一大於 $2$ 的偶數，都可表示成兩個質數之和」，請撰寫一程式讓使用者輸入大於 $2$ 的偶數 $n$，進行下列步驟：</p>
+<ol>
+<li>找出兩個質數 $a$、$b$ 使得 $n=a+b$ 且 $a-b$ 的絕對值為最小值</li>
+<li>取 $n_1=|a-b|$ 並進行步驟 1，直到 $n_1=2$ 或 $n_1=0$ 為止</li>
+<li><p>輸出運算過程中的 $n$、$n_1$……<br>例如：輸入 $n=64$，運算過程如下：</p>
+ <div class="note note-primary">
+            <p>步驟1：$a=41,b=23$ （$64=41+23$）<br>步驟2：$n_1=|a-b|=41-23=18$<br>步驟1：$a=11,b=7$ （$18=11+7$）<br>步驟2：$n_1=|a-b|=11-7=4$<br>步驟1：$a=2,b=2$ （$4=2+2$）<br>步驟2：$n_1=|a-b|=2-2=0$<br>步驟3：輸出 $64,18,4,0$</p> 
+          </div>
+</li>
+</ol>
+<h4 id="輸入說明-8"><a href="#輸入說明-8" class="headerlink" title="輸入說明"></a>輸入說明</h4><p>大於 $2$ 的偶數</p>
+<h4 id="輸出說明-8"><a href="#輸出說明-8" class="headerlink" title="輸出說明"></a>輸出說明</h4><p>依上述範例輸出運算結果，數字間以逗點（<code>,</code>）隔開</p>
+<h4 id="範例輸入1-5"><a href="#範例輸入1-5" class="headerlink" title="範例輸入1"></a>範例輸入1</h4><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs text">64<br></code></pre></td></tr></table></figure>
+<h4 id="範例輸出1-5"><a href="#範例輸出1-5" class="headerlink" title="範例輸出1"></a>範例輸出1</h4><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs text">64,18,4,0,<br></code></pre></td></tr></table></figure>
+<h4 id="範例輸入2-4"><a href="#範例輸入2-4" class="headerlink" title="範例輸入2"></a>範例輸入2</h4><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs text">50<br></code></pre></td></tr></table></figure>
+<h4 id="範例輸出2-6"><a href="#範例輸出2-6" class="headerlink" title="範例輸出2"></a>範例輸出2</h4><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs text">50,12,2,<br></code></pre></td></tr></table></figure>
+<h4 id="題解-8"><a href="#題解-8" class="headerlink" title="題解"></a>題解</h4>
+    <div class="fold">
+      <div class="fold-title fold-info collapsed" data-toggle="collapse" href="#collapse-a5b5ea11" role="button" aria-expanded="false" aria-controls="collapse-a5b5ea11">
+        <div class="fold-arrow">▶</div> 解答
+      </div>
+      <div class="fold-collapse collapse" id="collapse-a5b5ea11">
+        <div class="fold-content">
+          <p>這題算是較有難度的題目之一<br>這裡直接用暴力法來解<br>（優化題示：可以考慮不要跑過每個數字，試著把小質數如 2、3 的倍數跳過，就可以極大減少迴圈次數，也可以查查看相關演算法的做法）</p> <p>由於題目要多次判斷質數，質數部分直接寫一函式來解決<br>至於第一步驟要不要寫成函式，就看你囉<br>但第二步只會用到迴圈，直接寫在主程式中即可</p> <p>質數判斷前面有題目說過，這裡就不多說了<br>第一步驟的部分，我們可以用一個容器 <code>ans</code> 來存所有可能的答案<br>判斷很簡單，遍歷 $2$ 到 $n-1$ 的每個數<br>檢查目前跑到的數與其減去 $n$ 的數，是否皆質數（構建 $a+b=n$）<br>以 <code>(a, b)</code> 的方式存於 <code>ans</code> 中<br>再用 <code>sort()</code> 的 <code>key=</code> 指定排序方式為 <code>i-j</code> 的絕對值<br>最後回傳 <code>ans[0]</code>，即步驟一所求</p> <p>主程式中，我們要跑迴圈，中斷條件如題目所述（$n=2$ 或 $n=0$）<br>每次迴圈都要輸出並更新 <code>n</code><br>最後記得再輸出一次，才不會缺少最後一個答案<br>輸出尾部直接用 <code>end=</code> 指定即可</p> <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">def</span> <span class="hljs-title function_">is_prime</span>(<span class="hljs-params">n</span>):<br>    <span class="hljs-keyword">if</span> n &lt; <span class="hljs-number">2</span>:<br>        <span class="hljs-keyword">return</span> <span class="hljs-literal">False</span><br>    <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-number">2</span>, <span class="hljs-built_in">int</span>(n**<span class="hljs-number">0.5</span>)+<span class="hljs-number">1</span>):<br>        <span class="hljs-keyword">if</span> n % i == <span class="hljs-number">0</span>:<br>            <span class="hljs-keyword">return</span> <span class="hljs-literal">False</span><br>    <span class="hljs-keyword">return</span> <span class="hljs-literal">True</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">step1</span>(<span class="hljs-params">n</span>):<br>    ans = []<br>    <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-number">2</span>, n): <span class="hljs-comment">#逐一檢查符合條件者</span><br>        j = n - i<br>        <span class="hljs-keyword">if</span> is_prime(i) <span class="hljs-keyword">and</span> is_prime(j):<br>            ans.append((i, j))<br>    ans.sort(key=<span class="hljs-keyword">lambda</span> x: <span class="hljs-built_in">abs</span>(x[<span class="hljs-number">0</span>]-x[<span class="hljs-number">1</span>])) <span class="hljs-comment">#依兩數相減的絕對值來排序</span><br>    <span class="hljs-keyword">return</span> ans[<span class="hljs-number">0</span>] <span class="hljs-comment">#即兩數相減絕對值最小者</span><br><br>n = <span class="hljs-built_in">int</span>(<span class="hljs-built_in">input</span>())<br><span class="hljs-keyword">while</span> n != <span class="hljs-number">2</span> <span class="hljs-keyword">and</span> n != <span class="hljs-number">0</span>:<br>    <span class="hljs-built_in">print</span>(n, end=<span class="hljs-string">&#x27;,&#x27;</span>)<br>    a, b = step1(n)<br>    n = <span class="hljs-built_in">abs</span>(a - b)<br><span class="hljs-built_in">print</span>(n, end=<span class="hljs-string">&#x27;,&#x27;</span>)<br></code></pre></td></tr></table></figure> 
+        </div>
+      </div>
+    </div>
+<h3 id="五、括弧配對"><a href="#五、括弧配對" class="headerlink" title="五、括弧配對"></a>五、括弧配對</h3><h4 id="題目-9"><a href="#題目-9" class="headerlink" title="題目"></a>題目</h4><p>讓使用者輸入一個字串，包含左、右括弧與其他符號。與一般常見的算術運算式一樣，一個左括弧與在它右邊且最接近的右括弧配對。請找出已配對與無法配對的括弧，並用不同符號標示後輸出。<br>（注意：輸入字串不需要是合法的運算式。）</p>
+<h4 id="輸入說明-9"><a href="#輸入說明-9" class="headerlink" title="輸入說明"></a>輸入說明</h4><p>一個字串，包含文字、數字、左、右括弧與其他符號</p>
+<h4 id="輸出說明-9"><a href="#輸出說明-9" class="headerlink" title="輸出說明"></a>輸出說明</h4><p>標示已配對的左、右括弧以 <code>*</code> 號標示<br>無法配對的括弧以 <code>?</code> 號標示<br>文字、數字與其他符號以 <code>=</code> 標示</p>
+<h4 id="範例輸入1-6"><a href="#範例輸入1-6" class="headerlink" title="範例輸入1"></a>範例輸入1</h4><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs text">A(B+C))/(()D<br></code></pre></td></tr></table></figure>
+<h4 id="範例輸出1-6"><a href="#範例輸出1-6" class="headerlink" title="範例輸出1"></a>範例輸出1</h4><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs text">=*===*?=?**=<br></code></pre></td></tr></table></figure>
+<h4 id="範例輸入2-5"><a href="#範例輸入2-5" class="headerlink" title="範例輸入2"></a>範例輸入2</h4><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs text">(A+B)(C+D))+A-B(D+E)(T<br></code></pre></td></tr></table></figure>
+<h4 id="範例輸出2-7"><a href="#範例輸出2-7" class="headerlink" title="範例輸出2"></a>範例輸出2</h4><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs text">*===**===*?====*===*?=<br></code></pre></td></tr></table></figure>
+<h4 id="範例輸出3"><a href="#範例輸出3" class="headerlink" title="範例輸出3"></a>範例輸出3</h4><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs text">((A+5)+(B-3)/2))<br></code></pre></td></tr></table></figure>
+<h4 id="範例輸出3-1"><a href="#範例輸出3-1" class="headerlink" title="範例輸出3"></a>範例輸出3</h4><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs text">**===*=*===*==*?<br></code></pre></td></tr></table></figure>
+<h4 id="題解-9"><a href="#題解-9" class="headerlink" title="題解"></a>題解</h4>
+    <div class="fold">
+      <div class="fold-title fold-info collapsed" data-toggle="collapse" href="#collapse-27140a2a" role="button" aria-expanded="false" aria-controls="collapse-27140a2a">
+        <div class="fold-arrow">▶</div> 解答
+      </div>
+      <div class="fold-collapse collapse" id="collapse-27140a2a">
+        <div class="fold-content">
+          <p>這題應該是這個筆記檔中最難的一題了<br>可能有人看到題目會直覺想到用 <code>replace()</code>，甚至正規表達式<br>但其實我們不一定要直接操作字串<br>也可以額外開一個 list 來存答案</p> <p>首先，由於除了括號外的所有東西都是 <code>=</code><br>因此 <code>ans</code> 初始先假設「全部是 <code>=</code>」<br>如此，我們便只需要處理括號</p> <p><code>stack</code> 是專門用來存左括號位置的<br>只要遇到左括號，就放入<br>遇到右括號且 <code>stack</code> 內有東西時，則拿出，並把左右都標成 <code>*</code></p> <p>剩下的情況（<code>stack</code> 空且遇 <code>)</code>、全部跑完且 <code>stack</code> 有剩）<br>就是配對不了的左右括號，標成 <code>?</code></p> <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><code class="hljs python">s = <span class="hljs-built_in">input</span>()<br>ans = [<span class="hljs-string">&#x27;=&#x27;</span>] * <span class="hljs-built_in">len</span>(s)<br><br>stack = []<br><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-built_in">len</span>(s)):<br>    <span class="hljs-keyword">if</span> s[i] == <span class="hljs-string">&#x27;(&#x27;</span>:<br>        stack.append(i) <span class="hljs-comment">#記錄 &quot;(&quot; 的位置</span><br>    <span class="hljs-keyword">elif</span> s[i] == <span class="hljs-string">&#x27;)&#x27;</span>:<br>        <span class="hljs-keyword">if</span> stack: <span class="hljs-comment">#stack 裡有東西，代表該括號有得配對</span><br>            ans[stack.pop()] = <span class="hljs-string">&#x27;*&#x27;</span><br>            ans[i] = <span class="hljs-string">&#x27;*&#x27;</span><br>        <span class="hljs-keyword">else</span>: <span class="hljs-comment">#沒得配對</span><br>            ans[i] = <span class="hljs-string">&#x27;?&#x27;</span><br><br><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> stack: <span class="hljs-comment">#處理剩下沒配對的 &quot;(&quot;</span><br>    ans[i] = <span class="hljs-string">&#x27;?&#x27;</span><br><br><span class="hljs-built_in">print</span>(*ans, sep=<span class="hljs-string">&#x27;&#x27;</span>)<br></code></pre></td></tr></table></figure> 
+        </div>
+      </div>
+    </div>
+<h2 id="112"><a href="#112" class="headerlink" title="112"></a>112</h2><h3 id="一、差值計算"><a href="#一、差值計算" class="headerlink" title="一、差值計算"></a>一、差值計算</h3><h4 id="題目-10"><a href="#題目-10" class="headerlink" title="題目"></a>題目</h4><p>請撰寫一程式，讓使用者輸入六個不重複的整數，計算並輸出較大的三個數值和與較小的三個數值和之差。</p>
+<h4 id="輸入說明-10"><a href="#輸入說明-10" class="headerlink" title="輸入說明"></a>輸入說明</h4><p>六個不重複的整數</p>
+<h4 id="輸出說明-10"><a href="#輸出說明-10" class="headerlink" title="輸出說明"></a>輸出說明</h4><p>較大的三個數值和與較小的三個數值和之差</p>
+<h4 id="範例輸入-3"><a href="#範例輸入-3" class="headerlink" title="範例輸入"></a>範例輸入</h4><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs text">10<br>20<br>30<br>40<br>50<br>60<br></code></pre></td></tr></table></figure>
+<h4 id="範例輸出-3"><a href="#範例輸出-3" class="headerlink" title="範例輸出"></a>範例輸出</h4><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs text">90<br></code></pre></td></tr></table></figure>
+<h4 id="題解-10"><a href="#題解-10" class="headerlink" title="題解"></a>題解</h4>
+    <div class="fold">
+      <div class="fold-title fold-info collapsed" data-toggle="collapse" href="#collapse-fc319f56" role="button" aria-expanded="false" aria-controls="collapse-fc319f56">
+        <div class="fold-arrow">▶</div> 解答
+      </div>
+      <div class="fold-collapse collapse" id="collapse-fc319f56">
+        <div class="fold-content">
+          <p>先讀入六個數字，並存入一個 list 中<br>把它排序後，把後三項和減去前三項和，即答案</p> <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs python">array = [<span class="hljs-built_in">int</span>(<span class="hljs-built_in">input</span>()) <span class="hljs-keyword">for</span> _ <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-number">6</span>)]<br>array.sort()<br><span class="hljs-built_in">print</span>(<span class="hljs-built_in">sum</span>(array[<span class="hljs-number">3</span>:]) - <span class="hljs-built_in">sum</span>(array[:<span class="hljs-number">3</span>]))<br></code></pre></td></tr></table></figure> 
+        </div>
+      </div>
+    </div>
+<h3 id="二、過半數"><a href="#二、過半數" class="headerlink" title="二、過半數"></a>二、過半數</h3><h4 id="題目-11"><a href="#題目-11" class="headerlink" title="題目"></a>題目</h4><p>請撰寫一程式，讓使用者輸入一個正整數 $n(1 &lt; n \le 15)$，接著輸入 $n$ 個整數，判斷此數列中是否有數值出現的次數超過半數。若有，請輸出此數值為何；若無，請輸出 <code>error</code>。<br>（注意：$n$ 個整數的數列中，若出現次數大於 $\frac{n}{2}$ 的值，稱為「過半數」。）</p>
+<h4 id="輸入說明-11"><a href="#輸入說明-11" class="headerlink" title="輸入說明"></a>輸入說明</h4><p>一個正整數 $n(1 &lt; n \le 15)$ 及 $n$ 個整數</p>
+<h4 id="輸出說明-11"><a href="#輸出說明-11" class="headerlink" title="輸出說明"></a>輸出說明</h4><p>判斷是否有過半數</p>
+<h4 id="範例輸入1-7"><a href="#範例輸入1-7" class="headerlink" title="範例輸入1"></a>範例輸入1</h4><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs text">5<br>2 1 3 2 2<br></code></pre></td></tr></table></figure>
+<h4 id="範例輸出1-7"><a href="#範例輸出1-7" class="headerlink" title="範例輸出1"></a>範例輸出1</h4><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs text">2<br></code></pre></td></tr></table></figure>
+<h4 id="範例輸入2-6"><a href="#範例輸入2-6" class="headerlink" title="範例輸入2"></a>範例輸入2</h4><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs text">4<br>5 5 6 6<br></code></pre></td></tr></table></figure>
+<h4 id="範例輸出2-8"><a href="#範例輸出2-8" class="headerlink" title="範例輸出2"></a>範例輸出2</h4><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs text">error<br></code></pre></td></tr></table></figure>
+<h4 id="題解-11"><a href="#題解-11" class="headerlink" title="題解"></a>題解</h4>
+    <div class="fold">
+      <div class="fold-title fold-info collapsed" data-toggle="collapse" href="#collapse-f97ff480" role="button" aria-expanded="false" aria-controls="collapse-f97ff480">
+        <div class="fold-arrow">▶</div> 解答
+      </div>
+      <div class="fold-collapse collapse" id="collapse-f97ff480">
+        <div class="fold-content">
+          <p>為了計數，我們可以用標準函式庫中的 <code>collections.Counter()</code> 來計<br>標準輸入後，就用 <code>Counter()</code> 計數，以及設定一個 <code>ans</code> 預存答案</p> <p>把 <code>counter</code> 跑一次迴圈，逐項檢查 value 是否過半數<br>過了就把 <code>ans</code> 設為它的 key，並結束迴圈</p> <p>若有數字過半數，輸出，否則輸出 <code>error</code></p> <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">from</span> collections <span class="hljs-keyword">import</span> Counter<br><br>n = <span class="hljs-built_in">int</span>(<span class="hljs-built_in">input</span>())<br>a = <span class="hljs-built_in">list</span>(<span class="hljs-built_in">map</span>(<span class="hljs-built_in">int</span>, <span class="hljs-built_in">input</span>().split()))<br><br>counter = Counter(a)<br>ans = <span class="hljs-literal">None</span><br><br><span class="hljs-keyword">for</span> n, cnt <span class="hljs-keyword">in</span> counter.items():<br>    <span class="hljs-keyword">if</span> cnt % <span class="hljs-number">2</span> == <span class="hljs-number">1</span>:<br>        ans = n<br>        <span class="hljs-keyword">break</span><br><br><span class="hljs-built_in">print</span>(ans <span class="hljs-keyword">if</span> ans <span class="hljs-keyword">is</span> <span class="hljs-keyword">not</span> <span class="hljs-literal">None</span> <span class="hljs-keyword">else</span> <span class="hljs-string">&#x27;error&#x27;</span>)<br></code></pre></td></tr></table></figure> 
+        </div>
+      </div>
+    </div>
+<h3 id="三、字串拆解"><a href="#三、字串拆解" class="headerlink" title="三、字串拆解"></a>三、字串拆解</h3><h4 id="題目-12"><a href="#題目-12" class="headerlink" title="題目"></a>題目</h4><p>請撰寫一程式，讓使用者輸入一個用 <code>@</code> 符號分隔的整數字串，字串長度不超過 128 字元，將字串中的整數字元轉換為整數，依序輸出最大值、最小值以及有幾個質數。<br>（質數定義：在大於 $1$ 的自然數中，除了 $1$ 和該數自身外，無法被其他自然數整除的數。）</p>
+<h4 id="輸入說明-12"><a href="#輸入說明-12" class="headerlink" title="輸入說明"></a>輸入說明</h4><p>用 <code>@</code> 符號分隔的整數字串</p>
+<h4 id="輸出說明-12"><a href="#輸出說明-12" class="headerlink" title="輸出說明"></a>輸出說明</h4><p>最大值、最小值以及有幾個質數</p>
+<h4 id="範例輸入1-8"><a href="#範例輸入1-8" class="headerlink" title="範例輸入1"></a>範例輸入1</h4><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs text">6@-3@12@0@3<br></code></pre></td></tr></table></figure>
+<h4 id="範例輸出1-8"><a href="#範例輸出1-8" class="headerlink" title="範例輸出1"></a>範例輸出1</h4><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs text">12<br>-3<br>1<br></code></pre></td></tr></table></figure>
+<h4 id="範例輸入2-7"><a href="#範例輸入2-7" class="headerlink" title="範例輸入2"></a>範例輸入2</h4><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs text">2@5@7@-8<br></code></pre></td></tr></table></figure>
+<h4 id="範例輸出2-9"><a href="#範例輸出2-9" class="headerlink" title="範例輸出2"></a>範例輸出2</h4><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs text">7<br>-8<br>3<br></code></pre></td></tr></table></figure>
+<h4 id="題解-12"><a href="#題解-12" class="headerlink" title="題解"></a>題解</h4>
+    <div class="fold">
+      <div class="fold-title fold-info collapsed" data-toggle="collapse" href="#collapse-5bed508c" role="button" aria-expanded="false" aria-controls="collapse-5bed508c">
+        <div class="fold-arrow">▶</div> 解答
+      </div>
+      <div class="fold-collapse collapse" id="collapse-5bed508c">
+        <div class="fold-content">
+          <p>首先，把 <code>split()</code> 的引數設為 <code>@</code>，即可用它切成 list<br>再來，用 <code>max()</code> 和 <code>min()</code> 找最值<br>至於質數，一樣用之前寫過的那種寫法<br>至於計數，可以用 <code>filter()</code> 來保留所有質數，並用 <code>len()</code> 數<br>（記得先把 <code>filter()</code> 轉為 list，否則無法取 <code>len()</code>）</p> 
+        </div>
+      </div>
+    </div>
+<h3 id="四、十進位轉二進位"><a href="#四、十進位轉二進位" class="headerlink" title="四、十進位轉二進位"></a>四、十進位轉二進位</h3><h4 id="題目-13"><a href="#題目-13" class="headerlink" title="題目"></a>題目</h4><p>請撰寫一個程式，讓使用者輸入一個正整數 $N(0 &lt; N &lt; 256)$，請將 $N$ 轉成二進位並輸出。</p>
+<h4 id="輸入說明-13"><a href="#輸入說明-13" class="headerlink" title="輸入說明"></a>輸入說明</h4><p>一個正整數 $N(0 &lt; N &lt; 256)$</p>
+<h4 id="輸出說明-13"><a href="#輸出說明-13" class="headerlink" title="輸出說明"></a>輸出說明</h4><p>轉換成二進位的結果</p>
+<h4 id="範例輸入1-9"><a href="#範例輸入1-9" class="headerlink" title="範例輸入1"></a>範例輸入1</h4><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs text">12<br></code></pre></td></tr></table></figure>
+<h4 id="範例輸出1-9"><a href="#範例輸出1-9" class="headerlink" title="範例輸出1"></a>範例輸出1</h4><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs text">1100<br></code></pre></td></tr></table></figure>
+<h4 id="範例輸入2-8"><a href="#範例輸入2-8" class="headerlink" title="範例輸入2"></a>範例輸入2</h4><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs text">99<br></code></pre></td></tr></table></figure>
+<h4 id="範例輸出2-10"><a href="#範例輸出2-10" class="headerlink" title="範例輸出2"></a>範例輸出2</h4><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs text">1100011<br></code></pre></td></tr></table></figure>
+<h4 id="題解-13"><a href="#題解-13" class="headerlink" title="題解"></a>題解</h4>
+    <div class="fold">
+      <div class="fold-title fold-info collapsed" data-toggle="collapse" href="#collapse-09626ff8" role="button" aria-expanded="false" aria-controls="collapse-09626ff8">
+        <div class="fold-arrow">▶</div> 解答
+      </div>
+      <div class="fold-collapse collapse" id="collapse-09626ff8">
+        <div class="fold-content">
+          <p>十進制轉二進制對於 Python 來說非常簡單<br>只需要用 <code>bin()</code> 函數即可<br>但最後記得取 <code>[2:]</code>，否則會有前綴（<code>0b</code>）</p> <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-built_in">print</span>(<span class="hljs-built_in">bin</span>(<span class="hljs-built_in">int</span>(<span class="hljs-built_in">input</span>()))[<span class="hljs-number">2</span>:])<br></code></pre></td></tr></table></figure> 
+        </div>
+      </div>
+    </div>
+<h3 id="五、字母計數"><a href="#五、字母計數" class="headerlink" title="五、字母計數"></a>五、字母計數</h3><h4 id="題目-14"><a href="#題目-14" class="headerlink" title="題目"></a>題目</h4><p>小明在學習乘法算數，作為練習，他隨意寫一串大寫英文字母，計算所有字母分別出現的次數，再將這些數字相乘得到最終結果。請撰寫一程式，輸入一個由大寫英文字母組成的字串，並輸出字母出現個數相乘的結果。</p>
+<h4 id="輸入說明-14"><a href="#輸入說明-14" class="headerlink" title="輸入說明"></a>輸入說明</h4><p>一個由大寫英文字母組成且長度為 $L$ 的字串，其中 $0 &lt; L &lt; 31$</p>
+<h4 id="輸出說明-14"><a href="#輸出說明-14" class="headerlink" title="輸出說明"></a>輸出說明</h4><p>字母出現個數相乘的結果</p>
+<h4 id="範例輸入1-10"><a href="#範例輸入1-10" class="headerlink" title="範例輸入1"></a>範例輸入1</h4><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs text">AACCCBB<br></code></pre></td></tr></table></figure>
+<h4 id="範例輸出1-10"><a href="#範例輸出1-10" class="headerlink" title="範例輸出1"></a>範例輸出1</h4><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs text">12<br></code></pre></td></tr></table></figure>
+<h4 id="範例輸入2-9"><a href="#範例輸入2-9" class="headerlink" title="範例輸入2"></a>範例輸入2</h4><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs text">ASDFEGDSVVVVVVVVV<br></code></pre></td></tr></table></figure>
+<h4 id="範例輸出2-11"><a href="#範例輸出2-11" class="headerlink" title="範例輸出2"></a>範例輸出2</h4><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs text">36<br></code></pre></td></tr></table></figure>
+<h4 id="題解-14"><a href="#題解-14" class="headerlink" title="題解"></a>題解</h4>
+    <div class="fold">
+      <div class="fold-title fold-info collapsed" data-toggle="collapse" href="#collapse-d1f0d555" role="button" aria-expanded="false" aria-controls="collapse-d1f0d555">
+        <div class="fold-arrow">▶</div> 解答
+      </div>
+      <div class="fold-collapse collapse" id="collapse-d1f0d555">
+        <div class="fold-content">
+          <p>這題其實可以簡單用兩個標準函式庫就解決<br>首先，為了計入每個字的出現次數，要用 <code>collections.Counter()</code><br>再來，可以用 <code>math.prod()</code> 來求出 iteralbe 內每個元素的乘積</p> <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">from</span> collections <span class="hljs-keyword">import</span> Counter<br><span class="hljs-keyword">from</span> math <span class="hljs-keyword">import</span> prod<br><br>s = Counter(<span class="hljs-built_in">input</span>())<br><span class="hljs-built_in">print</span>(prod(s.values()))<br></code></pre></td></tr></table></figure> 
+        </div>
+      </div>
+    </div>
+<h2 id="113"><a href="#113" class="headerlink" title="113"></a>113</h2><h3 id="一、迴文數"><a href="#一、迴文數" class="headerlink" title="一、迴文數"></a>一、迴文數</h3><h4 id="題目-15"><a href="#題目-15" class="headerlink" title="題目"></a>題目</h4><p>請撰寫一程式，讓使用者輸入一正整數，判斷是否為迴文數，若是，請輸出 <code>Yes</code>；若不是，請輸出 <code>No</code>。<br>（迴文數：此數的數字按相反的順序重新排列後，所得到的數和原來的數一樣。）</p>
+<h4 id="輸入說明-15"><a href="#輸入說明-15" class="headerlink" title="輸入說明"></a>輸入說明</h4><p>一個正整數</p>
+<h4 id="輸出說明-15"><a href="#輸出說明-15" class="headerlink" title="輸出說明"></a>輸出說明</h4><p>判斷是否為迴文數</p>
+<h4 id="範例輸入1-11"><a href="#範例輸入1-11" class="headerlink" title="範例輸入1"></a>範例輸入1</h4><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs text">14641<br></code></pre></td></tr></table></figure>
+<h4 id="範例輸出1-11"><a href="#範例輸出1-11" class="headerlink" title="範例輸出1"></a>範例輸出1</h4><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs text">Yes<br></code></pre></td></tr></table></figure>
+<h4 id="範例輸入2-10"><a href="#範例輸入2-10" class="headerlink" title="範例輸入2"></a>範例輸入2</h4><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs text">25523<br></code></pre></td></tr></table></figure>
+<h4 id="範例輸出2-12"><a href="#範例輸出2-12" class="headerlink" title="範例輸出2"></a>範例輸出2</h4><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs text">No<br></code></pre></td></tr></table></figure>
+<h4 id="題解-15"><a href="#題解-15" class="headerlink" title="題解"></a>題解</h4>
+    <div class="fold">
+      <div class="fold-title fold-info collapsed" data-toggle="collapse" href="#collapse-c0894521" role="button" aria-expanded="false" aria-controls="collapse-c0894521">
+        <div class="fold-arrow">▶</div> 解答
+      </div>
+      <div class="fold-collapse collapse" id="collapse-c0894521">
+        <div class="fold-content">
+          <p>這題就是檢查原文是否等於反轉後字串即可</p> <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs python">s = <span class="hljs-built_in">input</span>()<br><span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;Yes&#x27;</span> <span class="hljs-keyword">if</span> s == s[::-<span class="hljs-number">1</span>] <span class="hljs-keyword">else</span> <span class="hljs-string">&#x27;No&#x27;</span>)<br></code></pre></td></tr></table></figure> 
+        </div>
+      </div>
+    </div>
+<h3 id="二、庫存函數"><a href="#二、庫存函數" class="headerlink" title="二、庫存函數"></a>二、庫存函數</h3><h4 id="題目-16"><a href="#題目-16" class="headerlink" title="題目"></a>題目</h4><p>請撰寫一程式，讓使用者先輸入三組字串及其相對應的庫存量做為比對標準，接著再輸入五個字串，若這五個字串與任一比對標準相同，則加上庫存量，最後輸出庫存量總合。<br>（提示 1：字串長度皆不超過 20 字元且庫存量皆為整數。）<br>（提示 2：大小寫視為不同的字串。）</p>
+<h4 id="輸入說明-16"><a href="#輸入說明-16" class="headerlink" title="輸入說明"></a>輸入說明</h4><p>三組字串及其相對應的庫存量、五個字串</p>
+<h4 id="輸出說明-16"><a href="#輸出說明-16" class="headerlink" title="輸出說明"></a>輸出說明</h4><p>庫存量總和</p>
+<h4 id="範例輸入-4"><a href="#範例輸入-4" class="headerlink" title="範例輸入"></a>範例輸入</h4><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs text">Apple 100<br>Asus 90<br>Acer 80<br>Msi<br>Apple<br>Lenovo<br>Asus<br>Dell<br></code></pre></td></tr></table></figure>
+<h4 id="範例輸出-4"><a href="#範例輸出-4" class="headerlink" title="範例輸出"></a>範例輸出</h4><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs text">190<br></code></pre></td></tr></table></figure>
+<h4 id="題解-16"><a href="#題解-16" class="headerlink" title="題解"></a>題解</h4>
+    <div class="fold">
+      <div class="fold-title fold-info collapsed" data-toggle="collapse" href="#collapse-1e6408ec" role="button" aria-expanded="false" aria-controls="collapse-1e6408ec">
+        <div class="fold-arrow">▶</div> 解答
+      </div>
+      <div class="fold-collapse collapse" id="collapse-1e6408ec">
+        <div class="fold-content">
+          <p>這題一看到輸入格式，就應該能想到要用 dict 來解<br>先建立好 dict 作為庫存，並逐一讀入，若存在庫存中，就把數計上<br>最後輸出計數即可</p> <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs python">goods = &#123;&#125;<br>ans = <span class="hljs-number">0</span><br><br><span class="hljs-keyword">for</span> _ <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-number">3</span>): <span class="hljs-comment"># 理論上可用 dict comprehension，但會變得極難閱讀</span><br>    k, v = <span class="hljs-built_in">input</span>().split()<br>    goods[k] = <span class="hljs-built_in">int</span>(v)<br><br><span class="hljs-keyword">for</span> _ <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-number">5</span>):<br>    p = <span class="hljs-built_in">input</span>()<br>    <span class="hljs-keyword">if</span> p <span class="hljs-keyword">in</span> goods:<br>        ans += goods[p]<br><br><span class="hljs-built_in">print</span>(ans)<br></code></pre></td></tr></table></figure> 
+        </div>
+      </div>
+    </div>
+<h3 id="三、檢驗學號"><a href="#三、檢驗學號" class="headerlink" title="三、檢驗學號"></a>三、檢驗學號</h3><h4 id="題目-17"><a href="#題目-17" class="headerlink" title="題目"></a>題目</h4><ol>
+<li>請撰寫一程式，讓使用者輸入三組學號，學號總共有 6 個字元，由左至右分別以 $s0$~$s5$ 表示，$s0$~$s4$ 均是數字；$s5$ 是大寫英文字母的檢查碼。</li>
+<li>$s5$ 的判斷規則：若公式 <code>((s0+s2+s4)+(s1+s3)*5)%26</code> 的計算結果為 $1$，則 $s5$ 為 <code>A</code>；若計算結果為 $2$，則 $s5$ 為 <code>B</code>，以此類推。</li>
+<li>學校規定：學號中的奇數數字不得超過 2 個，請依序判斷使用者輸入的學號是否正確，正確則輸出 <code>Pass</code>，否則輸出 <code>Fail</code>。<br>（提示：數字 <code>0</code> 的 ASCII 碼=48，英文字母 <code>A</code> 的 ASCII 碼=65。）</li>
+</ol>
+<h4 id="輸入說明-17"><a href="#輸入說明-17" class="headerlink" title="輸入說明"></a>輸入說明</h4><p>三組學號</p>
+<h4 id="輸出說明-17"><a href="#輸出說明-17" class="headerlink" title="輸出說明"></a>輸出說明</h4><p>三組學號是否合法</p>
+<h4 id="範例輸入-5"><a href="#範例輸入-5" class="headerlink" title="範例輸入"></a>範例輸入</h4><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs text">12345M<br>55236B<br>04805G<br></code></pre></td></tr></table></figure>
+<h4 id="範例輸出-5"><a href="#範例輸出-5" class="headerlink" title="範例輸出"></a>範例輸出</h4><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs text">Fail<br>Fail<br>Pass<br></code></pre></td></tr></table></figure>
+<h4 id="題解-17"><a href="#題解-17" class="headerlink" title="題解"></a>題解</h4>
+    <div class="fold">
+      <div class="fold-title fold-info collapsed" data-toggle="collapse" href="#collapse-2d16d1f0" role="button" aria-expanded="false" aria-controls="collapse-2d16d1f0">
+        <div class="fold-arrow">▶</div> 解答
+      </div>
+      <div class="fold-collapse collapse" id="collapse-2d16d1f0">
+        <div class="fold-content">
+          <p>這題除了在輸入上比較麻煩外，其實邏輯不算太難<br>首先，應題目要求，寫一個函式來檢查 3.</p> <p>再來，寫一個迴圈來把程式執行三次，以達成「3 次輸入」要求</p> <p>主程式中，檢查 3. 和2.，並最後輸出即可</p> <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">def</span> <span class="hljs-title function_">less_than_1_odd</span>(<span class="hljs-params">arr</span>):<br>    odd = <span class="hljs-number">0</span><br>    <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> arr:<br>        <span class="hljs-keyword">if</span> i % <span class="hljs-number">2</span> == <span class="hljs-number">1</span>:<br>            odd += <span class="hljs-number">1</span><br>    <span class="hljs-keyword">return</span> odd &lt;= <span class="hljs-number">2</span><br><br><span class="hljs-keyword">for</span> _ <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-number">3</span>):<br>    s0, s1, s2, s3, s4, s5 = <span class="hljs-built_in">input</span>()<br>    s0, s1, s2, s3, s4 = <span class="hljs-built_in">int</span>(s0), <span class="hljs-built_in">int</span>(s1), <span class="hljs-built_in">int</span>(s2), <span class="hljs-built_in">int</span>(s3), <span class="hljs-built_in">int</span>(s4)<br><br>    <span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> less_than_1_odd([s0, s1, s2, s3, s4]):<br>        <span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;Fail&#x27;</span>)<br>        <span class="hljs-keyword">continue</span><br><br>    check = ((s0+s2+s4)+(s1+s3)*<span class="hljs-number">5</span>)%<span class="hljs-number">26</span> + <span class="hljs-number">64</span><br><br>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;Pass&#x27;</span> <span class="hljs-keyword">if</span> check == <span class="hljs-built_in">ord</span>(s5) <span class="hljs-keyword">else</span> <span class="hljs-string">&#x27;Fail&#x27;</span>)<br></code></pre></td></tr></table></figure> 
+        </div>
+      </div>
+    </div>
+<h3 id="四、找零錢"><a href="#四、找零錢" class="headerlink" title="四、找零錢"></a>四、找零錢</h3><h4 id="題目-18"><a href="#題目-18" class="headerlink" title="題目"></a>題目</h4><ol>
+<li>請撰寫一程式，製作販賣機找零系統，讓使用者輸入一個正整數，代表需要找零的金額；再輸入三個不重複的正整數，代表販賣機可找零的硬幣面額，請依照「面額大至小」輸出找零結果，不同面額請用半形空格隔開，若未使用到該面額，則不須輸出。</li>
+<li>販賣機找零規則：請使用最少的硬幣數目找零。<br>（輸入資料一定可以完成找零，且販賣機內的硬幣數量無上限。）</li>
+</ol>
+<h4 id="輸入說明-18"><a href="#輸入說明-18" class="headerlink" title="輸入說明"></a>輸入說明</h4><p>第 1 列：一個正整數，代表要找零的金額 $N(0 &lt; N &lt; 2000)$<br>第 2 列：三個正整數，代表三種硬幣面額，中間以半形空白間隔</p>
+<h4 id="輸出說明-18"><a href="#輸出說明-18" class="headerlink" title="輸出說明"></a>輸出說明</h4><p>找零結果</p>
+<h4 id="範例輸入1-12"><a href="#範例輸入1-12" class="headerlink" title="範例輸入1"></a>範例輸入1</h4><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs text">32<br>1 10 5<br></code></pre></td></tr></table></figure>
+<h4 id="範例輸出1-12"><a href="#範例輸出1-12" class="headerlink" title="範例輸出1"></a>範例輸出1</h4><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs text">3*$10 2*$1<br></code></pre></td></tr></table></figure>
+<h4 id="範例輸入2-11"><a href="#範例輸入2-11" class="headerlink" title="範例輸入2"></a>範例輸入2</h4><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs text">78<br>2 3 4<br></code></pre></td></tr></table></figure>
+<h4 id="範例輸出2-13"><a href="#範例輸出2-13" class="headerlink" title="範例輸出2"></a>範例輸出2</h4><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs text">19*$4 1*$2<br></code></pre></td></tr></table></figure>
+<h4 id="題解-18"><a href="#題解-18" class="headerlink" title="題解"></a>題解</h4>
+    <div class="fold">
+      <div class="fold-title fold-info collapsed" data-toggle="collapse" href="#collapse-7e7e3982" role="button" aria-expanded="false" aria-controls="collapse-7e7e3982">
+        <div class="fold-arrow">▶</div> 解答
+      </div>
+      <div class="fold-collapse collapse" id="collapse-7e7e3982">
+        <div class="fold-content">
+          <p>這題因為要統計硬幣數，所以用 <code>collections.defaultdict()</code> 比較方便（雖然 dict 也能解）</p> <p>首先，把輸入讀入，並將 <code>coins</code> 依大到小排（為了用最少硬幣）<br>並建立一個 defaultdict</p> <p>接下來，跑迴圈，把硬幣大到小跑<br>只要目前金額大於跑到的金額<br>代表可以拿一個該面額的硬幣找<br>就把硬幣數加一，並把目前金額減掉它<br>（這裡如果不是為了計數，也可以用取模）</p> <p>最後，將它依格輸出即可</p> <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">from</span> collections <span class="hljs-keyword">import</span> defaultdict<br><br>n = <span class="hljs-built_in">int</span>(<span class="hljs-built_in">input</span>())<br>coins = <span class="hljs-built_in">list</span>(<span class="hljs-built_in">map</span>(<span class="hljs-built_in">int</span>, <span class="hljs-built_in">input</span>().split()))<br><br>coins.sort(reverse=<span class="hljs-literal">True</span>)<br><br>counter = defaultdict(<span class="hljs-built_in">int</span>)<br><br><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> coins:<br>    <span class="hljs-keyword">while</span> n &gt;= i:<br>        n -= i<br>        counter[i] += <span class="hljs-number">1</span><br><br><span class="hljs-keyword">for</span> k, v <span class="hljs-keyword">in</span> counter.items():<br>    <span class="hljs-built_in">print</span>(<span class="hljs-string">f&#x27;<span class="hljs-subst">&#123;v&#125;</span>*$<span class="hljs-subst">&#123;k&#125;</span>&#x27;</span>, end=<span class="hljs-string">&#x27; &#x27;</span>)<br></code></pre></td></tr></table></figure> 
+        </div>
+      </div>
+    </div>
+<h3 id="五、電影院座位安排"><a href="#五、電影院座位安排" class="headerlink" title="五、電影院座位安排"></a>五、電影院座位安排</h3><h4 id="題目-19"><a href="#題目-19" class="headerlink" title="題目"></a>題目</h4><ol>
+<li>防疫期間，電影院規定影廳內同一列的兩位觀眾之間不能相鄰而坐，必須間隔至少一個位置，以降低疾病傳播的風險。</li>
+<li>某天，電影院接到一群團體客人的訂位，在散客已經劃位的狀態下，需要依照防疫規定將他們安排在同一影廳內。</li>
+<li>已知影廳為長方形，給定影廳的列數、行數、團體客人數量與散客的劃位狀況，請判斷能不能將團體客人「全數」安排進該影廳內。</li>
+<li>以下圖為例，影廳有 5 列，每列有 9 個位置，填色區塊為散客已預訂座位。依照防疫規定，最多可容納 10 位的團體客人，位置如圖數字標記處。</li>
+</ol>
+<img src="/img/infomonth5.png" srcset="/img/loading.gif" lazyload class="">
+<h4 id="輸入說明-19"><a href="#輸入說明-19" class="headerlink" title="輸入說明"></a>輸入說明</h4><p>第 1 列：輸入三個正整數，分別代表影廳列數 $R$、行數 $C$ 以及團體客人數量 $N$，數字之間以半行空白間隔（列數 $R$ 與行數 $C$ 皆不超過 20）<br>第 $2 ~ R+1$ 列：代表影廳每一列的散客劃位狀況，英文大寫 <code>X</code> 代表 已經訂位；大寫 <code>O</code> 代表可安排的座位</p>
+<h4 id="輸出說明-19"><a href="#輸出說明-19" class="headerlink" title="輸出說明"></a>輸出說明</h4><p>若可將團體客人全數安排進該影廳，請輸出字串 <code>true</code>；否則輸出字串 <code>false</code></p>
+<h4 id="範例輸入1-13"><a href="#範例輸入1-13" class="headerlink" title="範例輸入1"></a>範例輸入1</h4><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs text">5 9 10<br>OOOOXOOOO<br>OOXOOXOXO<br>OXOXOOXOX<br>OOXOXOXOX<br>OOOOOOOOX<br></code></pre></td></tr></table></figure>
+<h4 id="範例輸出1-13"><a href="#範例輸出1-13" class="headerlink" title="範例輸出1"></a>範例輸出1</h4><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs text">true<br></code></pre></td></tr></table></figure>
+<h4 id="範例輸出2-14"><a href="#範例輸出2-14" class="headerlink" title="範例輸出2"></a>範例輸出2</h4><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs text">4 12 8<br>OOXOXOOXOXOO<br>XOXOOXOXOOOO<br>OOOOXOXOXOOO<br>XOXOXOXOOXOX<br></code></pre></td></tr></table></figure>
+<h4 id="範例輸出2-15"><a href="#範例輸出2-15" class="headerlink" title="範例輸出2"></a>範例輸出2</h4><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs text">false<br></code></pre></td></tr></table></figure>
+<h4 id="題解-19"><a href="#題解-19" class="headerlink" title="題解"></a>題解</h4>
+    <div class="fold">
+      <div class="fold-title fold-info collapsed" data-toggle="collapse" href="#collapse-38125c6c" role="button" aria-expanded="false" aria-controls="collapse-38125c6c">
+        <div class="fold-arrow">▶</div> 解答
+      </div>
+      <div class="fold-collapse collapse" id="collapse-38125c6c">
+        <div class="fold-content">
+          <p>這題其實不算簡單</p> <p>首先，因為題目只要求要看左右，不用管前後<br>所以我們不一定要一次讀入所有資料<br>也可以逐行處理</p> <p>因為已經有客人了，我們可以直接把所有已經有人的位子左右標成不能坐<br>注意到，這裡我用 <code>X</code> 來標原客人，<code>N</code> 標記左右不可坐座位<br>因為如果都標成 <code>X</code>，那只要有一個客人 <code>X</code>，把他右邊也標成 <code>X</code> 後，會隨迴圈把右邊整串變成 <code>X</code><br>所以記得換一種符號（或者也可以試著跳過下個位子的判斷，但還要寫邊界，比較麻煩）</p> <p>做完標記後，就可以來一個個分配位子了<br>可以用數的，但會比較麻煩，只不過效率可能可以好一點？<br>或者像我一樣，直接硬跑迴圈<br>把位子一個個數下去，最後再看剩下實際可坐（即考量所有人皆左右無人）座位數和要分配的人數即可</p> <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><code class="hljs python">r, c, n = <span class="hljs-built_in">map</span>(<span class="hljs-built_in">int</span>, <span class="hljs-built_in">input</span>().split())<br>ans = <span class="hljs-number">0</span><br><br><span class="hljs-keyword">for</span> _ <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(r):<br>    seats = <span class="hljs-built_in">list</span>(<span class="hljs-built_in">input</span>().strip())<br><br>    <span class="hljs-comment">#將已有客人的座位左右標為不可用</span><br>    <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(c):<br>        <span class="hljs-keyword">if</span> seats[i] == <span class="hljs-string">&#x27;X&#x27;</span>:<br>            <span class="hljs-keyword">if</span> i &gt; <span class="hljs-number">0</span>:<br>                seats[i-<span class="hljs-number">1</span>] = <span class="hljs-string">&#x27;N&#x27;</span><br>            <span class="hljs-keyword">if</span> i &lt; c - <span class="hljs-number">1</span>:<br>                seats[i+<span class="hljs-number">1</span>] = <span class="hljs-string">&#x27;N&#x27;</span><br><br>    <span class="hljs-comment">#在可用座位上以不相鄰方式安排</span><br>    i = <span class="hljs-number">0</span><br>    <span class="hljs-keyword">while</span> i &lt; c:<br>        <span class="hljs-keyword">if</span> seats[i] == <span class="hljs-string">&#x27;O&#x27;</span>:<br>            ans += <span class="hljs-number">1</span><br>            i += <span class="hljs-number">2</span> <span class="hljs-comment">#隔一格</span><br>        <span class="hljs-keyword">else</span>:<br>            i += <span class="hljs-number">1</span><br><br><span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;true&#x27;</span> <span class="hljs-keyword">if</span> n &lt;= ans <span class="hljs-keyword">else</span> <span class="hljs-string">&#x27;false&#x27;</span>)<br></code></pre></td></tr></table></figure> 
+        </div>
+      </div>
+    </div>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E7%AD%86%E8%A8%98%E8%88%87%E6%95%99%E5%AD%B8/" class="category-chain-item">筆記與教學</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/%E7%AD%86%E8%A8%98%E8%88%87%E6%95%99%E5%AD%B8/%E7%A8%8B%E5%BC%8F/" class="category-chain-item">程式</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/%E7%AD%86%E8%A8%98%E8%88%87%E6%95%99%E5%AD%B8/%E7%A8%8B%E5%BC%8F/%E9%A1%8C%E8%A7%A3/" class="category-chain-item">題解</a>
+  
+  
+
+  
+
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/%E7%AD%86%E8%A8%98/" class="print-no-link">#筆記</a>
+      
+        <a href="/tags/%E6%95%99%E5%AD%B8/" class="print-no-link">#教學</a>
+      
+        <a href="/tags/%E7%A8%8B%E5%BC%8F/" class="print-no-link">#程式</a>
+      
+        <a href="/tags/Python/" class="print-no-link">#Python</a>
+      
+        <a href="/tags/%E9%A1%8C%E8%A7%A3/" class="print-no-link">#題解</a>
+      
+        <a href="/tags/%E8%B3%87%E8%A8%8A%E6%9C%88%E8%B3%87%E8%A8%8A%E6%87%89%E7%94%A8%E6%8A%80%E8%83%BD%E7%AB%B6%E8%B3%BD/" class="print-no-link">#資訊月資訊應用技能競賽</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>資訊月資訊應用技能競賽——考古題（題目 + 詳解）</div>
+      <div>https://chuen666666.github.io/資訊月資訊應用技能競賽——考古題（題目+詳解）/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>淳</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>發布於</div>
+          <div>2025-12-29 11:44</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>更新於</div>
+          <div>2026-03-02 00:01</div>
+        </div>
+      
+      
+        <div class="license-meta-item">
+          <div>許可協議</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 姓名標示">
+                    <i class="iconfont icon-cc-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/%E5%AD%B8%E6%B8%AC%E6%95%B8A%E5%85%AC%E5%BC%8F%E7%AD%86%E8%A8%98/" title="學測數 A 公式筆記">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">學測數 A 公式筆記</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/%E6%96%B0%E6%89%8B%E9%83%BD%E8%83%BD%E7%9C%8B%E6%87%82%E7%9A%84%E7%BE%85%E5%BF%85%E9%81%94%E6%B3%95%E5%89%87/" title="新手都能看懂的羅必達法則">
+                        <span class="hidden-mobile">新手都能看懂的羅必達法則</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+  
+  
+    <article id="comments" lazyload>
+      
+    <div id="giscus" class="giscus"></div>
+    <script type="text/javascript">
+      Fluid.utils.loadComments('#giscus', function() {
+        var options = {"repo":"Chuen666666/Chuen666666.github.io","repo-id":"R_kgDOPtWSPw","category":"General","category-id":"DIC_kwDOPtWSP84C0IRu","mapping":"pathname","reactions-enabled":1,"emit-metadata":0,"input-position":"top","theme-light":"light","theme-dark":"dark","lang":"zh-TW"};
+        var attributes = {};
+        for (let option in options) {
+          if (!option.startsWith('theme-')) {
+            var key = option.startsWith('data-') ? option : 'data-' + option;
+            attributes[key] = options[option];
+          }
+        }
+        var light = 'light';
+        var dark = 'dark';
+        window.GiscusThemeLight = light;
+        window.GiscusThemeDark = dark;
+        attributes['data-theme'] = document.documentElement.getAttribute('data-user-color-scheme') === 'dark' ? dark : light;
+        for (let attribute in attributes) {
+          var value = attributes[attribute];
+          if (value === undefined || value === null || value === '') {
+            delete attributes[attribute];
+          }
+        }
+        var s = document.createElement('script');
+        s.setAttribute('src', 'https://giscus.app/client.js');
+        s.setAttribute('crossorigin', 'anonymous');
+        for (let attribute in attributes) {
+          s.setAttribute(attribute, attributes[attribute]);
+        }
+        var ss = document.getElementsByTagName('script');
+        var e = ss.length > 0 ? ss[ss.length - 1] : document.head || document.documentElement;
+        e.parentNode.insertBefore(s, e.nextSibling);
+      });
+    </script>
+    <noscript>Please enable JavaScript to view the comments</noscript>
+
+
+    </article>
+  
+
+
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜尋</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">關鍵字</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <span>© 2025 淳</span> <br> <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+    <div class="statistics">
+  
+  
+
+  
+    
+      <span id="busuanzi_container_site_pv" style="display: none">
+        總訪問量 
+        <span id="busuanzi_value_site_pv"></span>
+         次
+      </span>
+    
+    
+      <span id="busuanzi_container_site_uv" style="display: none">
+        總訪客數 
+        <span id="busuanzi_value_site_uv"></span>
+         人
+      </span>
+    
+    
+
+  
+
+</div>
+
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  var relativeDate = function() {
+    var updatedTime = document.getElementById('updated-time');
+    if (updatedTime) {
+      var text = updatedTime.textContent;
+      var reg = /\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(?:Z|[+-]\d{2}:\d{2})/;
+      var matchs = text.match(reg);
+      if (matchs) {
+        var relativeTime = moment(matchs[0]).fromNow();
+        updatedTime.textContent = text.replace(reg, relativeTime);
+      }
+      updatedTime.style.display = '';
+    }
+  };
+  Fluid.utils.createScript('https://lib.baomitu.com/moment.js/2.29.4/moment.min.js', function() {
+    if (!'zh-tw'.startsWith('en')) {
+      Fluid.utils.createScript('https://lib.baomitu.com/moment.js/2.29.4/locale/zh-tw.min.js', function() {
+        relativeDate();
+      });
+    } else {
+      relativeDate();
+    }
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/5.0.0/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  
+      <script>
+        if (!window.MathJax) {
+          window.MathJax = {
+            tex    : {
+              inlineMath: { '[+]': [['$', '$']] }
+            },
+            loader : {
+              load: ['ui/lazy']
+            },
+            options: {
+              renderActions: {
+                insertedScript: [200, () => {
+                  document.querySelectorAll('mjx-container').forEach(node => {
+                    let target = node.parentNode;
+                    if (target.nodeName.toLowerCase() === 'li') {
+                      target.parentNode.classList.add('has-jax');
+                    }
+                  });
+                }, '', false]
+              }
+            }
+          };
+        } else {
+          MathJax.startup.document.state(0);
+          MathJax.texReset();
+          MathJax.typeset();
+          MathJax.typesetPromise();
+        }
+
+        Fluid.events.registerRefreshCallback(function() {
+          if ('MathJax' in window && MathJax.startup.document && typeof MathJax.startup.document.state === 'function') {
+            MathJax.startup.document.state(0);
+            MathJax.texReset();
+            MathJax.typeset();
+            MathJax.typesetPromise();
+          }
+        });
+      </script>
+    
+
+  <script  src="https://lib.baomitu.com/mathjax/3.2.2/es5/tex-mml-chtml.js" ></script>
+
+  <script  src="/js/local-search.js" ></script>
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+
+
+  
+<script src="/js/custom.js"></script>
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">部落格在允許 JavaScript 執行的環境下瀏覽效果更佳</div>
+  </noscript>
+</body>
+</html>

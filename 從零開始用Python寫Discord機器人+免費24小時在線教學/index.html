@@ -1,0 +1,981 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-TW" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/avatar.jpg">
+  <link rel="icon" href="/img/avatar.jpg">
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="">
+  <meta name="author" content="淳">
+  <meta name="keywords" content="Python, 程式, 專案, 筆記, 教學, 心得, 考證照, 比賽, 競程, 淳, 淳宇, Chuen666666, 淳宇淳蠢">
+  
+    <meta name="description" content="教你用完全免費的方式，從零開始建立一個 Discord 機器人，並且讓它 24 小時在線上運作">
+<meta property="og:type" content="article">
+<meta property="og:title" content="從零開始用 Python 寫 Discord 機器人 + 免費 24 小時在線教學">
+<meta property="og:url" content="https://chuen666666.github.io/%E5%BE%9E%E9%9B%B6%E9%96%8B%E5%A7%8B%E7%94%A8Python%E5%AF%ABDiscord%E6%A9%9F%E5%99%A8%E4%BA%BA+%E5%85%8D%E8%B2%BB24%E5%B0%8F%E6%99%82%E5%9C%A8%E7%B7%9A%E6%95%99%E5%AD%B8/index.html">
+<meta property="og:site_name" content="淳の神奇小網站">
+<meta property="og:description" content="教你用完全免費的方式，從零開始建立一個 Discord 機器人，並且讓它 24 小時在線上運作">
+<meta property="og:locale" content="zh_TW">
+<meta property="og:image" content="https://chuen666666.github.io/img/github_link.png">
+<meta property="og:image" content="https://chuen666666.github.io/img/render_url.png">
+<meta property="article:published_time" content="2026-01-03T14:56:43.000Z">
+<meta property="article:modified_time" content="2026-03-01T16:01:58.714Z">
+<meta property="article:author" content="淳">
+<meta property="article:tag" content="Discord Bot">
+<meta property="article:tag" content="Python">
+<meta property="article:tag" content="教學">
+<meta property="article:tag" content="程式">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://chuen666666.github.io/img/github_link.png">
+  
+  
+    <meta name="referrer" content="no-referrer-when-downgrade">
+  
+  
+  <title>從零開始用 Python 寫 Discord 機器人 + 免費 24 小時在線教學 - 淳の神奇小網站</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1749284_5i9bdhy70f8.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1735173_0756783m6t5.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+  
+<link rel="stylesheet" href="/css/custom.css">
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"chuen666666.github.io","root":"/","version":"1.9.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3","placement":"left","visible":"hover","icon":"❡"},"progressbar":{"enable":true,"height_px":3,"color":null,"options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"left","headingSelector":"h1,h2,h3","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+  
+<meta name="generator" content="Hexo 8.1.1"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>淳の網站</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首頁</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>歸檔</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分類</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>標籤</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>關於</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/links/" target="_self">
+                <i class="iconfont icon-link-fill"></i>
+                <span>友站</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/default.png') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="從零開始用 Python 寫 Discord 機器人 + 免費 24 小時在線教學"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-author" aria-hidden="true"></i>
+        淳
+      </span>
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2026-01-03 22:56" pubdate>
+          2026-01-03 22:56
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          7.8k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          66 分鐘
+        
+      </span>
+    
+
+    
+    
+      
+        <span id="busuanzi_container_page_pv" style="display: none">
+          <i class="iconfont icon-eye" aria-hidden="true"></i>
+          <span id="busuanzi_value_page_pv"></span> 次
+        </span>
+        
+
+      
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="padding-left: 2rem; margin-right: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目錄</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">從零開始用 Python 寫 Discord 機器人 + 免費 24 小時在線教學</h1>
+            
+              <p id="updated-time" class="note note-light" style="display: none">
+                
+                  
+                    本文最後更新於：2026-03-02T00:01:58+08:00
+                  
+                  
+
+                
+              </p>
+            
+            
+              <div class="markdown-body">
+                
+                <h2 id="建立機器人"><a href="#建立機器人" class="headerlink" title="建立機器人"></a>建立機器人</h2><ol>
+<li>先準備好一個 Bot 準備要加入的伺服器（需擁有權限）</li>
+<li>到 <a target="_blank" rel="noopener" href="https://discord.com/developers/applications">Discord Dev</a> 官網，點擊右上角 <code>New Application</code>，填入機器人名稱後，點擊 <code>Create</code></li>
+<li>可以分別在 <code>App Icon</code>、<code>Name</code>、<code>Description</code>、<code>Tags</code> 欄位中，指定機器人<strong>頭貼</strong>、<strong>名稱</strong>、<strong>簡介</strong>（即使用者點開機器人後顯示在簡介欄的內容）、<strong>標籤</strong></li>
+<li>到 <code>Installation</code> 中，依自己需求勾選 <code>User Install</code>（使用者從 Bot 簡介點擊<strong>新增應用程式</strong>）或／和 <code>Guild Install</code>（邀入伺服器內使用）</li>
+<li>到 <code>Bot</code> 中，可以設定 Bot 的<strong>頭貼</strong>、<strong>背景橫幅</strong>、<strong>名稱</strong>，之後往下滑，將 <code>Presence Intent</code>、<code>Server Members Intent</code>、<code>Message Content Intent</code> 勾起來，下方 <code>Bot Permissions</code> 可以依自己需要打勾，建議可以將 <code>Public Bot</code> 取消勾選（依喜好，決定他人是否可以邀你的 Bot 進其他群）</li>
+<li>到 <code>OAuth2</code> 中的 <code>OAuth2 URL Generator</code>，勾選 <code>bot</code> 和 <code>applications.commands</code>，並滑到下方展開的另一個大類（<code>Bot Permissions</code>），依自己的需要勾選權限</li>
+<li>滑到最下面，點擊 <code>Generated URL</code> 右邊的複製鈕，並貼到瀏覽器中，即可將 Bot 邀請進先前建立好的伺服器</li>
+<li><p>回到 <code>Bot</code> 中，複製 <code>Token</code>；若只有 <code>Reset Token</code>，先按它，再複製即可</p>
+<div class="note note-danger">
+            <p>Bot Token 相當於 Bot 的帳號密碼，任何擁有它的人都可以任意控制該 Bot，因此請妥善保管<br>勿將 Token 公開出來，或上傳到 GitHub 中，或者直接寫進主要程式碼當中<br>一旦發現任何外泄的可能，請立即回到 <a target="_blank" rel="noopener" href="https://discord.com/developers/applications">Discord Dev</a> 中的 <code>Bot</code>，並點擊 <code>Reset Token</code> 以更新新的 Token</p> 
+          </div>
+</li>
+<li><p>【可選】在伺服器中建立一個 Bot 專用身分組（管理員權限），方便管理與排版的同時，也不會因為當初沒開到某個權限而讓 Bot 運作不了；但這樣的操作也得承擔萬一 Bot 被盜，越高權限可能讓它的危害越大的風險</p>
+</li>
+</ol>
+<h2 id="電腦環境"><a href="#電腦環境" class="headerlink" title="電腦環境"></a>電腦環境</h2><ol>
+<li>Python：至少 3.8+，建議 3.10+</li>
+<li>IDE：此以 VS Code 為例，並會使用 VS Code 的「原始檔控制」（圖形化的 Git 操作）代替所有 CLI 指令</li>
+<li>到 GitHub 中，點擊右上角的 <code>+</code>，並點 <code>New repository</code><ul>
+<li><code>Name</code> 和 <code>Description</code> 可隨便填</li>
+<li><code>Choose visibility</code> 無論設定什麼權限都可以，但它會直接影響到別人看不看得到你這個 Repository（倉庫，下簡稱 Repo）</li>
+<li>關掉 <code>Add README</code></li>
+<li>點擊 <code>Create repository</code></li>
+</ul>
+</li>
+<li>建立一個資料夾，名稱任意，並創建以下檔案：</li>
+</ol>
+<ul>
+<li><code>main.py</code>：主要 Bot 程式</li>
+<li><code>.env</code>：放置 Token 專用</li>
+<li><code>config.json</code>：用來放置所有 Discord 頻道 ID</li>
+<li><code>.gitignore</code>：放置所有不想被上傳到 Git 的檔案</li>
+<li><code>README.md</code>：與其他人說明 Bot 的安裝與使用方式等（若 <code>Visibility</code> 為 <code>Private</code>，此項可省略）</li>
+<li><code>requirements.txt</code>：所有 Python 檔會用到的第三方套件（即需要 <code>pip install &lt;package&gt;</code> 的東西）</li>
+</ul>
+<ol>
+<li>在 VS Code 中，在剛才的資料夾底下建立一個 Venv，這是 Python 自帶的虛擬環境，讓每個專案之間用的套件或 Python 版本不會互相打架<ol>
+<li>用 VS Code 打開剛才的 <code>main.py</code></li>
+<li>點擊右下角寫著 Python 版本的數字</li>
+<li>點擊 <code>建立虛擬環境…</code> &rarr; <code>Venv</code> &rarr; <code>Python 3.X</code></li>
+</ol>
+</li>
+</ol>
+<h2 id="檔案內容"><a href="#檔案內容" class="headerlink" title="檔案內容"></a>檔案內容</h2><h3 id="env"><a href="#env" class="headerlink" title=".env"></a>.env</h3><p>貼上先前複製的 Bot Token 到 <code>&lt;Token&gt;</code>（<code>&lt;</code> 和 <code>&gt;</code> 也不用留）</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs env">TOKEN=&lt;Token&gt;<br></code></pre></td></tr></table></figure>
+<p>特別注意，ENV 檔不能加任何引號或空格，否則會讀不到</p>
+<h3 id="config-json"><a href="#config-json" class="headerlink" title="config.json"></a>config.json</h3><p>為了讓程式好修改，我們會習慣將 Discord 頻道的 ID 都放到這裡</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs json"><span class="hljs-punctuation">&#123;</span><br>  <span class="hljs-attr">&quot;CHANNEL1&quot;</span><span class="hljs-punctuation">:</span> ID1<span class="hljs-punctuation">,</span><br>  <span class="hljs-attr">&quot;CHANNEL2&quot;</span><span class="hljs-punctuation">:</span> ID2<br><span class="hljs-punctuation">&#125;</span><br></code></pre></td></tr></table></figure>
+<p>不一定要將所有頻道都放入，只要放 Bot 會需要特別控制的頻道（如指令區、特別管理的頻道等）</p>
+<p>一般來說，寫進此檔的頻道名稱可以自己取（不用和 DC 一樣），但習慣上會用全大寫表示常數（不改變值的變數）；ID 則固定使用整數型別存放（即不用加引號）</p>
+<p>要取得頻道 ID，請在 DC 的設定 <code>進階</code> &rarr; <code>開發者模式</code> 開啟選項，之後直接對著想要取值的頻道點擊右鍵，即可找到複製頻道 ID 的選項</p>
+<h3 id="gitignore"><a href="#gitignore" class="headerlink" title=".gitignore"></a>.gitignore</h3><p>放這裡的檔案都不會被上傳到 Git，除了執行時可能產生的一些不需要的文件以外，也要放一些敏感資料，例如我們先前提過的 <code>.env</code>，以免把重要資料公開給大家知道，即使你的 Repo 設為 <code>Private</code>，這一步仍對資安而言很重要！</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><code class="hljs gitignore"># Environment/Channel ID<br>.env<br>config.json<br><br># Venv<br>venv/<br>.venv/<br>env/<br><br># Python<br>__pycache__/<br>*.pyc<br><br># Logs<br>*.log<br>logs/<br><br># Build<br>build/<br>dist/<br>*.egg-info/<br><br># Tests<br>.pytest_cache/<br>.coverage<br>htmlcov/<br><br># IDE/OS<br>.DS_Store<br>Thumbs.db<br>.vscode/<br>.idea/<br></code></pre></td></tr></table></figure>
+<h3 id="README-md"><a href="#README-md" class="headerlink" title="README.md"></a>README.md</h3><p>這會顯示在你 GitHub 專案首頁，通常會放介紹、安裝方式、功能說明等，依自己需求撰寫即可</p>
+<p>通常會提及 <code>config.json</code> 和 <code>.env</code> 的建置，因為它們已被放入 <code>.gitignore</code>，因此需額外說明</p>
+<h3 id="requirements-txt"><a href="#requirements-txt" class="headerlink" title="requirements.txt"></a>requirements.txt</h3><p>這是 Python Venv 安裝後，會需要安裝的套件，有了這個檔案，任何使用者都可以快速建立好一模一樣的環境</p>
+<p>版本號不是必填，如果沒有寫，它會自動安裝最新版，不過為了穩定性，建議還是寫一個下限版本，如下：</p>
+<figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs txt">discord.py&gt;=2.4.0<br>python-dotenv&gt;=1.0.0<br>flask&gt;=3.0.0<br></code></pre></td></tr></table></figure>
+<p>寫好這個檔案後，除了給別人看以外，我們自己也得先執行一次，來安裝等等會用到的套件</p>
+<p>記得執行指令時，要在這個專案底下的 Terminal 才能找到 <code>requirements.txt</code></p>
+<p>在 VS Code 中，可以點擊左上角 三條線 &rarr; <code>終端機</code> &rarr; <code>新增終端機</code> 來打開 Terminal，並且可以使用 <code>cd &lt;資料夾路徑&gt;</code> 切換到專案所在的目錄</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">pip install -r requirements.txt<br></code></pre></td></tr></table></figure>
+<h2 id="推到-GitHub-上"><a href="#推到-GitHub-上" class="headerlink" title="推到 GitHub 上"></a>推到 GitHub 上</h2><p>完成了剛才的工作後，我們就可以先來提交第一次的 GitHub 推送</p>
+<ol>
+<li>回到先前創建的 Repo 頁，並找到下圖連結，點擊複製鈕</li>
+</ol>
+<img src="/img/github_link.png" srcset="/img/loading.gif" lazyload class="">
+<ol>
+<li>回到專案所在的目錄底下，輸入以下指令：</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash">git init<br>git branch -M main<br>git remote add origin &lt;剛才複製的 Repo 連結&gt;<br></code></pre></td></tr></table></figure>
+<ol>
+<li>到 VS Code，點擊右側欄的「原始檔控制」（或使用 <kbd>Ctrl</kbd> <kbd>Shift</kbd> <kbd>G</kbd>），點擊「變更」字樣右邊的加號鈕，此步相當於以下指令：</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">git add .<br></code></pre></td></tr></table></figure>
+<ol>
+<li>在上方訊息欄中，輸入任意訊息（例如 <code>first commit</code>），這個訊息叫作「commit message」，是為了方便辨識每次的推送，此為必填項，填完後再點擊下方 <code>提交</code>，此步相當於以下指令：</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">git commit -m <span class="hljs-string">&quot;first commit&quot;</span><br></code></pre></td></tr></table></figure>
+<ol>
+<li><code>提交</code> 點完後，按鈕會變為 <code>發佈 Branch</code>（若已建立追踪，即不是第一次提交，則按鈕會叫作 <code>同步變更</code>），點擊它，即可完成上傳，此步相當於以下指令：</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">git push -u origin main <span class="hljs-comment"># 第一次推送</span><br>git push <span class="hljs-comment"># 已建立追踪後推送</span><br></code></pre></td></tr></table></figure>
+<h2 id="主程式"><a href="#主程式" class="headerlink" title="主程式"></a>主程式</h2><p>這一章裡，我會把整個程式拆成好幾個不同步分來說，不過對程式檔本身而言，是有照順序的，因此可以放心從上到下一步步跟著操作</p>
+<h3 id="匯入"><a href="#匯入" class="headerlink" title="匯入"></a>匯入</h3><p>這裡是整個架構會用到的東西，如果你程式裡還會用到其他套件，記得一起放入這一區塊中（第三方套件也要記得一併放入 <code>requirements.txt</code> 中）</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> json<br><span class="hljs-keyword">import</span> os<br><span class="hljs-keyword">from</span> pathlib <span class="hljs-keyword">import</span> Path<br><br><span class="hljs-keyword">import</span> discord<br><span class="hljs-keyword">from</span> discord.ext <span class="hljs-keyword">import</span> commands<br><span class="hljs-keyword">from</span> dotenv <span class="hljs-keyword">import</span> load_dotenv<br><span class="hljs-keyword">from</span> flask <span class="hljs-keyword">import</span> Flask<br><span class="hljs-keyword">from</span> threading <span class="hljs-keyword">import</span> Thread<br></code></pre></td></tr></table></figure>
+<h3 id="啟動迷你網頁"><a href="#啟動迷你網頁" class="headerlink" title="啟動迷你網頁"></a>啟動迷你網頁</h3><p>雖然在本機跑程式時，這裡的功能跟本用不上，不過它其實是為了後面將 Bot 跑在線上的托管平台時，能持續保持上線的關鍵之一</p>
+<p>其原理是透過創一個迷你網頁，加上自動訪問網頁的機器人，讓網頁保持活躍，使 <code>main.py</code> 能夠一直跑下去，從而讓 Bot 本身也保持著上線</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-comment"># 啟動迷你網頁，讓 Render 持續上線</span><br>app = Flask(__name__)<br><br><span class="hljs-meta">@app.route(<span class="hljs-params"><span class="hljs-string">&#x27;/&#x27;</span></span>)</span><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">home</span>():<br>    <span class="hljs-keyword">return</span> <span class="hljs-string">&quot;I&#x27;m alive!&quot;</span><br><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">run</span>():<br>    app.run(host=<span class="hljs-string">&#x27;0.0.0.0&#x27;</span>, port=<span class="hljs-number">8080</span>)<br><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">keep_alive</span>():<br>    t = Thread(target=run)<br>    t.daemon = <span class="hljs-literal">True</span><br>    t.start()<br></code></pre></td></tr></table></figure>
+<h3 id="讀取-config-json-和-env"><a href="#讀取-config-json-和-env" class="headerlink" title="讀取 config.json 和 .env"></a>讀取 <code>config.json</code> 和 <code>.env</code></h3><p>這裡為了穩定性，我選擇使用 <code>pathlib.Path</code> 來設定目前所在的位置（<code>BASE_DIR</code>）</p>
+<p>可能有人不理解為什麼不用相對路徑寫，但其實是因為在不同操作系統間，路徑可能都會有些微差異，尤其對使用 Windows 的人而言，大多托管平台都是 Linux，路徑上會有些差異，因此使用「變數湊成的絕對路徑」才是一個更穩定的方式</p>
+<p>而讀取 <code>config.json</code> 和 <code>.env</code> 的程式雖然看起來有點複雜，不過其實這樣的寫法都是為了在各操作系統間以及本機和線上托管平台的環境差異而存在</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><code class="hljs python">BASE_DIR = Path(__file__).resolve().parent<br><br><span class="hljs-comment"># 讀取 config.json</span><br><span class="hljs-keyword">if</span> os.path.exists(<span class="hljs-string">&#x27;/etc/secrets/config.json&#x27;</span>):<br>    CONFIG_PATH = Path(<span class="hljs-string">&#x27;/etc/secrets/config.json&#x27;</span>)<br><span class="hljs-keyword">elif</span> (BASE_DIR / <span class="hljs-string">&#x27;config.json&#x27;</span>).exists():<br>    CONFIG_PATH = BASE_DIR / <span class="hljs-string">&#x27;config.json&#x27;</span><br><span class="hljs-keyword">else</span>:<br>    CONFIG_PATH = Path(<span class="hljs-string">&#x27;config.json&#x27;</span>)<br><br><span class="hljs-keyword">try</span>:<br>    <span class="hljs-keyword">with</span> CONFIG_PATH.<span class="hljs-built_in">open</span>(<span class="hljs-string">&#x27;r&#x27;</span>, encoding=<span class="hljs-string">&#x27;utf-8&#x27;</span>) <span class="hljs-keyword">as</span> f:<br>        config = json.load(f)<br>    <span class="hljs-built_in">print</span>(<span class="hljs-string">f&#x27;成功讀取設定檔：<span class="hljs-subst">&#123;CONFIG_PATH&#125;</span>&#x27;</span>)<br><span class="hljs-keyword">except</span> Exception <span class="hljs-keyword">as</span> e:<br>    <span class="hljs-built_in">print</span>(<span class="hljs-string">f&#x27;讀取設定檔失敗！路徑：<span class="hljs-subst">&#123;CONFIG_PATH&#125;</span>，錯誤：<span class="hljs-subst">&#123;e&#125;</span>&#x27;</span>)<br><br><span class="hljs-comment"># 讀取 .env</span><br>load_dotenv()<br>TOKEN = os.getenv(<span class="hljs-string">&#x27;TOKEN&#x27;</span>)<br></code></pre></td></tr></table></figure>
+<h3 id="設定-intents"><a href="#設定-intents" class="headerlink" title="設定 intents"></a>設定 intents</h3><p>這個設定是為了控制機器人「能夠收到哪些類型的事件」，若沒有顯示開啟，機器人將不能讀取或接收到那類型的事件</p>
+<p>另外，在 <code>command_prefix=&#39;!&#39;</code> 的部分，可以將 <code>!</code> 改為任何想要的指令前綴，不過這部分不影響斜線指令（且勿將它設為斜線）</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs python">intents = discord.Intents.default()<br>intents.guilds = <span class="hljs-literal">True</span><br>intents.其他需要接收的事件 = <span class="hljs-literal">True</span><br><br>bot = commands.Bot(command_prefix=<span class="hljs-string">&#x27;!&#x27;</span>, intents=intents)<br></code></pre></td></tr></table></figure>
+
+    <div class="fold">
+      <div class="fold-title fold-info collapsed" data-toggle="collapse" href="#collapse-81ad9a70" role="button" aria-expanded="false" aria-controls="collapse-81ad9a70">
+        <div class="fold-arrow">▶</div> 所有事件一覽表
+      </div>
+      <div class="fold-collapse collapse" id="collapse-81ad9a70">
+        <div class="fold-content">
+          <div class="table-container"> <table> <thead> <tr> <th style="text-align:center">事件（Intent）名稱</th> <th style="text-align:center">事件簡介</th> <th style="text-align:center">是否特權</th> </tr> </thead> <tbody> <tr> <td style="text-align:center"><code>guilds</code></td> <td style="text-align:center">伺服器相關事件（加入、刪除、更新）</td> <td style="text-align:center">否</td> </tr> <tr> <td style="text-align:center"><code>members</code></td> <td style="text-align:center">伺服器成員事件（加入、離開、更新、成員列表）</td> <td style="text-align:center">是</td> </tr> <tr> <td style="text-align:center"><code>bans</code></td> <td style="text-align:center">伺服器封禁／解除封禁事件</td> <td style="text-align:center">否</td> </tr> <tr> <td style="text-align:center"><code>emojis_and_stickers</code></td> <td style="text-align:center">伺服器表情符號與貼圖事件</td> <td style="text-align:center">否</td> </tr> <tr> <td style="text-align:center"><code>integrations</code></td> <td style="text-align:center">伺服器整合事件（如 Twitch、YouTube 整合）</td> <td style="text-align:center">否</td> </tr> <tr> <td style="text-align:center"><code>webhooks</code></td> <td style="text-align:center">webhook 更新事件</td> <td style="text-align:center">否</td> </tr> <tr> <td style="text-align:center"><code>invites</code></td> <td style="text-align:center">邀請建立／刪除事件</td> <td style="text-align:center">否</td> </tr> <tr> <td style="text-align:center"><code>voice_states</code></td> <td style="text-align:center">語音頻道狀態事件（成員加入／離開語音、靜音、說話狀態）</td> <td style="text-align:center">否</td> </tr> <tr> <td style="text-align:center"><code>presences</code></td> <td style="text-align:center">成員狀態事件（上線／離線／遊戲狀態）</td> <td style="text-align:center">是</td> </tr> <tr> <td style="text-align:center"><code>messages</code></td> <td style="text-align:center">訊息建立／刪除／編輯事件</td> <td style="text-align:center">否</td> </tr> <tr> <td style="text-align:center"><code>message_content</code></td> <td style="text-align:center">讀取訊息文字</td> <td style="text-align:center">是</td> </tr> <tr> <td style="text-align:center"><code>reactions</code></td> <td style="text-align:center">訊息反應事件（新增／移除表情反應）</td> <td style="text-align:center">否</td> </tr> <tr> <td style="text-align:center"><code>typing</code></td> <td style="text-align:center">使用者正在輸入事件</td> <td style="text-align:center">否</td> </tr> </tbody> </table> </div> <blockquote> <p><strong>是否特權</strong>指的是需要到 <a target="_blank" rel="noopener" href="https://discord.com/developers/applications">Discord Dev</a> 中的 <code>Bot</code> &rarr; <code>Gateway Intents</code> 特別開啟才能接收</p> </blockquote> 
+        </div>
+      </div>
+    </div>
+<h3 id="主要程式"><a href="#主要程式" class="headerlink" title="主要程式"></a>主要程式</h3><p>先說，這個部分機乎不可能全講，因為真的多到爆炸，因此這裡只會示範幾個基本的事件和指令，至於具體要實現什麼功能，可參考<a target="_blank" rel="noopener" href="https://discordpy.readthedocs.io/en/stable/index.html">官方文檔</a>，或者直接問 AI</p>
+<p>這裡要特別注意，我們如果要取頻道 ID，請透過 <code>config[&#39;CHANNEL_ID&#39;]</code></p>
+<p>程式中的函式主要結構是以一個裝飾器加上 <code>async def</code> 來寫，這種函數的名稱必須按照 Discord.py API 規定命名，才能被正確觸發；而操作的部分，會使用 <code>await</code> 來執行</p>
+<p>Discord.py 框架中，還有一個非常方便的寫法，也就是它會自動把引數透過類型註示（Type Hint）進行轉換，非常方便</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-comment"># 機器人上線事件</span><br><span class="hljs-meta">@bot.event</span><br><span class="hljs-keyword">async</span> <span class="hljs-keyword">def</span> <span class="hljs-title function_">on_ready</span>():<br>    channel = bot.get_channel(config[<span class="hljs-string">&#x27;UPDATE&#x27;</span>])<br>    <span class="hljs-keyword">try</span>:<br>        synced = <span class="hljs-keyword">await</span> bot.tree.sync() <span class="hljs-comment"># 自動同步指令（程式與 Bot 間的同步）</span><br>        <span class="hljs-keyword">if</span> channel:<br>            <span class="hljs-built_in">print</span>(<span class="hljs-string">f&#x27;自動同步成功！同步了 <span class="hljs-subst">&#123;<span class="hljs-built_in">len</span>(synced)&#125;</span> 條指令！&#x27;</span>) <span class="hljs-comment"># 顯示在終端機（除錯用）</span><br>    <span class="hljs-keyword">except</span> Exception <span class="hljs-keyword">as</span> e:<br>        <span class="hljs-keyword">if</span> channel:<br>            <span class="hljs-built_in">print</span>(<span class="hljs-string">f&#x27;自動同步失敗：<span class="hljs-subst">&#123;e&#125;</span>&#x27;</span>)<br>    <span class="hljs-keyword">finally</span>:<br>        update_member_count_loop.start()<br><br><span class="hljs-comment"># 成員加入／離開事件</span><br><span class="hljs-meta">@bot.event</span><br><span class="hljs-keyword">async</span> <span class="hljs-keyword">def</span> <span class="hljs-title function_">on_member_join</span>(<span class="hljs-params">member</span>):<br>    channel = bot.get_channel(config[<span class="hljs-string">&#x27;JOIN&#x27;</span>])<br>    <span class="hljs-keyword">await</span> channel.send(<span class="hljs-string">f&#x27;**<span class="hljs-subst">&#123;member&#125;</span>** 加入了伺服器！&#x27;</span>) <span class="hljs-comment"># 在指定頻道中傳送歡迎訊息</span><br><span class="hljs-meta">@bot.event</span><br><span class="hljs-keyword">async</span> <span class="hljs-keyword">def</span> <span class="hljs-title function_">on_member_remove</span>(<span class="hljs-params">member</span>):<br>    channel = bot.get_channel(config[<span class="hljs-string">&#x27;LEAVE&#x27;</span>])<br>    <span class="hljs-keyword">await</span> channel.send(<span class="hljs-string">f&#x27;**<span class="hljs-subst">&#123;member&#125;</span>** 離開了伺服器！&#x27;</span>) <span class="hljs-comment"># 在指定頻道中傳送離開訊息</span><br><br><span class="hljs-comment"># 斜線指令</span><br><span class="hljs-meta">@bot.hybrid_command()</span><br><span class="hljs-keyword">async</span> <span class="hljs-keyword">def</span> <span class="hljs-title function_">greet</span>(<span class="hljs-params">ctx</span>): <span class="hljs-comment"># ctx 代表指令的上下文，包含了許多有用的資訊</span><br>    <span class="hljs-keyword">await</span> ctx.send(<span class="hljs-string">f&#x27;你好，<span class="hljs-subst">&#123;ctx.author.mention&#125;</span>！&#x27;</span>) <span class="hljs-comment"># ctx.author.mention 會提及發送指令的使用者</span><br><br><span class="hljs-meta">@bot.hybrid_command()</span><br><span class="hljs-keyword">async</span> <span class="hljs-keyword">def</span> <span class="hljs-title function_">add</span>(<span class="hljs-params">ctx, a: <span class="hljs-built_in">int</span>, b: <span class="hljs-built_in">int</span></span>): <span class="hljs-comment"># 參數 a 和 b 會自動轉成整數</span><br>    <span class="hljs-string">&quot;&quot;&quot;計算兩數字和並回傳結果&quot;&quot;&quot;</span> <span class="hljs-comment"># 自動顯示在 DC 的指令說明中</span><br>    result = a + b<br>    <span class="hljs-keyword">await</span> ctx.send(<span class="hljs-string">f&#x27;<span class="hljs-subst">&#123;a&#125;</span> + <span class="hljs-subst">&#123;b&#125;</span> = <span class="hljs-subst">&#123;result&#125;</span>&#x27;</span>) <span class="hljs-comment"># 回傳計算結果</span><br></code></pre></td></tr></table></figure>
+<h3 id="啟動-Bot"><a href="#啟動-Bot" class="headerlink" title="啟動 Bot"></a>啟動 Bot</h3><p>最後，加上這一段，讓 Bot 能夠跑起來</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-comment"># 啟動 Bot</span><br><span class="hljs-keyword">if</span> __name__ == <span class="hljs-string">&#x27;__main__&#x27;</span>:<br>    <span class="hljs-keyword">if</span> TOKEN:<br>        keep_alive()<br>        bot.run(TOKEN)<br>    <span class="hljs-keyword">else</span>:<br>        <span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;錯誤！找不到 TOKEN！&#x27;</span>)<br></code></pre></td></tr></table></figure>
+<p>完成整個程式碼後，我們可以先在自己電腦上測試看看，執行 <code>main.py</code> 後，Bot 是否有順利上線，並且能夠正常回應指令，一切都沒問題後，我們記得把它推上 GitHub（<code>原始檔控制</code> &rarr; <code>變更</code> 右邊的 <code>+</code> &rarr; 輸入 commit message &rarr; <code>提交</code> &rarr; <code>同步變更</code>，或用以下指令）</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash">git add .<br>git commit -m <span class="hljs-string">&quot;寫自己的 commit message 在這個引號中&quot;</span><br>git push<br></code></pre></td></tr></table></figure>
+<h2 id="線上托管"><a href="#線上托管" class="headerlink" title="線上托管"></a>線上托管</h2><p>在自己電腦上執行 <code>main.py</code> 後，理論上 Bot 就會上線，不過為了讓它能夠 24 小時都在線上，我們需要把它放到線上的托管平台跑</p>
+<ol>
+<li>到 <a target="_blank" rel="noopener" href="https://dashboard.render.com/login">Render</a>，使用 GitHub 登入</li>
+<li>點擊 <code>Create new project</code> &rarr; <code>New service</code> &rarr; <code>Web Service</code> &rarr; Discord Bot 的 Repo</li>
+<li>進行以下設定：<ul>
+<li><code>Language</code>：選擇 <code>Python3</code>（應為預設值）</li>
+<li><code>Branch</code>：選擇 <code>main</code>（應為預設值）</li>
+<li><code>Build Command</code>：<code>pip install -r requirements.txt</code>（應為預設值）</li>
+<li><code>Start Command</code>：輸入 <code>python main.py</code></li>
+<li><code>Instance Type</code>：選擇免費的 <code>Free</code></li>
+<li><code>Environment Variables</code>：名稱填入 <code>TOKEN</code>，值則貼上你的 Bot Token</li>
+<li><code>Advanced</code><ul>
+<li><code>Select Files</code>：點擊 <code>Add Secret File</code>，名稱填入 <code>config.json</code>，內容則貼上 <code>config.json</code> 內容</li>
+<li><code>Health Check Path</code>：填入 <code>/</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>點擊 <code>Create Web Service</code>，它就會自動開始部署，並且未來若有編輯任何程式並推送到 GitHub 上，它也會自動重新部署；若希望手動重新部署，可點擊 <code>Manual Deploy</code> &rarr; <code>Clear build cache &amp; deploy</code></li>
+<li>如下圖，將 Render 連結複製起來</li>
+</ol>
+<img src="/img/render_url.png" srcset="/img/loading.gif" lazyload class="">
+<h2 id="讓-Bot-24-小時上線"><a href="#讓-Bot-24-小時上線" class="headerlink" title="讓 Bot 24 小時上線"></a>讓 Bot 24 小時上線</h2><p>雖然我們已把 Bot 放到 Render 上，但免費方案在 15 分鐘內若沒有任何流量，它就會自動休眠，Bot 也就離線了</p>
+<p>為了讓它持續有流量，我們可以設定一個機器人，每五分鐘就定期訪問一次 Render 網址，讓它保持活躍，這也正是我們前面寫的迷你網頁的用途</p>
+<ol>
+<li>到 <a target="_blank" rel="noopener" href="https://dashboard.uptimerobot.com/login?ref=header">UptimeRobot</a>，使用 GitHub 登入</li>
+<li>點擊 <code>New</code></li>
+<li>在 <code>URL to monitor</code> 中，貼上剛才複製的 Render 網址</li>
+<li>其他設定保持預設，點擊 <code>Create Monitor</code>，一切應該就大功告成了！</li>
+</ol>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E7%AD%86%E8%A8%98%E8%88%87%E6%95%99%E5%AD%B8/" class="category-chain-item">筆記與教學</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/%E7%AD%86%E8%A8%98%E8%88%87%E6%95%99%E5%AD%B8/%E7%A8%8B%E5%BC%8F/" class="category-chain-item">程式</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/%E7%AD%86%E8%A8%98%E8%88%87%E6%95%99%E5%AD%B8/%E7%A8%8B%E5%BC%8F/%E5%B0%88%E6%A1%88/" class="category-chain-item">專案</a>
+  
+  
+
+  
+
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/%E6%95%99%E5%AD%B8/" class="print-no-link">#教學</a>
+      
+        <a href="/tags/%E7%A8%8B%E5%BC%8F/" class="print-no-link">#程式</a>
+      
+        <a href="/tags/Python/" class="print-no-link">#Python</a>
+      
+        <a href="/tags/Discord-Bot/" class="print-no-link">#Discord Bot</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>從零開始用 Python 寫 Discord 機器人 + 免費 24 小時在線教學</div>
+      <div>https://chuen666666.github.io/從零開始用Python寫Discord機器人+免費24小時在線教學/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>淳</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>發布於</div>
+          <div>2026-01-03 22:56</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>更新於</div>
+          <div>2026-03-02 00:01</div>
+        </div>
+      
+      
+        <div class="license-meta-item">
+          <div>許可協議</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 姓名標示">
+                    <i class="iconfont icon-cc-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/%E9%99%BD%E6%98%8E%E9%AB%98%E4%B8%AD112%E5%B9%B4AI%E7%8F%ADPython%E4%B8%8A%E6%A9%9F%E8%80%83%E2%80%94%E2%80%94%E9%A1%8C%E7%9B%AE-%E8%A9%B3%E8%A7%A3/" title="陽明高中 112 年 AI 班 Python 上機考——題目 + 詳解">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">陽明高中 112 年 AI 班 Python 上機考——題目 + 詳解</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/%E5%AD%B8%E6%B8%AC%E6%95%B8A%E5%85%AC%E5%BC%8F%E7%AD%86%E8%A8%98/" title="學測數 A 公式筆記">
+                        <span class="hidden-mobile">學測數 A 公式筆記</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+  
+  
+    <article id="comments" lazyload>
+      
+    <div id="giscus" class="giscus"></div>
+    <script type="text/javascript">
+      Fluid.utils.loadComments('#giscus', function() {
+        var options = {"repo":"Chuen666666/Chuen666666.github.io","repo-id":"R_kgDOPtWSPw","category":"General","category-id":"DIC_kwDOPtWSP84C0IRu","mapping":"pathname","reactions-enabled":1,"emit-metadata":0,"input-position":"top","theme-light":"light","theme-dark":"dark","lang":"zh-TW"};
+        var attributes = {};
+        for (let option in options) {
+          if (!option.startsWith('theme-')) {
+            var key = option.startsWith('data-') ? option : 'data-' + option;
+            attributes[key] = options[option];
+          }
+        }
+        var light = 'light';
+        var dark = 'dark';
+        window.GiscusThemeLight = light;
+        window.GiscusThemeDark = dark;
+        attributes['data-theme'] = document.documentElement.getAttribute('data-user-color-scheme') === 'dark' ? dark : light;
+        for (let attribute in attributes) {
+          var value = attributes[attribute];
+          if (value === undefined || value === null || value === '') {
+            delete attributes[attribute];
+          }
+        }
+        var s = document.createElement('script');
+        s.setAttribute('src', 'https://giscus.app/client.js');
+        s.setAttribute('crossorigin', 'anonymous');
+        for (let attribute in attributes) {
+          s.setAttribute(attribute, attributes[attribute]);
+        }
+        var ss = document.getElementsByTagName('script');
+        var e = ss.length > 0 ? ss[ss.length - 1] : document.head || document.documentElement;
+        e.parentNode.insertBefore(s, e.nextSibling);
+      });
+    </script>
+    <noscript>Please enable JavaScript to view the comments</noscript>
+
+
+    </article>
+  
+
+
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜尋</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">關鍵字</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <span>© 2025 淳</span> <br> <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+    <div class="statistics">
+  
+  
+
+  
+    
+      <span id="busuanzi_container_site_pv" style="display: none">
+        總訪問量 
+        <span id="busuanzi_value_site_pv"></span>
+         次
+      </span>
+    
+    
+      <span id="busuanzi_container_site_uv" style="display: none">
+        總訪客數 
+        <span id="busuanzi_value_site_uv"></span>
+         人
+      </span>
+    
+    
+
+  
+
+</div>
+
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  var relativeDate = function() {
+    var updatedTime = document.getElementById('updated-time');
+    if (updatedTime) {
+      var text = updatedTime.textContent;
+      var reg = /\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(?:Z|[+-]\d{2}:\d{2})/;
+      var matchs = text.match(reg);
+      if (matchs) {
+        var relativeTime = moment(matchs[0]).fromNow();
+        updatedTime.textContent = text.replace(reg, relativeTime);
+      }
+      updatedTime.style.display = '';
+    }
+  };
+  Fluid.utils.createScript('https://lib.baomitu.com/moment.js/2.29.4/moment.min.js', function() {
+    if (!'zh-tw'.startsWith('en')) {
+      Fluid.utils.createScript('https://lib.baomitu.com/moment.js/2.29.4/locale/zh-tw.min.js', function() {
+        relativeDate();
+      });
+    } else {
+      relativeDate();
+    }
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/5.0.0/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/js/local-search.js" ></script>
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+
+
+  
+<script src="/js/custom.js"></script>
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">部落格在允許 JavaScript 執行的環境下瀏覽效果更佳</div>
+  </noscript>
+</body>
+</html>

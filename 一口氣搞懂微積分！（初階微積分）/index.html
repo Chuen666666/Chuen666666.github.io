@@ -1,0 +1,1336 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-TW" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/avatar.jpg">
+  <link rel="icon" href="/img/avatar.jpg">
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="">
+  <meta name="author" content="淳">
+  <meta name="keywords" content="Python, 程式, 專案, 筆記, 教學, 心得, 考證照, 比賽, 競程, 淳, 淳宇, Chuen666666, 淳宇淳蠢">
+  
+    <meta name="description" content="一口氣讓你理解高中微積分在幹嘛，並做一些延伸">
+<meta property="og:type" content="article">
+<meta property="og:title" content="一口氣搞懂微積分！（初階微積分）">
+<meta property="og:url" content="https://chuen666666.github.io/%E4%B8%80%E5%8F%A3%E6%B0%A3%E6%90%9E%E6%87%82%E5%BE%AE%E7%A9%8D%E5%88%86%EF%BC%81%EF%BC%88%E5%88%9D%E9%9A%8E%E5%BE%AE%E7%A9%8D%E5%88%86%EF%BC%89/index.html">
+<meta property="og:site_name" content="淳の神奇小網站">
+<meta property="og:description" content="一口氣讓你理解高中微積分在幹嘛，並做一些延伸">
+<meta property="og:locale" content="zh_TW">
+<meta property="og:image" content="https://chuen666666.github.io/img/synthetic_division.png">
+<meta property="og:image" content="https://chuen666666.github.io/img/extremum.png">
+<meta property="og:image" content="https://chuen666666.github.io/img/turning_point.png">
+<meta property="og:image" content="https://chuen666666.github.io/img/no_extremum.png">
+<meta property="og:image" content="https://chuen666666.github.io/img/no_turning_point.png">
+<meta property="og:image" content="https://chuen666666.github.io/img/inverse_function.jpg">
+<meta property="og:image" content="https://chuen666666.github.io/img/integral.jpg">
+<meta property="og:image" content="https://chuen666666.github.io/img/Rotationskoerper_animation.gif">
+<meta property="article:published_time" content="2026-02-18T12:56:25.000Z">
+<meta property="article:modified_time" content="2026-03-01T16:01:58.714Z">
+<meta property="article:author" content="淳">
+<meta property="article:tag" content="微分">
+<meta property="article:tag" content="微積分">
+<meta property="article:tag" content="教學">
+<meta property="article:tag" content="數學">
+<meta property="article:tag" content="極限">
+<meta property="article:tag" content="積分">
+<meta property="article:tag" content="筆記">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://chuen666666.github.io/img/synthetic_division.png">
+  
+  
+    <meta name="referrer" content="no-referrer-when-downgrade">
+  
+  
+  <title>一口氣搞懂微積分！（初階微積分） - 淳の神奇小網站</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1749284_5i9bdhy70f8.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1735173_0756783m6t5.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+  
+<link rel="stylesheet" href="/css/custom.css">
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"chuen666666.github.io","root":"/","version":"1.9.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3","placement":"left","visible":"hover","icon":"❡"},"progressbar":{"enable":true,"height_px":3,"color":null,"options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"left","headingSelector":"h1,h2,h3","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+  
+<meta name="generator" content="Hexo 8.1.1"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>淳の網站</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首頁</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>歸檔</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分類</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>標籤</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>關於</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/links/" target="_self">
+                <i class="iconfont icon-link-fill"></i>
+                <span>友站</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/default.png') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="一口氣搞懂微積分！（初階微積分）"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-author" aria-hidden="true"></i>
+        淳
+      </span>
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2026-02-18 20:56" pubdate>
+          2026-02-18 20:56
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          980 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          9 分鐘
+        
+      </span>
+    
+
+    
+    
+      
+        <span id="busuanzi_container_page_pv" style="display: none">
+          <i class="iconfont icon-eye" aria-hidden="true"></i>
+          <span id="busuanzi_value_page_pv"></span> 次
+        </span>
+        
+
+      
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="padding-left: 2rem; margin-right: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目錄</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">一口氣搞懂微積分！（初階微積分）</h1>
+            
+              <p id="updated-time" class="note note-light" style="display: none">
+                
+                  
+                    本文最後更新於：2026-03-02T00:01:58+08:00
+                  
+                  
+
+                
+              </p>
+            
+            
+              <div class="markdown-body">
+                
+                <p>在這篇文章中，我會以新手都能聽懂的方式，來講解基礎高中微積分，並且再將它向外延伸一些，分享一些好用的技巧和有趣的題目，讓大家能夠透過這篇文章來入門微積分的世界。</p>
+<p>如果有哪裡我寫得太難懂，或一直搞不懂的情況，歡迎主動私訊我詢問！</p>
+<div class="note note-success">
+            <p>本篇筆記公式較多，手機瀏覽易跑版<br>建議使用電腦觀看以獲得最佳閱讀體驗</p> 
+          </div>
+<div class="note note-primary">
+            <p>靈感與部分資料取自微積分課程、高三上數學與 YouTube，若有侵權之疑，請主動與我聯繫！</p> 
+          </div>
+<h2 id="極限"><a href="#極限" class="headerlink" title="極限"></a>極限</h2><h3 id="意義"><a href="#意義" class="headerlink" title="意義"></a>意義</h3><p>「極限」指的是一個「<strong>無限逼近的過程</strong>」，例如當 $x$ 無限接近 $a$ 時，可以寫作 $x \to a$。需要特別注意的是，當 $x \to a$ 時，$x \ne a$。</p>
+<h3 id="計算"><a href="#計算" class="headerlink" title="計算"></a>計算</h3><p>當我們在計算一個函數 $f(x)$ 在 $x \to a$ 時，我們可以寫成</p>
+
+$$
+\lim_{x \to a}f(x)
+$$
+
+<p>計算時，我們可以試著先將 $a$ 直接代入 $f(x)$，此時可能會產生三種結果：</p>
+<ul>
+<li>$\frac{\mathbb R}{0}$：不存在（Does not exist, D.N.E., $\nexists$）</li>
+<li>$\frac{\mathbb R}{\mathbb R}$：即極限值的結果</li>
+<li>$\frac 00$：不定形式（Indeterminate）</li>
+</ul>
+<p>前兩種都好理解，但何為不定形式？不定形式指的是「還不確定它是什麼」，也就是說還要做進一步的處理，才能得到其值。在做極限時，一共有七種不定形式：</p>
+<ul>
+<li>$\frac 00$</li>
+<li>$\pm\frac{\infty}{\infty}$</li>
+<li>$\infty-\infty$</li>
+<li>$0\cdot\infty$</li>
+<li>$0^0$</li>
+<li>$1^\infty$</li>
+<li>$\infty^0$</li>
+</ul>
+<p>那麼，什麼叫「進一步的處理」？其實在遇到不定形式時，我們都能夠用某種方式，將它轉換為 $\frac 00$ 或 $\pm\frac\infty\infty$ 這兩種不定形式，則此時我們就知道，原式的分子和分母必存在一個公因式可以進行約分。</p>
+<p>約分算是其中一種處理方式，而另一種則是使用<strong>羅必達法則</strong>來處理：</p>
+<a class="btn" href="/新手都能看懂的羅必達法則"  title="羅必達法則教學文章" target="_blank">羅必達法則教學文章</a>
+<p>經過處理後，若仍為不定形式，則可以重覆處理，直到它不是不定形式，則此時便可求出函數的極限值。</p>
+<h3 id="左極限、右極限"><a href="#左極限、右極限" class="headerlink" title="左極限、右極限"></a>左極限、右極限</h3><p>在處理一些比較特別的極限時，我們可以將極限拆為左極限與右極限，它的意義即為「極限值是從左側（負）或右側（正）逼近」。要注意的是，<strong>極限值必唯一</strong>，故唯有函數<strong>左極限值 = 右極限值</strong>時，極限值才存在，否則極限不存在。</p>
+<p>舉個例子，</p>
+
+$$
+f(x)=\begin{cases} {x^2}, & {x<1} \\ {2x+1}, & {x\ge 1} \end{cases}
+$$
+
+<p>求</p>
+
+$$
+\lim_{x \to 1}f(x)
+$$
+
+<p>因為函數剛好在 $x=1$ 處斷開了，因此為了計算 $x \to 1$ 時的極限值，就得用到左右極限的概念。先來看左極限，它可以寫成 $\displaystyle\lim_{x \to 1^-}f(x)$，因為極限從左側逼近，可以把它想像成 $0.999…$，所以我們代 $x&lt;1$ 的那段，極限值就會是 $1$；再看右極限，它可以寫成 $\displaystyle\lim_{x \to 1^+}f(x)$，因為極限從右側逼近，可以把它想像成 $1.000…1$，所以代 $x \ge 1$ 那段，極限值就會是 $3$。</p>
+<p>很明顯地，$1 \ne 3$，左右極限不相等，故函數值不存在。</p>
+<h3 id="夾擠定律"><a href="#夾擠定律" class="headerlink" title="夾擠定律"></a>夾擠定律</h3><p>這是一個相當直觀的定律，指的是當 $x \to a$ 時，若 $g(x) \le f(x) \le h(x)$，且 $\displaystyle\lim_{x \to a}g(x)=\displaystyle\lim_{x \to a}h(x)=L$，則 $\displaystyle\lim_{x \to a}f(x)=L$。</p>
+<h2 id="無窮"><a href="#無窮" class="headerlink" title="無窮"></a>無窮</h2><h3 id="意義-1"><a href="#意義-1" class="headerlink" title="意義"></a>意義</h3><p>無窮不是一個數，而是「<strong>無限上升</strong>」的概念，記作 $\infty$。對任意實數 $a$，它必在 $(-\infty,\infty)$ 之間，寫作 $-\infty&lt;a&lt;\infty$。</p>
+<h3 id="運算"><a href="#運算" class="headerlink" title="運算"></a>運算</h3><p>剛才我們提到了一些包含了無窮的不定形式，現在讓我們深入了解一下無窮的運算。注意，以下條件均為「<strong>做極限</strong>」的狀態下的簡化表達，非嚴謹數學語言。</p>
+<ul>
+<li>$\infty \pm a=\infty$</li>
+<li>$-\infty \pm a=-\infty$</li>
+<li>$\infty+\infty=\infty$</li>
+<li>$a\cdot\infty=\infty,\,a&gt;0$</li>
+<li>$-a\cdot\infty=-\infty,\,a&gt;0$</li>
+<li>$\infty\cdot\infty=\infty$</li>
+<li>$\infty\cdot(-\infty)=-\infty$</li>
+<li>$\frac{\pm a}{\infty}=0$</li>
+<li>$\infty^r=\infty,\,r&gt;0$</li>
+<li>$\frac{1}{\infty^r}=0,\,r&gt;0$</li>
+<li>$\frac{\pm a}{0}=\pm\infty,\,a&gt;0$（依 $0^+$ 或 $0^-$ 決定正負號）</li>
+<li>$a^\infty=\infty,\,a&gt;1$</li>
+<li>$a^\infty=0,\,0 \le a &lt; 1$</li>
+</ul>
+<h3 id="比大小"><a href="#比大小" class="headerlink" title="比大小"></a>比大小</h3><p>雖然都是無窮，但根據函數跑去無窮的速度不同，我們仍可以對它們比大小，具體方式便是採用<strong>大 O 符號（Big-O）</strong>和<strong>小 o 符號（little-o）</strong>。</p>
+<p>以下均比較 $f(n)$ 和 $g(n)$ 均趨近無窮（$n \to \infty$，且兩函數亦逼近無窮）時的情況來說明。</p>
+<h4 id="大-O"><a href="#大-O" class="headerlink" title="大 O"></a>大 O</h4><p>當 $f(n)$ 跑去無窮的速度<strong>慢於或等於</strong> $g(n)$ 時，可以寫成</p>
+
+$$
+f(n)=O(g(n))
+$$
+
+<h4 id="小-o"><a href="#小-o" class="headerlink" title="小 o"></a>小 o</h4><p>當 $f(n)$ 跑去無窮的速度<strong>小於</strong> $g(n)$ 時，可以寫成</p>
+
+$$
+f(n)=o(g(n))
+$$
+
+<h4 id="做法"><a href="#做法" class="headerlink" title="做法"></a>做法</h4><p>我們可以把兩個要比大小的函數放到一個分數的分子和分母（$\displaystyle\lim_{n \to \infty}\frac{f(n)}{g(n)}$），算它會趨近於 $0$ 還是 $\infty$，就能知道誰大誰小了。</p>
+<h4 id="舉例"><a href="#舉例" class="headerlink" title="舉例"></a>舉例</h4><p>若欲比較 $2^n$ 和 $n^2$ 在 $n \to \infty$ 時的大小，我們可以算出 $\displaystyle\lim_{n \to \infty}\frac{n^2}{2^n}=0$，代表<strong>分母 &gt; 分子</strong>，即同時符合 $n^2=O(2^n)$ 和 $n^2=o(2^n)$；反之，若算 $\displaystyle\lim_{n \to \infty}\frac{2^n}{n^2}=\infty$，就表示 $2^n \ne O(n^2)$ 和 $2^n \ne o(n^2)$。結論就可以說 $n^2 \ll 2^n$。</p>
+<h2 id="泰勒形式"><a href="#泰勒形式" class="headerlink" title="泰勒形式"></a>泰勒形式</h2><h3 id="形式"><a href="#形式" class="headerlink" title="形式"></a>形式</h3><p>只要把一個標準形式的多項式 $a_nx^n+a_{n-1}x^{n-1}+\cdots+a_1x+a_0$ 改寫成 $c_0+c_1(x-a)+c_2(x-a)^2+\cdots+c_n(x-a)^n$ 的形式，就稱為<strong>泰勒形式（泰勒展開式）</strong>，並且 $a$ 稱為<strong>參考點</strong>。</p>
+<h3 id="做法-1"><a href="#做法-1" class="headerlink" title="做法"></a>做法</h3><p>要把多項式轉為泰勒形式，我們可以採用高一上就教過的<strong>連續綜合除法</strong>。舉個例子，若我們要做「$2x^3−3x^2+4x+5$」在參考點 $a=1$ 處的泰勒展開：</p>
+<img src="/img/synthetic_division.png" srcset="/img/loading.gif" lazyload class="" title="泰勒展開範例">
+<p>最終它的泰勒形式即為</p>
+
+$$
+8+4(x-1)+3(x-1)^2+2(x-1)^3
+$$
+
+<h3 id="一次估計"><a href="#一次估計" class="headerlink" title="一次估計"></a>一次估計</h3><p>做出泰勒形式後，它的意義實際上是做估計，我們取泰勒形式到一次項時，則稱為「<strong>一次估計</strong>」，其泰勒形式的圖形其實也就是原本圖形在遠處看時的近似圖形（一次圖形）。</p>
+<p>以剛才的 $a_nx^n+a_{n-1}x^{n-1}+\cdots+a_1x+a_0$ 改寫成 $c_0+c_1(x-a)+c_2(x-a)^2+\cdots+c_n(x-a)^n=8+4(x-1)+3(x-1)^2+2(x-1)^3$ 而言，其一次估計就會取 $8+4(x-1)$ 這個部分來做估計。</p>
+<p>要特別注意的是，$|x-a|$ 之值要夠小才能用一次估計，否則估計出來的數值會誤差很大。</p>
+<h3 id="切線與導數"><a href="#切線與導數" class="headerlink" title="切線與導數"></a>切線與導數</h3><p>我們稱一次估計的函數 $y=m(x-a)+f(a)$ 為 $f(x)$ 在 $x=a$ 處的<strong>切線</strong>，且斜率 $m$ 又稱為「<strong>導數</strong>」，可以寫作 $f’(a)$。</p>
+<p>因此，一次估計的公式又可以寫成</p>
+
+$$
+y=f'(a)(x-a)+f(a)
+$$
+
+<h2 id="導數（微分）"><a href="#導數（微分）" class="headerlink" title="導數（微分）"></a>導數（微分）</h2><h3 id="基本公式"><a href="#基本公式" class="headerlink" title="基本公式"></a>基本公式</h3><p><strong>微分</strong>是指計算出導（函）數的計算過程，對 $f(x)$ 微分（或者說求其導函數）可以寫作 $f’(x)$ 或 $[f(x)]’$，我們有兩種方式可以理解導數的基本公式。</p>
+<h4 id="泰勒形式"><a href="#泰勒形式" class="headerlink" title="泰勒形式"></a>泰勒形式</h4><p>從一次估計的概念中，我們可以知道 $f(x) \approx f(a)+f’(a)(x-a)$，也就是說 $\frac{f(x)-f(a)}{x-a} \approx f’(a)$。而此時，若 $x$ 越來越靠近 $a$，則函數近似值就會越來越準，故可寫成</p>
+
+$$
+f'(a)=\displaystyle\lim\_{x \to a}\frac{f(x)-f(a)}{x-a}
+$$
+
+<h4 id="極限-1"><a href="#極限-1" class="headerlink" title="極限"></a>極限</h4><p>另一個觀點來看，導數代表的是「<strong>切線斜率</strong>」，若用 $h$ 表示 $x$ 的改變量，則 $f(a+h)-f(a)$ 代表 $y$ 的改變量，那麼就可以寫成 $\frac{f(a+h)-f(a)}{h}$，代表的是在區間 $[a,a+h]$ 之間的<strong>平均變化率</strong>。</p>
+<p>若今天我們讓 $h \to 0$，則平均變化率會變成<strong>瞬時變化率</strong>，也就是導數，則可以寫為</p>
+
+$$
+f'(a)=\lim_{h \to 0}\frac{f(a+h)-f(a)}{h}
+$$
+
+<div class="note note-info">
+            <p>之所以導數代表切線斜率，其實我們可以想像成在函數上找任意一點 $a$，以及向右找另一點 $a+h$，這兩點可以連成一條線（即<strong>割線</strong>）。而若我們把這兩條線越靠越近，讓它們無限逼近於一個點，讓它們幾乎重疊時（即 $h \to 0$），它們兩線的連線就是<strong>切線</strong>。</p> <p>其實<strong>割線斜率</strong>概念上相當於<strong>平均變化率</strong>，而當 $h \to 0$，割線變為切線時，它就成了<strong>瞬間變化率</strong>，也因此導數就會是<strong>切線斜率</strong>。</p> 
+          </div>
+<h4 id="整合"><a href="#整合" class="headerlink" title="整合"></a>整合</h4><p>我們改寫 $h=x-a$，則</p>
+
+$$
+f'(a)=\lim_{x \to a}\frac{f(x)−f(a)}{x-a}​
+$$
+
+<p>因此兩種看法指向的是同一個結果。</p>
+<h4 id="推導成公式"><a href="#推導成公式" class="headerlink" title="推導成公式"></a>推導成公式</h4><p>當我們代 $f(x)=x^n$ 時，無論你是用泰勒形式或極限的看法去代算，都能得出一個結論：$[x^n]’=nx^{n-1}$，這便是導數的基礎公式。</p>
+<p>我們分別就不同情況來舉一例子：</p>
+<ul>
+<li>$[x^5]’=5x^4$</li>
+<li>$[7]’=0$</li>
+<li>$[\sqrt x]’=[x^{\frac12}]’=\frac12x^{-\frac12}$</li>
+<li>$[\frac{1}{x^3}]’=[x^{-3}]’=-3x^{-4}$</li>
+</ul>
+<h3 id="運算-1"><a href="#運算-1" class="headerlink" title="運算"></a>運算</h3><ul>
+<li>加減法則：多項式函數做導函數時，可以將每項拆開，分別計算導數後，再組合起來。例如 $f(x)=x^2+x+1$，做它的導函數時，可以將 $x^2$、$x$、$1$ 這三項分開來算導數後，再組合起來，得 $f’(x)=2x+1$</li>
+<li>係數積法則：有係數時，可以將它提出來，求出導數後再乘回去。例如 $f(x)=3x^2$，則微分時可將係數 $3$ 提出，過程會變成 $f’(x)=3[x^2]’=3[2x]=6x$</li>
+</ul>
+<h3 id="多次微分"><a href="#多次微分" class="headerlink" title="多次微分"></a>多次微分</h3><p>在進行不止一次的微分時，例如二次微分（記作 $f’’(x)$），是取一次微分 $f’(x)$ 的結果再進行微分，以此類推。</p>
+<p>記號上，我們會用 $f’(x)$、$f’’(x)$、$f’’’(x)$ 表示一到三次的微分，而四次及以上，則會用 $f^{(4)}$、$f^{(5)}$、$f^{(6)}$……來表達。</p>
+<h2 id="增減、極值、反曲點"><a href="#增減、極值、反曲點" class="headerlink" title="增減、極值、反曲點"></a>增減、極值、反曲點</h2><h3 id="遞增或遞減"><a href="#遞增或遞減" class="headerlink" title="遞增或遞減"></a>遞增或遞減</h3><p>我們知道了，一次微分代表函數的<strong>切線斜率</strong>，因此若我們想知道 $x=a$ 處的切線斜率，可以用 $f’(a)$ 求得。$f’(a)&gt;0$ 表示函數遞增（Increase），$f’(a)&lt;0$ 則是遞減（Decrease），且 $|f’(a)|$ 可以反映出函數陡或緩。</p>
+<p>若現在的情況相反，我們知道函數值，但要求它在哪個區間的遞增或遞減情形，則我們可以直接設 $f’(x)&gt;0$ 或 $f’(x)&lt;0$ 再去求 $x$ 範圍，就能知道函數的情形了。</p>
+<div class="note note-info">
+            <p>再精確一點說：</p> <ul> <li>$f’(a)\ge0$：遞增</li> <li>$f’(a)\le0$：遞減</li> <li>$f’(a)&gt;0$：嚴格遞增</li> <li>$f’(a)&lt;0$：嚴格遞減</li> </ul> 
+          </div>
+<h3 id="極值"><a href="#極值" class="headerlink" title="極值"></a>極值</h3><p>剛才提到了 $f’(a)&gt;0$ 和 $f’(a)&lt;0$ 的情況了，但 $f’(a)=0$ 呢？實際上，在 $f’(a)=0$ 處，它在函數圖形上會剛好是一個臨界點（Critical Point），那這就很好想它的意義了，也就是「<strong>極值</strong>」。</p>
+<p>以二次圖形來說，轉折處只會有一個，也就是它的<strong>最大值</strong>（絕對極大值 Absolute Maximum、全域極大值 Global Maximum）或<strong>最小值</strong>（絕對極小值 Absolute Minimum、全域極小值 Global Minimum）。</p>
+<p>但到了三次及以上的圖形時，它的圖形就不一定會存在最值了，某些方向會向無窮遠處延伸，此時我們仍能找到 $f’(a)=0$ 的值，它會在很小的區域中呈現小山峰或小山谷，因為在小範圍中它是最大或最小的值，我們稱它為<strong>極大值</strong>（相對極大值 Relative Maximum、局部極大值 Local Maximum）或<strong>極小值</strong>（相對極小值 Relative Minimum、局部極小值 Local Minimum）。</p>
+<p>不過，這裡仍會存在一個例外，也就是「重根」時，當我們找到 $f’(x)$ 的解 $a$ 為重根時，表示它在 $f’(a)$ 的左右兩側沒有變號，此時在 $x=a$ 處就不能算極值。</p>
+<img src="/img/extremum.png" srcset="/img/loading.gif" lazyload class="" title="極值">
+<h3 id="反曲點"><a href="#反曲點" class="headerlink" title="反曲點"></a>反曲點</h3><h4 id="定義"><a href="#定義" class="headerlink" title="定義"></a>定義</h4><p>反曲點發生在三次及以上的函數，在函數圖形取一點，若該點的左右兩側「<strong>彎曲方向相反</strong>」（<strong>一上一下</strong>或<strong>一下一上</strong>）時，則該點就稱為<strong>反曲點（Point of Inflection）</strong>。</p>
+<img src="/img/turning_point.png" srcset="/img/loading.gif" lazyload class="" title="反曲點">
+<h4 id="做法-2"><a href="#做法-2" class="headerlink" title="做法"></a>做法</h4><p>對於存在反曲點的函數 $f(x)$，其反曲點「可能」發生在 $x=a$ 處，使得 $f’’(a)=0$ 且 $f’’(a)$ 在 $a$ 的兩側變號。</p>
+<div class="note note-info">
+            <p>其實反曲點的意義就是去找「切線斜率 $f’(x)$ 圖形的切線斜率 $f’’(x)$」</p> 
+          </div>
+<h3 id="例外"><a href="#例外" class="headerlink" title="例外"></a>例外</h3><p>在函數中，<strong>不一定會存在極值或反曲點</strong>，例如 $x^3$ 不存在極值、$x^4$ 不存在反曲點。</p>
+<div class="group-image-container"><div class="group-image-row"><div class="group-image-wrap"><img src="/img/no_extremum.png" srcset="/img/loading.gif" lazyload alt="不存在極值"></div></div><div class="group-image-row"><div class="group-image-wrap"><img src="/img/no_turning_point.png" srcset="/img/loading.gif" lazyload alt="不存在反曲點"></div></div></div>
+<p>那要如何檢查？我們只要檢查以下其中一項，即可確定極值或反曲點的存在：</p>
+<ul>
+<li>$f’(x)$（極值）或 $f’’(x)$（反曲點）在 $a$ 左右兩側變號</li>
+<li>$f’’(a) \ne 0$（極值）或 $f’’’(a) \ne 0$（反曲點）</li>
+<li>實際畫出圖形確認</li>
+</ul>
+<h2 id="用導數理解泰勒形式"><a href="#用導數理解泰勒形式" class="headerlink" title="用導數理解泰勒形式"></a>用導數理解泰勒形式</h2><h3 id="每項"><a href="#每項" class="headerlink" title="每項"></a>每項</h3><p>我們可以將 $f(x)=c_0+c_1(x-a)+c_2(x-a)^2+\cdots+c_n(x-a)^n$ 進行數次微分後，觀察到一個現象：每一項的 $c_n$，實際上可以被寫成</p>
+
+$$
+c_n = \frac{1}{n!} f^{(n)}(a)
+$$
+
+<h3 id="一次估計-1"><a href="#一次估計-1" class="headerlink" title="一次估計"></a>一次估計</h3><p>套用剛才的結論，我們就可以將一次估計寫成</p>
+
+$$
+f(x)=f'(a)(x-a)+f(a)
+$$
+
+<p>與先前的結論一致。</p>
+<h2 id="導數公式的推廣"><a href="#導數公式的推廣" class="headerlink" title="導數公式的推廣"></a>導數公式的推廣</h2><h3 id="乘法律"><a href="#乘法律" class="headerlink" title="乘法律"></a>乘法律</h3><h4 id="證明"><a href="#證明" class="headerlink" title="證明"></a>證明</h4><p>其實這個證明同樣可以從極限或泰勒形式出發，這裡就用比較簡單的極限角度來證它吧。</p>
+<p>首先定義 $u=u(x),v=v(x)$ 且皆為可微函數，那麼它們的微分可以寫成定義的樣子</p>
+
+$$
+(uv)'(x)=\lim_{h \to 0}\frac{u(x+h)v(x+h)-u(x)v(x)}{h}
+$$
+
+<p>再來，為了把它折成兩項，我們可以在分子同加減 $u(x+h)v(x)$</p>
+
+$$
+(uv)'(x)=\lim_{h \to 0}\frac{u(x+h)(v(x+h)-v(x))}{h}+\lim\_{h \to 0}\frac{v(x)(u(x+h)−u(x))​}{h}
+=\lim_{h \to 0}\left[u(x+h)\frac{v(x+h)-v(x)}{h}\right]+v(x)\lim_{h \to 0}\frac{u(x+h)-u(x)}{h}
+$$
+
+<p>因為 $\displaystyle\lim_{h \to 0}u(x+h)=u(x)$，因此第一項變成 $\displaystyle\lim_{h \to 0}u(x+h)\cdot\lim_{h \to 0}\frac{v(x+h)−v(x)​}{h}=u(x)v’(x)$、第二項變成 $v(x)\cdot u’(x)$，證明完畢。</p>
+<h4 id="公式"><a href="#公式" class="headerlink" title="公式"></a>公式</h4><ul>
+<li>基本二項：$[uv]’=u’v+uv’$（前微後不微 + 後微前不微）</li>
+<li>推廣多項：$[uvw]’=u’vw+uv’w+uvw’$（每項各別微）</li>
+</ul>
+<h3 id="連鎖律（Chain-Rule）"><a href="#連鎖律（Chain-Rule）" class="headerlink" title="連鎖律（Chain Rule）"></a>連鎖律（Chain Rule）</h3><h4 id="證明-1"><a href="#證明-1" class="headerlink" title="證明"></a>證明</h4><p>證明一樣是使用原始極限定義的方式，我們取 $h(x)=g(f(x))$，並求出其導函數</p>
+
+$$
+h'(a)=\lim_{x \to a}\frac{h(x)-h(a)}{x-a}=\lim_{x \to a}\frac{g(f(x))-g(f(a))}{x-a}
+$$
+
+<p>將它拆開</p>
+
+$$
+h'(a)=\lim_{x \to a}\left[\frac{g(f(x))-g(f(a))}{f(x)-f(a)}\cdot\frac{f(x)-f(a)}{x-a}\right]
+$$
+
+<p>再拆</p>
+
+$$
+h'(a)=\left(\lim_{x \to a}\frac{g(f(x))-g(f(a))}{f(x)-f(a)}\right)\cdot\left(\lim_{x \to a}\frac{f(x)-f(a)}{x-a}\right)
+$$
+
+<p>整理、代換，並令 $u=f(x)$</p>
+
+$$
+\lim_{x \to a}\frac{g(f(x))-g(f(a))}{f(x)-f(a)}=\lim_{u \to f(a)}\frac{g(u)-g(f(a))}{u-f(a)}=g'(f(a))
+$$
+
+
+$$
+\lim_{x \to a}\frac{f(x)-f(a)}{x-a}=f'(a)
+$$
+
+<p>合併兩項</p>
+
+$$
+h'(a)=g'(f(a))\cdot f'(a)
+$$
+
+<p>證畢。</p>
+<h4 id="公式-1"><a href="#公式-1" class="headerlink" title="公式"></a>公式</h4><script type="math/tex; mode=display">
+[f(g(x))]' = f'(g(x))\cdot g'(x)</script><h3 id="除法律"><a href="#除法律" class="headerlink" title="除法律"></a>除法律</h3><h4 id="證明-2"><a href="#證明-2" class="headerlink" title="證明"></a>證明</h4><p>除法律實際上是乘法律和連鎖律的綜合應用，因此此項不一定要記憶。</p>
+
+$$
+\left[\frac vu\right]'=\left(v\cdot\frac 1u\right)'=v'\cdot\frac 1u+v\cdot\left[\frac 1u\right]'=v'\cdot\frac 1u+v\cdot\left[-\frac{u'}{u^2}\right]=\frac{v'u-vu'}{u^2}
+$$
+
+<h4 id="公式-2"><a href="#公式-2" class="headerlink" title="公式"></a>公式</h4><script type="math/tex; mode=display">
+\left[\frac{v}{u}\right]'=\frac{v'u-vu'}{u^2}</script><h3 id="三角函數"><a href="#三角函數" class="headerlink" title="三角函數"></a>三角函數</h3><p>具體證明以及更多三角函數微分不在本章範圍中，此僅補充兩個最常見的三角函數微分：</p>
+<ul>
+<li>$[\sin x]’=\cos x$</li>
+<li>$[\cos x]’=-\sin x$</li>
+</ul>
+<h2 id="另一種導數符號"><a href="#另一種導數符號" class="headerlink" title="另一種導數符號"></a>另一種導數符號</h2><p>前面我們說過，導數的原始定義為 $f’(x)=\displaystyle\lim_{h \to 0}\frac{f(x+h)-f(x)}{h}$，其中分母的 $h$ 說的其實就是 <strong>$x$ 的變化量</strong>小到靠近 $0$（因為 $h \to 0$），而分子的 $f(x+h)-f(x)$ 看的就是 $y$（即 $f(x)$）在 $h$ 靠近 $0$ 時的「<strong>變化量</strong>」。</p>
+<p>我們可以發現，上面那一大串說明，可以被簡化成</p>
+
+$$
+\lim_{\Delta x \to 0}\frac{\Delta y}{\Delta x}
+$$
+
+<p>那既然 $x$ 和 $y$ 變化量都會靠近 $0$，不如我們就把「變化量 $\Delta$」改寫成別的形式，數學家於是想到用「$\mathrm d$」來表示「<strong>微量</strong>的變化量」，於是微分的過程就可以被簡化成 $f’(x)=\frac{\mathrm dy}{\mathrm dx}$，而這便是<strong>萊布尼茲符號</strong>（我們原先提到的則稱為<strong>牛頓符號</strong>）。</p>
+<p>我們可以再把 $f(x)$ 代回 $y$，式子就變成了</p>
+
+$$
+f'(x)=\frac{\mathrm d}{\mathrm dx}f(x)
+$$
+
+<p>便成為了我們最常見到的表達形式。</p>
+<h2 id="反導函數（不定積分）"><a href="#反導函數（不定積分）" class="headerlink" title="反導函數（不定積分）"></a>反導函數（不定積分）</h2><h3 id="反函數"><a href="#反函數" class="headerlink" title="反函數"></a>反函數</h3><p>在談反導函數前，我們先來說說<strong>反函數</strong>。若今天我們有一函數 $y=f(x)$，則其反函數為 $x=f(y)$（亦記作 $f^{-1}(x)$），由此我們可以得知，「反函數」指與原函數相反的操作。若今天我們有一數 $\alpha$，則在經過函數 $f(x)$ 會變成 $f(\alpha)$，再將 $f(\alpha)$ 經過其反函數 $f^{-1}(x)$ 後，會變成 $f(f^{-1}(\alpha))$，因為 $f(x)$ 和 $f^{-1}(x)$ 互為反函數，因此</p>
+
+$$
+f(f^{-1}(\alpha))=\alpha
+$$
+
+<img src="/img/inverse_function.jpg" srcset="/img/loading.gif" lazyload class="" title="反函數示例圖">
+<blockquote>
+<p>圖片來源：<a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=chDCHElXp7g">臺北酷課雲 YouTube 頻道</a></p>
+</blockquote>
+<h3 id="反導函數"><a href="#反導函數" class="headerlink" title="反導函數"></a>反導函數</h3><h4 id="意義-2"><a href="#意義-2" class="headerlink" title="意義"></a>意義</h4><p>反導函數屬於反函數的一種，但它還原的是微分操作，那微分具體在做什麼？前面提到過，微分在做的其實是看非常微量的變化量，因此積分（反導函數）就是把這些微量變化量加總起來，看看原來的函數是什麼。</p>
+<p>表示上，若寫成 $\int \mathrm dy$，就表示把無窮多個微量的 $\mathrm dy$ 加在一起，還原成 $y$。又因為微分會寫成 $f’(x)=\frac{\mathrm dy}{\mathrm dx}$，移項可得 $\mathrm dy = f’(x)\,\mathrm dx$，因此積分又可以寫成</p>
+
+$$
+\int \mathrm dy=\int f(x) \; \mathrm dx
+$$
+
+<h4 id="作法"><a href="#作法" class="headerlink" title="作法"></a>作法</h4><p>至於具體做法呢？要「還原」其實很簡單，我們只要逆向操作微分即可。微分公式為 $[ax^n]’=anx^{n-1}$，白話來說，就是「次方乘下來，次方減一」，因此積分的逆操作就會變成「<strong>次方加一，次方除下來</strong>」，我們可以寫作 $\int \, x^n \; \mathrm dx=\frac{1}{n+1}x^{n+1},\,n \ne -1$。</p>
+<p>舉個例子，$f(x)=3x^5,\,f’(x)=15x^4$，則要對 $f’(x)$ 積分還原回 $f(x)$，就可以寫</p>
+
+$$
+f(x)=\int f'(x) \; \mathrm dx=\frac{15}{4+1}x^{4+1}=3x^5
+$$
+
+<h4 id="丟失的常數項"><a href="#丟失的常數項" class="headerlink" title="丟失的常數項"></a>丟失的常數項</h4><p>但這裡還會有一個問題，我們做微分時，常數項會消失，而消失項無法在積分中找回，因此我們要補上一個常數項 $C$，來表示「任何可能的常數」。也因為有一項不確定數值（不定常數），因此這種積分才被稱為「<strong>不定積分</strong>」。</p>
+<p>舉個例子</p>
+
+$$
+\int \, 2x+6 \; \mathrm dx=x^2+6x+C
+$$
+
+<h2 id="定積分"><a href="#定積分" class="headerlink" title="定積分"></a>定積分</h2><h3 id="做法-3"><a href="#做法-3" class="headerlink" title="做法"></a>做法</h3><p>前面說過，不定積分是指帶有一個不定常數的積分，而本章要說明的定積分，可想而知，是一種不會帶不定常數、確定數值的積分。</p>
+<p>我們可以為積分標示上下限，例如「$f(x)$ 對 $x$ 從 $a$ 到 $b$ 的積分」就可表示為 $\int_a^b \, f(x) \; \mathrm dx$。假設 $F’(x)=f(x)$，則 $\int \, f(x) \; \mathrm dx=F(x)+C$，加入上下限後就變成</p>
+
+$$
+\int_a^b \, f(x) \; \mathrm dx=F(b)-F(a)
+$$
+
+<p>可以簡單記憶「<strong>上標代入 - 下標代入</strong>」，而 $F(b)-F(a)$ 可以簡記成 $\left. F(x) \right|_a^b$ 或 $[F(x)]_a^b$。</p>
+<h3 id="意義-3"><a href="#意義-3" class="headerlink" title="意義"></a>意義</h3><p>若函數 $f(x)$ 在區間 $[a,b]$ 連續，則 $\int_a^b \, f(x) \; \mathrm dx$ 表示在區間 $[a,b]$ 內 $f(x)$ 與 $x$ 軸夾的<strong>有向面積</strong>。</p>
+<p>何為有向面積？若函數處於 $x$ 軸下方，則定積分結果會為負號，又或是有部分區域穿到了 $x$ 軸下方時，會導致面積被減掉，而這種數值就叫作有向面積。如果要算出<strong>真實面積</strong>，則需要將 $x$ 軸上方與 $x$ 軸下方的部分拆開計算，並加上<strong>絕對值</strong>後，再加總。</p>
+<p>這其實就是「<strong>黎曼和</strong>」的極限結論，當我們把圖形切成無限多個長方形，再計算長方形面積的總和，它的面積就會無限接近曲線下面積。</p>
+<p>舉個例子，若我們要求下方圖形的面積，我們將它切成十份，左圖將長方形放在線上，因此面積會高估，即上黎曼和，其面積和可以表示為 $\displaystyle U_{10}=\sum_{i=1}^{10}f(x_i) \cdot \Delta x$（長方形面積 = 長 &times; 寛）；右圖將長方形放在線下，因此面積會低估，即下黎曼和，其面積和可以表示為 $L_{10}=\displaystyle\sum_{i=1}^{10}f(x_{i-1}) \cdot \Delta x$。</p>
+<p>那如果不切成十份，而是改切成 $n$ 份，上和即 $U_n=\displaystyle\sum_{i=1}^{n}f(x_i) \cdot \Delta x$、下和即 $L_n=\displaystyle\sum_{i=1}^{n}f(x_{i-1}) \cdot \Delta x$。我們可以想像，當 $n$ 越大時，面積會估計得越準確，並且上、下黎曼和會漸漸靠近，那什麼時候會等於曲線下面積呢？就是 $n \to \infty$ 時，當把線切成無限多份時，上、下和會逼近到一致，概念上有點像夾擠定理那樣，讓</p>
+
+$$
+\lim_{n \to \infty}U_n=\lim_{n \to \infty}L_n=\int_a^b \, f(x) \; \mathrm dx
+$$
+
+<img src="/img/integral.jpg" srcset="/img/loading.gif" lazyload class="" title="黎曼和示例圖">
+<blockquote>
+<p>圖片來源：<a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=jEjvtO5_A6E">Ing. Jorge Sanchez YouTube 頻道</a></p>
+</blockquote>
+<h3 id="平均值"><a href="#平均值" class="headerlink" title="平均值"></a>平均值</h3><h4 id="離散"><a href="#離散" class="headerlink" title="離散"></a>離散</h4><p>在離散情況下，平均值的計算相當簡單，就是 $\displaystyle\mu=\frac{1}{n} \sum_{i=1}^n x_i$，說人話就是資料總和 &div; 筆數。</p>
+<h4 id="連續"><a href="#連續" class="headerlink" title="連續"></a>連續</h4><p>那在連續的情況下如何計算？其實在連續圖形中，只要我們能找到一水平線，其與 $x$ 軸夾的長方形面積與函數曲線下面積相等，我們就說那條線的高度（$y$ 軸）為函數的<strong>平均值</strong>。</p>
+<p>假設在區間 $[a,b]$ 中，要找到函數 $f(x)$ 的平均值 $\mu$，我們可能會寫成 $\mu\cdot(b-a)=\int_a^b \, f(x) \; \mathrm dx$，移項一下就可以得到平均值的公式</p>
+
+$$
+\mu=\frac{1}{b-a}\int_a^b \, f(x) \; \mathrm dx
+$$
+
+<h3 id="代換積分法"><a href="#代換積分法" class="headerlink" title="代換積分法"></a>代換積分法</h3><h4 id="不定積分"><a href="#不定積分" class="headerlink" title="不定積分"></a>不定積分</h4><p>首先，<strong>代換積分法（u-substitution）</strong>的「代換」，即表示要用某一個變數來替換另一串比較難的運算，實務上，我們習慣以 $u$ 來代換，具體怎麼做呢？</p>
+<ol>
+<li>找到一串看起來比較難算的東西（通常是為了解決微分連鎖律的反運算）</li>
+<li>令 $u$ 為那一串東西</li>
+<li>算出 $\mathrm du$，具體做法是對令 $u$ 算式左右兩邊都微分，得到 $\frac{\mathrm du}{\mathrm dx}$，再移項</li>
+<li>整個式子變成簡單的、與 $u$ 有關的積分，正常計算積分</li>
+<li>再把 $x$ 代回原式，完成運算</li>
+</ol>
+<p>這麼說可能有點難懂，別急，我們舉個例子來算算看就懂了：計算 $\int \, 2x\cos x^2 \; \mathrm dx$。因為 $x^2$ 微分就是 $2x$，要用到連鎖律的反運算，因此這題使用代換積分法來做再適合不過了。</p>
+<ol>
+<li>找到一串難算的東西，我們可以選擇 $x^2$，因為它出現在三解函數內，難算</li>
+<li>令 $u=x^2$</li>
+<li>左右兩邊微分，變成 $\frac{\mathrm du}{\mathrm dx}=2x$，移項可得 $\mathrm du=2x \, \mathrm dx$</li>
+<li>原式變成 $\int \, \cos u \; \mathrm du$，直接算它會得到 $\sin u+C$</li>
+<li>代回原式，變成 $\sin x^2+C$，完成</li>
+</ol>
+<div class="note note-info">
+            <p>要判斷能不能用代換積分法、要令 $u$ 是什麼，關鍵就是要找到一個 $u$，使得 $f(x)=g(u)\cdot \mathrm du$</p> 
+          </div>
+<h4 id="定積分-1"><a href="#定積分-1" class="headerlink" title="定積分"></a>定積分</h4><p>定積分的代換積分法運算相比不定積分，其實只差了一步，也就是<strong>替換上下標</strong>，因為當今天函數變成用變數 $u$ 而非 $x$ 時，以 $x$ 為基準的上下標，就得替換成以 $u$ 為基準的上下標，如此做了之後，當我們再去算<strong>上標代入 - 下標代入</strong>時，就不一定要將 $x$ 代回（步驟 5.），直接代入即可。</p>
+<p>舉個例子，要計算 $\int_0^2 \, 2x\sqrt{1+x^2} \; \mathrm dx$，步驟就會變成：</p>
+<ol>
+<li>找到難算的東西，我們找 $1+x^2$</li>
+<li>令 $u=1+x^2$</li>
+<li>$\frac{\mathrm du}{\mathrm dx}=2x$，所以 $\mathrm du=2x \, \mathrm dx$</li>
+<li>轉換上下標，$上標=1+2^2=5$、$下標=1+0^2=1$</li>
+<li>做積分 $\int_1^5 \, \sqrt u \; \mathrm du=\int_1^5 \, u^{\frac 12} \; \mathrm du=\frac 23\left[u^{\frac 32}\right]_1^5$</li>
+<li><strong>上標代入 - 下標代入</strong>，變成 $\frac 23(5^{\frac 32}-1^{\frac 32})=\frac 23(5\sqrt 5-1)$，完成</li>
+</ol>
+<h4 id="注意事項"><a href="#注意事項" class="headerlink" title="注意事項"></a>注意事項</h4><p>除了前面提到的，找 $u$ 時要使 $f(x)=g(u)\cdot \mathrm du$ 之外，還要特別注意這個 $u$ 所代換的方程式必須為<strong>一對一函數（one to one function）</strong>，也就是 $f(a)=f(b) \implies a=b$，例如 $f(x)=x^2$ 就不符合，因為 $f(1)=f(-1)=1$ 但 $1 \ne -1$，這種情況下就不能令 $u$ 為它。</p>
+<h2 id="圓與球"><a href="#圓與球" class="headerlink" title="圓與球"></a>圓與球</h2><h3 id="圓"><a href="#圓" class="headerlink" title="圓"></a>圓</h3><p>對於一個圓 $x^2+y^2=r^2$，我們從國小就知道了它的面積為 $A=\pi r^2$，但這是怎麼來的呢？我們可以用積分來理解它。</p>
+<p>概念上，要計算一個圓面積，我們可以把它看成是從半徑為 $0$ 漸漸擴散到半徑為 $r$ 的所有同心圓，其圓周長 &times; 極小的厚度的總和（若無厚度，線的面積為 $0$，總和仍會是 $0$）。周長的公式我們小時候就學過，$S=2 \pi x$；至於厚度，因為它會隨著你切成的同心圓數量增加，而導致厚度變薄，當數量逼近無限個同心圓時，厚度逼近於 0，故厚度可表示成 $\mathrm dx$。那我們從 $0$ 到 $r$ 的範圍中，同心圓面積都是 $2 \pi x \, \mathrm dx$，所以圓面積就會是 $\int_0^r \, 2 \pi x \mathrm dx=[\pi x^2]_0^r=\pi r^2$。</p>
+<h3 id="球"><a href="#球" class="headerlink" title="球"></a>球</h3><h4 id="體積（球殼法）"><a href="#體積（球殼法）" class="headerlink" title="體積（球殼法）"></a>體積（球殼法）</h4><p>面積是由無數線組成，所以體積是由無數面組成，那套用這個概念，我們就可以來探討球體的體積如何計算了。對於一個球體 $x^2+y^2+z^2=r^2$，它會是由無數個同心球殼組成，若我們切的球殼越多，每層球殼的厚度也一樣會越接近 0，故厚度為 $\mathrm dr$；球的表面積是 $4 \pi r^2$，那球殼體積微量就是 $\mathrm dV = 4 \pi r^2 \, \mathrm dr$，我們再把從 $0$ 到 $r$ 的所有球殼體積加起來，就會是 $V=\int_0^r 4 \pi r^2 \, \mathrm dr=4\pi \int_0^r r^2 \, \mathrm dr=4\pi\left[\frac{r^3}{3}\right]_0^r=\frac 43\pi r^3$。</p>
+
+<iframe src="https://www.geogebra.org/calculator/b7jgp5w7?embed" width="800" height="600" loading="lazy" allowfullscreen style="border: 1px solid #e4e4e4;border-radius: 4px;" frameborder="0"></iframe>
+
+<div class="note note-light">
+            <p>可以點擊左側 <code>dr</code> 的數值滑桿播放按鈕來播放動畫</p> 
+          </div>
+<h4 id="體積（圓盤法）"><a href="#體積（圓盤法）" class="headerlink" title="體積（圓盤法）"></a>體積（圓盤法）</h4><p>另一種想法，則是換一種角度去切它，我們除了用同心球殼以外，也可以直接切成好幾個很薄的、平面的圓盤，例如我們可以繞著 $x$ 軸做旋轉體（也就是先畫出一個二維圓，把它中心放在 $x$ 軸，讓它以 $x$ 軸為中心點旋轉出第三維度），我們可以把它表示成 $y^2+z^2=r^2-x^2$，而截面圓半徑即為 $r(x)=\sqrt{r^2-x^2}$。</p>
+<p>再來，我們要把每個圓盤假設成非常薄，薄到接近 0，可以用 $\mathrm dx$ 表示，故薄片體積即截面圓 &times; 厚度，可以寫成 $\mathrm dV=\pi r(x)^2 \, \mathrm dx=\pi(r^2-x^2) \, \mathrm dx$，而球體體積就會是從最左邊 $-r$ 到最右邊 $r$ 的所有薄片體積和，即為 $V=\int_{-r}^r \, \pi(r^2-x^2) \; \mathrm dx=\frac 43\pi r^3$（計算過程省略，<del>留作課後習題</del>）。</p>
+
+<iframe src="https://www.geogebra.org/3d/m4prvqvt?embed" width="800" height="600" loading="lazy" allowfullscreen style="border: 1px solid #e4e4e4;border-radius: 4px;" frameborder="0"></iframe>
+
+<div class="note note-light">
+            <p>可以點擊左側 <code>x0</code> 和（或）<code>dx</code> 的數值滑桿播放按鈕來播放動畫</p> 
+          </div>
+<div class="note note-info">
+            <p>圓盤法和球殼法只是兩種最常見的解法，仍會有其他種解法（如環形法）<br>不過個人推薦，如果只想學一種，那圓盤法還是最推薦的，它在後面的章節中也會有所應用</p> 
+          </div>
+<h4 id="表面積"><a href="#表面積" class="headerlink" title="表面積"></a>表面積</h4><p>其實表面積和體積的關係非常巧妙，剛才我們提到，體積都會是由無數面組成，而在更前面的章節中，我們也提到，積分所做的其實就是利用「微小變化量的總和」來還原「微小變化量」的微分操作。注意到了嗎，體積的積分，就是還原表面積的微分，所以表面積公式實際上只要把體積公式微分一下，就可以求得了，即 $\left[\frac 43\pi r^3\right]’=4 \pi r^2$。</p>
+<p>如果這個解釋太抽象，我們也能用圖形角度理解，<strong>表面積</strong>的概念我們可以這麼想，如果今天有一圓球體體積為 $V(r)=\frac 43 \pi r^3$，比這個球還再大一點點的球，它的體積為 $V(r+h)$，那麼它們之間的體積差，就會是一層小球殼，其體積為 $\frac{V(r+h)-V(r)}{h}$，我們可以想像，若 $h$ 很小很小時，這層球殼體積就會逼近於球體表面積，具體計算為</p>
+
+$$
+\lim_{h \to 0}\frac{V(r+h)-V(r)}{h}=[V(r)]'=4 \pi r^2
+$$
+
+<p>所以其實這兩種解釋最後的方向都會是一樣的——微分。</p>
+<h2 id="旋轉體體積"><a href="#旋轉體體積" class="headerlink" title="旋轉體體積"></a>旋轉體體積</h2><h3 id="定義-1"><a href="#定義-1" class="headerlink" title="定義"></a>定義</h3><p>將一個二維圖形繞一條線（旋轉軸）轉一圈 $360^\circ$，會形成一個三維立體圖形，即<strong>旋轉體（Solid of Revolution）</strong>。</p>
+<p>在高中階段和初階微積分中，我們只會學到以 $x$ 軸為旋轉軸的情形，故本章只會以它為例說明。</p>
+<h3 id="做法-4"><a href="#做法-4" class="headerlink" title="做法"></a>做法</h3><p>對於一個實心圖形的旋轉體，以 $x$ 軸為旋轉軸的旋轉體體積為 $V=\pi\int_a^b \, f^2(x) \; \mathrm dx$。</p>
+<p>若今天要求的是 $f(x)$ 和 $g(x)$ 包圍而成的圖形以 $x$ 軸為旋轉軸的旋轉體體積，則體積為</p>
+
+$$
+V=\pi\int_a^b \, |f^2(x)-g^2(x)| \; \mathrm dx
+$$
+
+<img src="/img/Rotationskoerper_animation.gif" srcset="/img/loading.gif" lazyload class="" title="旋轉體">
+<blockquote>
+<p>圖片來源：<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/zh-tw/%E6%97%8B%E8%BD%AC%E4%BD%93">維基百科</a></p>
+</blockquote>
+<h2 id="自然常數-e"><a href="#自然常數-e" class="headerlink" title="自然常數 $e$"></a>自然常數 $e$</h2><h3 id="數值"><a href="#數值" class="headerlink" title="數值"></a>數值</h3><p>$e$ 是一個無限不循環小數，值大約是 $2.71828…$。</p>
+<h3 id="定義——金融"><a href="#定義——金融" class="headerlink" title="定義——金融"></a>定義——金融</h3><p>當年利率為 $r$、每年複利計息 $n$ 次時，則每年的成長倍率（<strong>年增率</strong>，即每年本利和的成長率）是 $\left(1+\frac rn\right)^n$，如果把計息次數逼近無限次時（也就是<strong>連續複利</strong>），年增率會逼近一個極限，也就是自然常數 $e$，具體寫法會變成</p>
+
+$$
+\lim_{n \to \infty}\left(1+\frac rn\right)^n=e^r
+$$
+
+<h3 id="定義——指數函數"><a href="#定義——指數函數" class="headerlink" title="定義——指數函數"></a>定義——指數函數</h3><p>利用 $\displaystyle f’(x)=\lim_{h \to 0}\frac{f(x+h)-f(x)}{h}$ 這個原始定義，我們可以算出指數函數的導數值，例如：</p>
+<ul>
+<li>$[2^x]’ \approx 2^x \cdot 0.6931$</li>
+<li>$[3^x]’ \approx 3^x \cdot 1.0986$</li>
+<li>$[4^x]’ \approx 4^x \cdot 1.3863$</li>
+</ul>
+<p>注意到，所有指數函數 $a^x$，其導數會變成「$a^x \cdot\, ?$」的形式，於是在努力逼近下，我們會找到一個特殊的數，使得「$?$」部分逼近於 1，也就是讓 $[a^x]’=a^x$，而這個 $a$ 實際上就是自然常數 $e$。</p>
+<p>結論，自然常數 $e$ 的其中一個特性即 $[e^x]’=e^x$，逆向的積分操作 $\int \, e^x \; \mathrm dx=e^x+C$ 也成立。</p>
+<p>將這個特性推導成一般化公式，對指數函數 $e^u$，其導數 $[e^u]’=e^u \cdot u’$（別忘了連鎖律）。</p>
+<h2 id="指數與對數函數"><a href="#指數與對數函數" class="headerlink" title="指數與對數函數"></a>指數與對數函數</h2><h3 id="指數函數"><a href="#指數函數" class="headerlink" title="指數函數"></a>指數函數</h3><h4 id="微分"><a href="#微分" class="headerlink" title="微分"></a>微分</h4><p>原本底數為 $e$ 時，我們有 $[e^x]’=e^x$，那如果底數換成非負實數 $a$ 呢？前面學過，它會是 $[a^x]’=a^x \cdot \; ?$，那這個 $?$ 又怎麼算？根據對數率 $a=e^{\ln a}$ 和一系列繪畫觀察等過程，我們可以得到一個指數函數的微分公式，即</p>
+
+$$
+[a^x]'=\ln a \cdot a^x, \, a>0
+$$
+
+<h4 id="積分"><a href="#積分" class="headerlink" title="積分"></a>積分</h4><p>其實積分只不過是把有連鎖律的微分公式反過來，即</p>
+
+$$
+\int \, u'e^u \; \mathrm dx=e^u+C
+$$
+
+<p>不過當要積的是 $a^x$ 這種形式時，可以利用指數率，化簡後形成</p>
+
+$$
+\int \, a^x \; \mathrm dx=\frac{a^x}{\ln a}, \, 0<a \ne 1
+$$
+
+<h3 id="對數函數"><a href="#對數函數" class="headerlink" title="對數函數"></a>對數函數</h3><h4 id="微分-1"><a href="#微分-1" class="headerlink" title="微分"></a>微分</h4><p>經過對數律與連鎖律等推導，我們可以得到以下公式：</p>
+<ul>
+<li>$[\ln u]’=u’\cdot\frac 1u=\frac{u’}{u}$</li>
+<li>$[\log_a x]’=\left[\frac{\ln x}{\ln a}\right]’=\frac{1}{x\cdot\ln a}$</li>
+</ul>
+<h4 id="積分-1"><a href="#積分-1" class="headerlink" title="積分"></a>積分</h4><p>從上面指數函數的積分結果再進行進一步的計算後，一樣可以換算成對數函數的積分公式</p>
+
+$$
+\int \, \ln x \; \mathrm dx=x\ln x-x+C
+$$
+
+<h2 id="積分基本公式的修正"><a href="#積分基本公式的修正" class="headerlink" title="積分基本公式的修正"></a>積分基本公式的修正</h2><p>前面我們說，積分公式為 $\int \, x^n \; \mathrm dx=\frac{1}{n+1}x^{n+1}, \, x \ne -1$，最後這個 $x \ne -1$ 的條件是為了不要出現分母是 0 的情況，但如果真的出現了 $n=0$（其實也就是 $\frac{1}{x}$）的情況，我們又該怎麼對它積分？</p>
+<p>剛才我們又提到了，$[\ln x]’=\frac 1x$，不過這裡要特別注意負號的情況，當負數時，$[\ln -x]’=\frac{1}{-x}[-x]’=\frac{-1}{-x}=\frac 1x$，故應改寫成</p>
+
+$$
+[\ln |x|]'=\frac 1x, \, x \ne 0
+$$
+
+<p>把整個積分基本公式做修正，得到最終公式</p>
+
+$$
+\int \, x^n \; \mathrm dx =\begin{cases}\frac{1}{n+1}x^{n+1}+C, & n\neq -1 \\\ln|x|+C, & n=-1\end{cases}
+$$
+
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E7%AD%86%E8%A8%98%E8%88%87%E6%95%99%E5%AD%B8/" class="category-chain-item">筆記與教學</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/%E7%AD%86%E8%A8%98%E8%88%87%E6%95%99%E5%AD%B8/%E6%95%B8%E5%AD%B8/" class="category-chain-item">數學</a>
+  
+  
+
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/%E7%AD%86%E8%A8%98/" class="print-no-link">#筆記</a>
+      
+        <a href="/tags/%E6%95%99%E5%AD%B8/" class="print-no-link">#教學</a>
+      
+        <a href="/tags/%E6%95%B8%E5%AD%B8/" class="print-no-link">#數學</a>
+      
+        <a href="/tags/%E5%BE%AE%E7%A9%8D%E5%88%86/" class="print-no-link">#微積分</a>
+      
+        <a href="/tags/%E5%BE%AE%E5%88%86/" class="print-no-link">#微分</a>
+      
+        <a href="/tags/%E7%A9%8D%E5%88%86/" class="print-no-link">#積分</a>
+      
+        <a href="/tags/%E6%A5%B5%E9%99%90/" class="print-no-link">#極限</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>一口氣搞懂微積分！（初階微積分）</div>
+      <div>https://chuen666666.github.io/一口氣搞懂微積分！（初階微積分）/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>淳</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>發布於</div>
+          <div>2026-02-18 20:56</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>更新於</div>
+          <div>2026-03-02 00:01</div>
+        </div>
+      
+      
+        <div class="license-meta-item">
+          <div>許可協議</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 姓名標示">
+                    <i class="iconfont icon-cc-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/%E4%BA%BA%E7%94%9F%E7%9A%84%E7%AC%AC%E4%B8%80%E5%BC%B5%E5%B0%88%E6%A5%AD%E5%9F%B7%E7%85%A7%EF%BC%81%E4%B8%89%E7%AD%89%E6%A5%AD%E9%A4%98%E7%84%A1%E7%B7%9A%E9%9B%BB%E5%9F%B7%E7%85%A7%E5%88%B0%E6%89%8B%EF%BC%81/" title="人生的第一張專業執照！三等業餘無線電執照到手！">
+                        <span class="hidden-mobile">人生的第一張專業執照！三等業餘無線電執照到手！</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+  
+  
+    <article id="comments" lazyload>
+      
+    <div id="giscus" class="giscus"></div>
+    <script type="text/javascript">
+      Fluid.utils.loadComments('#giscus', function() {
+        var options = {"repo":"Chuen666666/Chuen666666.github.io","repo-id":"R_kgDOPtWSPw","category":"General","category-id":"DIC_kwDOPtWSP84C0IRu","mapping":"pathname","reactions-enabled":1,"emit-metadata":0,"input-position":"top","theme-light":"light","theme-dark":"dark","lang":"zh-TW"};
+        var attributes = {};
+        for (let option in options) {
+          if (!option.startsWith('theme-')) {
+            var key = option.startsWith('data-') ? option : 'data-' + option;
+            attributes[key] = options[option];
+          }
+        }
+        var light = 'light';
+        var dark = 'dark';
+        window.GiscusThemeLight = light;
+        window.GiscusThemeDark = dark;
+        attributes['data-theme'] = document.documentElement.getAttribute('data-user-color-scheme') === 'dark' ? dark : light;
+        for (let attribute in attributes) {
+          var value = attributes[attribute];
+          if (value === undefined || value === null || value === '') {
+            delete attributes[attribute];
+          }
+        }
+        var s = document.createElement('script');
+        s.setAttribute('src', 'https://giscus.app/client.js');
+        s.setAttribute('crossorigin', 'anonymous');
+        for (let attribute in attributes) {
+          s.setAttribute(attribute, attributes[attribute]);
+        }
+        var ss = document.getElementsByTagName('script');
+        var e = ss.length > 0 ? ss[ss.length - 1] : document.head || document.documentElement;
+        e.parentNode.insertBefore(s, e.nextSibling);
+      });
+    </script>
+    <noscript>Please enable JavaScript to view the comments</noscript>
+
+
+    </article>
+  
+
+
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜尋</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">關鍵字</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <span>© 2025 淳</span> <br> <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+    <div class="statistics">
+  
+  
+
+  
+    
+      <span id="busuanzi_container_site_pv" style="display: none">
+        總訪問量 
+        <span id="busuanzi_value_site_pv"></span>
+         次
+      </span>
+    
+    
+      <span id="busuanzi_container_site_uv" style="display: none">
+        總訪客數 
+        <span id="busuanzi_value_site_uv"></span>
+         人
+      </span>
+    
+    
+
+  
+
+</div>
+
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  var relativeDate = function() {
+    var updatedTime = document.getElementById('updated-time');
+    if (updatedTime) {
+      var text = updatedTime.textContent;
+      var reg = /\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(?:Z|[+-]\d{2}:\d{2})/;
+      var matchs = text.match(reg);
+      if (matchs) {
+        var relativeTime = moment(matchs[0]).fromNow();
+        updatedTime.textContent = text.replace(reg, relativeTime);
+      }
+      updatedTime.style.display = '';
+    }
+  };
+  Fluid.utils.createScript('https://lib.baomitu.com/moment.js/2.29.4/moment.min.js', function() {
+    if (!'zh-tw'.startsWith('en')) {
+      Fluid.utils.createScript('https://lib.baomitu.com/moment.js/2.29.4/locale/zh-tw.min.js', function() {
+        relativeDate();
+      });
+    } else {
+      relativeDate();
+    }
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/5.0.0/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  
+      <script>
+        if (!window.MathJax) {
+          window.MathJax = {
+            tex    : {
+              inlineMath: { '[+]': [['$', '$']] }
+            },
+            loader : {
+              load: ['ui/lazy']
+            },
+            options: {
+              renderActions: {
+                insertedScript: [200, () => {
+                  document.querySelectorAll('mjx-container').forEach(node => {
+                    let target = node.parentNode;
+                    if (target.nodeName.toLowerCase() === 'li') {
+                      target.parentNode.classList.add('has-jax');
+                    }
+                  });
+                }, '', false]
+              }
+            }
+          };
+        } else {
+          MathJax.startup.document.state(0);
+          MathJax.texReset();
+          MathJax.typeset();
+          MathJax.typesetPromise();
+        }
+
+        Fluid.events.registerRefreshCallback(function() {
+          if ('MathJax' in window && MathJax.startup.document && typeof MathJax.startup.document.state === 'function') {
+            MathJax.startup.document.state(0);
+            MathJax.texReset();
+            MathJax.typeset();
+            MathJax.typesetPromise();
+          }
+        });
+      </script>
+    
+
+  <script  src="https://lib.baomitu.com/mathjax/3.2.2/es5/tex-mml-chtml.js" ></script>
+
+  <script  src="/js/local-search.js" ></script>
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+
+
+  
+<script src="/js/custom.js"></script>
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">部落格在允許 JavaScript 執行的環境下瀏覽效果更佳</div>
+  </noscript>
+</body>
+</html>

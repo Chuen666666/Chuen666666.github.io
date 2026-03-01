@@ -1,0 +1,874 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-TW" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/avatar.jpg">
+  <link rel="icon" href="/img/avatar.jpg">
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="">
+  <meta name="author" content="淳">
+  <meta name="keywords" content="Python, 程式, 專案, 筆記, 教學, 心得, 考證照, 比賽, 競程, 淳, 淳宇, Chuen666666, 淳宇淳蠢">
+  
+    <meta name="description" content="我和 @閔捷 參加了 2026 年 1 月底的清大 HPC 寒令營">
+<meta property="og:type" content="article">
+<meta property="og:title" content="清華大學高速計算人工智慧冬令營——參加心得">
+<meta property="og:url" content="https://chuen666666.github.io/%E6%B8%85%E8%8F%AF%E5%A4%A7%E5%AD%B8%E9%AB%98%E9%80%9F%E8%A8%88%E7%AE%97%E4%BA%BA%E5%B7%A5%E6%99%BA%E6%85%A7%E5%86%AC%E4%BB%A4%E7%87%9F%E2%80%94%E2%80%94%E5%8F%83%E5%8A%A0%E5%BF%83%E5%BE%97/index.html">
+<meta property="og:site_name" content="淳の神奇小網站">
+<meta property="og:description" content="我和 @閔捷 參加了 2026 年 1 月底的清大 HPC 寒令營">
+<meta property="og:locale" content="zh_TW">
+<meta property="og:image" content="https://chuen666666.github.io/img/HPC_camp_group_pic.JPG">
+<meta property="og:image" content="https://chuen666666.github.io/img/CHUH_computer_room_sound.png">
+<meta property="og:image" content="https://chuen666666.github.io/img/HPC_award.JPG">
+<meta property="og:image" content="https://chuen666666.github.io/img/HPC_group_award.JPG">
+<meta property="og:image" content="https://chuen666666.github.io/img/HPC_group.JPG">
+<meta property="og:image" content="https://chuen666666.github.io/img/HPC_winter_camp.jpg">
+<meta property="og:image" content="https://chuen666666.github.io/img/HPC_sticker_laptop.jpg">
+<meta property="article:published_time" content="2026-01-31T07:29:40.000Z">
+<meta property="article:modified_time" content="2026-03-01T16:01:58.714Z">
+<meta property="article:author" content="淳">
+<meta property="article:tag" content="HPC">
+<meta property="article:tag" content="叢集運算">
+<meta property="article:tag" content="國網中心">
+<meta property="article:tag" content="心得">
+<meta property="article:tag" content="程式">
+<meta property="article:tag" content="超算">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://chuen666666.github.io/img/HPC_camp_group_pic.JPG">
+  
+  
+    <meta name="referrer" content="no-referrer-when-downgrade">
+  
+  
+  <title>清華大學高速計算人工智慧冬令營——參加心得 - 淳の神奇小網站</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1749284_5i9bdhy70f8.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1735173_0756783m6t5.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+  
+<link rel="stylesheet" href="/css/custom.css">
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"chuen666666.github.io","root":"/","version":"1.9.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3","placement":"left","visible":"hover","icon":"❡"},"progressbar":{"enable":true,"height_px":3,"color":null,"options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"left","headingSelector":"h1,h2,h3","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+  
+<meta name="generator" content="Hexo 8.1.1"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>淳の網站</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首頁</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>歸檔</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分類</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>標籤</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>關於</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/links/" target="_self">
+                <i class="iconfont icon-link-fill"></i>
+                <span>友站</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/default.png') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="清華大學高速計算人工智慧冬令營——參加心得"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-author" aria-hidden="true"></i>
+        淳
+      </span>
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2026-01-31 15:29" pubdate>
+          2026-01-31 15:29
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          4k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          33 分鐘
+        
+      </span>
+    
+
+    
+    
+      
+        <span id="busuanzi_container_page_pv" style="display: none">
+          <i class="iconfont icon-eye" aria-hidden="true"></i>
+          <span id="busuanzi_value_page_pv"></span> 次
+        </span>
+        
+
+      
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="padding-left: 2rem; margin-right: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目錄</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">清華大學高速計算人工智慧冬令營——參加心得</h1>
+            
+              <p id="updated-time" class="note note-light" style="display: none">
+                
+                  
+                    本文最後更新於：2026-03-02T00:01:58+08:00
+                  
+                  
+
+                
+              </p>
+            
+            
+              <div class="markdown-body">
+                
+                <p>我與 <a target="_blank" rel="noopener" href="https://xieserver.com/">@閔捷</a> 一起報名參加了由清華大學叢集運算團隊所舉辦的 《清華大學高速計算人工智慧冬令營》（2026/1/29~31），我們被分配到了第四小隊，隊員除了 <a target="_blank" rel="noopener" href="https://xieserver.com/">@閔捷</a> 之外，還有 <a target="_blank" rel="noopener" href="https://qwo877.github.io/me/">@匿名用戶9487</a> 和 <a target="_blank" rel="noopener" href="https://github.com/Xiancode207585">@Xiancode207585</a>。我和 <a target="_blank" rel="noopener" href="https://qwo877.github.io/me/">@匿名用戶9487</a> 基本上算是舊識了，我們在 115 資訊月資訊應用技能競賽就見過了，<a target="_blank" rel="noopener" href="https://github.com/Xiancode207585">@Xiancode207585</a> 這個交大佬我們倒是都互不認識，不過合作和聊天過程意外地順利就是了。</p>
+<h2 id="第零天（28-號）"><a href="#第零天（28-號）" class="headerlink" title="第零天（28 號）"></a>第零天（28 號）</h2><p>我和 <a target="_blank" rel="noopener" href="https://xieserver.com/">@閔捷</a> 因為聽說清大提供的住宿環境不太好，因此我們提早自己訂了飯店，我和他就這麼住上了幾天，<del>當初還不小心少訂一天，我們兩個北七甚至沒發現，出發前一天才去補訂</del>。</p>
+<p><a target="_blank" rel="noopener" href="https://xieserver.com/">@閔捷</a> 訂了今天到新竹的台鐵，其實 12 點多的火車對於明天才開始活動的我們來說實在有些早，不過既然都訂了，我們就提早了不少出發。</p>
+<p>到了新竹，我才猛然想起自己忘了帶小米手環的充電線，於是我們一路從火車站走去大遠百，去到裡面的小米實體店，我們目標明確，一進去就問了店員：「有沒有我這個手環的充電線？」但不幸的是，這麼舊型號的線已經只剩網購能買到了，我們也就只能作罷離開。我們隨後去查了查從大遠百到新舍商旅（即我們住的飯店）要怎麼去，結果發現從火車站過去還比較方便呢，但都走到這了，我們也不想花 100 多元搭 Uber，只好再花個半小時走過去，正好也就到了可以 Check-in 的時間。</p>
+<p>原本我們是這麼想的，但結果走到剩 300 公尺時，有一段路被擋住了，是施工，我們只好再拖著重重的行李繞路，最後花了超多時間和精力，總算是回到了飯店。</p>
+<p>放好行李，並做了短暫的歇息後，我們開始找晚餐，然後我們得出了一個多數人都知道的結論——<del>新竹根本美食沙漠</del>（玩笑）。我們最後選擇了旅館樓下不遠的三媽臭臭鍋作為晚餐。</p>
+<p>晚餐後的生活，大概這三天都差不多：跟女友語音通話，然後三個人（包含 <a target="_blank" rel="noopener" href="https://xieserver.com/">@閔捷</a>）嘴炮加幹話，再去買點酒、泡麵、零食，然後抱著筆電打 Code 到凌晨。</p>
+<h2 id="第一天（29-號）"><a href="#第一天（29-號）" class="headerlink" title="第一天（29 號）"></a>第一天（29 號）</h2><p>今天是營隊正式開始的第一天，昨天和前台訂的 6:30 的 Morning Call 完全沒把我們叫醒，而是 <a target="_blank" rel="noopener" href="https://xieserver.com/">@閔捷</a> 在 8:30 左右驚醒，然後把我搖醒，我們再光速出門，騎 YouBike 一路狂飆到清大，<del>還在旁邊的草叢那嘔吐了十分鐘</del>，好不容易在 9:10 左右抵達，結果就得知了一個更震驚我們的消息——報到時間到 9:30，我們一邊<del>罵街</del>後悔，一邊暗暗決定後面些天要訂 Uber 來了。</p>
+<p>這個營隊的上課模式和大學別無二致，基本上就是多數時候聽教授教，我們再在有實操的部分自己努力（<del>或者煩隊輔</del>）。今天的課程基本上就是教一些平行運算和超算的東西，以及一些叢集運算的規範。我們先在 iServer 註冊帳號，並利用 SSH 連到國網中心（國家高速網路與計算中心）的「創進一號」，我們會在上面跑一些練習或作業的 Code，來讓我們能夠了解何謂「叢集運算（HPC）」。</p>
+<div class="note note-info">
+            <p>創進一號（Forerunner 1, F1）為國網中心建置的高速計算主機，具備 558 台計算伺服器，共可提供 62,496 個計算核心；每台計算伺服器配備兩顆 56 核心 Intel Xeon Platinum 8480 + 2.0 GHz 處理器、InfiniBand 200 Gb/s 高速網路、512 GB 記憶體。</p> <p>（資料來源：<a target="_blank" rel="noopener" href="https://www.nchc.org.tw/Page?itemid=2&amp;mid=4">國家高速網路與計算中心</a>）</p> 
+          </div>
+<p>午餐其實並不是這次營隊包辦的項目，因此我們一行人得自己出去校外吃，我們最開始是決定和隊輔一同出去吃飯，不過隊輔也有和他同學約好，最後我們竟然高達了 21 個人一起前去吃午飯。我們去了間叫「紅吱吱」的平價牛排，雖算不上好吃，但第一個和所有隊友坐同一桌一同吃飯的一餐還是挺值得紀念的吧。</p>
+<p>至於晚餐，營隊在第一個晚上提供了 Pizza（<del>好耶又省一餐錢</del>），因此我們是直接在教室吃，省時又好吃，是我今天吃得最滿意的一餐了。</p>
+<p>但課程還遠沒有結束，晚餐過後還有課程，課程表定到 21:30 才結束，而實際上我們甚至是到了 22:30 多才離開學校的，除了課堂上的練習外，我們還有 Homework 要做，我們可以去拼 Scoreboard 排名，盡可能把程式改得快到極致（不過排名還是會被前面的一群又肝又佬的電神霸占），我們小隊哪懂 C++ 啊，於是一群 Vibe Coding 之神只好一直在換 AI 和提交屎山到 OJ 上之間反覆橫跳。</p>
+<p>課程結束後，我們拖著疲憊的身體，原本想的是可以訂 Uber 回去，但又想到來時的上坡路要是不滑回去豈不是虧大了？於是我們又頭鐵地去借了 YouBike，一路滑下坡，吹著早上用體力和毅力換來的晚風，回到了房間。</p>
+<p>但晚上除了幹話、我喝冰結、<a target="_blank" rel="noopener" href="https://xieserver.com/">@閔捷</a> 吃芭樂乾之外，我們還得用肝來換 Scoreboard 的排名，我「早早」地三點就睡了，但 <a target="_blank" rel="noopener" href="https://xieserver.com/">@閔捷</a> 獨自幹到了四點<del>還不給我關燈</del>，實在是很有毅力了。</p>
+<h2 id="第二天（30-號）"><a href="#第二天（30-號）" class="headerlink" title="第二天（30 號）"></a>第二天（30 號）</h2><p>今天早上我們總算是起床得比較從容了，我們也學乖了訂 Uber 前往清大，不過今天因為要去參觀國網中心，我們得提早半小時前去清大，再坐遊覽車過去國網中心。</p>
+<p>我們這幾個同組的人被分配到了相鄰的座位，不過在我旁邊的是 <a target="_blank" rel="noopener" href="https://qwo877.github.io/me/">@匿名用戶9487</a>，我們也藉這個機會好好地<del>嘴炮</del>交流了一番，也算是一個不錯的回憶了。</p>
+<p>國網中心的參觀基本上都是聽演講，這對睡眠不足的我和 <a target="_blank" rel="noopener" href="https://xieserver.com/">@閔捷</a> 而言，要不睡著簡直是不可能的任務，但好在我們也沒有睡多久，最重要的是，聽到了 HiPAC 國網盃的比賽資訊，我們眼睛一亮，當即決定了要去參加這個比賽，更大的影響是，我特選正取的中教大（台中教育大學）原本我對它的資工還存疑，但隨著講者提到中教大的超算很強，這讓我對中教大完全改了觀。</p>
+<p>國網中心的行程結束後，我們去成功湖拍了張大合照（下圖）就去吃午餐了。這次倒是沒有二十幾人的飯局了，反而只有寥寥幾人去，不過我、<a target="_blank" rel="noopener" href="https://xieserver.com/">@閔捷</a>、<a target="_blank" rel="noopener" href="https://qwo877.github.io/me/">@匿名用戶9487</a>、隊輔都在，還有一些隊輔的朋友，我們六人一桌，去吃了這幾天來最好吃的餐廳「甘泉魚麵」，雖然剛開始吃飯時有點小尬尷，但到後面也算聊起來了，社交的部分還算順利。</p>
+<img src="/img/HPC_camp_group_pic.JPG" srcset="/img/loading.gif" lazyload class="d-block mx-auto mb-4" width="500" title="成功湖大合照">
+<p>下午和晚上的課程也是照例進行，主要在教 CPU、Core、MPI、OpenMP 等等，不知道是因為上手了，或者真的比較簡單，今天的實操體感上比昨天的順利不少，雖然仍然是需要依賴 AI，不過其實總體掌握感多過了昨天那種迷茫的感覺。</p>
+<p>下午我們還有一個環節是參觀清大的圖書館，雖然去過了國家圖書館，已經看過了很厲害的圖書館，但作為校園的一部分，清大圖書館還是看得我相當震驚，領我們去看的領隊也耐心地向我們講解了一些關於清大的歷史和特色。</p>
+<p>晚餐時間，今天清大依舊供應了一餐麥當勞，但我本人是對台灣老麥不太存有好感就是了。吃飯過程還有一個介紹清大資工系的節目，雖然特選結果都已塵埃落定，但我還是把它給聽完了，<del>反觀 <a target="_blank" rel="noopener" href="https://xieserver.com/">@閔捷</a> 自己偷偷溜回教室卷 Homework 的排名</del>。</p>
+<p>晚餐和晚上的課程結束後，我們還有一個參觀清大機房的節目，這完全進入了 <a target="_blank" rel="noopener" href="https://xieserver.com/">@閔捷</a> 的舒適圈，但對硬體沒什麼研究的我，一趟下來只聽懂了機房有 5090 和 H100。不得不說，<a target="_blank" rel="noopener" href="https://xieserver.com/">@閔捷</a> 在這裡完全展現了自己對硬體的精熟和勇往直前的社交能力，他到處給別人講解機房中的機器，還主動和一堆清大生搭話，甚至一度被別人誤認成清大生，我則只能在旁邊聽著一堆專有名詞發呆。不過不得不說，機房是真的蠻大聲的，下面這張是我在機房裡測的分貝數，實在很難想像長期待在這種環境的人耳朵能變成什麼樣子。</p>
+<img src="/img/CHUH_computer_room_sound.png" srcset="/img/loading.gif" lazyload class="d-block mx-auto mb-4" width="300" title="清大機房的分貝數">
+<p>今天放人的時間又是 22:00 多了，我們依然騎 YouBike 滑回飯店，但在某個紅燈時，我們發現了一個意外：「你外套呢？」我問道，「啊！忘在清大了，笑死。」<a target="_blank" rel="noopener" href="https://xieserver.com/">@閔捷</a> 回，這聽起來好像沒什麼問題，實則問題大了，明天就是退房日，但他將房卡放在了外套口袋中……。</p>
+<p>晚上的生活誠如前面說的，就是嘴炮、打 Code 做作業、喝酒吃零食，依然是 3:00 睡覺。</p>
+<h2 id="第三天（31-號）"><a href="#第三天（31-號）" class="headerlink" title="第三天（31 號）"></a>第三天（31 號）</h2><p>今天早上的起床倒是沒什麼困難，但退房時就有些尬尷了，「呃……房卡？」我交出房卡後，與櫃檯人員對視一秒後，他問道：「應該會有兩張吧？」，最後 <a target="_blank" rel="noopener" href="https://xieserver.com/">@閔捷</a> 只好悻悻地賠了 200 元，喜提新舍商旅 611 號房房卡一張。</p>
+<p>今天的課程就容易得多了，早上在講一些 AI 概論，也就是我們學校 AI 班課程和我參加過的所有 AI 活動都會講，我已經聽好幾次的那套理論，什麼 ML、DL、RNN、Transformer 架構、注意力機制等等，還有用 Colab 玩一些基礎 CV 的項目，這是何其親切啊，尤其對於摸了兩天 C++ 的我來說。</p>
+<p>今天午餐就比較隨意了，我們找了教室樓下的全家，隨意買了點東西果腹，<a target="_blank" rel="noopener" href="https://xieserver.com/">@閔捷</a> 這個認真魔人吃完後就急急地跑回去卷 Code 排名了，而我則是慢悠悠地吃完麵才回教室休息。</p>
+<p>下午就比較輕鬆了，課程到了表定的 16:00 後，就進入了這個營隊最後一個階段——閉幕式。其實我本來還不知道這個營隊是有設獎項的，不過我們這個 Vibe Coding 小隊竟然還拿了不少次獎，我個人就拿了兩個獎項，而我們小隊還又拿了一個小隊的獎項，於是我得到了一個清大的插頭（轉接頭）、可以貼到筆電上的「國立清華大學叢集電腦競賽團隊」貼紙、國網中心的外套之外，加上每人都有送的 3D 列印手機架和第一天小遊戲拿到的撲克牌，這一趟下來可真是盆滿缽滿。</p>
+<p>其實整個閉幕式的過程之中，<a target="_blank" rel="noopener" href="https://xieserver.com/">@閔捷</a> 還主動和一堆清大學生交換了 IG，我順勢在他後面也交換了不少 DC，但加好友歸加好友，他的社交能力實在讓我尤為佩服，也終於能夠明白了他為什麼可以擁有如此龐大的人脈，更是讓我學會了另一種我從未思考過的社交觀念，這大概是我這一趟清大三日遊學到最寶貴的東西了。受了他的鼓舞，我也隨即提議去交換教授的聯繫方式，而教授人很好地和我們加了 LINE，「這個連我們都沒有欸！」我們隊輔如此說道。</p>
+<p>一切活動都結束後，我和 <a target="_blank" rel="noopener" href="https://xieserver.com/">@閔捷</a> 還留下來跟我們的小隊輔電神聊了一段時間，問了蠻多關於國網盃競賽和 HPC 相關的問題，讓我收獲滿滿。經歷了充實又費精力的營隊後，我們搭著區間車回台北，沿路也一直計劃著國網盃的比賽和組伺服器等事宜，相約在半年後可以一起做出點成績。</p>
+<div class="group-image-container"><div class="group-image-row"><div class="group-image-wrap"><img src="/img/HPC_award.JPG" srcset="/img/loading.gif" lazyload alt="個人獲獎"></div><div class="group-image-wrap"><img src="/img/HPC_group_award.JPG" srcset="/img/loading.gif" lazyload alt="小隊獲獎"></div><div class="group-image-wrap"><img src="/img/HPC_group.JPG" srcset="/img/loading.gif" lazyload alt="小隊團照"></div></div><div class="group-image-row"><div class="group-image-wrap"><img src="/img/HPC_winter_camp.jpg" srcset="/img/loading.gif" lazyload alt="結業證書"></div><div class="group-image-wrap"><img src="/img/HPC_sticker_laptop.jpg" srcset="/img/loading.gif" lazyload alt="清大 HPC 貼紙"></div></div></div>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E5%BF%83%E5%BE%97/" class="category-chain-item">心得</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/%E5%BF%83%E5%BE%97/%E6%B4%BB%E5%8B%95/" class="category-chain-item">活動</a>
+  
+  
+
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/%E5%BF%83%E5%BE%97/" class="print-no-link">#心得</a>
+      
+        <a href="/tags/%E7%A8%8B%E5%BC%8F/" class="print-no-link">#程式</a>
+      
+        <a href="/tags/HPC/" class="print-no-link">#HPC</a>
+      
+        <a href="/tags/%E5%8F%A2%E9%9B%86%E9%81%8B%E7%AE%97/" class="print-no-link">#叢集運算</a>
+      
+        <a href="/tags/%E8%B6%85%E7%AE%97/" class="print-no-link">#超算</a>
+      
+        <a href="/tags/%E5%9C%8B%E7%B6%B2%E4%B8%AD%E5%BF%83/" class="print-no-link">#國網中心</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>清華大學高速計算人工智慧冬令營——參加心得</div>
+      <div>https://chuen666666.github.io/清華大學高速計算人工智慧冬令營——參加心得/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>淳</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>發布於</div>
+          <div>2026-01-31 15:29</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>更新於</div>
+          <div>2026-03-02 00:01</div>
+        </div>
+      
+      
+        <div class="license-meta-item">
+          <div>許可協議</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 姓名標示">
+                    <i class="iconfont icon-cc-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/%E4%BA%BA%E7%94%9F%E7%9A%84%E7%AC%AC%E4%B8%80%E5%BC%B5%E5%B0%88%E6%A5%AD%E5%9F%B7%E7%85%A7%EF%BC%81%E4%B8%89%E7%AD%89%E6%A5%AD%E9%A4%98%E7%84%A1%E7%B7%9A%E9%9B%BB%E5%9F%B7%E7%85%A7%E5%88%B0%E6%89%8B%EF%BC%81/" title="人生的第一張專業執照！三等業餘無線電執照到手！">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">人生的第一張專業執照！三等業餘無線電執照到手！</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/%E9%82%84%E4%B8%8D%E6%9C%83%E5%AF%ABMarkdown%EF%BC%9F%E4%B8%8D%E8%A6%81%E5%86%8D%E5%AF%AB%E9%86%9C%E9%86%9C%E7%9A%84README-md%E4%BA%86%EF%BC%81/" title="還不會寫 Markdown？不要再寫醜醜的 README.md 了！">
+                        <span class="hidden-mobile">還不會寫 Markdown？不要再寫醜醜的 README.md 了！</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+  
+  
+    <article id="comments" lazyload>
+      
+    <div id="giscus" class="giscus"></div>
+    <script type="text/javascript">
+      Fluid.utils.loadComments('#giscus', function() {
+        var options = {"repo":"Chuen666666/Chuen666666.github.io","repo-id":"R_kgDOPtWSPw","category":"General","category-id":"DIC_kwDOPtWSP84C0IRu","mapping":"pathname","reactions-enabled":1,"emit-metadata":0,"input-position":"top","theme-light":"light","theme-dark":"dark","lang":"zh-TW"};
+        var attributes = {};
+        for (let option in options) {
+          if (!option.startsWith('theme-')) {
+            var key = option.startsWith('data-') ? option : 'data-' + option;
+            attributes[key] = options[option];
+          }
+        }
+        var light = 'light';
+        var dark = 'dark';
+        window.GiscusThemeLight = light;
+        window.GiscusThemeDark = dark;
+        attributes['data-theme'] = document.documentElement.getAttribute('data-user-color-scheme') === 'dark' ? dark : light;
+        for (let attribute in attributes) {
+          var value = attributes[attribute];
+          if (value === undefined || value === null || value === '') {
+            delete attributes[attribute];
+          }
+        }
+        var s = document.createElement('script');
+        s.setAttribute('src', 'https://giscus.app/client.js');
+        s.setAttribute('crossorigin', 'anonymous');
+        for (let attribute in attributes) {
+          s.setAttribute(attribute, attributes[attribute]);
+        }
+        var ss = document.getElementsByTagName('script');
+        var e = ss.length > 0 ? ss[ss.length - 1] : document.head || document.documentElement;
+        e.parentNode.insertBefore(s, e.nextSibling);
+      });
+    </script>
+    <noscript>Please enable JavaScript to view the comments</noscript>
+
+
+    </article>
+  
+
+
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜尋</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">關鍵字</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <span>© 2025 淳</span> <br> <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+    <div class="statistics">
+  
+  
+
+  
+    
+      <span id="busuanzi_container_site_pv" style="display: none">
+        總訪問量 
+        <span id="busuanzi_value_site_pv"></span>
+         次
+      </span>
+    
+    
+      <span id="busuanzi_container_site_uv" style="display: none">
+        總訪客數 
+        <span id="busuanzi_value_site_uv"></span>
+         人
+      </span>
+    
+    
+
+  
+
+</div>
+
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  var relativeDate = function() {
+    var updatedTime = document.getElementById('updated-time');
+    if (updatedTime) {
+      var text = updatedTime.textContent;
+      var reg = /\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(?:Z|[+-]\d{2}:\d{2})/;
+      var matchs = text.match(reg);
+      if (matchs) {
+        var relativeTime = moment(matchs[0]).fromNow();
+        updatedTime.textContent = text.replace(reg, relativeTime);
+      }
+      updatedTime.style.display = '';
+    }
+  };
+  Fluid.utils.createScript('https://lib.baomitu.com/moment.js/2.29.4/moment.min.js', function() {
+    if (!'zh-tw'.startsWith('en')) {
+      Fluid.utils.createScript('https://lib.baomitu.com/moment.js/2.29.4/locale/zh-tw.min.js', function() {
+        relativeDate();
+      });
+    } else {
+      relativeDate();
+    }
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/5.0.0/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/js/local-search.js" ></script>
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+
+
+  
+<script src="/js/custom.js"></script>
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">部落格在允許 JavaScript 執行的環境下瀏覽效果更佳</div>
+  </noscript>
+</body>
+</html>
