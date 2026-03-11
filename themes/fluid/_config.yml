@@ -1415,13 +1415,19 @@ links:
       link: https://youtube.com/@uyukisauce3054?si=iaiGyTSGWxmoacZw,
       avatar: /avatar/water_59.jpg
       }
+    - {
+      title: "ヨーグルト",
+      intro: "瘋子有什麼不好呢?",
+      link: https://yogurt0617.github.io/aboutMeee/,
+      avatar: /avatar/yogurt.jpg
+      }
 
 
   # 當成員頭像加載失敗時，替換為指定圖片
   # When the member avatar fails to load, replace the specified image
   onerror_avatar: /img/avatar.png
 
-  # 友連下方自定義區域，支援 HTML，可插入例如申請友連的文字
+  # 友站下方自定義區域，支援 HTML，可插入例如申請友站的文字
   # Custom content at the bottom of the links
   custom:
       enable: true
