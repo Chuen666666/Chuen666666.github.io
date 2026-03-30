@@ -17,7 +17,7 @@ date: 2026-01-06 15:34:24
 excerpt: 所有由 @郭10 出的陽明高中校內資訊能力競賽題目的 Python 詳解
 ---
 
-這份題解是關於由 [@郭10](https://yilinguo121.github.io/) 所出的[陽明高中校內資訊能力競賽題庫](https://codeforces.com/gym/629558/)的 Python 詳解
+這份題解是關於由 [@郭10](https://www.yilin0121.com/) 所出的[陽明高中校內資訊能力競賽題庫](https://codeforces.com/gym/629558/)的 Python 詳解
 
 如有任何錯誤或疑問，歡迎於下方留言或主動與我聯繫討論
 
