@@ -1082,7 +1082,7 @@ links:
     - {
       title: "哈哈哈",
       intro: "陽明電神🛐",
-      link: https://www.instagram.com/harry.chen.14855?igsh=cmVwamszbmpnNTI2,
+      link: http://discordapp.com/users/1462992192867143933,
       avatar: /avatar/youc.jpg
     }
     - {
@@ -1432,6 +1432,12 @@ links:
       intro: "一隻不會飛的章魚研究生",
       link: https://www.hhk.one/,
       avatar: /avatar/kangkang.JPG
+      }
+    - {
+      title: "fishbaby1011",
+      intro: "", // TODO
+      link: https://blog.fishbaby1011.com/,
+      avatar: /avatar/fishbaby.jpg
       }
 
 
