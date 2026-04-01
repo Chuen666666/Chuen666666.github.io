@@ -1427,6 +1427,12 @@ links:
       link: https://www.instagram.com/sapsamcat007/?hl=zh-tw,
       avatar: /avatar/sap.gif
       }
+    - {
+      title: "康康",
+      intro: "一隻不會飛的章魚研究生",
+      link: https://www.hhk.one/,
+      avatar: /avatar/kangkang.JPG
+      }
 
 
   # 當成員頭像加載失敗時，替換為指定圖片
