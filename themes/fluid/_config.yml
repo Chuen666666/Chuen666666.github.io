@@ -1435,7 +1435,7 @@ links:
       }
     - {
       title: "fishbaby1011",
-      intro: "", // TODO
+      intro: "",
       link: https://blog.fishbaby1011.com/,
       avatar: /avatar/fishbaby.jpg
       }
