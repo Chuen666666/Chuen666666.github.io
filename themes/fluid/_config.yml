@@ -1451,6 +1451,12 @@ links:
       link: https://www.instagram.com/baihufox,
       avatar: /avatar/baihu.png
       }
+    - {
+      title: "人",
+      intro: "在資訊佬們旁邊晃悠的人社牲",
+      link: https://www.threads.com/@young._.qwq1945,
+      avatar: /avatar/ren.jpg
+      }
 
 
   # 當成員頭像加載失敗時，替換為指定圖片
