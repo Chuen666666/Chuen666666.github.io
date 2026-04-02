@@ -1457,6 +1457,12 @@ links:
       link: https://www.threads.com/@young._.qwq1945,
       avatar: /avatar/ren.jpg
       }
+    - {
+      title: "yoru1005",
+      intro: "115特選爆死生，重度明日方舟玩家",
+      link: https://github.com/Yoru1005,
+      avatar: /avatar/yoru.jpg
+      }
 
 
   # 當成員頭像加載失敗時，替換為指定圖片
