@@ -1049,6 +1049,12 @@ links:
       link: https://xieserver.com/,
       avatar: /avatar/minje.webp
     }
+    # - {
+    #   title: "雪餅",
+    #   intro: "",
+    #   link: https://icecookies1017.github.io/,
+    #   avatar: /avatar/
+    # }
     - {
       title: "nini",
       intro: "聽小妹的就對了",
@@ -1438,6 +1444,12 @@ links:
       intro: "",
       link: https://blog.fishbaby1011.com/,
       avatar: /avatar/fishbaby.jpg
+      }
+    - {
+      title: "baihu",
+      intro: "一個小廢物高中生",
+      link: https://www.instagram.com/baihufox,
+      avatar: /avatar/baihu.png
       }
 
 
