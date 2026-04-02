@@ -1049,12 +1049,12 @@ links:
       link: https://xieserver.com/,
       avatar: /avatar/minje.webp
     }
-    # - {
-    #   title: "雪餅",
-    #   intro: "",
-    #   link: https://icecookies1017.github.io/,
-    #   avatar: /avatar/
-    # }
+    - {
+      title: "雪餅",
+      intro: "什麼都不會的雪餅",
+      link: https://icecookies1017.github.io/,
+      avatar: /avatar/icecookies.png
+    }
     - {
       title: "nini",
       intro: "聽小妹的就對了",
