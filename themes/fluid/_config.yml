@@ -1463,6 +1463,12 @@ links:
       link: https://github.com/Yoru1005,
       avatar: /avatar/yoru.jpg
       }
+    - {
+      title: "青呱Gua",
+      intro: "廢物一枚 便便教主",
+      link: https://guatw.net/,
+      avatar: /avatar/Gua.png
+      }
 
 
   # 當成員頭像加載失敗時，替換為指定圖片
