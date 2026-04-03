@@ -1469,6 +1469,12 @@ links:
       link: https://guatw.net/,
       avatar: /avatar/Gua.png
       }
+    - {
+      title: "boo00976",
+      intro: "資訊初學者",
+      link: https://github.com/boo00976,
+      avatar: /avatar/hiroya.png
+      }
 
 
   # 當成員頭像加載失敗時，替換為指定圖片
