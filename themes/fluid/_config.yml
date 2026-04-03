@@ -1475,6 +1475,12 @@ links:
       link: https://github.com/boo00976,
       avatar: /avatar/hiroya.png
       }
+    - {
+      title: "Hsinnnu",
+      intro: "又菜又愛玩",
+      link: https://www.instagram.com/chyiltzzz__,
+      avatar: /avatar/Hsinnnu.png
+      }
 
 
   # 當成員頭像加載失敗時，替換為指定圖片
