@@ -1481,6 +1481,12 @@ links:
       link: https://www.instagram.com/chyiltzzz__,
       avatar: /avatar/Hsinnnu.png
       }
+    - {
+      title: "ChuangB",
+      intro: "略略略",
+      link: https://chuangb48.github.io/personal_webside/,
+      avatar: /avatar/ChuangB.jpg
+      }
 
 
   # 當成員頭像加載失敗時，替換為指定圖片
