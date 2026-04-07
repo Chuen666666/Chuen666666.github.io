@@ -1487,6 +1487,12 @@ links:
       link: https://chuangb48.github.io/personal_webside/,
       avatar: /avatar/ChuangB.jpg
       }
+    - {
+      title: "雙生之狐",
+      intro: "一個手作堪比CNC的社恐",
+      link: https://www.instagram.com/fox_wee0408,
+      avatar: /avatar/melon_duck.jpg
+      }
 
 
   # 當成員頭像加載失敗時，替換為指定圖片
