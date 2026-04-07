@@ -1493,6 +1493,12 @@ links:
       link: https://www.instagram.com/fox_wee0408,
       avatar: /avatar/melon_duck.jpg
       }
+    - {
+      title: "何煦人也",
+      intro: "競程很菜的競程仔",
+      link: https://www.instagram.com/hush._.0319,
+      avatar: /avatar/hush.jpg
+      }
 
 
   # 當成員頭像加載失敗時，替換為指定圖片
