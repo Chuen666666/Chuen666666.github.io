@@ -1505,6 +1505,12 @@ links:
       link: https://www.instagram.com/hush._.0319,
       avatar: /avatar/hush.jpg
       }
+    - {
+      title: "玥楓",
+      intro: "我是玥楓，被電神電死的玥楓喵",
+      link: https://www.instagram.com/liu_senryckey,
+      avatar: /avatar/liu.webp
+      }
 
 
   # 當成員頭像加載失敗時，替換為指定圖片
