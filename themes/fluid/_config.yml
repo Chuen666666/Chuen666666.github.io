@@ -1511,6 +1511,12 @@ links:
       link: https://www.instagram.com/liu_senryckey,
       avatar: /avatar/liu.webp
       }
+    - {
+      title: "PGpenguin72",
+      intro: "是一隻企鵝喔",
+      link: https://pg72.tw/,
+      avatar: /avatar/pg72.png
+      }
 
 
   # 當成員頭像加載失敗時，替換為指定圖片
