@@ -1512,12 +1512,17 @@ links:
       avatar: /avatar/liu.webp
       }
     - {
+      title: "PGpenguin72",
+      intro: "是一隻企鵝喔",
+      link: https://pg72.tw/,
+      avatar: /avatar/pg72.png
+      }
+    - {
       title: "喵靈",
       intro: "一隻什麼都不會卻又什麼都想學的貓",
       link: https://m30wlin35.com/,
       avatar: /avatar/meowlin.webp
       }
-
 
   # 當成員頭像加載失敗時，替換為指定圖片
   # When the member avatar fails to load, replace the specified image
