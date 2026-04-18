@@ -1523,6 +1523,13 @@ links:
       link: https://m30wlin35.com/,
       avatar: /avatar/meowlin.webp
       }
+    - {
+      title: "宇",
+      intro: "NTNU LS",
+      link: https://www.instagram.com/yuhsin_0125,
+      avatar: /avatar/sychlys.jpg
+      }
+
 
   # 當成員頭像加載失敗時，替換為指定圖片
   # When the member avatar fails to load, replace the specified image
