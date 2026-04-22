@@ -1529,6 +1529,12 @@ links:
       link: https://www.instagram.com/yuhsin_0125,
       avatar: /avatar/sychlys.jpg
       }
+    - {
+      title: "灰毛",
+      intro: "我是傻逼",
+      link: https://neo-furry.graycat.me/,
+      avatar: /avatar/graycat.jpg
+      }
 
 
   # 當成員頭像加載失敗時，替換為指定圖片
