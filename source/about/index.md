@@ -4,16 +4,18 @@ layout: about
 ---
 
 ## 網站介紹
+
 這個網站是我分享個人經歷的地方，我會分享參加的比賽、專案經驗、學習心得與筆記、檢定與證照考取等內容。
 
 ## 自我介紹
+
 - 網名：淳、Chuen666666、淳宇淳蠢
 - 姓別：男
 - 交往狀況：有女友
 - 生日：2008 年 1 月 12 日
 - 國籍與所在地：🇹🇼（台北市）
 - 興趣
-  - 寫程式（Python、Markdown、LaTeX）
+  - 寫程式（Python、C++、Markdown、LaTeX）
   - 酷酷的科技產品（機械手臂）
   - 剪片（Adobe Premiere Pro）
   - 運動（羽球、路跑、溜冰、扯鈴）
@@ -27,6 +29,7 @@ layout: about
   - 學習中：印尼文
 
 ## 聯絡方式
+
 - Discord: [chuen666666](http://discordapp.com/users/929138508772311150)
 - LINE: [chuen666666](https://line.me/ti/p/PIRT8GwtGk)
 - Email: [chunyutsai97@gmail.com](mailto:chunyutsai97@gmail.com)
@@ -35,6 +38,7 @@ layout: about
 > 所有聯絡方式都確認開啟了陌生人訊息，加入後請直接傳訊息表明自己是從個網來的，否則可能被我誤以為是垃圾帳號而忽略
 
 ## 我的 DC 伺服器
+
 若想接收到發文通知，可以考慮加入我的 DC 伺服器：[淳の天地](https://discord.gg/KcPVwPvqx2)
 
 {% raw %}
