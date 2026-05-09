@@ -1535,6 +1535,12 @@ links:
       link: https://neo-furry.graycat.me/,
       avatar: /avatar/graycat.jpg
       }
+    - {
+      title: "kyle",
+      intro: "有人要來寫 Rust 嗎",
+      link: https://simplykyle.eu.org/,
+      avatar: /avatar/kyle.png
+      }
 
 
   # 當成員頭像加載失敗時，替換為指定圖片
