@@ -3,10 +3,11 @@ title: 陽明高中 112 年 AI 班 Python 上機考——題目 + 詳解
 categories:
   - 筆記與教學
   - 程式
-  - 題解
+  - 競程
 tags:
   - 筆記
   - 程式
+  - 競程
   - Python
   - 題解
 math: true
