@@ -218,8 +218,7 @@ for i in range(1, 6):
 ### 210
 
 ```py
-from math import gcd
-lcm = lambda x, y: (x*y) // gcd(x, y)
+from math import gcd, lcm
 
 a, b = int(input()), int(input())
 print(gcd(a, b), lcm(a, b), sep='\n')

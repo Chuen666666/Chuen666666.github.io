@@ -333,58 +333,84 @@ int main() {
 ### 207
 
 ```cpp
-def prime(n):
-    if n <= 1:
-        return False
-    for i in range(2, int(n**0.5)+1):
-        if n % i == 0:
-            return False
-    return True
+#include <bits/stdc++.h>
+using namespace std;
 
-n = int(input())
-print(f'{n} is{"" if prime(n) else " not"} a prime number')
+bool prime(int n) {
+    for (int i = 2; i*i <= n; i++) if (n % i == 0) return 0;
+    return 1;
+}
+
+int main() {
+    ios::sync_with_stdio(0), cin.tie(0), cout.tie(0);
+
+    int n;
+    cin >> n;
+    string s = (prime(n)) ? "" : " not";
+    cout << n << " is" << s << " a prime number";
+}
 ```
 
 ### 208
 
 ```cpp
-def prime(n):
-    if n <= 1:
-        return False
-    for i in range(2, int(n**0.5)+1):
-        if n % i == 0:
-            return False
-    return True
+#include <bits/stdc++.h>
+using namespace std;
 
-print(*(i for i in range(2, int(input())) if prime(i)), end=' \n')
+bool prime(int n) {
+    for (int i = 2; i*i <= n; i++) if (n % i == 0) return 0;
+    return 1;
+}
+
+int main() {
+    ios::sync_with_stdio(0), cin.tie(0), cout.tie(0);
+
+    int n;
+    cin >> n;
+    for (int i = 2; i < n; i++) if (prime(i)) cout << i << ' ';
+}
 ```
 
 ### 209
 
 ```cpp
-n = int(input())
-if n == 0:
-    for i in range(1, 6):
-        for j in range(1, 6):
-            print(f'{i} x {j} = {i*j}', end='\t')
-        print()
-elif n == 1:
-    for i in range(1, 6):
-        for j in range(1, 6):
-            print(f'{j} x {i} = {j*i}', end='\t')
-        print()
-else:
-    print('error')
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    ios::sync_with_stdio(0), cin.tie(0), cout.tie(0);
+
+    int n;
+    cin >> n;
+
+    if (n != 0 and n != 1) {
+        cout << "error";
+        return 0;
+    }
+
+    for (int i = 1; i <= 5; i++) {
+        for (int j = 1; j <= 5; j++) {
+            if (n == 0) cout << i << " x " << j << " = " << i * j << '\t';
+            else cout << j << " x " << i << " = " << i * j << '\t';
+        }
+        cout << '\n';
+    }
+}
 ```
 
 ### 210
 
 ```cpp
-from math import gcd
-lcm = lambda x, y: (x*y) // gcd(x, y)
+#include <bits/stdc++.h>
+using namespace std;
 
-a, b = int(input()), int(input())
-print(gcd(a, b), lcm(a, b), sep='\n')
+int main() {
+    ios::sync_with_stdio(0), cin.tie(0), cout.tie(0);
+
+    int a, b;
+    cin >> a >> b;
+    cout << gcd(a, b) << '\n' << lcm(a, b);
+}
 ```
 
 ## 第3類：函式與陣列
