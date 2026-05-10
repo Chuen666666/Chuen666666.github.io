@@ -201,6 +201,7 @@ print(*(i for i in range(2, int(input())) if prime(i)), end=' \n')
 
 ```py
 n = int(input())
+
 if n == 0:
     for i in range(1, 6):
         for j in range(1, 6):
