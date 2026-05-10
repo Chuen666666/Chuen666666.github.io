@@ -418,119 +418,218 @@ int main() {
 ### 301
 
 ```cpp
-def compute():
-    star, line = int(input()), int(input())
-    for _ in range(line):
-        print('*' * star)
-    print(star*line)
+#include <bits/stdc++.h>
+using namespace std;
 
-compute()
+int main() {
+    ios::sync_with_stdio(0), cin.tie(0), cout.tie(0);
+
+    //compute
+    int a, b;
+    cin >> a >> b;
+    for (int i = 0; i < b; i++) {
+        for (int j = 0; j < a; j++) cout << '*';
+        cout << '\n';
+    }
+    cout << a * b;
+}
 ```
 
 ### 302
 
 ```cpp
-def compute(n):
-    if n < 0 or n > 100:
-        return -1
-    return n+5 if n>=60 else n+10
+#include <bits/stdc++.h>
+using namespace std;
 
-print(compute(int(input())))
+int main() {
+    ios::sync_with_stdio(0), cin.tie(0), cout.tie(0);
+
+    //compute
+    int n;
+    cin >> n;
+    
+    if (n > 100 or n < 0) {
+        cout << -1;
+        return 0;
+    }
+
+    cout << ((n > 60) ? n + 5 : n + 10);
+}
 ```
 
 ### 303
 
 ```cpp
-def compute(n):
-    for i in range(2, int(n**0.5)+1):
-        if n % i == 0:
-            return False
-    return True
+#include <bits/stdc++.h>
+using namespace std;
 
-n = int(input())
-print(f'{n} is {"" if compute(n) else "not "}a prime number')
+bool compute(int n) {
+    for (int i = 2; i*i <= n; i++) if (n % i == 0) return 0;
+    return 1;
+}
+
+int main() {
+    ios::sync_with_stdio(0), cin.tie(0), cout.tie(0);
+
+    int n;
+    cin >> n;
+    string s = (compute(n)) ? "" : " not";
+    cout << n << " is" << s << " a prime number";
+}
 ```
 
 ### 304
 
 ```cpp
-def compute(arr):
-    t = 0
-    for i in arr:
-        if i % 3 == 0:
-            t += 1
-    return t
+#include <bits/stdc++.h>
+using namespace std;
 
-arr = [int(input()) for _ in range(6)]
-print(compute(arr))
+int main() {
+    ios::sync_with_stdio(0), cin.tie(0), cout.tie(0);
+
+    //compute
+    int cnt = 0;
+    for (int i = 0; i < 6; i++) {
+        int x;
+        cin >> x;
+        if (x % 3 == 0) cnt++;
+    }
+    cout << cnt;
+}
 ```
 
 ### 305
 
 ```cpp
-def compute(a, b, c):
-    return eval(a+c+b)
+#include <bits/stdc++.h>
+using namespace std;
 
-a, c, b = input(), input(), input()
-c = '+' if c=='1' else '*'
-print(compute(a,b,c))
+int compute(int a, int b ,int c) {
+    if (c == 1) return a + b;
+    else return a * b;
+}
+
+int main() {
+    ios::sync_with_stdio(0), cin.tie(0), cout.tie(0);
+
+    int a, b, c;
+    cin >> a >> c >> b;
+    cout << compute(a, b, c);
+}
 ```
 
 ### 306
 
 ```cpp
-from math import factorial
+#include <bits/stdc++.h>
+using namespace std;
 
-def compute(): pass #題目硬性規定要用自訂function 所以才寫這行繞過限制
+int compute(int n) {
+    if (n == 0) return 1;
+    return n * compute(n - 1);
+}
 
-n = int(input())
-print(f'{n}!={factorial(n)}')
+int main() {
+    ios::sync_with_stdio(0), cin.tie(0), cout.tie(0);
+
+    int n;
+    cin >> n;
+    cout << n << "!=" << compute(n);
+}
 ```
 
 ### 307
 
 ```cpp
-def compute(): pass
+#include <bits/stdc++.h>
+using namespace std;
 
-print(max(int(input()) for _ in range(5)))
+int main() {
+    ios::sync_with_stdio(0), cin.tie(0), cout.tie(0);
+
+    //compute
+    int n[5];
+    for (int i = 0; i < 5; i++) cin >> n[i];
+    cout << *max_element(n, n+5);
+}
 ```
 
 ### 308
 
 ```cpp
-def compute(): pass
+#include <bits/stdc++.h>
+using namespace std;
 
-fib = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55] #因為題目有說數字<=10
-for i in range(int(input()), 0, -1):
-    print(f'fib({i})={fib[i-1]}')
+int compute(int n) {
+    if (n < 2) return n;
+    return compute(n-1) + compute(n-2);
+}
+
+int main() {
+    ios::sync_with_stdio(0), cin.tie(0), cout.tie(0);
+
+    int n;
+    cin >> n;
+    n++;
+    
+    while (--n) cout << "fib(" << n << ")=" << compute(n) << '\n';
+}
 ```
 
 ### 309
 
 ```cpp
-def compute(arr, brr):
-    return f'{min(a / b for a, b in zip(arr, brr)):.3f}'
+#include <bits/stdc++.h>
+using namespace std;
 
-arr = [int(input()) for _ in range(3)]
-brr = [int(input()) for _ in range(3)]
-print(compute(arr, brr))
+int main() {
+    ios::sync_with_stdio(0), cin.tie(0), cout.tie(0);
+
+    //compute
+    float a, b, c, d, e, f;
+    cin >> a >> b >> c >> d >> e >> f;
+    float x = a / d, y = b / e, z = c / f;
+    cout << fixed << setprecision(3) << min(x, min(y, z));
+}
 ```
 
 ### 310
 
 ```cpp
-def compute(n):
-    a = 0
-    for i in str(n):
-        a += int(i)**len(str(n))
-    return n == a
+#include <bits/stdc++.h>
+using namespace std;
 
-t = 0
-for i in range(1, int(input())+1):
-    if compute(i):
-        print(i)
-        t += i
-print(t)
+bool compute(int n) {
+    int k = 0, t = n;
+    while (t > 0) {
+        k++;
+        t /= 10;
+    }
+
+    int s = 0;
+    t = n;
+    while (t > 0) {
+        s += pow(t%10, k);
+        t /= 10;
+    }
+
+    return s == n;
+}
+
+int main() {
+    ios::sync_with_stdio(0), cin.tie(0), cout.tie(0);
+
+    int n, a = 0;
+    cin >> n;
+
+    for (int i = 1; i < n; i++)
+        if (compute(i)) {
+            cout << i << '\n';
+            a += i;
+        }
+
+    cout << a;
+}
 ```
 
 ## 第4類：字串與檔案處理
