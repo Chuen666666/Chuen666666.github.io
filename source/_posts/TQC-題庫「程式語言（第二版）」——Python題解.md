@@ -14,7 +14,7 @@ tags:
   - Python
 math: false
 mermaid: false
-hide: true
+hide: false
 date: 2026-05-09 22:51:26
 excerpt: TQC+ 在 Code Judger 題庫的「程式語言（第二版）」的 Python 解
 ---
