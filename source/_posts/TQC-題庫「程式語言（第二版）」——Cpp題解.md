@@ -637,111 +637,233 @@ int main() {
 ### 401
 
 ```cpp
-s1, s2 = input(), input()
-print(len(s1), len(s2), s1+s2, sep='\n')
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    ios::sync_with_stdio(0), cin.tie(0), cout.tie(0);
+
+    string a, b;
+    cin >> a >> b;
+    cout << a.size() << '\n' << b.size() << '\n' << a << b;
+}
 ```
 
 ### 402
 
 ```cpp
-s1, s2, n = input(), input(), int(input())
-if n > len(s1):
-    print('error')
-    exit()
+#include <bits/stdc++.h>
+using namespace std;
 
-s = [s1[:n], s2[:n]]
-s.sort()
-if s[0] == s[1]:
-    print(f'{s1} = {s2}')
-elif s[0] == s1[:n]:
-    print(f'{s1} < {s2}')
-else:
-    print(f'{s1} > {s2}')
+int main() {
+    ios::sync_with_stdio(0), cin.tie(0), cout.tie(0);
+
+    string s1, s2;
+    int n;
+
+    getline(cin, s1);
+    getline(cin, s2);
+    cin >> n;
+
+    if (n > s1.size()) {
+        cout << "error";
+        return 0;
+    }
+
+    string a = s1.substr(0, n);
+    string b = s2.substr(0, n);
+
+    if (a == b) cout << s1 << " = " << s2;
+    else if (a < b) cout << s1 << " < " << s2;
+    else cout << s1 << " > " << s2;
+}
 ```
 
 ### 403
 
 ```cpp
-print(input().swapcase())
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    ios::sync_with_stdio(0), cin.tie(0), cout.tie(0);
+
+    string s;
+    cin >> s;
+
+    for (char &c : s) {
+        if (islower(c)) c = toupper(c);
+        else c = tolower(c);
+    }
+
+    cout << s;
+}
 ```
 
 ### 404
 
 ```cpp
-from collections import Counter #一個計算元素出現頻率的容器 長相和用法同dict
+#include <bits/stdc++.h>
+using namespace std;
 
-a = Counter(input())
-m = max(a.values())
-c = [k for k, v in a.items() if v == m]
-print(*c, m, sep='\n')
+int main() {
+    ios::sync_with_stdio(0), cin.tie(0), cout.tie(0);
+
+    string s;
+    cin >> s;
+    int arr[26] = {0};
+
+    for (char c : s) arr[c-'a']++;
+    int pos = max_element(arr, arr+26) - arr;
+    cout << char(pos+'a') << '\n' << arr[pos];
+}
 ```
 
 ### 405
 
 ```cpp
-a, b, c = int(input()), int(input()), int(input())
+#include <bits/stdc++.h>
+using namespace std;
 
-with open('read.txt', 'r') as f:
-    data = f.read().split()
+int main() {
+    ios::sync_with_stdio(0), cin.tie(0), cout.tie(0);
 
-print(f'{str(a)*a}{data[0][a:]}\n{str(b)*b}{data[1][b:]}\n{str(c)*c}{data[2][c:]}')
+    int a, b, c;
+    cin >> a >> b >> c;
+    ifstream in("read.txt");
+    string data[3];
+    in >> data[0] >> data[1] >> data[2];
+
+    cout << string(a, char(a+'0')) << data[0].substr(a) << '\n'
+         << string(b, char(b+'0')) << data[1].substr(b) << '\n'
+         << string(c, char(c+'0')) << data[2].substr(c);
+}
 ```
 
 ### 406
 
 ```cpp
-lo = 'qwertyuiopasdfghjklzxcvbnm'
-up = lo.upper()
+#include <bits/stdc++.h>
+using namespace std;
 
-inp = input()
-for i in inp:
-    if i in 'plmPLM':
-        print(i, end='')
-    elif i in lo:
-        print(lo[lo.index(i)+1], end='')
-    else:
-        print(up[up.index(i)+1], end='')
+int main() {
+    ios::sync_with_stdio(0), cin.tie(0), cout.tie(0);
+
+    string lo = "qwertyuiopasdfghjklzxcvbnm";
+    string up = "QWERTYUIOPASDFGHJKLZXCVBNM";
+
+    string inp;
+    cin >> inp;
+
+    for (char c : inp) {
+        if (c == 'p' or c == 'l' or c == 'm' or c == 'P' or c == 'L' or c == 'M') cout << c;
+        else if (islower(c)) {
+            int pos = lo.find(c);
+            cout << lo[pos+1];
+        }
+        else {
+            int pos = up.find(c);
+            cout << up[pos+1];
+        }
+    }
+}
 ```
 
 ### 407
 
 ```cpp
-with open('read.txt', 'r') as infile, open('write.txt', 'w') as outfile:
-    data = infile.read()
-    outfile.write(data.replace('*', ''))
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    ios::sync_with_stdio(0), cin.tie(0), cout.tie(0);
+
+    ifstream in("read.txt");
+    ofstream out("write.txt");
+    char c;
+    while (in.get(c)) if (c != '*') out << c;
+}
 ```
 
 ### 408
 
 ```cpp
-s1, s2 = input(), input()
-if len(s1) <= 3 or len(s2) <= 3 or len(s1) > 20 or len(s2) > 20:
-    print('error')
-else:
-    print(len(s1), len(s2), (s1+s2)[::-1], sep='\n')
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    ios::sync_with_stdio(0), cin.tie(0), cout.tie(0);
+
+    string a, b;
+    cin >> a >> b;
+
+    if (a.size() < 3 or a.size() > 20 or b.size() < 3 or b.size() > 20) {
+        cout << "error";
+        return 0;
+    }
+
+    string c = a + b;
+    reverse(c.begin(), c.end());
+
+    cout << a.size() << '\n' << b.size() << '\n' << c;
+}
 ```
 
 ### 409
 
 ```cpp
-with open('read.txt') as infile, open('write.txt', 'w') as outfile:
-    for i in infile.read():
-        outfile.write(chr(ord(i)+2))
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    ios::sync_with_stdio(0), cin.tie(0), cout.tie(0);
+
+    ifstream in("read.txt");
+    ofstream out("write.txt");
+
+    char c;
+    while (in.get(c)) out << char(c+2);
+}
 ```
 
 ### 410
 
 ```cpp
-from string import capwords #與swapcase()有點像 但不會誤把what's的s轉大寫
+#include <bits/stdc++.h>
+using namespace std;
 
-n = int(input())
+string capwords(string s) {
+    stringstream ss(s);
+    string word;
+    string result = "";
 
-with open('read.txt', 'r') as infile, open('write.txt', 'w') as outfile:
-    f = infile.readlines()
-    for i in range(len(f[:n])):
-        outfile.write(capwords(f[i].strip()))
-        if i < n-1:
-            outfile.write('\n')
+    while (ss >> word) {
+        word[0] = toupper(word[0]);
+        for (int i = 1; i < word.size(); i++) word[i] = tolower(word[i]);
+
+        if (!result.empty()) result += " ";
+        result += word;
+    }
+    return result;
+}
+
+int main() {
+    ios::sync_with_stdio(0), cin.tie(0), cout.tie(0);
+
+    int n;
+    cin >> n;
+    ifstream in("read.txt");
+    ofstream out("write.txt");
+    string line;
+    vector<string> lines;
+
+    while (getline(in, line)) lines.push_back(line);
+
+    for (int i = 0; i < n and i < lines.size(); i++) {
+        out << capwords(lines[i]);
+        if (i < n - 1 and i < lines.size() - 1) out << '\n';
+    }
+}
 ```
 
 ## 第5類：綜合應用一
