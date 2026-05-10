@@ -202,18 +202,17 @@ print(*(i for i in range(2, int(input())) if prime(i)), end=' \n')
 ```py
 n = int(input())
 
-if n == 0:
-    for i in range(1, 6):
-        for j in range(1, 6):
-            print(f'{i} x {j} = {i*j}', end='\t')
-        print()
-elif n == 1:
-    for i in range(1, 6):
-        for j in range(1, 6):
-            print(f'{j} x {i} = {j*i}', end='\t')
-        print()
-else:
+if n not in (0, 1):
     print('error')
+    exit()
+
+for i in range(1, 6):
+    for j in range(1, 6):
+        if n == 0:
+            print(f'{i} x {j} = {i*j}', end='\t')
+        else:
+            print(f'{j} x {i} = {i*j}', end='\t')
+    print()
 ```
 
 ### 210
