@@ -115,19 +115,10 @@ print('error' if a>100 else a+10 if a>60 else a+5)
 if-else 解
 
 ```py
-a = int(input())
-print('one' if a==1 else 'two' if a==2 else 'three' if a==3 else 'four' if a==4 else 'error')
-```
-
-list 解
-
-```py
 TABLE = ('one', 'two', 'three', 'four')
-i = int(input()) - 1
-try:
-    print(TABLE[i])
-except:
-    print('error')
+i = int(input())
+
+print(TABLE[i-1] if 1 <= i <= 4 else 'error')
 ```
 
 ### 204
@@ -159,9 +150,22 @@ print(f'error:{arr[-1]}')
 
 ### 206
 
+迴圈解
+
 ```py
 a, b = int(input()), int(input())
 print(sum(i for i in range(a, b+1) if i % 2))
+```
+
+公式解
+
+```py
+def odd_sum(n):
+    cnt = (n + 1) // 2
+    return cnt**2
+
+a, b = int(input()), int(input())
+print(odd_sum(b) - odd_sum(a-1))
 ```
 
 ### 207
