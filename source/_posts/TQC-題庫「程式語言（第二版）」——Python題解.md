@@ -427,6 +427,7 @@ with open('read.txt', 'r') as infile, open('write.txt', 'w') as outfile:
 
 ```py
 s1, s2 = input(), input()
+
 if len(s1) <= 3 or len(s2) <= 3 or len(s1) > 20 or len(s2) > 20:
     print('error')
 else:
