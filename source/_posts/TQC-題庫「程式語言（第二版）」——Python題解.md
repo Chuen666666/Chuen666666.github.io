@@ -674,7 +674,7 @@ arr = [int(input()) for _ in range(10)]
 print(f'score = {sum(arr)%10}')
 ```
 
-{% fold 假解的定義 %}
+{% fold @假解的定義 %}
 假解指的是剛好可以通過測資 但不正確的寫法
 也就是沒有按題目的邏輯去寫 只是剛好系統放的測資用這個程式跑得過
 這題假解就是這種情況 剛好跑得過這個網站的所有測資 但其實根本不是這樣解的
@@ -741,7 +741,7 @@ except:
     print('error')
 ```
 
-{% fold numpy %}
+{% fold @numpy %}
 numpy不是Python的built-in function或庫
 而是第三方的庫
 所以不確定真實上機考時是否可以使用

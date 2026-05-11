@@ -1142,73 +1142,158 @@ int main() {
 ### 601 大小寫轉換
 
 ```cpp
-lett = input()
-n = int(input())
+#include <bits/stdc++.h>
+using namespace std;
 
-s = lett[n].swapcase()
-nlet = lett[:n] + s + lett[n+1:]
-print(f'The letter that was selected is: {s}\n{nlet}')
+int main() {
+    ios::sync_with_stdio(0), cin.tie(0), cout.tie(0);
+
+    string s;
+    int n;
+    cin >> s >> n;
+    char &c = s[n];
+
+    if ('a' <= c and c <= 'z') c -= 'a' - 'A';
+    else c += 'a' - 'A';
+
+    cout << "The letter that was selected is: " << c << '\n' << s;
+}
 ```
 
 ### 602 字串拆解
 
 ```cpp
-uc = lc = ''
-c = 0
-for i in input():
-    if 'A' <= i <= 'Z':
-        uc += i
-        c += 1
-    else:
-        lc += i
-print(uc, lc, c, sep='\n')
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    ios::sync_with_stdio(0), cin.tie(0), cout.tie(0);
+
+    string s, cap, let;
+    cin >> s;
+    
+    for (char c : s) {
+        if ('a' <= c and c <= 'z') let.push_back(c);
+        else cap.push_back(c);
+    }
+
+    cout << cap << '\n' << let << '\n' << cap.size();
+}
 ```
 
 ### 603 多重迴圈
 
 ```cpp
-a, _ = map(int, input().split())
-for _ in range(a):
-    print(input().replace(' ', ','))
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    ios::sync_with_stdio(0), cin.tie(0), cout.tie(0);
+
+    int n, m;
+    cin >> n >> m;
+
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < m - 1; j++) {
+            int x;
+            cin >> x;
+            cout << x << ',';
+        }
+
+        int x;
+        cin >> x;
+        cout << x << '\n';
+    }
+}
 ```
 
 ### 604 選擇排序
 
 ```cpp
-lst = [int(input()) for _ in range(9)]
-lst.sort()
-print(*lst, f'sum = {sum(lst)}', sep='\n')
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    ios::sync_with_stdio(0), cin.tie(0), cout.tie(0);
+
+    multiset<int> s;
+    for (int i = 0; i < 9; i++) {
+        int x;
+        cin >> x;
+        s.insert(x);
+    }
+
+    for (auto pt : s) cout << pt << '\n';
+    cout << "sum = " << accumulate(s.begin(), s.end(), 0);
+}
 ```
 
 ### 605 差值計算
 
 ```cpp
-lst = [int(input()) for _ in range(6)]
-lst.sort()
-print(sum(lst[3:]) - sum(lst[:3]))
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    ios::sync_with_stdio(0), cin.tie(0), cout.tie(0);
+
+    int arr[6];
+    for (int i = 0; i < 6; i++) cin >> arr[i];
+    sort(arr, arr+6);
+    cout << (arr[3]+arr[4]+arr[5]) - (arr[0]+arr[1]+arr[2]);
+}
 ```
 
 ### 606 檢驗學號
 
 ```cpp
-for _ in range(3):
-    s = list(input())
-    s[:-1] = map(int, s[:-1])
-    check = chr(((s[0]+s[2]+s[4])+(s[1]+s[3])*5)%26 + 64)
-    print('Pass' if check == s[5] else 'Fail')
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    ios::sync_with_stdio(0), cin.tie(0), cout.tie(0);
+
+    for (int i = 0; i < 3; i++) {
+        string s;
+        cin >> s;
+        int a = s[0] - '0',
+            b = s[1] - '0',
+            c = s[2] - '0',
+            d = s[3] - '0',
+            e = s[4] - '0';
+        char f = s[5];
+
+        char check = ((a+c+e)+(b+d)*5 - 1) % 26 + 'A';
+        cout << ((check == f) ? "Pass" : "Fail") << '\n';
+    }
+}
 ```
 
 ### 607 撲克排比大小
 
 ```cpp
-CMP = tuple('CDHS')
-one, two = input().split()
-if one == two:
-    print(f'{one} = {two}')
-elif one[0] == two[0]:
-    print(f'{one} {">" if int(one[1:])>int(two[1:]) else "<"} {two}')
-else:
-    print(f'{one} {">" if CMP.index(one[0])>CMP.index(two[0]) else "<"} {two}')
+#include <bits/stdc++.h>
+using namespace std;
+
+int value(char c) {
+    string cmp = "CDHS";
+    return cmp.find(c);
+}
+
+int main() {
+    ios::sync_with_stdio(0), cin.tie(0), cout.tie(0);
+
+    string a, b;
+    cin >> a >> b;
+
+    if (a == b) cout << a << " = " << b;
+    else if (a[0] == b[0]) {
+        int x = stoi(a.substr(1)),
+            y = stoi(b.substr(1));
+        
+        cout << a << ((x > y) ? " > " : " < ") << b;
+    } else cout << a << ((value(a[0]) > value(b[0])) ? " > " : " < ") << b;
+}
 ```
 
 ### 608 棒球計分
@@ -1216,44 +1301,80 @@ else:
 假解
 
 ```cpp
-arr = [int(input()) for _ in range(10)]
-print(f'score = {sum(arr)%10}')
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    ios::sync_with_stdio(0), cin.tie(0), cout.tie(0);
+
+    int sum = 0;
+
+    for (int i = 0; i < 10; i++) {
+        int x;
+        cin >> x;
+        sum += x;
+    }
+
+    cout << "score = " << sum % 10;
+}
 ```
 
-:::spoiler 假解的定義
+{% fold @假解的定義 %}
 假解指的是剛好可以通過測資 但不正確的寫法
 也就是沒有按題目的邏輯去寫 只是剛好系統放的測資用這個程式跑得過
 這題假解就是這種情況 剛好跑得過這個網站的所有測資 但其實根本不是這樣解的
 由於我不確定最後TQC+測驗會不會用相同測資 因此為求保險 建議還是要理解一下真解的概念
-:::
+{% endfold %}
 真解
 
 ```cpp
-ans = [False] * 3 #[一壘, 二壘, 三壘]
-score = 0
+#include <bits/stdc++.h>
+using namespace std;
 
-for _ in range(10):
-    hit = int(input())
-    if hit == 0:
-        continue
-    elif hit == 1:
-        if ans[-1]:
-            score += 1
-        ans = [True] + ans[:-1]
-    elif hit == 2:
-        if ans[-1]:
-            score += 1
-        if ans[-2]:
-            score += 1
-        ans = [False, True] + ans[:-2]
-    elif hit == 3:
-        score += sum(ans)
-        ans = [False, False, True]
-    else:
-        score += sum(ans) + 1
-        ans = [False] * 3
+int main() {
+    ios::sync_with_stdio(0), cin.tie(0), cout.tie(0);
 
-print(f'score = {score}')
+    bool base[3] = {false, false, false}; // {一壘, 二壘, 三壘}
+    int score = 0;
+
+    for (int i = 0; i < 10; i++) {
+        int hit;
+        cin >> hit;
+
+        if (hit == 0) continue;
+        else if (hit == 1) {
+            if (base[2]) score++;
+
+            base[2] = base[1];
+            base[1] = base[0];
+            base[0] = 1;
+        } 
+        else if (hit == 2) {
+            if (base[2]) score++;
+            if (base[1]) score++;
+
+            base[2] = base[0];
+            base[1] = 1;
+            base[0] = 0;
+        } 
+        else if (hit == 3) {
+            score += base[0] + base[1] + base[2];
+
+            base[0] = 0;
+            base[1] = 0;
+            base[2] = 1;
+        } 
+        else {
+            score += base[0] + base[1] + base[2] + 1;
+
+            base[0] = 0;
+            base[1] = 0;
+            base[2] = 0;
+        }
+    }
+
+    cout << "score = " << score;
+}
 ```
 
 ### 609 閏年
@@ -1287,11 +1408,11 @@ except:
     print('error')
 ```
 
-:::spoiler numpy
+{% fold @numpy %}
 numpy不是Python的built-in function或庫
 而是第三方的庫
 所以不確定真實上機考時是否可以使用
-:::
+{% endfold %}
 
 ## 第7類：綜合應用三
 
