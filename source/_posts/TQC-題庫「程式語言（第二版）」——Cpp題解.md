@@ -871,133 +871,270 @@ int main() {
 ### 501 字串轉換
 
 ```cpp
-s = input()
-print(f'{s} change to {s.split(".")[0]}')
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    ios::sync_with_stdio(0), cin.tie(0), cout.tie(0);
+
+    string s;
+    cin >> s;
+    cout << s << " change to " << stoi(s);
+}
 ```
 
 ### 502 數字相乘
 
 ```cpp
-s = input()
-s2 = ''
-for i in s:
-    s2 += f'{i}*'
-s2 = s2[:-1]
-print(f'{s2}={eval(s2)}')
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    ios::sync_with_stdio(0), cin.tie(0), cout.tie(0);
+
+    string s;
+    cin >> s;
+
+    int ans = 1;
+    string a = "";
+
+    for (int i = 0; i < s.size(); i++) {
+        int digit = s[i] - '0';
+        ans *= digit;
+
+        a += s[i];
+        if (i != s.size() - 1) {
+            a += "*";
+        }
+    }
+
+    cout << a << '=' << ans;
+}
 ```
 
 ### 503 區間運算
 
 ```cpp
-a, b = int(input()), int(input())
-for i in range(1, a):
-    if (i**0.5).is_integer():
-        print(int(i**0.5)**b)
+#include <bits/stdc++.h>
+using namespace std;
+
+#define EPS 1e-6
+
+int main() {
+    ios::sync_with_stdio(0), cin.tie(0), cout.tie(0);
+
+    int a, b;
+    cin >> a >> b;
+
+    for (int i = 1; i < a; i++) {
+        float s = sqrt(i);
+        if (fabs(s - floor(s)) < EPS) cout << int(pow(s, b)) << '\n';
+    }
+}
 ```
 
 ### 504 迴文數
 
 ```cpp
-s = input()
-print('Yes' if s==s[::-1] else 'No')
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    ios::sync_with_stdio(0), cin.tie(0), cout.tie(0);
+
+    string s;
+    cin >> s;
+    string a = s;
+    reverse(a.begin(), a.end());
+    cout << ((s == a) ? "Yes" : "No");
+}
 ```
 
 ### 505 公式計算
 
 ```cpp
-from math import log10, floor
+#include <bits/stdc++.h>
+using namespace std;
 
-a, b, c, d, e, f = float(input()), float(input()), float(input()), float(input()), float(input()), float(input())
-ans = abs(a)*floor(b) + c**d * e**0.5 + log10(f)
-print(f'{ans:.2f}')
+int main() {
+    ios::sync_with_stdio(0), cin.tie(0), cout.tie(0);
+
+    float a, b, c, d, e, f;
+    cin >> a >> b >> c >> d >> e >> f;
+    cout << fixed << setprecision(2) << abs(a) * floor(b) + pow(c, d) * sqrt(e) + log10(f);
+}
 ```
 
 ### 506 質因數分解
 
 ```cpp
-n = int(input())
+#include <bits/stdc++.h>
+using namespace std;
 
-if n < 2:
-    print(-1)
-    exit()
+int main() {
+    ios::sync_with_stdio(0), cin.tie(0), cout.tie(0);
 
-fs = []
-while n % 2 == 0:
-    fs.append(2)
-    n //= 2
+    int n;
+    cin >> n;
 
-f = 3
-while f**2 <= n:
-    while n % f == 0:
-        fs.append(f)
-        n //= f
-    f += 2
+    if (n < 2) {
+        cout << -1;
+        return 0;
+    }
+    
+    vector<int> fs;
+    while (n % 2 == 0) {
+        fs.push_back(2);
+        n /= 2;
+    }
 
-if n > 2:
-    fs.append(n)
+    int f = 3;
+    while (f * f <= n) {
+        while (n % f == 0) {
+            fs.push_back(f);
+            n /= f;
+        }
+        f += 2;
+    }
 
-if len(fs) == 1:
-    print(-1)
-else:
-    print(*fs, sep='*')
+    if (n > 2) fs.push_back(n);
+    
+    if (fs.size() == 1) cout << -1;
+    else {
+        for (int i = 0; i < fs.size()-1; i++) cout << fs[i] << '*';
+        cout << fs[fs.size()-1];
+    }
+}
 ```
 
 ### 507 猜數字
 
 ```cpp
-ans = list(input())
-for _ in range(3):
-    a = b = 0
-    g = list(input())
-    for i in range(4):
-        if ans[i] == g[i]:
-            a += 1
-        elif g[i] in ans:
-            b += 1
-    print(f'{a}A{b}B')
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    ios::sync_with_stdio(0), cin.tie(0), cout.tie(0);
+
+    string s;
+    cin >> s;
+
+    for (int i = 0; i < 3; i++) {
+        int a = 0, b = 0;
+        string g;
+        cin >> g;
+
+        for (int j = 0; j < 4; j++) {
+            if (s[j] == g[j]) a++;
+            else if (count(s.begin(), s.end(), g[j])) b++;
+        }
+
+        cout << a << 'A' << b << "B\n";
+    }
+}
 ```
 
 ### 508 二進位運算
 
 ```cpp
-b1, b2 = input(), input()
-n1, n2 = int(b1, 2), int(b2, 2)
+#include <bits/stdc++.h>
+using namespace std;
 
-sb = bin(n1+n2)[2:]
-if len(sb) > 8:
-    sb = '11111111'
+int main() {
+    ios::sync_with_stdio(0), cin.tie(0), cout.tie(0);
 
-print(f'{n1} + {n2} = {n1+n2}\n{sb}')
+    string a, b;
+    cin >> a >> b;
+
+    int c = stoi(a, nullptr, 2),
+        d = stoi(b, nullptr, 2),
+        s = c + d;
+
+    cout << c << " + " << d << " = " << s << '\n';
+
+    if (s > 255) cout << "11111111";
+    else {
+        string ans = bitset<8>(s).to_string();
+        cout << ans;
+    }
+}
 ```
 
 ### 509 字串拆解
 
 ```cpp
-s = list(map(int, input().split('/')))
-print(*s)
-print(sum(s))
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    ios::sync_with_stdio(0), cin.tie(0), cout.tie(0);
+
+    string s;
+    cin >> s;
+
+    stringstream ss(s);
+    string part;
+
+    vector<int> nums;
+    int sum = 0;
+
+    while (getline(ss, part, '/')) {
+        int x = stoi(part);
+        nums.push_back(x);
+        sum += x;
+    }
+
+    for (int i = 0; i < nums.size(); i++) {
+        if (i) cout << ' ';
+        cout << nums[i];
+    }
+
+    cout << '\n' << sum;
+}
 ```
 
 ### 510 星號輸出
 
 ```cpp
-h, w = map(int, input().split())
-m = [list(map(int, input().split())) for _ in range(h)]
+#include <bits/stdc++.h>
+using namespace std;
 
-for i in range(h):
-    ans = ''
-    for j in range(w):
-        if m[i][j] == 0:
-            ans += ' '
-        else:
-            if i==0 or j==0 or i==h-1 or j==w-1:
-                ans += '*'
-            else:
-                if m[i-1][j]==0 or m[i][j-1]==0 or m[i+1][j]==0 or m[i][j+1]==0:
-                    ans += '*'
-                else:
-                    ans += ' '
-    print(ans)
+int main() {
+    ios::sync_with_stdio(0), cin.tie(0), cout.tie(0);
+
+    int h, w;
+    cin >> h >> w;
+
+    vector<vector<int>> m(h, vector<int>(w));
+
+    for (int i = 0; i < h; i++) {
+        for (int j = 0; j < w; j++) {
+            cin >> m[i][j];
+        }
+    }
+
+    for (int i = 0; i < h; i++) {
+        string ans = "";
+
+        for (int j = 0; j < w; j++) {
+            if (m[i][j] == 0) ans += ' ';
+            else {
+                if (i == 0 or j == 0 or i == h - 1 or j == w - 1) ans += '*';
+                else {
+                    if (m[i - 1][j] == 0 or
+                        m[i][j - 1] == 0 or
+                        m[i + 1][j] == 0 or
+                        m[i][j + 1] == 0) {
+                        ans += '*';
+                    }
+                    else ans += ' ';
+                }
+            }
+        }
+
+        cout << ans << '\n';
+    }
+}
 ```
 
 ## 第6類：綜合應用二
