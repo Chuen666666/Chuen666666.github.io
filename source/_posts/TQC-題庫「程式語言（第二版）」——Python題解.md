@@ -801,12 +801,12 @@ else:
 
 ```py
 ar = {k: int(v) for k, v in (input().split() for _ in range(3))} #dict
-arr = {input() for _ in range(5)} #set
 t = 0
 
-for i in arr:
-    if i in ar:
-        t += ar[i]
+for _ in range(5):
+    s = input()
+    if s in ar:
+        t += ar[s]
 
 print(t)
 ```

@@ -1334,7 +1334,7 @@ using namespace std;
 int main() {
     ios::sync_with_stdio(0), cin.tie(0), cout.tie(0);
 
-    bool base[3] = {false, false, false}; // {一壘, 二壘, 三壘}
+    bool base[3] = {0}; // {一壘, 二壘, 三壘}
     int score = 0;
 
     for (int i = 0; i < 10; i++) {
@@ -1380,174 +1380,366 @@ int main() {
 ### 609 閏年
 
 ```cpp
-from datetime import date #用來專門處理日期時間等問題的套件
+#include <bits/stdc++.h>
+using namespace std;
 
-y, m, d = map(int, input().split())
-try:
-    dt = date(y, m, d)
-    print(dt.timetuple().tm_yday)
-except:
-    print('error')
+bool leap(int y) {
+    if (y % 400 == 0) return 1;
+    if (y % 100 == 0) return 0;
+    if (y % 4 == 0) return 1;
+    return 0;
+}
+
+int main() {
+    ios::sync_with_stdio(0), cin.tie(0), cout.tie(0);
+
+    int y, m, d;
+    cin >> y >> m >> d;
+    int days[] = {0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
+
+    if (y <= 0 or m < 1 or m > 12) {
+        cout << "error";
+        return 0;
+    }
+
+    if (leap(y)) days[2] = 29;
+    
+
+    if (d < 1 or d > days[m]) {
+        cout << "error";
+        return 0;
+    }
+
+    int ans = 0;
+    for (int i = 1; i < m; i++) ans += days[i];
+
+    cout << ans + d;
+}
 ```
 
 ### 610 矩陣乘積
 
 ```cpp
-from numpy import matrix #矩陣運算用 可直接算出矩陣乘法的結果
+#include <bits/stdc++.h>
+using namespace std;
 
-t, _ = map(int, input().split())
-a = matrix([list(map(int, input().split())) for _ in range(t)])
+int main() {
+    ios::sync_with_stdio(0), cin.tie(0), cout.tie(0);
 
-t, _ = map(int, input().split())
-b = matrix([list(map(int, input().split())) for _ in range(t)])
+    int m, n;
+    cin >> m >> n;
 
-try:
-    for i in (a*b).tolist(): #matrix.tolist() 把它變為二維陣列 輸出才不會多括號
-        print(*i)
-except:
-    print('error')
+    vector<vector<int>> a(m, vector<int>(n));
+
+    for (int i = 0; i < m; i++)
+        for (int j = 0; j < n; j++)
+            cin >> a[i][j];
+
+    int p, q;
+    cin >> p >> q;
+
+    vector<vector<int>> b(p, vector<int>(q));
+
+    for (int i = 0; i < p; i++)
+        for (int j = 0; j < q; j++)
+            cin >> b[i][j];
+
+    // A 是 m*n，B 是 p*q
+    // 矩陣可相乘的條件：n == p
+    if (n != p) {
+        cout << "error";
+        return 0;
+    }
+
+    vector<vector<int>> ans(m, vector<int>(q, 0));
+
+    for (int i = 0; i < m; i++) {
+        for (int j = 0; j < q; j++) {
+            for (int k = 0; k < n; k++) {
+                ans[i][j] += a[i][k] * b[k][j];
+            }
+        }
+    }
+
+    for (int i = 0; i < m; i++) {
+        for (int j = 0; j < q; j++) {
+            if (j) cout << ' ';
+            cout << ans[i][j];
+        }
+        cout << '\n';
+    }
+}
 ```
-
-{% fold @numpy %}
-numpy不是Python的built-in function或庫
-而是第三方的庫
-所以不確定真實上機考時是否可以使用
-{% endfold %}
 
 ## 第7類：綜合應用三
 
 ### 701 海龍公式
 
 ```cpp
-a, b, c = int(input()), int(input()), int(input())
-s = (a+b+c) / 2
-print(f'{(s*(s-a)*(s-b)*(s-c))**0.5:.2f}')
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    ios::sync_with_stdio(0), cin.tie(0), cout.tie(0);
+
+    int a, b, c;
+    cin >> a >> b >> c;
+    float s = (a+b+c) / 2.0;
+    cout << fixed << setprecision(2) << sqrt(s * (s-a) * (s-b) * (s-c));
+}
 ```
 
 ### 702 二進位轉十進位
 
 ```cpp
-print(int(input(), 2))
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    ios::sync_with_stdio(0), cin.tie(0), cout.tie(0);
+
+    string s;
+    cin >> s;
+    cout << stoi(s, nullptr, 2);
+}
 ```
 
 ### 703 找零錢
 
 ```cpp
-n = int(input())
+#include <bits/stdc++.h>
+using namespace std;
 
-if n >= 50:
-    print(f'{n//50}*$50', end=' ')
-    n %= 50
-if n >= 10:
-    print(f'{n//10}*$10', end=' ')
-    n %= 10
-if n >= 5:
-    print(f'{n//5}*$5', end=' ')
-    n %= 5
+int main() {
+    ios::sync_with_stdio(0), cin.tie(0), cout.tie(0);
 
-print(f'{n}*$1')
+    int n;
+    cin >> n;
+
+    if (n >= 50) {
+        cout << n / 50 << "*$50 ";
+        n %= 50;
+    }
+    if (n >= 10) {
+        cout << n / 10 << "*$10 ";
+        n %= 10;
+    }
+    if (n >= 5) {
+        cout << n / 5 << "*$5 ";
+        n %= 5;
+    }
+
+    cout << n << "*$1";
+}
 ```
 
 ### 704 過半數
 
 ```cpp
-from collections import Counter
+#include <bits/stdc++.h>
+using namespace std;
 
-t = int(input())
-arr = Counter(map(int, input().split()))
+int main() {
+    ios::sync_with_stdio(0), cin.tie(0), cout.tie(0);
 
-for k, v in arr.items():
-    if v > t/2:
-        print(k)
-        break
-else:
-    print('error')
+    int t;
+    cin >> t;
+
+    unordered_map<int, int> cnt;
+
+    for (int i = 0; i < t; i++) {
+        int x;
+        cin >> x;
+        cnt[x]++;
+    }
+
+    for (auto [k, v] : cnt) {
+        if (v * 2 > t) {
+            cout << k;
+            return 0;
+        }
+    }
+
+    cout << "error";
+}
 ```
 
 ### 705 庫存函數
 
 ```cpp
-ar = {k: int(v) for k, v in (input().split() for _ in range(3))} #dict
-arr = {input() for _ in range(5)} #set
-t = 0
+#include <bits/stdc++.h>
+using namespace std;
 
-for i in arr:
-    if i in ar:
-        t += ar[i]
+int main() {
+    ios::sync_with_stdio(0), cin.tie(0), cout.tie(0);
 
-print(t)
+    unordered_map<string, int> ar;
+
+    for (int i = 0; i < 3; i++) {
+        string k;
+        int v;
+        cin >> k >> v;
+        ar[k] = v;
+    }
+
+    int t = 0;
+
+    for (int i = 0; i < 5; i++) {
+        string s;
+        cin >> s;
+        if (ar.count(s)) t += ar[s];
+    }
+
+    cout << t;
+}
 ```
 
 ### 706 整數檔案讀寫
 
 ```cpp
-arr = [int(input()) for _ in range(4)]
+#include <bits/stdc++.h>
+using namespace std;
 
-with open('read.txt', 'r') as infile, open('write.txt', 'w') as outfile:
-    for i in infile.readlines():
-        arr.append(int(i.strip()))
-    arr.sort()
-    for i in arr:
-        outfile.write(f'{i}\n')
+int main() {
+    ios::sync_with_stdio(0), cin.tie(0), cout.tie(0);
+
+    vector<int> arr;
+
+    for (int i = 0; i < 4; i++) {
+        int x;
+        cin >> x;
+        arr.push_back(x);
+    }
+
+    ifstream in("read.txt");
+    ofstream out("write.txt");
+
+    int x;
+    while (in >> x) arr.push_back(x);    
+
+    sort(arr.begin(), arr.end());
+
+    for (int n : arr) out << n << '\n';
+}
 ```
 
 ### 707 動態記憶體配置
 
 ```cpp
-arr = []
-for _ in range(int(input())):
-    a, b = map(int, input().split())
-    arr.append((f'{a}x{b}=', a*b))
+#include <bits/stdc++.h>
+using namespace std;
 
-arr.sort(key=lambda x: x[1])
-for i in arr:
-    print(*i, sep='')
+int main() {
+    ios::sync_with_stdio(0), cin.tie(0), cout.tie(0);
+
+    int n;
+    cin >> n;
+
+    vector<pair<int, string>> arr;
+
+    for (int i = 0; i < n; i++) {
+        int a, b;
+        cin >> a >> b;
+
+        int p = a * b;
+        string s = to_string(a) + "x" + to_string(b) + "=";
+
+        arr.push_back({p, s});
+    }
+
+    sort(arr.begin(), arr.end());
+
+    for (auto p : arr) cout << p.second << p.first << '\n';
+}
 ```
 
 ### 708 12小時制時間
 
 ```cpp
-c = 0
-for _ in range(3):
-    h, m = map(int, input().split())
-    if h == 0:
-        print(f'AM 12:{m}')
-        c += 1
-    elif h < 12:
-        print(f'AM {h}:{m}')
-        c += 1
-    elif h == 12:
-        print(f'PM {h}:{m}')
-    else:
-        print(f'PM {h-12}:{m}')
-print(c)
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    ios::sync_with_stdio(0), cin.tie(0), cout.tie(0);
+
+    int c = 0;
+
+    for (int i = 0; i < 3; i++) {
+        int h, m;
+        cin >> h >> m;
+
+        if (h == 0) {
+            cout << "AM 12:" << m << '\n';
+            c++;
+        } else if (h < 12) {
+            cout << "AM " << h << ":" << m << '\n';
+            c++;
+        } else if (h == 12) {
+            cout << "PM " << h << ":" << m << '\n';
+        } else {
+            cout << "PM " << h - 12 << ":" << m << '\n';
+        }
+    }
+
+    cout << c;
+}
 ```
 
 ### 709 圓面積計算
 
 ```cpp
-area = 0
-biggest = [0] * 3
+#include <bits/stdc++.h>
+using namespace std;
 
-for _ in range(int(input())):
-    x, y, r = map(int, input().split())
-    area += r**2 * 3.14159
-    if r > biggest[-1]:
-        biggest = [x, y, r]
+int main() {
+    ios::sync_with_stdio(0), cin.tie(0), cout.tie(0);
 
-print(f'Sum = {area:.2f}\nx: {biggest[0]}, y: {biggest[1]}\nradius: {biggest[2]}')
+    int n;
+    cin >> n;
+    float area = 0;
+    int biggest[3] = {0}; // x, y, r
+
+    for (int i = 0; i < n; i++) {
+        int x, y, r;
+        cin >> x >> y >> r;
+
+        area += r * r * 3.14159;
+
+        if (r > biggest[2]) {
+            biggest[0] = x;
+            biggest[1] = y;
+            biggest[2] = r;
+        }
+    }
+
+    cout << fixed << setprecision(2) << "Sum = " << area
+         << "\nx: " << biggest[0] << ", y: " << biggest[1]
+         << "\nradius: " << biggest[2];
+}
 ```
 
 ### 710 FIFO分頁替換演算法
 
 ```cpp
-arr = [0] * 4
-i = 0
+#include <bits/stdc++.h>
+using namespace std;
 
-for _ in range(10):
-    data = int(input())
-    if data not in arr:
-        arr[i] = data
-        i = (i+1) % 4
-    print(*arr, end=' \n')
+int main() {
+    ios::sync_with_stdio(0), cin.tie(0), cout.tie(0);
+
+    int i = 0, arr[4] = {0};
+
+    for (int j = 0; j < 10; j++) {
+        int data;
+        cin >> data;
+
+        if (find(arr, arr + 4, data) == arr + 4) { // data not in arr
+            arr[i] = data;
+            i = (i + 1) % 4;
+        }
+
+        for (int k = 0; k < 4; k++) cout << arr[k] << ' ';
+        cout << '\n';
+    }
+}
 ```
