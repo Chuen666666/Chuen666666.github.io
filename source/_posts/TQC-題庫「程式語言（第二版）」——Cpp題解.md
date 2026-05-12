@@ -14,7 +14,7 @@ tags:
   - C++
 math: false
 mermaid: false
-hide: true
+hide: false
 date: 2026-05-10 02:37:09
 excerpt: TQC+ 在 Code Judger 題庫的「程式語言（第二版）」的 C++ 解
 ---
