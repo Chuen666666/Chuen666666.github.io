@@ -12,7 +12,7 @@ tags:
   - 全國程式力競賽
 math: false
 mermaid: false
-hide: true
+hide: false
 date: 2026-05-12 11:57:12
 excerpt: 分享一下參加致理科大全國程式力競賽的心得，以及對 TQC+ 題目的看法
 ---
