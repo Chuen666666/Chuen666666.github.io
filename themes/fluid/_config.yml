@@ -314,7 +314,7 @@ web_analytics:
 # Canonical, to specify a canonical URL for Google Search, need to set up `url: http://yourdomain.com` in hexo _config.yml
 # See: https://support.google.com/webmasters/answer/139066
 canonical:
-  enable: false
+  enable: true
 
 # 對頁面中的圖片和評論插件進行懶加載處理，可見範圍外的元素不會提前加載
 # Lazy loading of images and comment plugin on the page
