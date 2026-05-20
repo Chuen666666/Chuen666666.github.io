@@ -1542,6 +1542,12 @@ links:
       link: https://simplykyle.eu.org/,
       avatar: /avatar/kyle.png
       }
+    - {
+      title: "shrimp2845",
+      intro: "ohhi?",
+      link: https://shrimp2845-tw.github.io/,
+      avatar: /avatar/shrimp2845.jpg
+      }
 
 
   # 當成員頭像加載失敗時，替換為指定圖片
