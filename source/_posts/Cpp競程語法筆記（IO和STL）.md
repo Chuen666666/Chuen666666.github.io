@@ -22,7 +22,7 @@ excerpt: 包含一些 I/O 技巧和競程用 STL 語法的小筆記
 
 1. 不準確：它只是我的簡易筆記，不要求表達絕對準確和寫法可讀性佳
 2. 不完整：它不是為了教會你，只是方便學習和記憶的筆記，是從[《從零到一：那些演算法競賽會用到的基礎語法》](https://emanlaicepsa.github.io/2020/10/21/0-index/)整理的非常小一部分內容，欲學習者，請去看原文
-3. 此筆記內容主要是為了競程用的 C++ 筆記，所有程式皆用萬用標頭檔（`#include <bits/stdc++.h>`）、`using namespace std;` 和 I/O 優化（`ios::sync_with_stdio(0), cin.tie(0);`）
+3. 此筆記內容主要是為了競程用的 C++ 筆記，所有程式皆用萬用標頭檔（`#include <bits/stdc++.h>`）、使用標準命名空間（`using namespace std;`） 和 I/O 優化（`ios::sync_with_stdio(0), cin.tie(0), cout.tie(0);`）
 4. 非零基礎：此筆記的註解會用類比 Python 概念的方式寫
 
 {% endnote %}
