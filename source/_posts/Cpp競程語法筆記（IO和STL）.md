@@ -11,7 +11,7 @@ tags:
   - C++
 math: true
 mermaid: false
-hide: true
+hide: false
 date: 2026-05-18 11:57:07
 excerpt: 包含一些 I/O 技巧和競程用 STL 語法的小筆記
 ---
