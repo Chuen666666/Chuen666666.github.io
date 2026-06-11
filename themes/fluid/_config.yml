@@ -1547,6 +1547,12 @@ links:
       link: https://shrimp2845-tw.github.io/,
       avatar: /avatar/shrimp2845.jpg
       }
+    - {
+      title: "R3X DJ",
+      intro: "對不起我都在 Vibe Hacking",
+      link: https://r3xdj.github.io/,
+      avatar: /avatar/R3X_DJ.png
+      }
 
 
   # 當成員頭像加載失敗時，替換為指定圖片
