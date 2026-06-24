@@ -135,13 +135,7 @@ hexo s
   _multiconfig.yml
   ```
 
-2. 下載部署的插件 `hexo-deployer-git`：
-
-  ```bash
-  npm install hexo-deployer-git --save
-  ```
-
-3. 去 Hexo 的 [Themes](https://hexo.io/themes/) 頁面，找一個自己喜歡的網站模板（主題），點進去後，依下圖複製其網址，再用指令 clone 到自己電腦中
+2. 去 Hexo 的 [Themes](https://hexo.io/themes/) 頁面，找一個自己喜歡的網站模板（主題），點進去後，依下圖複製其網址，再用指令 clone 到自己電腦中
 
   {% img /img/fluid_github.png %}
 
@@ -161,7 +155,7 @@ hexo s
   因為會有部分語法不被原生 MD 支援，故 IDE 的 MD 預覽也可能與最終效果不合
   {% endnote %}
 
-4. 打開 `/my-blog/_config.yml` 文件，你可以先將文件取代成以下這一份，再依以下文件內的指示（所有中文字的部分，分別為第 6, 7, 8, 9, 10, 16, 108 行）填入自己的資訊：
+3. 打開 `/my-blog/_config.yml` 文件，你可以先將文件取代成以下這一份，再依以下文件內的中文提示填入自己的資訊：
 
   ```yml
   # Hexo Configuration
@@ -267,19 +261,13 @@ hexo s
   ## Themes: https://hexo.io/themes/
   theme: 主題名稱
 
-  # Deployment
-  ## Docs: https://hexo.io/docs/one-command-deployment
-  deploy:
-    type: git
-    repo: https://github.com/你的名字/你的名字.github.io.git
-    branch: main
   ```
 
   {% note warning %}
   YAML 檔對空格相當敏感，`:` 的後面一定要加一個空格（除非沒東西）
   {% endnote %}
 
-5. 根據不同主題，你可能需要去設定那個主題自己的 `_config.主題.yml` 或各頁 `index.md` 等，這部分會因各主題而有所不同，所以推薦直接用 AI（我推薦 Gemini，它架站效率比 ChatGPT 好很多），你可以用以下的 prompt，並依自己的需求更改：
+4. 根據不同主題，你可能需要去設定那個主題自己的 `_config.主題.yml` 或各頁 `index.md` 等，這部分會因各主題而有所不同，所以推薦直接用 AI（我推薦 Gemini，它架站效率比 ChatGPT 好很多），你可以用以下的 prompt，並依自己的需求更改：
 
   ```text
   我在使用 Hexo 架設網站，目前我進行到設定主題，我使用的主題是 {主題名稱}，我已經將它 clone 下來，也在 _config.yml 中設置好了，除此之外就沒做任何其他多餘的設定了。
@@ -287,9 +275,9 @@ hexo s
   過程中若有不同設定或偏好要向我確認，你可以先向我問清楚。
   ```
 
-6. 到 GitHub 個網 Repo 中，`Settings` &rarr; `Actions` &rarr; `General` &rarr; `Workflow permissions` 將權限改為 `Read and write permissions`
+5. 到 GitHub 個網 Repo 中，`Settings` &rarr; `Pages` &rarr; `Build and deployment`，將 `Source` 改成 `GitHub Actions`
 
-7. 在根目錄（`my-blog`）下，創一個資料夾 `.github`（若已存在則免創），再在裡面創建另一個資料夾 `workflows`（若已存在則免創），最後再在裡面創建檔案 `deploy.yml` 並貼上以下內容：
+6. 在根目錄（`my-blog`）下，創一個資料夾 `.github`（若已存在則免創），再在裡面創建另一個資料夾 `workflows`（若已存在則免創），最後再在裡面創建檔案 `deploy.yml` 並貼上以下內容：
 
   ```yml
   name: Hexo Deploy
@@ -304,22 +292,24 @@ hexo s
     cancel-in-progress: true
 
   permissions:
-    contents: write
+    contents: read
+    pages: write
+    id-token: write
 
   jobs:
-    build_and_deploy:
+    build:
       runs-on: ubuntu-latest
       steps:
         - name: Checkout source
-          uses: actions/checkout@v4
+          uses: actions/checkout@v6
           with:
             submodules: recursive
             fetch-depth: 0
 
         - name: Setup Node.js
-          uses: actions/setup-node@v4
+          uses: actions/setup-node@v6
           with:
-            node-version: "20"
+            node-version: "24"
             cache: "npm"
 
         - name: Install Dependencies
@@ -330,28 +320,38 @@ hexo s
             npx hexo clean
             npx hexo generate
 
-        - name: Deploy to gh-pages
-          uses: peaceiris/actions-gh-pages@v4
+        - name: Add Pages marker
+          run: touch public/.nojekyll
+
+        - name: Upload Pages artifact
+          uses: actions/upload-pages-artifact@v5
           with:
-            github_token: ${{ secrets.GITHUB_TOKEN }}
-            publish_dir: ./public
-            publish_branch: gh-pages
-            enable_jekyll: false
-            force_orphan: true
+            path: public
+
+    deploy:
+      runs-on: ubuntu-latest
+      needs: build
+      environment:
+        name: github-pages
+        url: ${{ steps.deployment.outputs.page_url }}
+      steps:
+        - name: Deploy to GitHub Pages
+          id: deployment
+          uses: actions/deploy-pages@v5
   ```
 
-8. 試將以上程式碼推到 GitHub 上
+7. 試將以上程式碼推到 GitHub 上
 
   ```bash
   git init
   git remote add origin <Repo 網址>
   git branch -M main
+  git add .
+  git commit -m "init hexo site"
   git push -u origin main
   ```
 
-9. 到 GitHub 的那個網站 Repo 中，`Settings` &rarr; `Pages` &rarr; `Build and deployment` 中，確認 `Source` 是選到 `Deploy from a branch`，並且底下 `Branch` 的部分從 `main` 改為 `gh-pages`
-10. 到 `Settings` &rarr; `Environments` 中有一個 `Allow administrators to bypass configured protection rules` 選項打勾
-11. 等它 CI/CD 過了後，可以打開 `https://你的名字.github.io/` 看看網站是否正常上線了
+8. 等它 CI/CD 過了後，可以打開 `https://你的名字.github.io/` 看看網站是否正常上線了
 
 ## （可選）加上插件
 
@@ -566,7 +566,7 @@ hexo s
 
   ```bash
   git add .
-  git commit "填寫自己的 commit message"
+  git commit -m "填寫自己的 commit message"
   git push
   ```
 
