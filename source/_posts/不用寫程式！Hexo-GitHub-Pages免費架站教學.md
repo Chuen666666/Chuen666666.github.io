@@ -320,8 +320,22 @@ hexo s
             npx hexo clean
             npx hexo generate
 
+        - name: Verify generated site
+          run: |
+            test -f public/index.html
+            test -f public/about/index.html
+            test -f public/archives/index.html
+            test -f public/categories/index.html
+            test -f public/tags/index.html
+            test -f public/links/index.html
+            find public -type f | wc -l
+            du -sh public
+
         - name: Add Pages marker
           run: touch public/.nojekyll
+
+        - name: Configure Pages
+          uses: actions/configure-pages@v5
 
         - name: Upload Pages artifact
           uses: actions/upload-pages-artifact@v5
