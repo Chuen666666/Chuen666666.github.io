@@ -36,6 +36,21 @@ jobs:
       - name: Install Dependencies
         run: npm ci || npm install
 
+      - name: Inspect build inputs
+        run: |
+          node --version
+          npm --version
+          npx hexo version
+          pwd
+          ls -la
+          find source -maxdepth 2 -type f | sort | head -100
+          echo "Post count:"
+          find source/_posts -maxdepth 1 -type f -name '*.md' | wc -l
+          echo "Page files:"
+          find source/about source/links -maxdepth 2 -type f -print
+          echo "Config excerpt:"
+          sed -n '1,120p' _config.yml
+
       - name: Generate Files
         run: |
           npx hexo clean
