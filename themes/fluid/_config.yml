@@ -1553,6 +1553,12 @@ links:
       link: https://r3xdj.github.io/,
       avatar: /avatar/R3X_DJ.png
       }
+    - {
+      title: "洋蔥",
+      intro: "一位對資訊科技結合創業頗有興趣的高中生。",
+      link: https://founder.taicoolah.com/,
+      avatar: /avatar/onion.png
+      }
 
 
   # 當成員頭像加載失敗時，替換為指定圖片
