@@ -106,7 +106,12 @@ npm install -g hexo-cli
 hexo init my-blog
 cd my-blog
 npm install # 若無法執行，可改用管理員權限的 Terminal
+npm install hexo-renderer-marked --save
 ```
+
+{% note info %}
+`hexo-renderer-marked` 是將 Markdown 文章轉成 HTML 的渲染器。若沒有正常安裝或使用太舊的渲染器，部署後可能會看到 `.md` 被原樣複製到網站，導致首頁、文章列表或關於頁沒有正常產生。
+{% endnote %}
 
 3. 預覽測試
 
