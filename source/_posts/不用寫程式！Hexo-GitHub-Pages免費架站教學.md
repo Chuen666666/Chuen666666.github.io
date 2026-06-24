@@ -322,14 +322,25 @@ hexo s
 
         - name: Verify generated site
           run: |
-            test -f public/index.html
-            test -f public/about/index.html
-            test -f public/archives/index.html
-            test -f public/categories/index.html
-            test -f public/tags/index.html
-            test -f public/links/index.html
+            required_files=(
+              public/index.html
+              public/about/index.html
+              public/archives/index.html
+              public/categories/index.html
+              public/tags/index.html
+              public/links/index.html
+            )
+            missing=0
+            for file in "${required_files[@]}"; do
+              if [ ! -f "$file" ]; then
+                echo "::error::Missing generated file: $file"
+                missing=1
+              fi
+            done
             find public -type f | wc -l
             du -sh public
+            find public -maxdepth 2 -type f | sort | head -100
+            exit "$missing"
 
         - name: Add Pages marker
           run: touch public/.nojekyll
