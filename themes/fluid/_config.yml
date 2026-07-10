@@ -1565,6 +1565,12 @@ links:
       link: https://hawks.tw/,
       avatar: /avatar/Hawks.png
       }
+    - {
+      title: "Yuto",
+      intro: "Hi 我是 Yuto，熱愛電腦科學和資訊安全。專注於研究系統安全與偵測工程，也喜歡打 CTF，歡迎多多交流～",
+      link: https://blog.yuto0226.dev/,
+      avatar: /avatar/yuto.jpg
+      }
 
 
   # 當成員頭像加載失敗時，替換為指定圖片
