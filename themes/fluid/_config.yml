@@ -1571,6 +1571,12 @@ links:
       link: https://blog.yuto0226.dev/,
       avatar: /avatar/yuto.jpg
       }
+    - {
+      title: "benjaminshih",
+      intro:  "不想被體制束縛的競程選手兼開發者",
+      link: https://benjamin-shih-tw.github.io/BLOG,
+      avatar: /avatar/
+      }
 
 
   # 當成員頭像加載失敗時，替換為指定圖片
