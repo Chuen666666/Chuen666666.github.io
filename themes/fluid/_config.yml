@@ -1577,6 +1577,12 @@ links:
       link: https://benjamin-shih-tw.github.io/BLOG,
       avatar: /avatar/
       }
+    - {
+      title: "hung",
+      intro:  "我不會競程",
+      link: https://hung-liu.github.io/,
+      avatar: /avatar/hung.png
+      }
 
 
   # 當成員頭像加載失敗時，替換為指定圖片
