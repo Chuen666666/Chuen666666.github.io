@@ -15,7 +15,7 @@ date: 2026-07-13 14:24:50
 excerpt: 分享我第一次參加 SITCON Camp 的經驗和收穫，以及它憑什麼收這麼貴的錢
 ---
 
-我在 8/8 ~ 8/12 參加了 SITCON Camp 2026，這是我第一次參加 SITCON Camp，不過並不是我第一次接觸 SITCON 了，SITCON 2026 我同樣有去，當時我就已經相當喜歡這個組織了，這次雖然 SITCON Camp 2026 的收費高達 &dollar;9900（我買早鳥票 &dollar;8900），但我仍選擇了報名參加。
+我在 8/8 ~ 8/12 參加了 SITCON Camp 2026，這是我第一次參加 SITCON Camp，不過並不是我第一次接觸 SITCON，SITCON 2026 我同樣有去，當時我就已經相當喜歡這個組織了，這次雖然 SITCON Camp 2026 的收費高達 &dollar;9900（我買早鳥票 &dollar;8900），但我仍選擇了報名參加。
 
 {% btn /第一次參加SITCON心得, SITCON 2026 參加心得, SITCON 2026 參加心得 %}
 
