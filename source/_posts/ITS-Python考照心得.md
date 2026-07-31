@@ -13,3 +13,8 @@ hide: true
 date: 2026-07-16 16:56:15
 excerpt:
 ---
+
+{% gi 2 2 %}
+![ITS-Python 證書](/img/its_python_certificate.jpg)
+![ITS-Python 成績單](/img/its_python_score.jpg)
+{% endgi %}
