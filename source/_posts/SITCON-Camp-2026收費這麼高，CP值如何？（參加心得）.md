@@ -10,7 +10,7 @@ tags:
   - 心得
 math: false
 mermaid: false
-hide: true
+hide: false
 date: 2026-07-13 14:24:50
 excerpt: 分享我第一次參加 SITCON Camp 的經驗和收穫，以及它憑什麼收這麼貴的錢
 ---
