@@ -161,9 +161,10 @@ Vibe Coding 對我來說其實不是什麼太難的技能，不過在這個過�
 
 總而言之，我非常喜歡這次的活動。就算預算不足，無法參加 SITCON Camp，至少明年的 SITCON 2027，你可以一起來感受 SITCON 大家庭的氛圍和規模！
 
-{% gi 4 2 %}
+{% gi 3 2 %}
 ![團照 1](/img/sitcon_camp_group_1.jpg)
 ![團照 2](/img/sitcon_camp_group_2.jpg)
 ![團照 3](/img/sitcon_camp_group_3.jpg)
-![參加證書](/img/sitcon_camp_certificate.jpg)
 {% endgi %}
+
+{% img d-block mx-auto mb-4 /img/sitcon_camp_certificate.jpg 300 "SITCON Camp 2026 參加證書" %}
