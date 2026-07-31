@@ -129,7 +129,7 @@ Vibe Coding 對我來說其實不是什麼太難的技能，不過在這個過�
 
 今天晚上可以明顯感受到室友們的友善。大家聊成一片，還有人串寢來玩小石系統裡的對戰。是說，我在營隊期間也沒有很認真地玩這個系統，就當作一個話題了吧。睡覺前，我們室友間也開了一個 DC 群，畢竟睡完這一覺後，我們的相處時間就只能用小時計算了。
 
-{% img d-block mx-auto mb-4 /img/sitcon_camp_day4_1.jpg 300 "爐邊夜談" %}
+{% img d-block mx-auto mb-4 /img/sitcon_camp_day4_1.jpg 800 "爐邊夜談" %}
 
 ### 第五天
 
@@ -167,4 +167,4 @@ Vibe Coding 對我來說其實不是什麼太難的技能，不過在這個過�
 ![團照 3](/img/sitcon_camp_group_3.jpg)
 {% endgi %}
 
-{% img d-block mx-auto mb-4 /img/sitcon_camp_certificate.jpg 300 "SITCON Camp 2026 參加證書" %}
+{% img d-block mx-auto mb-4 /img/sitcon_camp_certificate.jpg 500 "SITCON Camp 2026 參加證書" %}
