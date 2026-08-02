@@ -31,8 +31,8 @@ excerpt: ITS Python 作為一個不用寫程式的程式語言認證，難嗎？
 
 正式考試時，對我來講幾乎是零壓力，有點像當時去參加一堆 TQC+ 的比賽那種感覺；而我也是提了很早就交卷了（大概早了 20 幾分鐘），並以 940 分通過測驗，還讓我優閒地寫了幾個我覺得題敘有待改進的題目寫回饋。
 
-{% img d-block mx-auto mb-4 /img/its_python_certificate.jpg 800 "ITS-Python 證書" %}
-{% img d-block mx-auto mb-4 /img/its_python_score.jpg 500 "ITS-Python 成績單" %}
+{% img d-block mx-auto mb-4 /img/its_python_certificate.jpg 800 "ITS Python 證書" %}
+{% img d-block mx-auto mb-4 /img/its_python_score.jpg 500 "ITS Python 成績單" %}
 
 ## 心得
 
