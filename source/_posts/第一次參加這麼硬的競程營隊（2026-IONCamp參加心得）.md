@@ -1,12 +1,13 @@
 ---
 title: 第一次參加這麼硬的競程營隊（2026 IONCamp 參加心得）
 categories:
-  - 筆記與教學
-  - 程式
+  - 心得
+  - 活動
 tags:
-  - 筆記
-  - 教學
   - 程式
+  - 活動
+  - 競程
+  - IONCamp
 math: false
 mermaid: false
 hide: true
