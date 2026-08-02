@@ -7,6 +7,7 @@ tags:
   - 程式
   - 心得
   - ITS Python
+  - Python
 math: false
 mermaid: false
 hide: true
