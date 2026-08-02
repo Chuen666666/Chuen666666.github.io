@@ -10,7 +10,7 @@ tags:
   - Python
 math: false
 mermaid: false
-hide: true
+hide: false
 date: 2026-07-16 16:56:15
 excerpt: ITS Python 作為一個不用寫程式的程式語言認證，難嗎？推薦考嗎？
 ---
