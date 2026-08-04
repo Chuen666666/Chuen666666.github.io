@@ -1589,6 +1589,12 @@ links:
       link: https://steventeng.uk/,
       avatar: /avatar/steven.png
       }
+    - {
+      title: "235",
+      intro:  "all night long",
+      link: https://235blog.netlify.app/,
+      avatar: /avatar/235.jpg
+      }
 
 
   # 當成員頭像加載失敗時，替換為指定圖片
