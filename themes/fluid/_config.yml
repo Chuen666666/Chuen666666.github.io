@@ -1613,6 +1613,12 @@ links:
       link: https://www.threads.com/@chrislaiisme,
       avatar: /avatar/chrislaiisme.jpg
       }
+    - {
+      title: "Chara_Wu",
+      intro: "一個資訊能力很爛，拚盡全力變成大佬，偶爾玩玩其他自己感興趣遊戲的人",
+      link: https://www.facebook.com/chara.wu.2025,
+      avatar: /avatar/Chara_Wu.png
+      }
 
 
   # 當成員頭像加載失敗時，替換為指定圖片
