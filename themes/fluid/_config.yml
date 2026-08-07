@@ -1595,6 +1595,18 @@ links:
       link: https://235blog.netlify.app/,
       avatar: /avatar/235.jpg
       }
+    - {
+      title: "蘇冠霖",
+      intro:  "喜歡競程跟音遊 但都很菜<br>最會玩的是Phigros, 但很多音遊都玩過",
+      link: https://www.instagram.com/hpcp13_sworda/,
+      avatar: /avatar/swrda.jpg
+      }
+    - {
+      title: "Cheng0928",
+      intro:  "乃木坂 46 是日本大型女子偶像團體，成立於2011年8月21日；其出道時定位為另一女子偶像團體AKB48的「官方對手」（公式ライバル），有獨立的營運團隊，行銷策略及團體風格也與AKB48系列團體不同，惟總製作人同樣是秋元康。目前有34名成員，隊長由菅原咲月擔任。其與2015年8月21日成立的櫸坂46（現櫻坂46）、2018年8月20日成立的吉本坂46、以及2019年2月11日自櫸坂46獨立的日向坂46，構成大型偶像團體系列「坂道系列」。",
+      link: https://cheng-0928.github.io/,
+      avatar: /avatar/cheng.svg
+      }
 
 
   # 當成員頭像加載失敗時，替換為指定圖片
