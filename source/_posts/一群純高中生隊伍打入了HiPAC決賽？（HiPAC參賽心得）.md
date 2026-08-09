@@ -17,10 +17,11 @@ math: false
 mermaid: false
 hide: true
 date: 2026-08-06 14:41:53
-excerpt:
+excerpt: 我的第一次參加 HiPAC 國網盃競賽，拿到了佳作和一堆獎
 ---
 
-## 動機&初賽
+## 動機 & 初賽
+
 - 匿名用戶9487 揪
 - 隨便打打
 - 初賽 vibe coding
@@ -29,9 +30,11 @@ excerpt:
 - all senior high team, no teacher / coach
 
 ## 初賽
+
 ## 線上培訓
 
 ## 第零天
+
 - 主辦幫我們多訂一天 提前下台南（明報到時間很早
 - 12:00自強號（舊 差評）4hr到善化 -> 飯店接駁（雖近）free taxi
 - (with Justin, itu)
@@ -42,10 +45,11 @@ excerpt:
 - free 24HR 零食bar 有飲料和一堆吃的
 - twcat mom 帶便當 :+1: (附近沒吃的)
 - chat+snack bar
-- 宵夜 飯店free（粥/蝦卷） 
+- 宵夜 飯店free（粥/蝦卷）
 - 晚上 依舊聊天/MC -> 1:00 sleep
 
 ## 第一天
+
 - alarm 7:00, but 6:4X wake up
 - breakfast :+1: (best in 3 meals, 飯店提供)
 - 等遊覽車 -> 遇藝人 -> 車略晚
@@ -71,6 +75,7 @@ excerpt:
 - biggest problem: twcat's laptop (not able to turn on again, teammate - 1)
 
 ## 第二天
+
 - 9:00~9:30報到 怕沒早餐吃 7:00wake up
 - after breakfast -> nap 30 min
 - still 10:00 start
@@ -79,7 +84,7 @@ excerpt:
 - rule update: no 挖洞, llm can use not only vLLM (consider use tensorRT-LLM)
 - get 30 scores (1st q)
 - many submission been killed by Justin (work on same q)
-- 零食飲料 :+1: 
+- 零食飲料 :+1:
 - 午餐也不錯 但沒吃完
 - POOP 好幾次
 - 蜜香果茶 三分糖 薄冰 -> 不甜(even 有點酸)
@@ -95,6 +100,7 @@ excerpt:
 - late sleep (2:30), tired af
 
 ## 第三天
+
 - wake up early (6:45)
 - the last day of competition
 - 9:00~11:00 competition + 11:00~12:00 making PPT
@@ -113,5 +119,21 @@ excerpt:
 - wait nvedia's talking finish
 - take down our poster
 - back classroom -> ans of q
+- a lot of award (3)
+- 接駁 -> THR
+- dinner (justin and 9487 no)
+- back tp (11:04)
 
 ## 心得
+
+### 關於 HPC 和 Vibe Coding
+
+### 關於隊友
+
+### 關於國網
+
+沒衣服
+
+### 關於資安問題
+
+/hipac_certificate.jpg
