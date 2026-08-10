@@ -9,7 +9,6 @@ tags:
   - 活動
   - COSCUP
   - 開源人年會
-  - 碼農高天
 math: false
 mermaid: false
 hide: true
