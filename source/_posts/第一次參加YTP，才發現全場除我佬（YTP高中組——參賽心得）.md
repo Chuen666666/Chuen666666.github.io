@@ -13,7 +13,7 @@ math: false
 mermaid: false
 hide: true
 date: 2026-08-02 11:54:44
-excerpt:
+excerpt: 被一堆電神和國手包圍的 YTP，參賽體驗如何？午餐吃得好不好？
 ---
 
 /ytp_certificate.jpg
