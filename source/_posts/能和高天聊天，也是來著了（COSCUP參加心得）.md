@@ -19,7 +19,8 @@ COSCUP x UbuCon Asia 2026
 
 
 
-{% gi 2 2 %}
+{% gi 3 2 %}
+![高天簽名](/img/coscup_gautian_sign.jpg)
 ![高天合照](/img/coscup_gautian.jpg)
 ![PyCon 攤位照](/img/coscup_pycon.jpg)
 {% endgi %}
