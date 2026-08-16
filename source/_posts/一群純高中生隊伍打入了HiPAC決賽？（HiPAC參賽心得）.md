@@ -124,6 +124,14 @@ excerpt: 我的第一次參加 HiPAC 國網盃競賽，拿到了佳作和一堆�
 - dinner (justin and 9487 no)
 - back tp (11:04)
 
+{% gi 5 2 %}
+![參賽證明](/img/hipac_certificate.jpg)
+![團照](/img/hipac_group.jpg)
+![佳作獎牌](/img/hipac_medal.jpg)
+![Nvidia 特別獎](/img/hipac_nvidia.jpg)
+![未來之星](/img/hipac_star_of_future.jpg)
+{% endgi %}
+
 ## 心得
 
 ### 關於 HPC 和 Vibe Coding
