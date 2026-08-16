@@ -16,3 +16,10 @@ date: 2026-08-08 15:19:45
 excerpt:
 ---
 COSCUP x UbuCon Asia 2026
+
+
+
+{% gi 2 2 %}
+![高天合照](/img/coscup_gautian.jpg)
+![PyCon 攤位照](/img/coscup_pycon.jpg)
+{% endgi %}
