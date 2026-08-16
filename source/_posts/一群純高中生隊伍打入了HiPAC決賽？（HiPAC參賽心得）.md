@@ -53,13 +53,22 @@ excerpt: 我的第一次參加 HiPAC 國網盃競賽，拿到了佳作和一堆�
 - alarm 7:00, but 6:4X wake up
 - breakfast :+1: (best in 3 meals, 飯店提供)
 - 等遊覽車 -> 遇藝人 -> 車略晚
+{% gi 2 2 %}
+![藝人 1](/img/hipac_celeb.jpg)
+![藝人 2](/img/hipac_celeb2.jpg)
+{% endgi %}
 - 到國網中心報到比賽 (匿名用戶9487 earlier than us)
 - 比賽5+1題
 - 開場介紹：1st time 台南場辦比賽, 1st time 初賽, mechine expensive(15 teams, 12 H200/team, total $\approx$ 4億NTD)
+{% img d-block mx-auto mb-4 /img/hipac_hardware.jpg 500 "比賽硬體" %}
 - claude code $600 (dad's credit card)
 - 全部人都認領一題了 -> 看題 提想法 chat
 - 氛圍 :+1: 零食/青茶/熱美式
 - VSC SSH連線問題(+30min)
+{% gi 2 2 %}
+![AMD 贊助的乖乖](/img/hipac_kuaikuai.jpg)
+![AMD 贊助的多功能筆](/img/hipac_pen.jpg)
+{% endgi %}
 - Justin: find 2 bugs (資安洞) -> 隱藏題+DL別人submission (reported) 感覺網站像vibe出來的
 - 別組(fishbaby, frank, kohiro)交流多(跑來我們組chat)
 - 打翻水on twcat's laptop -> 接手LLM題
@@ -97,6 +106,7 @@ excerpt: 我的第一次參加 HiPAC 國網盃競賽，拿到了佳作和一堆�
 - rule didn't mentioned 不能連機器 -> VPN 連進去(只斷SSH連線) -> 電話問 -> 「你們想挑戰規則嗎？」
 - Frank依舊來room chat
 - continue PPT (all teammates in our room)
+{% img d-block mx-auto mb-4 /img/hipac_draw.jpg 400 "伊藤蒼太的小隊畫" %}
 - late sleep (2:30), tired af
 
 ## 第三天
@@ -118,11 +128,11 @@ excerpt: 我的第一次參加 HiPAC 國網盃競賽，拿到了佳作和一堆�
 - go back classroom: kohiro's group not pres yet (not fair) (chat)
 - wait nvedia's talking finish
 - take down our poster
+{% img d-block mx-auto mb-4 /img/hipac_poster.jpg 800 "隊伍海報" %}
 - back classroom -> ans of q
 - a lot of award (3)
-- 接駁 -> THR
-- dinner (justin and 9487 no)
-- back tp (11:04)
+
+{% img d-block mx-auto mb-4 /img/hipac_amd_and_nvidia.jpg 500 "Nvidia 和 AMD 代表合影" %}
 
 {% gi 5 2 %}
 ![參賽證明](/img/hipac_certificate.jpg)
@@ -132,6 +142,17 @@ excerpt: 我的第一次參加 HiPAC 國網盃競賽，拿到了佳作和一堆�
 ![未來之星](/img/hipac_star_of_future.jpg)
 {% endgi %}
 
+{% gi 5 2 %}
+![參賽證明](/img/hipac_certificate.jpg)
+![團照](/img/hipac_group.jpg)
+![佳作獎牌](/img/hipac_medal.jpg)
+![Nvidia 特別獎](/img/hipac_nvidia.jpg)
+![未來之星](/img/hipac_star_of_future.jpg)
+{% endgi %}
+
+- 接駁 -> THR
+- dinner (justin and 9487 no)
+- back tp (11:04)
 ## 心得
 
 ### 關於 HPC 和 Vibe Coding
@@ -143,5 +164,3 @@ excerpt: 我的第一次參加 HiPAC 國網盃競賽，拿到了佳作和一堆�
 沒衣服
 
 ### 關於資安問題
-
-/hipac_certificate.jpg
