@@ -13,11 +13,9 @@ math: false
 mermaid: false
 hide: true
 date: 2026-08-08 15:19:45
-excerpt:
+excerpt: 第一次參加號稱全亞洲最大的開源社群，竟然還能和高天聊到天！？
 ---
 COSCUP x UbuCon Asia 2026
-
-
 
 {% gi 3 2 %}
 ![高天簽名](/img/coscup_gautian_sign.jpg)
