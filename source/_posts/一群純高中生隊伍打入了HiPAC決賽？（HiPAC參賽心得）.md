@@ -20,6 +20,8 @@ date: 2026-08-06 14:41:53
 excerpt: 我的第一次參加 HiPAC 國網盃競賽，拿到了佳作和一堆獎
 ---
 
+由我、[@匿名用戶9487](https://qwo877.github.io/me/)、[@Justin](https://justin0711.com/)、[@伊藤蒼太](https://itousouta15.tw/)、[@Hawks](https://hawks.tw/)、[@伊藤喵貓](https://twcat0503.org/)（twcat）組成的純高中生隊伍，來參加第五屆國網盃應用程式效能優化競賽（HiPAC），也是我人生中第一次的 HPC 競賽，究竟體驗如何呢？
+
 ## 動機 & 初賽
 
 - 匿名用戶9487 揪
