@@ -1631,6 +1631,12 @@ links:
       link: https://billion4eblog.iam04e.workers.dev/,
       avatar: /avatar/billion.png
       }
+    - {
+      title: "yuyoru",
+      intro: "一個喜歡寫程式的半宅男",
+      link: https://theoyu314159.github.io/,
+      avatar: /avatar/yuyoru.png
+      }
 
 
   # 當成員頭像加載失敗時，替換為指定圖片
