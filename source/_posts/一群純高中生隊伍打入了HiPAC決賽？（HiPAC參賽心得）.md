@@ -32,7 +32,13 @@ excerpt: 我的第一次參加 HiPAC 國網盃競賽，拿到了佳作和一堆�
 
 然後，在幾乎只有 [@Justin](https://justin0711.com/) 和 [@伊藤喵貓](https://twcat0503.org/) 做事的情況下，我們成功進晉了決賽（？），~~因為只有他們有 Fable 5~~。之後還有一天的線上培訓，只不過因為那天是 SITCON Camp（[參加心得傳送門](/SITCON-Camp-2026收費這麼高，CP值如何？（參加心得）)），我便無法參加了。
 
-## 第零天
+## 決賽
+
+{% note info %}
+這部分我會寫蠻多的，而且很多內容對準備打 HPC 比賽的人來說，完全沒用，因此如果你對它不感興趣，可直接跳到下一部分
+{% endnote %}
+
+### 第零天
 
 這次的決賽地點是台南，而我們隊伍清一色全都是北部人，勉強只有一個 [@伊藤蒼太](https://itousouta15.tw/) 是中部人，但我們無論如何都是需要提早一天下去的，否則第一天的報到時間實在太早了。原本我們一行人還在想著提早一天到台南的話怎麼住宿，結果就發現，我們有錢的國網中心（主辦單位）已經幫我們訂了提早一天的飯店，於是乎，我們就可以舒舒服服地提早一天入住了。這次的住宿地點是「南科贊美酒店」，四星級飯店，四人一房，飯店還有免費的零食吧和車站到飯店的免費接駁，可以說住宿品質和服務相較於其他住校舍的活動來說，完全是不同世界。
 
@@ -46,7 +52,7 @@ excerpt: 我的第一次參加 HiPAC 國網盃競賽，拿到了佳作和一堆�
 
 晚上倒也沒什麼事好做，但一群朋友聚在一起，難免會玩比較晚，又因今天放鬆的心態，我們一下就混到了 1:00 才睡覺。
 
-## 第一天
+### 第一天
 
 - alarm 7:00, but 6:4X wake up
 - breakfast :+1: (best in 3 meals, 飯店提供)
@@ -81,7 +87,7 @@ excerpt: 我的第一次參加 HiPAC 國網盃競賽，拿到了佳作和一堆�
 - 回房 chat -> sleep early (12:30)
 - biggest problem: twcat's laptop (not able to turn on again, teammate - 1)
 
-## 第二天
+### 第二天
 
 - 9:00~9:30報到 怕沒早餐吃 7:00wake up
 - after breakfast -> nap 30 min
@@ -107,7 +113,7 @@ excerpt: 我的第一次參加 HiPAC 國網盃競賽，拿到了佳作和一堆�
 {% img d-block mx-auto mb-4 /img/hipac_draw.jpg 400 "伊藤蒼太的小隊畫" %}
 - late sleep (2:30), tired af
 
-## 第三天
+### 第三天
 
 - wake up early (6:45)
 - the last day of competition
@@ -143,6 +149,7 @@ excerpt: 我的第一次參加 HiPAC 國網盃競賽，拿到了佳作和一堆�
 - 接駁 -> THR
 - dinner (justin and 9487 no)
 - back tp (11:04)
+
 ## 心得
 
 ### 關於 HPC 和 Vibe Coding
