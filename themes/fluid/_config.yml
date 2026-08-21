@@ -1637,6 +1637,12 @@ links:
       link: https://theoyu314159.github.io/,
       avatar: /avatar/yuyoru.png
       }
+    - {
+      title: "Duckcat",
+      intro: "別人電神我墊神",
+      link: https://www.instagram.com/owo_copycat,
+      avatar: /avatar/Duckcat.jpg
+      }
 
 
   # 當成員頭像加載失敗時，替換為指定圖片
