@@ -91,9 +91,10 @@ excerpt: 我的第一次參加 HiPAC 國網盃競賽，拿到了佳作和一堆�
 
 結果決賽時刻，[@Justin](https://justin0711.com/) 又發力了，不過這次可不是提權，畢竟決賽本來就開放了 `sudo` 權限，他這次在 OJ 上找出了兩個漏洞。首先，他發現可以直接透過改網址的方式，下載到隱藏題的題目（經典的只隱藏前端按鈕，沒做權限控制）；之後他又故技重施，發現了一個更為嚴重的 bug，他發現可以改掉「下載自己已經上傳的程式」按鈕連結，直接下載到別隊提交的程式碼（準確來說是各種檔案，因為 OJ 要求上傳 zip）。不過我們為人正直，並沒有使用這些漏洞，而是在發現後就立刻通報給裁判組了，只不過這個一眼就看起來很像 Vibe Coding 出來的 OJ，還存在這麼多洞，果不其然地被我們和另一個常來我們組聊天的裁判（也是出題者）噴爆。
 
-- Justin: find 2 bugs (資安洞) -> 隱藏題+DL別人submission (reported) 感覺網站像vibe出來的
-- 別組(fishbaby, frank, kohiro)交流多(跑來我們組chat)
-- 打翻水on twcat's laptop -> 接手LLM題
+比賽過程中，[@fishbaby1011](https://blog.fishbaby1011.com/)、[@Frank](https://frk.tw/)、[@kohiro](https://github.com/kohiro961021) 等人還一直跑到我們組聊天，裁判也沒有管，於是他們就成了串門子常客，時不時在兩組間來回跑。
+
+就在比賽進行到下午時，一件突發事件發生了，[@伊藤喵貓](https://twcat0503.org/) 一不小心把水打翻在了筆電上，NT&dollar;660k 的雷蛇筆電就這樣「泡湯」了。而原本負則 LLM 題的重擔，便落到了我肩上，不過如果你有仔細看過前面的配分，就會發現，高達 25% 的 LLM，肯定不是什麼簡單的題目，而水這麼一潑，沒的除了 [@伊藤喵貓](https://twcat0503.org/) 的筆電外，還是他一上午對這題的貢獻，沒辦法，我只好把一切重頭來過。
+
 - lots of food(蛋餅) and drink(微糖伯爵奶茶 超甜)
 - 6:30 end race(add lots of things to let squeue, let it can run until tmr)
 - 遊覽車回飯店
