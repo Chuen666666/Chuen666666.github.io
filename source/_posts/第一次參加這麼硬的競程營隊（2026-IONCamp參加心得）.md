@@ -124,6 +124,6 @@ for(inti=0;;++i)cout<<arr[i][(i+1)*(i+2)%44];
 
 總體而言，我非常推薦喜歡競程的人可以參加這個活動，它甚至可能比台大的競程營還簡單一些，不過這個活動絕對不是給只想要來交朋友和娛樂的人來，不然超長的上課時間，很可能讓你不到三天就想回家了。
 
-{% img d-block mx-auto mb-4 /img/pg_and_sworda_music_game.jpg 500 "PGpenguin72 和 Sworda 甜蜜雙排" %}
 {% img d-block mx-auto mb-4 /img/sworda_fem.jpg 300 "Sworda 女裝照" %}
+{% img d-block mx-auto mb-4 /img/pg_and_sworda_music_game.jpg 500 "PGpenguin72 和 Sworda 甜蜜雙排" %}
 {% img d-block mx-auto mb-4 /img/ionc_laptop.jpg 700 "我和 PGpenguin72 的電腦貼紙" %}
