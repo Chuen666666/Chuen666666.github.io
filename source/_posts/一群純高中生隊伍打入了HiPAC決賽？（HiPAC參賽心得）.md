@@ -166,7 +166,7 @@ excerpt: 我的第一次參加 HiPAC 國網盃競賽，拿到了佳作和一堆�
 - go back classroom: kohiro's group not pres yet (not fair) (chat)
 - wait nvedia's talking finish
 - take down our poster
-{% img d-block mx-auto mb-4 /img/hipac_poster.jpg 800 "隊伍海報" %}
+{% img d-block mx-auto mb-4 /img/hipac_poster.jpg 300 "隊伍海報" %}
 - back classroom -> ans of q
 - a lot of award (3)
 
