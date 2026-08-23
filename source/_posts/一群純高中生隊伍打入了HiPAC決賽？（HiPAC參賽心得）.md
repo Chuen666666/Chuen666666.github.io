@@ -67,8 +67,8 @@ excerpt: 我的第一次參加 HiPAC 國網盃競賽，拿到了佳作和一堆�
 
 本次比賽一共有一題效能題、四題應用題、一題隱藏題，配分和介紹如下圖（皆取自[官網](https://event1.nchc.org.tw/2026/hipac/)，因此你也可以前去官網了解詳細資訊）。
 
-{% img d-block mx-auto mb-4 /img/hipac_quesions.png 400 "題目介紹" %}
-{% img d-block mx-auto mb-4 /img/hipac_score.png 400 "配分" %}
+{% img d-block mx-auto mb-4 /img/hipac_quesions.png 600 "題目介紹" %}
+{% img d-block mx-auto mb-4 /img/hipac_score.png 600 "配分" %}
 
 比賽開始前，國網中心花了些時間介紹本次比賽，說了許多本次比賽的亮點，例如第一次參加人數多到要辦初賽、第一次啟用台南分部辦比賽（以往都在新竹總部）等等，也介紹了本次比賽的硬體——晶創26（Nano4），我們每隊一共有兩台伺服器，每台皆有 8 張的 H200，共 16 張 H200，每台機器大約 2500 萬台幣，共 5000 萬台幣，算上一共 15 隊的話，這次比賽的機器總值大約是 4 億台幣，真是個難以想像的數字。
 
