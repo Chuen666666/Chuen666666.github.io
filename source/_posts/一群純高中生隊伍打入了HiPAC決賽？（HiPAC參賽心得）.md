@@ -152,25 +152,23 @@ excerpt: 我的第一次參加 HiPAC 國網盃競賽，拿到了佳作和一堆�
 
 其實隱題沒有想像中那麼重要，因為既簡單又配分低（10%），我們並沒有花太多心力在它上面，快速把它做完後，就繼續花時間在優化前面四題應用題上了。我們的進度都算不錯，我一舉拿下了第二子題的分，而第三子題因為是效能分，因此無法得知拿了多少，只知道自己已經差不多做到極限了，趕在截止前半個小時就收工了，進度相當好；隊友那裡就沒那麼幸運了，他們原本領先的題，紛紛被超過，一下從第一名掉到了第四名，但剩下的時間也不夠我們繼續加速了，只好就此收工。
 
-11:00 ~ 12:00，我們又草草把簡報給做完了，畢竟剩下來的時間真的很少，我們要把國網上和 AI 的對話紀錄移到本機，再叫 AI 整理，最後再自己做成簡報，還得潤稿，因為我們是第三組，被分到了報告的第一梯次，因此我們並沒有多少時間可以練講稿，幾乎是簡報上傳完後沒多久，就被抓去報告了。
+11:00 ~ 12:00，我們又以非常快的速度把簡報給做完了，畢竟剩下來的時間真的很少，我們要把國網上和 AI 的對話紀錄移到本機，再叫 AI 整理，最後再自己做成簡報，還得潤稿，因為我們是第三組，被分到了報告的第一梯次，因此我們並沒有多少時間可以練講稿，幾乎是簡報上傳完後沒多久，就被抓去報告了。制度上，我們需要分成兩場來報告，每一場 9 分鐘，再加 3 分鐘的問答時間（同問同答、問不計時），因為 LLM 是第二場的部分，因此第一場報告時，我還能在一旁複習報告內容。
 
-- feel: u hv to know good about what u do, so u can do better (not only vibe coding can win competition), smarter model is obvious of hipac
-- feel2: teammates coworking better than day1,2
-- early 30 min finish llm q
-- ppt's time: no very enough, lots of things hv to say it by myself
-- kohiro: llm's score high af
-- lunch 20 min -> pronounce (15% of total score) (bcuz we are team03 also 1st large team)
-- 匿名貓: not good at this (spent too long time on his q + forgot what to say, not fluently)
-- llm is pt2: not bad this time, my pron sounds fluently (lots of things by ai tho)
-- after finish pron: 1.5 hr of nvedia staff sharing (me, itou, sean)
-- go back classroom: kohiro's group not pres yet (not fair) (chat)
-- wait nvedia's talking finish
-- take down our poster
+準備時間真的太少，加上可能是緊張的緣故，光 [@匿名用戶9487](https://qwo877.github.io/me/) 報告的第一題，就占了大部分時間，結果我們並沒有在時間內報告完第一場該報告的部分，只能在問答環節和第二場繼續努力了；第二場的情況就有所改善了，隊友對我的報告評價是「感覺你好像什麼都懂」，不過我自己知道，當下其實也是有一點點緊張的，而且報告時，有一個評審一直皺著眉頭，又害我更緊張了些，只不過最後的問答環節，我的 LLM 題始終都沒有被問，因此我也無從得知他皺眉的原因了。
+
+我們是第一梯次報告的，因此回到了原本的比賽場地後，幾乎就沒我們什麼事了，結果我們就看到 [@Frank](https://frk.tw/) 那一組還在悠悠閒閒地準備講稿，因為他們是最後一梯的，時間上可以說是非常充裕，令人直呼不公平，但願評審可以為前幾個報告的組別做一些優惠吧。
+
+之後，還有機房參觀和一個半小時的 Nvidia 介紹他們公司的演講，前者我們並沒有去，而後者則是我、[@Hawks](https://hawks.tw/) 和 [@伊藤蒼太](https://itousouta15.tw/) 一起去聽了一下，那個講座是由一位 Nividia 的員工作為主講，講解他們公司的一些發展和技術迭代等等，不過我們聽到一半就跑了，他們覺得實在無聊，甚至 [@伊藤蒼太](https://itousouta15.tw/) 已經睡上幾輪了，因此我們就又回到了原本比賽的場地，等待演講結束。我們還問了主辦單位能否將我們隊伍海報帶回去，得到同意後，我便把它拆了下來帶走了。
+
 {% img d-block mx-auto mb-4 /img/hipac_poster.jpg 300 "隊伍海報" %}
-- back classroom -> ans of q
-- a lot of award (3)
+
+等到了時間差不多了，我們才回到原本演講的場地，接著就到了公布答案和頒獎的時間了。公布答案我其實是沒有很認真在聽每一題，但令我印象最深的還是那個整天跑來我們組聊天的評審，他作為出題者，在這個環節倒是語出驚人：「這其實是我的作業，所以有 15 隊在用自己的 Token 幫我做，謝謝大家，各位的 Token 實在是非常好用。」
+
+之後就是頒獎了，首先是頒感謝狀，國網為贊助商頒發了感謝狀，而我們也有幸見到了 Nvidia 和 AMD 代表合影的歷史性一幕，~~可惜沒在台上打起來~~。
 
 {% img d-block mx-auto mb-4 /img/hipac_amd_and_nvidia.jpg 500 "Nvidia 和 AMD 代表合影" %}
+
+之後，我們就開始了等待頒獎，我們一開始其實很期待能不能拿到第三名，畢竟其實我們前幾天的表現都不錯，只在最後一天掉了一點，但排行榜始終是不公開的，因此我們其實直到頒獎結束，都不知道每題的排名情況。但第三名沒有如願，我們只拿到了佳作，雖然也是不錯，但這次有六個佳作名額，顯得含金量低了不小，不過至少有 NT&dollar;10,000 獎金，但很快，更令人驚喜的事情接二連三地來：Nvidia 贊助了一個特別獎（雖然我們也不知道評量標準是什麼），結果我們竟然拿到了，獎品是 US&dollar;1,000 的 Nivida 算力；之後，國網又頒了另一個「未來之星」的獎給我們，獎品是十萬台幣的國網算力額度。這兩個獎接連頒下來，實在讓我們驚喜，「666，還有第三關。」[@伊藤蒼太](https://itousouta15.tw/) 道。我們還開玩笑：「拿三個獎大概是靠獻祭一台筆電來的吧？」
 
 {% gi 5 2 %}
 ![參賽證明](/img/hipac_certificate.jpg)
@@ -180,12 +178,14 @@ excerpt: 我的第一次參加 HiPAC 國網盃競賽，拿到了佳作和一堆�
 ![未來之星](/img/hipac_star_of_future.jpg)
 {% endgi %}
 
-- 接駁 -> THR
-- dinner (justin and 9487 no)
-- back tp (11:04)
+活動都結束後，終於是準備要散場了，走前，國網還給我們發了晚餐的餐盒，真是生怕我們餓著。之後我們又搭了國網提供的接駁車，它會把我們送到高鐵站，於是我們就在高鐵站附近找了間日式的店作為晚餐，只不過 [@匿名用戶9487](https://qwo877.github.io/me/) 先和爸媽走了、[@Justin](https://justin0711.com/) 則趕火車去了，因此我們只有四個人聚餐。聚餐，或者叫慶功宴，吃得還蠻開心的，畢竟這些可以在飯桌上開玩笑、講幹話的隊友們，可是在不久的初賽時，還互相不太熟的人。
+
+吃完了飯，我們坐同一班高鐵回家去了，到家都已經 11:00 PM 了，實在充實，但更充實的大概屬我們的隊長了，[@Justin](https://justin0711.com/) 為了把 TR-PASS 用到極致，選擇了台鐵回桃園，結果還等不到車，硬生生在沒冷氣的火車站待了好幾個小時，又得坐好幾個小時的火車回北部，可以說是相當 Hardcore 了，我是隔天早上才收到他到家的訊息，似乎離我起床也不遠了，真是個悲劇的收場。
 
 ## 心得
 
+- feel: u hv to know good about what u do, so u can do better (not only vibe coding can win competition), smarter model is obvious of hipac
+- feel2: teammates coworking better than day1,2
 ### 關於 HPC 和 Vibe Coding
 
 ### 關於隊友
