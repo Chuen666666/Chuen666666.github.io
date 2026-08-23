@@ -68,7 +68,7 @@ excerpt: 我的第一次參加 HiPAC 國網盃競賽，拿到了佳作和一堆�
 本次比賽一共有一題效能題、四題應用題、一題隱藏題，配分和介紹如下圖（皆取自[官網](https://event1.nchc.org.tw/2026/hipac/)，因此你也可以前去官網了解詳細資訊）。
 
 {% gi 2 2 %}
-![題目介紹](/img/hipac_questions.png)
+![題目介紹](/img/hipac_quesions.png)
 ![配分](/img/hipac_score.png)
 {% endgi %}
 
