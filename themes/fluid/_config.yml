@@ -1649,6 +1649,12 @@ links:
       link: https://linktr.ee/hsuanya.lee,
       avatar: /avatar/miyun.jpg
       }
+    - {
+      title: "LuYishan",
+      intro: "大廢物",
+      link: https://github.com/LuYishan-4,
+      avatar: /avatar/LuYishan.jpg
+      }
 
 
   # 當成員頭像加載失敗時，替換為指定圖片
