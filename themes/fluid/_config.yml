@@ -1655,6 +1655,12 @@ links:
       link: https://github.com/LuYishan-4,
       avatar: /avatar/LuYishan.jpg
       }
+    - {
+      title: "希爾Xier",
+      intro: "一個會玩Linux和MCU的神奇女孩子🏳️‍⚧️",
+      link: https://xier0405.github.io/about/,
+      avatar: /avatar/xier.jpg
+      }
 
 
   # 當成員頭像加載失敗時，替換為指定圖片
