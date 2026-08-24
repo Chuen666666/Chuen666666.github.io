@@ -1643,6 +1643,12 @@ links:
       link: https://www.instagram.com/owo_copycat,
       avatar: /avatar/Duckcat.jpg
       }
+    - {
+      title: "Miyun",
+      intro: "不是資工系但常常出沒在資訊社群的貓<br>肝是彩色ㄉ",
+      link: https://linktr.ee/hsuanya.lee,
+      avatar: /avatar/miyun.
+      }
 
 
   # 當成員頭像加載失敗時，替換為指定圖片
