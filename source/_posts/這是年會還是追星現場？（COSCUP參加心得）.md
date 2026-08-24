@@ -36,7 +36,7 @@ excerpt: 第一次參加號稱全亞洲最大的開源社群活動，竟然還�
 
 之後我們去聽了我有興趣的「另一種 Encoding 方法：將語意檢索從O(n²)變成O(n)」，畢竟作為對 AI 略有研究的我，還是對這種主題蠻感興趣的，因此也聽得認真些了。
 
-接下來，我們整個上午就幾乎沒有再繼續聽議程了，而是在某兩間教室有許多攤位，我們在那裡遇到並集結成了一大群人，除了本來的我和 [@su2u4](https://github.com/su2u4-1/) 外，還加入了 [@Aaron](https://ronkao.tw/)、[@比例](https://billion4eblog.iam04e.workers.dev/)、[@Miyun](https://linktr.ee/hsuanya.lee)（雖然他只跟著逛一下，就自己去聽議程了，沒跟全程）、[@青呱Gua](https://guatw.net/)、@希爾Xier。攤位還蠻多東西看的，也順手拿了一大堆貼紙，不過最讓我印象深刻的還是 PyCon TW，一開始我們看到它桌上放著三個題目（如下）。
+接下來，我們整個上午就幾乎沒有再繼續聽議程了，而是在某兩間教室有許多攤位，我們在那裡遇到並集結成了一大群人，除了本來的我和 [@su2u4](https://github.com/su2u4-1/) 外，還加入了 [@Aaron](https://ronkao.tw/)、[@比例](https://billion4eblog.iam04e.workers.dev/)、[@Miyun](https://linktr.ee/hsuanya.lee)（雖然他只跟著逛一下，就自己去聽議程了，沒跟全程）、[@青呱Gua](https://guatw.net/)、[@希爾Xier](https://xier0405.github.io/about/)。攤位還蠻多東西看的，也順手拿了一大堆貼紙，不過最讓我印象深刻的還是 PyCon TW，一開始我們看到它桌上放著三個題目（如下）。
 
 {% fold info @ 第一題 %}
 
