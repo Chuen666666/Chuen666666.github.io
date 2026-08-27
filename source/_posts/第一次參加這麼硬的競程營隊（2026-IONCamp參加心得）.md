@@ -8,6 +8,7 @@ tags:
   - 活動
   - 競程
   - IONCamp
+  - 清大暑期程式競賽集訓營
 math: false
 mermaid: false
 hide: true
