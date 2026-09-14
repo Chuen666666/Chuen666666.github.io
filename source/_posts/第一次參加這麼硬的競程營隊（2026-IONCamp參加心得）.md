@@ -128,3 +128,5 @@ for(inti=0;;++i)cout<<arr[i][(i+1)*(i+2)%44];
 {% img d-block mx-auto mb-4 /img/sworda_fem.jpg 300 "Sworda 女裝照" %}
 {% img d-block mx-auto mb-4 /img/pg_and_sworda_music_game.jpg 400 "PGpenguin72 和 Sworda 甜蜜雙排" %}
 {% img d-block mx-auto mb-4 /img/ionc_laptop.jpg 700 "我和 PGpenguin72 的電腦貼紙" %}
+
+{% btn https://ioncamp.org/2026/gallery, IONC 公開相片集, IONC 公開相片集 %}
