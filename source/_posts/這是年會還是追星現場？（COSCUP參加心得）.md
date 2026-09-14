@@ -13,7 +13,7 @@ tags:
   - SITCON BoF x 負一籌
 math: false
 mermaid: false
-hide: true
+hide: false
 date: 2026-08-08 15:19:45
 excerpt: 第一次參加號稱全亞洲最大的開源社群活動，竟然還能和高天聊到天！？
 ---
