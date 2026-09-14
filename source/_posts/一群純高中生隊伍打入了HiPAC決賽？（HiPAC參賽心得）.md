@@ -15,7 +15,7 @@ tags:
   - 國網盃
 math: false
 mermaid: false
-hide: true
+hide: false
 date: 2026-08-06 14:41:53
 excerpt: 我的第一次參加 HiPAC 國網盃競賽，拿到了佳作和一堆獎
 ---
