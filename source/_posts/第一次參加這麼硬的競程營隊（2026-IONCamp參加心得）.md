@@ -11,7 +11,7 @@ tags:
   - 清大暑期程式競賽集訓營
 math: false
 mermaid: false
-hide: true
+hide: false
 date: 2026-07-18 14:08:35
 excerpt: 作為一個競程新手，參加了這次的 IONC 競程營隊後，我到底能成長多少呢？
 ---
