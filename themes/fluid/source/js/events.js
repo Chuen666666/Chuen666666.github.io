@@ -44,7 +44,7 @@ Fluid.events = {
   },
 
   registerParallaxEvent: function() {
-    var ph = jQuery('#banner[parallax="true"]');
+    var ph = jQuery('#banner[data-parallax="true"]');
     if (ph.length === 0) {
       return;
     }

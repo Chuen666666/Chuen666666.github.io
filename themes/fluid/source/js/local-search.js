@@ -18,7 +18,7 @@
     }
 
     if ($result.attr('class').indexOf('list-group-item') === -1) {
-      $result.html('<div class="m-auto text-center"><div class="spinner-border" role="status"><span class="sr-only">Loading...</span></div><br/>Loading...</div>');
+      $result.html('<div class="m-auto text-center"><div class="spinner-border" role="status"><span class="sr-only">Loading...</span></div><br>Loading...</div>');
     }
 
     jQuery.ajax({

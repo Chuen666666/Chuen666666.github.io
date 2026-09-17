@@ -39,7 +39,7 @@ page.banner_mask_alpha = theme.index.banner_mask_alpha
         <% if (theme.index.post_meta.date) { %>
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="<%= full_date(post.date, 'YYYY-MM-DD HH:mm') %>" pubdate>
+            <time datetime="<%= full_date(post.date, 'YYYY-MM-DD HH:mm') %>">
               <%- date(post.date, config.date_format) %>
             </time>
           </div>

@@ -5,7 +5,7 @@
 const urlJoin = require('../utils/url-join');
 
 hexo.extend.helper.register('css_ex', function(base, relative, ex = '') {
-  return `<link ${ex} rel="stylesheet" href="${this.url_for(urlJoin(base, relative))}" />`;
+  return `<link ${ex} rel="stylesheet" href="${this.url_for(urlJoin(base, relative))}">`;
 });
 
 hexo.extend.helper.register('js_ex', function(base, relative, ex = '') {

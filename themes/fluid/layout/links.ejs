@@ -17,7 +17,7 @@ page.comment = theme.links.comments.type
           <% if (each.avatar || each.image) { %>
             <div class="link-avatar my-auto">
               <img src="<%= url_for(each.avatar || each.image) %>" alt="<%= each.title %>"
-                   onerror="this.onerror=null; this.src=this.srcset='<%= url_for(theme.links.onerror_avatar) %>'"/>
+                   onerror="this.onerror=null; this.src=this.srcset='<%= url_for(theme.links.onerror_avatar) %>'">
             </div>
           <% } %>
           <div class="link-text">

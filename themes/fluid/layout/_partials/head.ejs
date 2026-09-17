@@ -20,7 +20,7 @@ var ogConfig = Object.assign({ image: ogImage && url_for(ogImage), url: canonica
   <link rel="apple-touch-icon" sizes="76x76" href="<%= url_for(theme.apple_touch_icon) %>">
   <link rel="icon" href="<%= url_for(theme.favicon) %>">
   <% if (theme.canonical.enable) { %>
-    <link rel="canonical" href="<%= canonicalUrl %>"/>
+    <link rel="canonical" href="<%= canonicalUrl %>">
   <% } %>
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
