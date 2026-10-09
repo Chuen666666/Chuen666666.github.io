@@ -1667,6 +1667,12 @@ links:
       link: https://sleepomen.github.io/,
       avatar: /avatar/vessel.webp
       }
+    - {
+      title: "DaoHui",
+      intro: "嘻嘻",
+      link: https://daohuimodernblog.vercel.app/,
+      avatar: /avatar/DaoHui.jpg
+      }
 
 
   # 當成員頭像加載失敗時，替換為指定圖片
