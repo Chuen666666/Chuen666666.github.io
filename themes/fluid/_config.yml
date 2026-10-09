@@ -1661,6 +1661,12 @@ links:
       link: https://xier0405.github.io/about/,
       avatar: /avatar/xier.jpg
       }
+    - {
+      title: "vessel",
+      intro: "文組小廢物",
+      link: https://sleepomen.github.io/,
+      avatar: /avatar/vessel.webp
+      }
 
 
   # 當成員頭像加載失敗時，替換為指定圖片
