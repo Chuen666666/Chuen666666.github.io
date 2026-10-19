@@ -11,7 +11,7 @@ tags:
   - PyCon TW
 math: false
 mermaid: false
-hide: true
+hide: false
 date: 2026-10-19 13:57:40
 excerpt: 這是我第一次參加 PyCon，規模卻比我想像中的小得多，這麼小規模的年會中，體驗如何？
 ---
