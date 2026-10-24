@@ -22,3 +22,33 @@ function initSheetZoom() {
 document.addEventListener('DOMContentLoaded', initSheetZoom);
 // 如果你有使用 PWA 或某些局部刷新的插件，可能也需要監聽此事件
 document.addEventListener('pjax:complete', initSheetZoom);
+
+// 依台北時區計算交往天數，起始日視為第 1 日
+function initRelationshipDays() {
+  const counter = document.getElementById('relationshipDays');
+  if (!counter) return;
+
+  const startDate = counter.dataset.startDate.split('-').map(Number);
+  const taipeiDateParts = new Intl.DateTimeFormat('en-US', {
+    timeZone: 'Asia/Taipei',
+    year: 'numeric',
+    month: 'numeric',
+    day: 'numeric'
+  }).formatToParts(new Date());
+  const getDatePart = (type) => Number(
+    taipeiDateParts.find((part) => part.type === type).value
+  );
+
+  const startTime = Date.UTC(startDate[0], startDate[1] - 1, startDate[2]);
+  const todayTime = Date.UTC(
+    getDatePart('year'),
+    getDatePart('month') - 1,
+    getDatePart('day')
+  );
+  const days = Math.floor((todayTime - startTime) / 86400000) + 1;
+
+  counter.textContent = days.toLocaleString('zh-TW');
+}
+
+document.addEventListener('DOMContentLoaded', initRelationshipDays);
+document.addEventListener('pjax:complete', initRelationshipDays);

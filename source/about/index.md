@@ -11,7 +11,7 @@ layout: about
 
 - 網名：淳、Chuen666666、淳宇淳蠢
 - 性別：男
-- 交往狀況：有女友
+- 交往狀況：和女友穩定交往 <span id="relationshipDays" data-start-date="2024-06-14">計算中</span> 日❤️
 - 生日：2008 年 1 月 12 日
 - 國籍與所在地：🇹🇼（台北市）
 - 興趣
