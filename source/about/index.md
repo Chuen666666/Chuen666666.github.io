@@ -15,7 +15,13 @@ layout: about
 - 生日：2008 年 1 月 12 日
 - 國籍與所在地：🇹🇼（台北市）
 - 興趣
-  - 寫程式（Python、C++、Markdown、LaTeX）
+  - 寫程式
+    - Python
+    - C++
+    - Markdown
+    - LaTeX
+    - PHP
+    - HTML、CSS、JavaScript
   - 酷酷的科技產品（機械手臂）
   - 剪片（Adobe Premiere Pro）
   - 運動（羽球、路跑、溜冰、扯鈴）
