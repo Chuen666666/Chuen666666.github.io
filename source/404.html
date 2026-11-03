@@ -1,0 +1,32 @@
+---
+layout: false
+---
+
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>找不到頁面 | 淳の神奇小網站</title>
+    <script>
+      const legacyPrefix = "/YMSH_TMRobot_Textbook";
+
+      if (
+        window.location.pathname === legacyPrefix ||
+        window.location.pathname.startsWith(`${legacyPrefix}/`)
+      ) {
+        const path = window.location.pathname.slice(legacyPrefix.length) || "/";
+        window.location.replace(
+          `https://tm.chuen666666.com${path}${window.location.search}${window.location.hash}`,
+        );
+      }
+    </script>
+  </head>
+  <body>
+    <main>
+      <h1>404</h1>
+      <p>找不到這個頁面。</p>
+      <p><a href="/">回到首頁</a></p>
+    </main>
+  </body>
+</html>
