@@ -11,5 +11,4 @@ math: false
 mermaid: false
 hide: true
 date: 2026-10-04 03:05:38
-excerpt:
 ---
