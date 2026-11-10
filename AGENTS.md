@@ -1,35 +1,36 @@
-# 專案代理指引
+# Repository Agent Guidelines
 
-## 適用範圍
+## Scope
 
-本檔案適用於整個儲存庫。子目錄若有自己的 `AGENTS.md`，應同時遵守其中更具體的規則。
+These instructions apply to the entire repository. If a subdirectory contains its own `AGENTS.md`, follow both files and give the more specific rules precedence within that subdirectory.
 
-## 專案概要
+## Project Overview
 
-- 這是「淳の神奇小網站」的 Hexo 8 靜態部落格，主要內容語言為繁體中文（zh-TW）。
-- 正式網址為 `https://chuen666666.com`，時區為 `Asia/Taipei`。
-- 網站使用 Fluid 主題；全站設定位於 `_config.yml`，主題設定位於 `themes/fluid/_config.yml`。
-- GitHub Actions 使用 Node.js 24，推送至 `main` 後會建置並部署至 GitHub Pages。
+- This is the Hexo 8 static blog named `淳の神奇小網站`. Its primary content language is Traditional Chinese (`zh-TW`).
+- The production URL is `https://chuen666666.com`, and the time zone is `Asia/Taipei`.
+- The site uses the Fluid theme. Site-wide settings live in `_config.yml`; theme settings live in `themes/fluid/_config.yml`.
+- GitHub Actions uses Node.js 24. A push to `main` builds and deploys the site to GitHub Pages.
 
-## 修改原則
+## Editing Principles
 
-- 修改前先閱讀 `package.json`、相關設定及鄰近檔案，延續現有格式與命名方式。
-- 使用繁體中文撰寫網站文字與專案文件；不要未經要求改寫作者的口吻、經歷或主張。
-- 只修改任務需要的檔案。工作區中既有的未提交內容視為使用者資料，不得覆蓋或清除。
-- 不要直接編輯 `node_modules/`、`public/`、`.deploy_git/` 或 `db.json`；它們是安裝、建置或部署產物。
-- 不要提交憑證、Webhook URL、Token 或其他秘密。工作流程中的秘密必須透過 GitHub Actions Secrets 引用。
-- 新增資源時使用清楚、穩定的檔名，並確認大小寫與文章引用完全一致；GitHub Pages 執行於區分大小寫的環境。
+- Before editing, read `package.json`, the applicable configuration, and nearby files. Preserve established formatting and naming conventions.
+- Write website copy and public-facing project documentation in Traditional Chinese. Keep AI instruction and maintenance-policy files, including `AGENTS.md` and `SECURITY.md`, in English.
+- Do not rewrite the author's voice, experiences, or claims unless requested.
+- Change only files required by the task. Treat existing uncommitted workspace content as user data; do not overwrite or remove it.
+- Do not edit `node_modules/`, `public/`, `.deploy_git/`, or `db.json` directly. They are installation, build, or deployment artifacts.
+- Never commit credentials, webhook URLs, tokens, or other secrets. Workflow secrets must be referenced through GitHub Actions Secrets.
+- Give new assets clear, stable names and verify that filename casing exactly matches every reference. GitHub Pages runs in a case-sensitive environment.
 
-## 文章編輯
+## Post Editing
 
-- `source/_posts/` 中的文章必須以成對的 `---` 包住 YAML front matter。
-- 延續現有欄位格式。`date` 使用 `YYYY-MM-DD HH:mm:ss`；`categories` 與 `tags` 使用 YAML 清單；`math`、`mermaid`、`hide` 使用布林值。
-- `excerpt` 若存在，必須是非空字串；沒有摘要時省略整個欄位，不要留下空白的 `excerpt:`，否則 Hexo 可能報出 `null is not a string`。
-- 除非使用者提供資料或明確要求，勿虛構第一人稱經歷、成績、活動細節或個人資訊。
-- 圖片通常放在 `source/img/`，影片放在 `source/video/`。文章內使用網站根目錄路徑，例如 `/img/example.jpg`，並核對檔名大小寫。
-- 保留既有 Markdown、HTML、Liquid/Hexo 標籤及 `{% raw %}` 區塊的語意；不要只為統一格式而大量重排文章。
+- Posts in `source/_posts/` must wrap YAML front matter between matching `---` delimiters.
+- Preserve the existing field formats. Use `YYYY-MM-DD HH:mm:ss` for `date`, YAML lists for `categories` and `tags`, and booleans for `math`, `mermaid`, and `hide`.
+- If `excerpt` is present, it must be a non-empty string. Omit the field entirely when no excerpt exists; an empty `excerpt:` may make Hexo fail with `null is not a string`.
+- Do not invent first-person experiences, scores, event details, or personal information unless the user supplies them or explicitly asks for fictional content.
+- Images normally belong in `source/img/`, and videos belong in `source/video/`. Use site-root paths such as `/img/example.jpg` in posts and verify exact filename casing.
+- Preserve the meaning of existing Markdown, HTML, Liquid or Hexo tags, and `{% raw %}` blocks. Do not broadly rearrange posts merely for formatting consistency.
 
-## 常用指令
+## Common Commands
 
 ```bash
 npm ci
@@ -38,19 +39,25 @@ npm run clean
 npm run build
 ```
 
-Windows PowerShell 若因執行原則無法執行 `npm.ps1`，可使用對應的 `npm.cmd`，例如 `npm.cmd run build`。
+If Windows PowerShell execution policy blocks `npm.ps1`, use the corresponding `npm.cmd` command, such as `npm.cmd run build`.
 
-## 驗證要求
+## Validation Requirements
 
-- 一般內容或設定變更至少執行 `npm run build`。
-- 相依套件變更應使用 npm 更新 `package-lock.json`，再執行乾淨安裝或建置。
-- 修改 CSS、JavaScript、版型或主題時，除建置外還要以本機伺服器檢查首頁、文章頁及受影響頁面的桌面與行動版呈現。
-- 若驗證被既有內容錯誤阻擋，應回報確切檔案、錯誤訊息與已完成的其他檢查，不要把無關修正混入任務。
-- 編輯文章後應確認 front matter 沒有意外空值，並在本機預覽標題、摘要、目錄、程式碼區塊、媒體與內部連結。
+- Run at least `npm run build` for ordinary content or configuration changes.
+- For dependency changes, update `package-lock.json` with npm and then perform a clean installation and build.
+- After changing CSS, JavaScript, templates, or the theme, use the local server to inspect the home page, post pages, and affected pages at desktop and mobile sizes in addition to running the build.
+- If an existing content error blocks validation, report the exact file, diagnostic, and other completed checks. Do not mix unrelated repairs into the task.
+- After editing a post, verify that front matter has no unintended empty values. Locally preview its title, excerpt, table of contents, code blocks, media, and internal links.
 
-## Git 與部署注意事項
+## Git and Deployment
 
-- 不要提交被 `.gitignore` 排除的產物。
-- 不要自行推送、部署或觸發外部通知，除非使用者明確要求。
-- `npm run deploy` 會寫入遠端部署儲存庫；僅在明確授權後執行。
-- `npm run p` 會加入全部變更、建立 commit 並推送，不應作為一般驗證指令。
+- Do not commit artifacts excluded by `.gitignore`.
+- Do not push, deploy, or trigger external notifications unless the user explicitly authorizes it.
+- `npm run deploy` writes to a remote deployment repository. Run it only with explicit authorization.
+- `npm run p` stages every change, creates a commit, and pushes it. Do not use it as an ordinary validation command.
+
+## Dependency Security
+
+- Read `SECURITY.md` before changing Hexo or related plugins. Update the register whenever an advisory, dependency path, production boundary, or risk decision changes.
+- Do not use `npm audit fix --force` or downgrade Hexo or a plugin to an older major merely to clear audit findings.
+- Validate a compatible fix with `npm ci`, `npm run clean`, and `npm run build`. Confirm the generated static site before marking an accepted risk as resolved.
