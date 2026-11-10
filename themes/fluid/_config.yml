@@ -10,7 +10,6 @@
 # You can get more detailed help from the guide
 #---------------------------
 
-
 #---------------------------
 # 全局
 # Global
@@ -337,7 +336,6 @@ lazyload:
 # Icon library, which includes many social icons, does not include those theme dependent, so your can modify link by yourself. See: https://hexo.fluid-dev.com/docs/en/icon/
 iconfont: //at.alicdn.com/t/c/font_1736178_k526ubmyhba.css
 
-
 #---------------------------
 # 頁頭
 # Header
@@ -369,7 +367,11 @@ navbar:
   menu:
     - { key: "home", link: "/", icon: "iconfont icon-home-fill" }
     - { key: "archive", link: "/archives/", icon: "iconfont icon-archive-fill" }
-    - { key: "category", link: "/categories/", icon: "iconfont icon-category-fill" }
+    - {
+        key: "category",
+        link: "/categories/",
+        icon: "iconfont icon-category-fill",
+      }
     - { key: "tag", link: "/tags/", icon: "iconfont icon-tags-fill" }
     - { key: "about", link: "/about/", icon: "iconfont icon-user-fill" }
     - { key: "links", link: "/links/", icon: "iconfont icon-link-fill" }
@@ -437,7 +439,6 @@ open_graph:
   fb_admins:
   fb_app_id:
 
-
 #---------------------------
 # 頁腳
 # Footer
@@ -475,7 +476,6 @@ footer:
     police_code: 12345678
     # 公安備案的圖片. 為空時不顯示備案圖片
     police_icon: /img/police_beian.png
-
 
 #---------------------------
 # 首頁
@@ -549,7 +549,6 @@ index:
   post_sticky:
     enable: true
     icon: "iconfont icon-top"
-
 
 #---------------------------
 # 文章頁
@@ -674,7 +673,7 @@ post:
     # CreativeCommons license
     # See: https://creativecommons.org/share-your-work/cclicenses/
     # Options: BY | BY-SA | BY-ND | BY-NC | BY-NC-SA | BY-NC-ND | ZERO
-    license: 'BY'
+    license: "BY"
 
     # 顯示作者
     author:
@@ -708,7 +707,7 @@ post:
     enable: true
     # 放大後圖片連結替換規則，可用於將壓縮圖片連結替換為原圖片連結，如 ['-slim', ''] 是將連結中 `-slim` 移除；如果想使用正則請使用 `re:` 前綴，如 ['re:\\d{3,4}\\/\\d{3,4}\\/', '']
     # The image url replacement when zooming, the feature can be used to replace the compressed image to the original image, eg: ['-slim', ''] removes `-slim` from the image url when zooming; if you want to use regular, use prefix `re:`, eg: ['re:\\d{3,4}\\/\\d{3,4}\\/','']
-    img_url_replace: ['', '']
+    img_url_replace: ["", ""]
 
   # 腳註語法，會在文章底部生成腳註，如果 Markdown 渲染器本身支援，則建議關閉，否則可能會衝突
   # Support footnote syntax, footnotes will be generated at the bottom of the post page. If the Markdown renderer itself supports it, please disable it, otherwise it may conflict
@@ -716,7 +715,7 @@ post:
     enable: true
     # 腳註的節標題，也可以在 front-matter 中通過 `footnote: <h2>Reference</h2>` 這種形式修改單獨頁面的 header
     # The section title of the footnote, you can also modify the header of a single page in the form of `footnote: <h2>Reference</h2>` in front-matter
-    header: ''
+    header: ""
 
   # 數學公式，開啟之前需要更換 Markdown 渲染器，否則複雜公式會有相容問題，具體請見：https://hexo.fluid-dev.com/docs/guide/##latex-數學公式
   # Mathematical formula. If enable, you need to change the Markdown renderer, see: https://hexo.fluid-dev.com/docs/en/guide/#math
@@ -744,7 +743,7 @@ post:
     specific: true
 
     # See: http://mermaid-js.github.io/mermaid/
-    options: { theme: 'default' }
+    options: { theme: "default" }
 
   # 評論插件
   # Comment plugin
@@ -754,7 +753,6 @@ post:
     # The specified plugin needs to set the necessary parameters at the same time
     # Options: utterances | disqus | gitalk | valine | waline | changyan | livere | remark42 | twikoo | cusdis | giscus | discuss
     type: giscus
-
 
 #---------------------------
 # 評論插件
@@ -785,12 +783,12 @@ disqus:
   # The following are Disqusjs configurations, please ignore if DisqusJS is not required, it supports filling in multiple apikeys, it is recommended to build the API endpoint by yourself
   # See: https://github.com/SukkaW/DisqusJS
   disqusjs: false
-  apikey: 
-    - 'KEY1'
+  apikey:
+    - "KEY1"
     #- 'KEY2'
   api: https://disqus.skk.moe/disqus/
-  admin: 
-  adminLabel: 
+  admin:
+  adminLabel:
 
 # Gitalk
 # 基於 GitHub Issues
@@ -801,9 +799,9 @@ gitalk:
   clientSecret:
   repo:
   owner:
-  admin: ['name']
+  admin: ["name"]
   language: zh-CN
-  labels: ['Gitalk']
+  labels: ["Gitalk"]
   perPage: 10
   pagerDirection: last
   distractionFreeMode: false
@@ -823,14 +821,14 @@ valine:
   appKey:
   path: window.location.pathname
   placeholder:
-  avatar: 'retro'
-  meta: ['nick', 'mail', 'link']
+  avatar: "retro"
+  meta: ["nick", "mail", "link"]
   requiredFields: []
   pageSize: 10
-  lang: 'zh-CN'
+  lang: "zh-CN"
   highlight: false
   recordIP: false
-  serverURLs: ''
+  serverURLs: ""
   emojiCDN:
   emojiMaps:
   enableQQ: false
@@ -840,12 +838,12 @@ valine:
 # Derived from Valine, with self-hosted service and new features
 # See: https://waline.js.org/
 waline:
-  serverURL: ''
+  serverURL: ""
   path: window.location.pathname
-  meta: ['nick', 'mail', 'link']
-  requiredMeta: ['nick']
-  lang: 'zh-CN'
-  emoji: ['https://cdn.jsdelivr.net/gh/walinejs/emojis/weibo']
+  meta: ["nick", "mail", "link"]
+  requiredMeta: ["nick"]
+  lang: "zh-CN"
+  emoji: ["https://cdn.jsdelivr.net/gh/walinejs/emojis/weibo"]
   dark: 'html[data-user-color-scheme="dark"]'
   wordLimit: 0
   pageSize: 10
@@ -855,15 +853,15 @@ waline:
 # Based on third-party service, insufficient support for regions outside China
 # http://changyan.kuaizhan.com
 changyan:
-  appid: ''
-  appkey: ''
+  appid: ""
+  appkey: ""
 
 # 來必力 Livere
 # 基於第三方的服務
 # Based on third-party service
 # See: https://www.livere.com
 livere:
-  uid: ''
+  uid: ""
 
 # Remark42
 # 需要自託管客戶端
@@ -874,7 +872,7 @@ remark42:
   site_id:
   max_shown_comments: 10
   locale: zh
-  components: ['embed']
+  components: ["embed"]
 
 # Twikoo
 # 支援騰訊雲、Vercel、Railway 等多種平臺部署
@@ -919,7 +917,6 @@ discuss:
   serverURLs:
   path: window.location.pathname
 
-
 #---------------------------
 # 歸檔頁
 # Archive Page
@@ -928,7 +925,6 @@ archive:
   banner_img: /img/default.png
   banner_img_height: 60
   banner_mask_alpha: 0.3
-
 
 #---------------------------
 # 分類頁
@@ -958,7 +954,6 @@ category:
   # The maximum number of posts in a single category. If the limit is exceeded, it will be displayed More. If 0 no limit
   post_limit: 10
 
-
 #---------------------------
 # 標籤頁
 # Tag Page
@@ -975,7 +970,6 @@ tag:
     start_color: #BBBBEE
     end_color: #337ab7
 
-
 #---------------------------
 # 關於頁
 # About Page
@@ -991,12 +985,31 @@ about:
   # 更多圖標可從 https://hexo.fluid-dev.com/docs/icon/ 查找，`class` 代表圖標的 css class，添加 `qrcode` 後，圖標不再是連結而是懸浮二維碼
   # More icons can be found from https://hexo.fluid-dev.com/docs/en/icon/  `class` is the css class of the icon. If adding `qrcode`, the icon is no longer a link, but a hovering QR code
   icons:
-    - { class: "iconfont icon-github-fill", link: "https://github.com/Chuen666666", tip: "GitHub" }
-    - { class: "iconfont icon-youtube-fill", link: "https://www.youtube.com/@Chuen666", tip: "YouTube" }
-    - { class: "iconfont icon-twitch-fill", link: "https://www.twitch.tv/chuen666", tip: "Twitch" }
-    - { class: "iconfont icon-steam", link: "https://steamcommunity.com/id/Chuen666666/", tip: "Steam" }
-    - { class: "iconfont icon-plan", link: "https://specs.gg/Chuen666666", tip: "SPECS.GG" }
-
+    - {
+        class: "iconfont icon-github-fill",
+        link: "https://github.com/Chuen666666",
+        tip: "GitHub",
+      }
+    - {
+        class: "iconfont icon-youtube-fill",
+        link: "https://www.youtube.com/@Chuen666",
+        tip: "YouTube",
+      }
+    - {
+        class: "iconfont icon-twitch-fill",
+        link: "https://www.twitch.tv/chuen666",
+        tip: "Twitch",
+      }
+    - {
+        class: "iconfont icon-steam",
+        link: "https://steamcommunity.com/id/Chuen666666/",
+        tip: "Steam",
+      }
+    - {
+        class: "iconfont icon-plan",
+        link: "https://specs.gg/Chuen666666",
+        tip: "SPECS.GG",
+      }
 
 #---------------------------
 # 自定義頁
@@ -1009,7 +1022,6 @@ page:
   banner_img: /img/default.png
   banner_img_height: 60
   banner_mask_alpha: 0.3
-
 
 #---------------------------
 # 404頁
@@ -1024,7 +1036,6 @@ page404:
   # Delay in redirecting to home page (milliseconds)
   redirect_delay: 5000
 
-
 #---------------------------
 # 友站頁
 # Links Page
@@ -1038,642 +1049,647 @@ links:
   # Member item of page
   items:
     - {
-      title: "郭10",
-      intro: "觀念考不到5級的115特選生",
-      link: https://www.yilin0121.com/,
-      avatar: /avatar/yilin.webp
-    }
-    - {
-      title: "閔捷",
-      intro: "站在山頂的傻逼",
-      link: https://xieserver.com/,
-      avatar: /avatar/minje.webp
-    }
-    - {
-      title: "雪餅",
-      intro: "什麼都不會的雪餅",
-      link: https://icecookies1017.github.io/,
-      avatar: /avatar/icecookies.png
-    }
-    - {
-      title: "nini",
-      intro: "聽小妹的就對了",
-      link: https://www.instagram.com/nininini_970623/,
-      avatar: /avatar/nini.jpg
-    }
-    - {
-      title: "Wy",
-      intro: "我是一個扮成蘿莉的小男娘",
-      link: https://wyyyyy812-tech.github.io/,
-      avatar: /avatar/Wy.jpg
-    }
-    - {
-      title: "歪擦",
-      intro: "我是俗頭🪨",
-      link: https://www.instagram.com/lyx._.1213,
-      avatar: /avatar/YX.jpg
-    }
-    - {
-      title: "Charlie",
-      intro: "早安?",
-      link: https://www.instagram.com/yuchen6365/,
-      avatar: /avatar/charlie.webp
-    }
-    - {
-      title: "o1987aoppp",
-      intro: "問就是還在練車",
-      link: https://www.instagram.com/o1987aoppp/,
-      avatar: /avatar/o1987aoppp.png
-    }
-    - {
-      title: "哈哈哈",
-      intro: "陽明電神🛐",
-      link: http://discordapp.com/users/1462992192867143933,
-      avatar: /avatar/youc.jpg
-    }
-    - {
-      title: "柚子",
-      intro: "",
-      link: https://www.instagram.com/uiz20080710,
-      avatar: /avatar/uiz.png
-    }
-    - {
-      title: "大眼睛",
-      intro: "我的私人飛機怎麼還沒來",
-      link: https://www.instagram.com/_lwh_0421,
-      avatar: /avatar/LWH.jpg
-    }
-    - {
-      title: "Muha",
-      intro: "Your friendly Indonesian",
-      link: https://muhawow.github.io/Muha-Guarddin/,
-      avatar: /avatar/muha.jpg
-    }
-    - {
-      title: "Moon",
-      intro: "100% made in Vietnam",
-      link: https://www.instagram.com/monovanaalesia,
-      avatar: /avatar/moon.jpg
-    }
-    - {
-      title: "馮蛋餅",
-      intro: "蛋餅沒有保存期限，因為神話不會過期",
-      link: https://fyc970823.github.io/,
-      avatar: /avatar/egg_pancake.jpg
-    }
-    - {
-      title: "睏貓",
-      intro: "愛睡覺的大壞貓，片師，重度咖啡因成癮，歡迎合作喵~",
-      link: https://www.instagram.com/sleepycat.1201,
-      avatar: /avatar/sleepycat.jpg
-    }
-    - {
-      title: "Raymond Weng",
-      intro: "什麼都沾一點的怪人",
-      link: https://raymondweng.dev/,
-      avatar: /avatar/raymond_weng.jpg
-    }
-    - {
-      title: "LDN",
-      intro: "才不是蘿莉控",
-      link: https://blog.ldn970110.com/,
-      avatar: /avatar/LDN.jpg
-    }
-    - {
-      title: "Frank",
-      intro: "Junior Backend Dev & CTF Player from ICEDTEA",
-      link: https://frk.tw/,
-      avatar: /avatar/frank.webp
-    }
-    - {
-      title: "匿名用戶9487",
-      intro: "喵",
-      link: https://qwo877.github.io/me/,
-      avatar: /avatar/qwo877.png
-    }
-    - {
-      title: "su2u4",
-      intro: "廢物一個",
-      link: https://github.com/su2u4-1/,
-      avatar: /avatar/su2u4.png
-    }
-    - {
-      title: "小一",
-      intro: "一個喜歡開發遊戲的人類",
-      link: https://www.instagram.com/littleonechung/,
-      avatar: /avatar/littleone.png
-    }
-    - {
-      title: "橘子",
-      intro: "橘子喵",
-      link: https://xn--gew.tw/,
-      avatar: /avatar/littleorange.png
-    }
-    - {
-      title: "kohiro",
-      intro: "<del>我是ko教授我超電</del>",
-      link: https://github.com/kohiro961021,
-      avatar: /avatar/kohiro.png
-    }
-    - {
-      title: "Icrack",
-      intro: "別再TLE了，我裂開",
-      link: https://lbc0841.github.io/,
-      avatar: /avatar/lbc0841.webp
-    }
-    - {
-      title: "伊藤有栖",
-      intro: "競程邊角料",
-      link: https://siewilly.github.io/,
-      avatar: /avatar/siewilly.webp
-    }
-    - {
-      title: "伊藤蒼太",
-      intro: "喵喵",
-      link: https://itousouta15.tw,
-      avatar: /avatar/itousouta15.webp
-    }
-    - {
-      title: "PepperSauce",
-      intro: "好想成為資安佬...",
-      link: https://peppersauce0712.github.io/,
-      avatar: /avatar/PepperSauce.jpg
-    }
-    - {
-      title: "Small Z",
-      intro: "Developer",
-      link: https://www.yuzen.dev/,
-      avatar: /avatar/yuzen9622.webp
-    }
-    - {
-      title: "Justin",
-      intro: "",
-      link: https://justin0711.com/,
-      avatar: /avatar/justin0711.jpg
-    }
-    - {
-      title: "伊藤喵貓",
-      intro: "菜菜的一隻喵",
-      link: https://twcat0503.org/,
-      avatar: /avatar/twcat0503.png
-    }
-    - {
-      title: "鴨鴨",
-      intro: "我是一個小廢廢",
-      link: https://ya-ya-12.github.io/,
-      avatar: /avatar/yaya.png
-    }
-    - {
-      title: "C.Y.",
-      intro: "一個被眾多電神給電死的文組學生",
-      link: https://chenyou0113.github.io/,
-      avatar: /avatar/CY.jpg
-    }
-    - {
-      title: "Robin",
-      intro: "花束を",
-      link: https://robin-tw.me/,
-      avatar: /avatar/robin.jpg
-    }
-    - {
-      title: "暴力又被TLE",
-      intro: "PY派對 (⁠・⁠∀⁠・⁠)",
-      link: https://www.threads.com/@ericshen19555,
-      avatar: /avatar/ericshen19555.png
-    }
-    - {
-      title: "AiverAiva",
-      intro: "咕咕嘎嘎",
-      link: https://weikuwu.me/,
-      avatar: /avatar/AiverAiva.jpg
-    }
-    - {
-      title: "夜月",
-      intro: "我太菜了，是不是應該轉文組",
-      link: https://yeyue1004.github.io/,
-      avatar: /avatar/lyscnf23.jpg
-    }
-    - {
-      title: "日凪空",
-      intro: "程式純noob但努力學習中",
-      link: https://www.instagram.com/yuki._0608,
-      avatar: /avatar/yuki.jpg
-    }
-    - {
-      title: "eason",
-      intro: "APCS菜逼",
-      link: https://www.instagram.com/easoneason609/#,
-      avatar: /avatar/eason.jpg
-    }
-    - {
-      title: "Aaron",
-      intro: "依舊沒學校的我 嗚嗚嗚",
-      link: https://ronkao.tw/,
-      avatar: /avatar/Aaron.jpg
-    }
-    - {
-      title: "jackoha",
-      intro: "東方廚",
-      link: https://jackoha.github.io/,
-      avatar: /avatar/jackoha.webp
-    }
-    - {
-      title: "雷諾",
-      intro: "你好呀!我是雷諾，一個喜歡女裝的男娘",
-      link: https://leinuoawa.xyz/,
-      avatar: /avatar/leinuo.png
-    }
-    - {
-      title: "TC",
-      intro: "一個特選特不上頂大的菜逼",
-      link: https://github.com/TC-sudo-dps,
-      avatar: /avatar/TC.jpg
-    }
-    - {
-      title: "Syuan",
-      intro: "蛤",
-      link: https://5yu4n.github.io/,
-      avatar: /avatar/Syuan.jpg
-    }
-    - {
-      title: "Qarchue",
-      intro: "一個遊戲很爛的外星人...",
-      link: https://qarchue.github.io/,
-      avatar: /avatar/Qarchue.png
-    }
-    - {
-      title: "Flashingtw",
-      intro: "正在研究演算法<br>喜歡程式(￣∇￣)",
-      link: https://www.threads.com/@flash.zcx,
-      avatar: /avatar/Flashingtw.jpg
-    }
-    - {
-      title: "草貓",
-      intro: "草貓不是貓草",
-      link: https://bryan0324.github.io/,
-      avatar: /avatar/bryan0324.png
-    }
-    - {
-      title: "zackzheng",
-      intro: "只是個學生的業餘Dev<br>可能會資安",
-      link: https://zack.siiway.org/,
-      avatar: /avatar/zack.png
-    }
-    - {
-      title: "yakura",
-      intro: "深度學習，網路安全",
-      link: https://github.com/yakura-OWO,
-      avatar: /avatar/yakura.jpg
-    }
-    - {
-      title: "Ling",
-      intro: "喜歡寫程式但很菜的一個人",
-      link: https://www.instagram.com/lxl._.0212,
-      avatar: /avatar/Ling.jpg
-    }
-    - {
-      title: "Xiancode207585",
-      intro: "<del>Hello, World!</del>",
-      link: https://github.com/Xiancode207585,
-      avatar: /avatar/Xiancode.png
-    }
-    - {
-      title: "西瓜",
-      intro: "一個只有4+1的可憐高三牲",
-      link: https://github.com/watermelen63,
-      avatar: /avatar/watermelen.jpg
-    }
-    - {
-      title: "陳奕嘉",
-      intro: "一個喜歡學東學西的不務正業工程師",
-      link: https://github.com/Chen1Plus,
-      avatar: /avatar/Aaron_Chen.jpg
+        title: "郭10",
+        intro: "觀念考不到5級的115特選生",
+        link: https://www.yilin0121.com/,
+        avatar: /avatar/yilin.webp,
       }
     - {
-      title: "貓p",
-      intro: "一隻民航跟資訊貓<br>請多指教：3",
-      link: https://www.instagram.com/neko._.p_rcss_roc.tw,
-      avatar: /avatar/cat_p.png
+        title: "閔捷",
+        intro: "站在山頂的傻逼",
+        link: https://xieserver.com/,
+        avatar: /avatar/minje.webp,
       }
     - {
-      title: "Aurielle Tavia",
-      intro: "看到各種小動物就走不動路",
-      link: https://www.instagram.com/hello_aqurielle.213/,
-      avatar: /avatar/Aurielle.png
+        title: "雪餅",
+        intro: "什麼都不會的雪餅",
+        link: https://icecookies1017.github.io/,
+        avatar: /avatar/icecookies.png,
       }
     - {
-      title: "Myster",
-      intro: "不太會寫程式的人類",
-      link: https://myster7494.github.io/,
-      avatar: /avatar/Myster.png
+        title: "nini",
+        intro: "聽小妹的就對了",
+        link: https://www.instagram.com/nininini_970623/,
+        avatar: /avatar/nini.jpg,
       }
     - {
-      title: "n10955165",
-      intro: "被現實蹂躪的小男娘",
-      link: https://github.com/n10955165,
-      avatar: /avatar/hansz.png
+        title: "Wy",
+        intro: "我是一個扮成蘿莉的小男娘",
+        link: https://wyyyyy812-tech.github.io/,
+        avatar: /avatar/Wy.jpg,
       }
     - {
-      title: "蜜蜂機器人",
-      intro: "",
-      link: https://www.facebook.com/share/1DmaG6SzYw/,
-      avatar: /avatar/bee.jpg
+        title: "歪擦",
+        intro: "我是俗頭🪨",
+        link: https://www.instagram.com/lyx._.1213,
+        avatar: /avatar/YX.jpg,
       }
     - {
-      title: "s0323010",
-      intro: "懂音樂的軟體工程師 | 個網爛爛的不想修",
-      link: https://devs0323010.github.io/,
-      avatar: /avatar/s.png
+        title: "Charlie",
+        intro: "早安?",
+        link: https://www.instagram.com/yuchen6365/,
+        avatar: /avatar/charlie.webp,
       }
     - {
-      title: "Brian Duan",
-      intro: "一般路過史萊姆",
-      link: https://www.justaslime.dev/,
-      avatar: /avatar/slime.jpg
+        title: "o1987aoppp",
+        intro: "問就是還在練車",
+        link: https://www.instagram.com/o1987aoppp/,
+        avatar: /avatar/o1987aoppp.png,
       }
     - {
-      title: "YD",
-      intro: "一名創新者、網頁工程師，想構建讓社會更好的系統",
-      link: https://www.kuang-ti.com/,
-      avatar: /avatar/yd.png
+        title: "哈哈哈",
+        intro: "陽明電神🛐",
+        link: http://discordapp.com/users/1462992192867143933,
+        avatar: /avatar/youc.jpg,
       }
     - {
-      title: "Kukusa",
-      intro: "可愛男娘私我",
-      link: https://www.instagram.com/kukusa7274/,
-      avatar: /avatar/Kukusa.png
+        title: "柚子",
+        intro: "",
+        link: https://www.instagram.com/uiz20080710,
+        avatar: /avatar/uiz.png,
       }
     - {
-      title: "Liquan",
-      intro: "擺爛中的大學生",
-      link: https://www.instagram.com/liquan_.0127,
-      avatar: /avatar/Liquan.jpg
+        title: "大眼睛",
+        intro: "我的私人飛機怎麼還沒來",
+        link: https://www.instagram.com/_lwh_0421,
+        avatar: /avatar/LWH.jpg,
       }
     - {
-      title: "陌語",
-      intro: "Doing the right thing may not always earn praise, but why should we betray our own principles just to please others ?",
-      link: https://github.com/Moyu0730,
-      avatar: /avatar/moyu.png
+        title: "Muha",
+        intro: "Your friendly Indonesian",
+        link: https://muhawow.github.io/Muha-Guarddin/,
+        avatar: /avatar/muha.jpg,
       }
     - {
-      title: "泫霄",
-      intro: "一个普通的人",
-      link: https://xxuanxiao.pages.dev/,
-      avatar: /avatar/xuo_azure.webp
+        title: "Moon",
+        intro: "100% made in Vietnam",
+        link: https://www.instagram.com/monovanaalesia,
+        avatar: /avatar/moon.jpg,
       }
     - {
-      title: "γ υ l&lt;i § Α ∩ ς Ε🍥",
-      intro: "有女朋友的現充",
-      link: https://youtube.com/@uyukisauce3054,
-      avatar: /avatar/water_59.jpg
+        title: "馮蛋餅",
+        intro: "蛋餅沒有保存期限，因為神話不會過期",
+        link: https://fyc970823.github.io/,
+        avatar: /avatar/egg_pancake.jpg,
       }
     - {
-      title: "ヨーグルト",
-      intro: "瘋子有什麼不好呢?",
-      link: https://youcheng0617.github.io/aboutMeee/,
-      avatar: /avatar/yogurt.jpg
+        title: "睏貓",
+        intro: "愛睡覺的大壞貓，片師，重度咖啡因成癮，歡迎合作喵~",
+        link: https://www.instagram.com/sleepycat.1201,
+        avatar: /avatar/sleepycat.jpg,
       }
     - {
-      title: "sap",
-      intro: "玫瑰不用長高，戀者自會彎腰。",
-      link: https://www.instagram.com/sapsamcat007/?hl=zh-tw,
-      avatar: /avatar/sap.gif
+        title: "Raymond Weng",
+        intro: "什麼都沾一點的怪人",
+        link: https://raymondweng.dev/,
+        avatar: /avatar/raymond_weng.jpg,
       }
     - {
-      title: "康康",
-      intro: "一隻不會飛的章魚研究生",
-      link: https://www.hhk.one/,
-      avatar: /avatar/kangkang.JPG
+        title: "LDN",
+        intro: "才不是蘿莉控",
+        link: https://blog.ldn970110.com/,
+        avatar: /avatar/LDN.jpg,
       }
     - {
-      title: "fishbaby1011",
-      intro: "一個搞資安跟HPC的infra仔",
-      link: https://blog.fishbaby1011.com/,
-      avatar: /avatar/fishbaby.jpg
+        title: "Frank",
+        intro: "Junior Backend Dev & CTF Player from ICEDTEA",
+        link: https://frk.tw/,
+        avatar: /avatar/frank.webp,
       }
     - {
-      title: "baihu",
-      intro: "一個小廢物高中生",
-      link: https://www.instagram.com/baihufox,
-      avatar: /avatar/baihu.png
+        title: "匿名用戶9487",
+        intro: "喵",
+        link: https://qwo877.github.io/me/,
+        avatar: /avatar/qwo877.png,
       }
     - {
-      title: "人",
-      intro: "在資訊佬們旁邊晃悠的人社牲",
-      link: https://www.threads.com/@young._.qwq1945,
-      avatar: /avatar/ren.jpg
+        title: "su2u4",
+        intro: "廢物一個",
+        link: https://github.com/su2u4-1/,
+        avatar: /avatar/su2u4.png,
       }
     - {
-      title: "yoru1005",
-      intro: "115特選爆死生，重度明日方舟玩家",
-      link: https://github.com/Yoru1005,
-      avatar: /avatar/yoru.jpg
+        title: "小一",
+        intro: "一個喜歡開發遊戲的人類",
+        link: https://www.instagram.com/littleonechung/,
+        avatar: /avatar/littleone.png,
       }
     - {
-      title: "青呱Gua",
-      intro: "廢物一枚 便便教主",
-      link: https://guatw.net/,
-      avatar: /avatar/Gua.png
+        title: "橘子",
+        intro: "橘子喵",
+        link: https://xn--gew.tw/,
+        avatar: /avatar/littleorange.png,
       }
     - {
-      title: "boo00976",
-      intro: "資訊初學者",
-      link: https://github.com/boo00976,
-      avatar: /avatar/hiroya.png
+        title: "kohiro",
+        intro: "<del>我是ko教授我超電</del>",
+        link: https://github.com/kohiro961021,
+        avatar: /avatar/kohiro.png,
       }
     - {
-      title: "Hsinnnu",
-      intro: "又菜又愛玩",
-      link: https://www.instagram.com/chyiltzzz__,
-      avatar: /avatar/Hsinnnu.png
+        title: "Icrack",
+        intro: "別再TLE了，我裂開",
+        link: https://lbc0841.github.io/,
+        avatar: /avatar/lbc0841.webp,
       }
     - {
-      title: "ChuangB",
-      intro: "略略略",
-      link: https://chuangb48.github.io/personal_webside/,
-      avatar: /avatar/ChuangB.jpg
+        title: "伊藤有栖",
+        intro: "競程邊角料",
+        link: https://siewilly.github.io/,
+        avatar: /avatar/siewilly.webp,
       }
     - {
-      title: "雙生之狐",
-      intro: "一個手作堪比CNC的社恐",
-      link: https://www.instagram.com/fox_wee0408,
-      avatar: /avatar/melon_duck.jpg
+        title: "伊藤蒼太",
+        intro: "喵喵",
+        link: https://itousouta15.tw,
+        avatar: /avatar/itousouta15.webp,
       }
     - {
-      title: "何煦人也",
-      intro: "競程很菜的競程仔",
-      link: https://www.instagram.com/hush._.0319,
-      avatar: /avatar/hush.jpg
+        title: "PepperSauce",
+        intro: "好想成為資安佬...",
+        link: https://peppersauce0712.github.io/,
+        avatar: /avatar/PepperSauce.jpg,
       }
     - {
-      title: "玥楓",
-      intro: "我是玥楓，被電神電死的玥楓喵",
-      link: https://yue-fon.vercel.app/,
-      avatar: /avatar/liu.webp
+        title: "Small Z",
+        intro: "Developer",
+        link: https://www.yuzen.dev/,
+        avatar: /avatar/yuzen9622.webp,
       }
     - {
-      title: "PGpenguin72",
-      intro: "是一隻企鵝喔",
-      link: https://pg72.tw/,
-      avatar: /avatar/pg72.png
+        title: "Justin",
+        intro: "",
+        link: https://justin0711.com/,
+        avatar: /avatar/justin0711.jpg,
       }
     - {
-      title: "喵靈",
-      intro: "一隻什麼都不會卻又什麼都想學的貓",
-      link: https://m30wlin35.com/,
-      avatar: /avatar/meowlin.webp
+        title: "伊藤喵貓",
+        intro: "菜菜的一隻喵",
+        link: https://twcat0503.org/,
+        avatar: /avatar/twcat0503.png,
       }
     - {
-      title: "宇",
-      intro: "NTNU LS",
-      link: https://www.instagram.com/yuhsin_0125,
-      avatar: /avatar/sychlys.jpg
+        title: "鴨鴨",
+        intro: "我是一個小廢廢",
+        link: https://ya-ya-12.github.io/,
+        avatar: /avatar/yaya.png,
       }
     - {
-      title: "灰毛",
-      intro: "我是傻逼",
-      link: https://neo-furry.graycat.me/,
-      avatar: /avatar/graycat.jpg
+        title: "C.Y.",
+        intro: "一個被眾多電神給電死的文組學生",
+        link: https://chenyou0113.github.io/,
+        avatar: /avatar/CY.jpg,
       }
     - {
-      title: "kyle",
-      intro: "有人要來寫 Rust 嗎",
-      link: https://simplykyle.eu.org/,
-      avatar: /avatar/kyle.png
+        title: "Robin",
+        intro: "花束を",
+        link: https://robin-tw.me/,
+        avatar: /avatar/robin.jpg,
       }
     - {
-      title: "shrimp2845",
-      intro: "ohhi?",
-      link: https://shrimp2845-tw.github.io/,
-      avatar: /avatar/shrimp2845.jpg
+        title: "暴力又被TLE",
+        intro: "PY派對 (⁠・⁠∀⁠・⁠)",
+        link: https://www.threads.com/@ericshen19555,
+        avatar: /avatar/ericshen19555.png,
       }
     - {
-      title: "R3X DJ",
-      intro: "對不起我都在 Vibe Hacking",
-      link: https://r3xdj.github.io/,
-      avatar: /avatar/R3X_DJ.png
+        title: "AiverAiva",
+        intro: "咕咕嘎嘎",
+        link: https://weikuwu.me/,
+        avatar: /avatar/AiverAiva.jpg,
       }
     - {
-      title: "洋蔥",
-      intro: "一位對資訊科技結合創業頗有興趣的高中生。",
-      link: https://founder.taicoolah.com/,
-      avatar: /avatar/onion.png
+        title: "夜月",
+        intro: "我太菜了，是不是應該轉文組",
+        link: https://yeyue1004.github.io/,
+        avatar: /avatar/lyscnf23.jpg,
       }
     - {
-      title: "Hawks",
-      intro: "",
-      link: https://hawks.tw/,
-      avatar: /avatar/Hawks.png
+        title: "日凪空",
+        intro: "程式純noob但努力學習中",
+        link: https://www.instagram.com/yuki._0608,
+        avatar: /avatar/yuki.jpg,
       }
     - {
-      title: "Yuto",
-      intro: "Hi 我是 Yuto，熱愛電腦科學和資訊安全。專注於研究系統安全與偵測工程，也喜歡打 CTF，歡迎多多交流～",
-      link: https://blog.yuto0226.dev/,
-      avatar: /avatar/yuto.jpg
+        title: "eason",
+        intro: "APCS菜逼",
+        link: https://www.instagram.com/easoneason609/#,
+        avatar: /avatar/eason.jpg,
       }
     - {
-      title: "benjaminshih",
-      intro: "不想被體制束縛的競程選手兼開發者",
-      link: https://benjamin-shih-tw.github.io/BLOG,
-      avatar: /avatar/
+        title: "Aaron",
+        intro: "依舊沒學校的我 嗚嗚嗚",
+        link: https://ronkao.tw/,
+        avatar: /avatar/Aaron.jpg,
       }
     - {
-      title: "hung",
-      intro: "我不會競程",
-      link: https://hung-liu.github.io/,
-      avatar: /avatar/hung.png
+        title: "jackoha",
+        intro: "東方廚",
+        link: https://jackoha.github.io/,
+        avatar: /avatar/jackoha.webp,
       }
     - {
-      title: "Steven",
-      intro: "好玩😉",
-      link: https://steventeng.uk/,
-      avatar: /avatar/steven.png
+        title: "雷諾",
+        intro: "你好呀!我是雷諾，一個喜歡女裝的男娘",
+        link: https://leinuoawa.xyz/,
+        avatar: /avatar/leinuo.png,
       }
     - {
-      title: "235",
-      intro: "all night long",
-      link: https://235blog.netlify.app/,
-      avatar: /avatar/235.jpg
+        title: "TC",
+        intro: "一個特選特不上頂大的菜逼",
+        link: https://github.com/TC-sudo-dps,
+        avatar: /avatar/TC.jpg,
       }
     - {
-      title: "Sworda",
-      intro: "喜歡競程跟音遊 但都很菜<br>最會玩的是Phigros",
-      link: https://www.instagram.com/hpcp13_sworda/,
-      avatar: /avatar/swrda.jpg
+        title: "Syuan",
+        intro: "蛤",
+        link: https://5yu4n.github.io/,
+        avatar: /avatar/Syuan.jpg,
       }
     - {
-      title: "Cheng0928",
-      intro: "乃木坂 46 是日本大型女子偶像團體，成立於2011年8月21日；其出道時定位為另一女子偶像團體AKB48的「官方對手」（公式ライバル），有獨立的營運團隊，行銷策略及團體風格也與AKB48系列團體不同，惟總製作人同樣是秋元康。目前有34名成員，隊長由菅原咲月擔任。其與2015年8月21日成立的櫸坂46（現櫻坂46）、2018年8月20日成立的吉本坂46、以及2019年2月11日自櫸坂46獨立的日向坂46，構成大型偶像團體系列「坂道系列」。",
-      link: https://cheng-0928.github.io/,
-      avatar: /avatar/cheng.svg
+        title: "Qarchue",
+        intro: "一個遊戲很爛的外星人...",
+        link: https://qarchue.github.io/,
+        avatar: /avatar/Qarchue.png,
       }
     - {
-      title: "chrislaiisme",
-      intro: "對俄羅斯使用強力水族箱",
-      link: https://www.threads.com/@chrislaiisme,
-      avatar: /avatar/chrislaiisme.jpg
+        title: "Flashingtw",
+        intro: "正在研究演算法<br>喜歡程式(￣∇￣)",
+        link: https://www.threads.com/@flash.zcx,
+        avatar: /avatar/Flashingtw.jpg,
       }
     - {
-      title: "Chara_Wu",
-      intro: "一個資訊能力很爛，拚盡全力變成大佬，偶爾玩玩其他自己感興趣遊戲的人",
-      link: https://www.facebook.com/chara.wu.2025,
-      avatar: /avatar/Chara_Wu.png
+        title: "草貓",
+        intro: "草貓不是貓草",
+        link: https://bryan0324.github.io/,
+        avatar: /avatar/bryan0324.png,
       }
     - {
-      title: "牛排",
-      intro: "資訊菜雞一個，大佬們不教",
-      link: https://www.instagram.com/lincaiyi1228/,
-      avatar: /avatar/sloth.webp
+        title: "zackzheng",
+        intro: "只是個學生的業餘Dev<br>可能會資安",
+        link: https://zack.siiway.org/,
+        avatar: /avatar/zack.png,
       }
     - {
-      title: "比例",
-      intro: "被拋棄在角落，沒人要的廢物",
-      link: https://billion4eblog.iam04e.workers.dev/,
-      avatar: /avatar/billion.png
+        title: "yakura",
+        intro: "深度學習，網路安全",
+        link: https://github.com/yakura-OWO,
+        avatar: /avatar/yakura.jpg,
       }
     - {
-      title: "yuyoru",
-      intro: "一個喜歡寫程式的半宅男",
-      link: https://theoyu314159.github.io/,
-      avatar: /avatar/yuyoru.png
+        title: "Ling",
+        intro: "喜歡寫程式但很菜的一個人",
+        link: https://www.instagram.com/lxl._.0212,
+        avatar: /avatar/Ling.jpg,
       }
     - {
-      title: "Duckcat",
-      intro: "別人電神我墊神",
-      link: https://www.instagram.com/owo_copycat,
-      avatar: /avatar/Duckcat.jpg
+        title: "Xiancode207585",
+        intro: "<del>Hello, World!</del>",
+        link: https://github.com/Xiancode207585,
+        avatar: /avatar/Xiancode.png,
       }
     - {
-      title: "Miyun",
-      intro: "肝是彩色的",
-      link: https://linktr.ee/hsuanya.lee,
-      avatar: /avatar/miyun.jpg
+        title: "西瓜",
+        intro: "一個只有4+1的可憐高三牲",
+        link: https://github.com/watermelen63,
+        avatar: /avatar/watermelen.jpg,
       }
     - {
-      title: "LuYishan",
-      intro: "鬼門開會不會有傲嬌酪梨雌小鬼半夜跑來吸我的陽氣啊o(////▽////)q欸嘿嘿...想想就開心",
-      link: https://luyishan-4-blog.wuming381906.workers.dev/,
-      avatar: /avatar/LuYishan.webp
+        title: "陳奕嘉",
+        intro: "一個喜歡學東學西的不務正業工程師",
+        link: https://github.com/Chen1Plus,
+        avatar: /avatar/Aaron_Chen.jpg,
       }
     - {
-      title: "希爾Xier",
-      intro: "一個會玩Linux和MCU的神奇女孩子🏳️‍⚧️",
-      link: https://xier0405.github.io/about/,
-      avatar: /avatar/xier.jpg
+        title: "貓p",
+        intro: "一隻民航跟資訊貓<br>請多指教：3",
+        link: https://www.instagram.com/neko._.p_rcss_roc.tw,
+        avatar: /avatar/cat_p.png,
       }
     - {
-      title: "vessel",
-      intro: "文組小廢物",
-      link: https://sleepomen.github.io/,
-      avatar: /avatar/vessel.webp
+        title: "Aurielle Tavia",
+        intro: "看到各種小動物就走不動路",
+        link: https://www.instagram.com/hello_aqurielle.213/,
+        avatar: /avatar/Aurielle.png,
       }
     - {
-      title: "DaoHui",
-      intro: "嘻嘻",
-      link: https://daohuimodernblog.vercel.app/,
-      avatar: /avatar/DaoHui.jpg
+        title: "Myster",
+        intro: "不太會寫程式的人類",
+        link: https://myster7494.github.io/,
+        avatar: /avatar/Myster.png,
       }
-
+    - {
+        title: "n10955165",
+        intro: "被現實蹂躪的小男娘",
+        link: https://github.com/n10955165,
+        avatar: /avatar/hansz.png,
+      }
+    - {
+        title: "蜜蜂機器人",
+        intro: "",
+        link: https://www.facebook.com/share/1DmaG6SzYw/,
+        avatar: /avatar/bee.jpg,
+      }
+    - {
+        title: "s0323010",
+        intro: "懂音樂的軟體工程師 | 個網爛爛的不想修",
+        link: https://devs0323010.github.io/,
+        avatar: /avatar/s.png,
+      }
+    - {
+        title: "Brian Duan",
+        intro: "一般路過史萊姆",
+        link: https://www.justaslime.dev/,
+        avatar: /avatar/slime.jpg,
+      }
+    - {
+        title: "YD",
+        intro: "一名創新者、網頁工程師，想構建讓社會更好的系統",
+        link: https://www.kuang-ti.com/,
+        avatar: /avatar/yd.png,
+      }
+    - {
+        title: "Kukusa",
+        intro: "可愛男娘私我",
+        link: https://www.instagram.com/kukusa7274/,
+        avatar: /avatar/Kukusa.png,
+      }
+    - {
+        title: "Liquan",
+        intro: "擺爛中的大學生",
+        link: https://www.instagram.com/liquan_.0127,
+        avatar: /avatar/Liquan.jpg,
+      }
+    - {
+        title: "陌語",
+        intro: "Doing the right thing may not always earn praise, but why should we betray our own principles just to please others ?",
+        link: https://github.com/Moyu0730,
+        avatar: /avatar/moyu.png,
+      }
+    - {
+        title: "泫霄",
+        intro: "一个普通的人",
+        link: https://xxuanxiao.pages.dev/,
+        avatar: /avatar/xuo_azure.webp,
+      }
+    - {
+        title: "γ υ l&lt;i § Α ∩ ς Ε🍥",
+        intro: "有女朋友的現充",
+        link: https://youtube.com/@uyukisauce3054,
+        avatar: /avatar/water_59.jpg,
+      }
+    - {
+        title: "ヨーグルト",
+        intro: "瘋子有什麼不好呢?",
+        link: https://youcheng0617.github.io/aboutMeee/,
+        avatar: /avatar/yogurt.jpg,
+      }
+    - {
+        title: "sap",
+        intro: "玫瑰不用長高，戀者自會彎腰。",
+        link: https://www.instagram.com/sapsamcat007/?hl=zh-tw,
+        avatar: /avatar/sap.gif,
+      }
+    - {
+        title: "康康",
+        intro: "一隻不會飛的章魚研究生",
+        link: https://www.hhk.one/,
+        avatar: /avatar/kangkang.JPG,
+      }
+    - {
+        title: "fishbaby1011",
+        intro: "一個搞資安跟HPC的infra仔",
+        link: https://blog.fishbaby1011.com/,
+        avatar: /avatar/fishbaby.jpg,
+      }
+    - {
+        title: "baihu",
+        intro: "一個小廢物高中生",
+        link: https://www.instagram.com/baihufox,
+        avatar: /avatar/baihu.png,
+      }
+    - {
+        title: "人",
+        intro: "在資訊佬們旁邊晃悠的人社牲",
+        link: https://www.threads.com/@young._.qwq1945,
+        avatar: /avatar/ren.jpg,
+      }
+    - {
+        title: "yoru1005",
+        intro: "115特選爆死生，重度明日方舟玩家",
+        link: https://github.com/Yoru1005,
+        avatar: /avatar/yoru.jpg,
+      }
+    - {
+        title: "青呱Gua",
+        intro: "廢物一枚 便便教主",
+        link: https://guatw.net/,
+        avatar: /avatar/Gua.png,
+      }
+    - {
+        title: "boo00976",
+        intro: "資訊初學者",
+        link: https://github.com/boo00976,
+        avatar: /avatar/hiroya.png,
+      }
+    - {
+        title: "Hsinnnu",
+        intro: "又菜又愛玩",
+        link: https://www.instagram.com/chyiltzzz__,
+        avatar: /avatar/Hsinnnu.png,
+      }
+    - {
+        title: "ChuangB",
+        intro: "略略略",
+        link: https://chuangb48.github.io/personal_webside/,
+        avatar: /avatar/ChuangB.jpg,
+      }
+    - {
+        title: "雙生之狐",
+        intro: "一個手作堪比CNC的社恐",
+        link: https://www.instagram.com/fox_wee0408,
+        avatar: /avatar/melon_duck.jpg,
+      }
+    - {
+        title: "何煦人也",
+        intro: "競程很菜的競程仔",
+        link: https://www.instagram.com/hush._.0319,
+        avatar: /avatar/hush.jpg,
+      }
+    - {
+        title: "玥楓",
+        intro: "我是玥楓，被電神電死的玥楓喵",
+        link: https://yue-fon.vercel.app/,
+        avatar: /avatar/liu.webp,
+      }
+    - {
+        title: "PGpenguin72",
+        intro: "是一隻企鵝喔",
+        link: https://pg72.tw/,
+        avatar: /avatar/pg72.png,
+      }
+    - {
+        title: "喵靈",
+        intro: "一隻什麼都不會卻又什麼都想學的貓",
+        link: https://m30wlin35.com/,
+        avatar: /avatar/meowlin.webp,
+      }
+    - {
+        title: "宇",
+        intro: "NTNU LS",
+        link: https://www.instagram.com/yuhsin_0125,
+        avatar: /avatar/sychlys.jpg,
+      }
+    - {
+        title: "灰毛",
+        intro: "我是傻逼",
+        link: https://neo-furry.graycat.me/,
+        avatar: /avatar/graycat.jpg,
+      }
+    - {
+        title: "kyle",
+        intro: "有人要來寫 Rust 嗎",
+        link: https://simplykyle.eu.org/,
+        avatar: /avatar/kyle.png,
+      }
+    - {
+        title: "shrimp2845",
+        intro: "ohhi?",
+        link: https://shrimp2845-tw.github.io/,
+        avatar: /avatar/shrimp2845.jpg,
+      }
+    - {
+        title: "R3X DJ",
+        intro: "對不起我都在 Vibe Hacking",
+        link: https://r3xdj.github.io/,
+        avatar: /avatar/R3X_DJ.png,
+      }
+    - {
+        title: "洋蔥",
+        intro: "一位對資訊科技結合創業頗有興趣的高中生。",
+        link: https://founder.taicoolah.com/,
+        avatar: /avatar/onion.png,
+      }
+    - {
+        title: "Hawks",
+        intro: "",
+        link: https://hawks.tw/,
+        avatar: /avatar/Hawks.png,
+      }
+    - {
+        title: "Yuto",
+        intro: "Hi 我是 Yuto，熱愛電腦科學和資訊安全。專注於研究系統安全與偵測工程，也喜歡打 CTF，歡迎多多交流～",
+        link: https://blog.yuto0226.dev/,
+        avatar: /avatar/yuto.jpg,
+      }
+    - {
+        title: "benjaminshih",
+        intro: "不想被體制束縛的競程選手兼開發者",
+        link: https://benjamin-shih-tw.github.io/BLOG,
+        avatar: /avatar/,
+      }
+    - {
+        title: "hung",
+        intro: "我不會競程",
+        link: https://hung-liu.github.io/,
+        avatar: /avatar/hung.png,
+      }
+    - {
+        title: "Steven",
+        intro: "好玩😉",
+        link: https://steventeng.uk/,
+        avatar: /avatar/steven.png,
+      }
+    - {
+        title: "235",
+        intro: "all night long",
+        link: https://235blog.netlify.app/,
+        avatar: /avatar/235.jpg,
+      }
+    - {
+        title: "Sworda",
+        intro: "喜歡競程跟音遊 但都很菜<br>最會玩的是Phigros",
+        link: https://www.instagram.com/hpcp13_sworda/,
+        avatar: /avatar/swrda.jpg,
+      }
+    - {
+        title: "Cheng0928",
+        intro: "乃木坂 46 是日本大型女子偶像團體，成立於2011年8月21日；其出道時定位為另一女子偶像團體AKB48的「官方對手」（公式ライバル），有獨立的營運團隊，行銷策略及團體風格也與AKB48系列團體不同，惟總製作人同樣是秋元康。目前有34名成員，隊長由菅原咲月擔任。其與2015年8月21日成立的櫸坂46（現櫻坂46）、2018年8月20日成立的吉本坂46、以及2019年2月11日自櫸坂46獨立的日向坂46，構成大型偶像團體系列「坂道系列」。",
+        link: https://cheng-0928.github.io/,
+        avatar: /avatar/cheng.svg,
+      }
+    - {
+        title: "chrislaiisme",
+        intro: "對俄羅斯使用強力水族箱",
+        link: https://www.threads.com/@chrislaiisme,
+        avatar: /avatar/chrislaiisme.jpg,
+      }
+    - {
+        title: "Chara_Wu",
+        intro: "一個資訊能力很爛，拚盡全力變成大佬，偶爾玩玩其他自己感興趣遊戲的人",
+        link: https://www.facebook.com/chara.wu.2025,
+        avatar: /avatar/Chara_Wu.png,
+      }
+    - {
+        title: "牛排",
+        intro: "資訊菜雞一個，大佬們不教",
+        link: https://www.instagram.com/lincaiyi1228/,
+        avatar: /avatar/sloth.webp,
+      }
+    - {
+        title: "比例",
+        intro: "被拋棄在角落，沒人要的廢物",
+        link: https://billion4eblog.iam04e.workers.dev/,
+        avatar: /avatar/billion.png,
+      }
+    - {
+        title: "yuyoru",
+        intro: "一個喜歡寫程式的半宅男",
+        link: https://theoyu314159.github.io/,
+        avatar: /avatar/yuyoru.png,
+      }
+    - {
+        title: "Duckcat",
+        intro: "別人電神我墊神",
+        link: https://www.instagram.com/owo_copycat,
+        avatar: /avatar/Duckcat.jpg,
+      }
+    - {
+        title: "Miyun",
+        intro: "肝是彩色的",
+        link: https://linktr.ee/hsuanya.lee,
+        avatar: /avatar/miyun.jpg,
+      }
+    - {
+        title: "LuYishan",
+        intro: "鬼門開會不會有傲嬌酪梨雌小鬼半夜跑來吸我的陽氣啊o(////▽////)q欸嘿嘿...想想就開心",
+        link: https://luyishan-4-blog.wuming381906.workers.dev/,
+        avatar: /avatar/LuYishan.webp,
+      }
+    - {
+        title: "希爾Xier",
+        intro: "一個會玩Linux和MCU的神奇女孩子🏳️‍⚧️",
+        link: https://xier0405.github.io/about/,
+        avatar: /avatar/xier.jpg,
+      }
+    - {
+        title: "vessel",
+        intro: "文組小廢物",
+        link: https://sleepomen.github.io/,
+        avatar: /avatar/vessel.webp,
+      }
+    - {
+        title: "DaoHui",
+        intro: "嘻嘻",
+        link: https://daohuimodernblog.vercel.app/,
+        avatar: /avatar/DaoHui.jpg,
+      }
+    - {
+        title: "Denny Huang",
+        intro: "",
+        link: https://denny.one/,
+        avatar: /avatar/denny.jpg,
+      }
 
   # 當成員頭像加載失敗時，替換為指定圖片
   # When the member avatar fails to load, replace the specified image
@@ -1682,19 +1698,19 @@ links:
   # 友站下方自定義區域，支援 HTML，可插入例如申請友站的文字
   # Custom content at the bottom of the links
   custom:
-      enable: true
-      content: '
-        <hr><p>歡迎交換友情連結！若沒有自己的網站，也可放上個人的社群帳號（IG、X、Threads、YouTube、GitHub、HackMD 等）～</p>
-        <p>以下提供本站資訊，並也請以相同格式提供自己的網站資料：</p>
-        <ul>
-          <li>名稱：淳</li>
-          <li>網址：https://chuen666666.com/</li>
-          <li>簡介：群除我佬，我是肺霧</li>
-          <li>頭貼：https://chuen666666.com/img/avatar.jpg</li>
-        </ul>
-        <p>若有任何其他客製化要求（例如更新簡介、加上<del>劃掉線</del>效果、加上<span class="spoiler" onclick="this.classList.add(&apos;open&apos;)">防雷</span>等）請主動告知</p>
-        <p>若有任何疑問，請至<a href="/about/" style="color: #31a5d9 !important; text-decoration: none;" onmouseover="this.style.textDecoration=&apos;underline&apos;;this.style.color=&apos;#1a7fa6&apos;" onmouseout="this.style.textDecoration=&apos;none&apos;;this.style.color=&apos;#31a5d9&apos;">關於</a>頁與我聯繫！</p>
-        '
+    enable: true
+    content: '
+      <hr><p>歡迎交換友情連結！若沒有自己的網站，也可放上個人的社群帳號（IG、X、Threads、YouTube、GitHub、HackMD 等）～</p>
+      <p>以下提供本站資訊，並也請以相同格式提供自己的網站資料：</p>
+      <ul>
+      <li>名稱：淳</li>
+      <li>網址：https://chuen666666.com/</li>
+      <li>簡介：群除我佬，我是肺霧</li>
+      <li>頭貼：https://chuen666666.com/img/avatar.jpg</li>
+      </ul>
+      <p>若有任何其他客製化要求（例如更新簡介、加上<del>劃掉線</del>效果、加上<span class="spoiler" onclick="this.classList.add(&apos;open&apos;)">防雷</span>等）請主動告知</p>
+      <p>若有任何疑問，請至<a href="/about/" style="color: #31a5d9 !important; text-decoration: none;" onmouseover="this.style.textDecoration=&apos;underline&apos;;this.style.color=&apos;#1a7fa6&apos;" onmouseout="this.style.textDecoration=&apos;none&apos;;this.style.color=&apos;#31a5d9&apos;">關於</a>頁與我聯繫！</p>
+      '
 
   # 評論插件
   # Comment plugin
@@ -1704,7 +1720,6 @@ links:
     # The specified plugin needs to set the necessary parameters at the same time
     # Options: utterances | disqus | gitalk | valine | waline | changyan | livere | remark42 | twikoo | cusdis | giscus | discuss
     type: giscus
-
 
 #---------------------------
 # 以下是配置 JS CSS 等靜態資源的 URL 字首，可以自定義成 CDN 地址，
