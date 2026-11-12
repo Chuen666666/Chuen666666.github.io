@@ -85,7 +85,7 @@ int main() {
     int a, b;
     while (true) {
         cin >> a >> b;
-        if (a == -1 and b == -1) break;
+        if (a == -1 && b == -1) break;
         cout << min(abs(a - b), min((a + 100 - b) % 100, (b + 100 - a) % 100)) << '\n';
     }
 }
@@ -143,13 +143,13 @@ int main() {
         char _;
         cin >> d >> _ >> m >> _ >> y >> D >> _ >> M >> _ >> Y;
 
-        if (y < Y or (y == Y and m < M) or (y == Y and m == M and d < D)) {
+        if (y < Y || (y == Y && m < M) || (y == Y && m == M && d < D)) {
             cout << "Invalid birth date\n";
             continue;
         }
 
         int age = y - Y;
-        if (m < M or (m == M and d < D)) age--;
+        if (m < M || (m == M && d < D)) age--;
 
         if (age > 130)
             cout << "Check birth date\n";
@@ -218,7 +218,7 @@ int main() {
     int a, b;
     while (true) {
         cin >> a >> b;
-        if (a == -1 and b == -1) break;
+        if (a == -1 && b == -1) break;
         cout << min(abs(a - b), min((a + 100 - b) % 100, (b + 100 - a) % 100)) << '\n';
     }
 }
@@ -248,7 +248,7 @@ void print(int n) {
 
 int sol(int a, int b) {
     int ans = 0, c = 0;
-    while (a or b or c) {
+    while (a || b || c) {
         if (a % 10 + b % 10 + c > 9) {
             ans++;
             c = 1;
@@ -266,7 +266,7 @@ int main() {
 
     int a, b;
     while (cin >> a >> b) {
-        if (a == 0 and b == 0) break;
+        if (a == 0 && b == 0) break;
         print(sol(a, b));
     }
 }
@@ -341,7 +341,7 @@ void init() {
 int f(int n) {
     int ans = 0;
     for (int i = 2; i * i <= n; ++i) {
-        if (prime[i] and n % i == 0) {
+        if (prime[i] && n % i == 0) {
             ++ans;
             while (n % i == 0)
                 n /= i;
@@ -356,7 +356,7 @@ signed main() {
 
     init();
     int n;
-    while (cin >> n and n != 0) cout << n << " : " << f(n) << '\n';
+    while (cin >> n && n != 0) cout << n << " : " << f(n) << '\n';
 }
 ```
 
