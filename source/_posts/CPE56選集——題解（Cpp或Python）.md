@@ -505,13 +505,113 @@ for _ in range(int(input())):
 
 > [UVa11398](https://onlinejudge.org/external/113/11398.pdf)、[ZeroJudge a467](https://zerojudge.tw/ShowProblem?problemid=a467)
 
+```python
+while True:
+    s = input().replace(' #', '').split()
+    if s == ['~']:
+        break
+
+    ans, flag = '', '0'
+    for i in s:
+        if len(i) == 1:
+            flag = '1'
+        elif len(i) == 2:
+            flag = '0'
+        else:
+            ans += flag * (len(i) - 2)
+
+    print(int(ans, 2))
+```
+
 ### Base -2
 
 > [UVa11121](https://onlinejudge.org/external/111/11121.pdf)、[ZeroJudge m946](https://zerojudge.tw/ShowProblem?problemid=m946)
 
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+#define int long long
+
+signed main() {
+    ios::sync_with_stdio(0), cin.tie(0);
+
+    int N, n;
+    cin >> N;
+    for (int i = 1; i <= N; ++i) {
+        vector<int> v;
+        cout << "Case #" << i << ": ";
+        cin >> n;
+
+        if (n == 0) {
+            cout << 0 << '\n';
+            continue;
+        }
+
+        while (n) {
+            int r = n % -2;
+            n /= -2;
+
+            if (r < 0) {
+                r += 2;
+                n++;
+            }
+
+            v.push_back(r);
+        }
+
+        reverse(v.begin(), v.end());
+        for (int i : v) cout << i;
+        cout << '\n';
+    }
+}
+```
+
 ### Fibonaccimal Base
 
 > [UVa00948](https://onlinejudge.org/external/9/948.pdf)、[ZeroJudge a134](https://zerojudge.tw/ShowProblem?problemid=a134)
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+#define int long long
+#define MAXN 100000005
+
+vector<int> fib = {0, 1};
+
+void init() {
+    for (int i = 2;; ++i) {
+        int n = fib[i - 1] + fib[i - 2];
+        if (n > MAXN) break;
+        fib.push_back(n);
+    }
+}
+
+signed main() {
+    ios::sync_with_stdio(0), cin.tie(0);
+
+    init();
+    int N, n;
+    cin >> N;
+    while (N--) {
+        cin >> n;
+        cout << n << " = ";
+
+        bool started = false;
+        for (int i = fib.size() - 1; i >= 2; --i) {
+            if (n >= fib[i]) {
+                cout << 1;
+                n -= fib[i];
+                started = true;
+            }
+            else if (started) {
+                cout << 0;
+            }
+        }
+
+        cout << " (fib)\n";
+    }
+}
+```
 
 ## 二維寫真
 
