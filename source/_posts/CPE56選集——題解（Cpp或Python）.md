@@ -95,11 +95,80 @@ int main() {
 
 > [UVa00392](https://onlinejudge.org/external/3/392.pdf)、[ZeroJudge c060](https://zerojudge.tw/ShowProblem?problemid=c060)
 
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+void pt(int i, int n, bool& first) {
+    if (!n) return;
+
+    if (!first) {
+        if (n < 0) cout << '-';
+        first = true;
+    }
+    else {
+        cout << (n < 0 ? " - " : " + ");
+    }
+
+    if (i == 0 || abs(n) != 1) cout << abs(n);
+
+    if (i > 0) {
+        cout << 'x';
+        if (i > 1) cout << '^' << i;
+    }
+}
+
+int main() {
+    ios::sync_with_stdio(0), cin.tie(0);
+
+    int n;
+    while (cin >> n) {
+        bool first = false;
+        int i = 8;
+        pt(i, n, first);
+        while (i--) {
+            cin >> n;
+            pt(i, n, first);
+        }
+        if (!first) cout << 0;
+        cout << '\n';
+    }
+}
+```
+
 ## 字串字元
 
-### OneTwo Three
+### One-Two-Three
 
 > [UVa12289](https://onlinejudge.org/external/122/12289.pdf)、[ZeroJudge a466](https://zerojudge.tw/ShowProblem?problemid=a466)
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    ios::sync_with_stdio(false), cin.tie(0);
+
+    int n;
+    cin >> n;
+    while (n--) {
+        string s;
+        cin >> s;
+        if (s.size() == 5)
+            cout << 3 << '\n';
+        else {
+            bool one = false;
+            for (char& i : s) {
+                if (i == 'n' || i == 'e') {
+                    one = true;
+                    break;
+                }
+            }
+            cout << ((one) ? 1 : 2) << '\n';
+        }
+    }
+}
+```
 
 ### Decoding
 
