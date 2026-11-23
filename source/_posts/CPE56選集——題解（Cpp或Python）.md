@@ -85,14 +85,31 @@ for i in range(1, int(input()) + 1):
 #include <bits/stdc++.h>
 using namespace std;
 
-int main() {
+const map<char, double> M = {{'C', 12.01}, {'H', 1.008}, {'O', 16.0}, {'N', 14.01}};
+
+signed main() {
     ios::sync_with_stdio(0), cin.tie(0);
 
-    int a, b;
-    while (true) {
-        cin >> a >> b;
-        if (a == -1 && b == -1) break;
-        cout << min(abs(a - b), min((a + 100 - b) % 100, (b + 100 - a) % 100)) << '\n';
+    int T;
+    cin >> T;
+
+    while (T--) {
+        double ans = 0.0;
+        int tmp;
+        char c;
+
+        string s;
+        cin >> s;
+        stringstream ss(s);
+
+        while (ss >> c) {
+            tmp = 1;
+
+            if (isdigit(ss.peek())) ss >> tmp;
+            ans += M.at(c) * tmp;
+        }
+
+        cout << fixed << setprecision(3) << ans << '\n';
     }
 }
 ```
@@ -420,11 +437,8 @@ int main() {
     ios::sync_with_stdio(0), cin.tie(0);
 
     int a, b;
-    while (true) {
-        cin >> a >> b;
-        if (a == -1 && b == -1) break;
+    while (cin >> a >> b && (a != -1) || (b != -1))
         cout << min(abs(a - b), min((a + 100 - b) % 100, (b + 100 - a) % 100)) << '\n';
-    }
 }
 ```
 
