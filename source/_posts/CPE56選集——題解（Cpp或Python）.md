@@ -13,7 +13,7 @@ tags:
   - CPE
   - C++
   - Python
-math: false
+math: true
 mermaid: false
 hide: true
 date: 2026-11-11 14:00:44
@@ -32,25 +32,33 @@ excerpt: CPE56 選集的 C++ 或 Python 題解
 
 > [UVa00272](https://onlinejudge.org/external/2/272.pdf)、[ZeroJudge c007](https://zerojudge.tw/ShowProblem?problemid=c007)
 
-```python
-from sys import stdin
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+// #define int long long
 
-flag = False
+signed main() {
+    ios::sync_with_stdio(0), cin.tie(0);
 
-for line in stdin:
-    line = line.strip()
-
-    for i in line:
-        if i == '"' and not flag:
-            print('``', end='')
-            flag = True
-        elif i == '"' and flag:
-            print('\'\'', end='')
-            flag = False
-        else:
-            print(i, end='')
-
-    print()
+    bool flag = false;
+    string s;
+    while (getline(cin, s)) {
+        for (char& c : s) {
+            if (c == '"' && !flag) {
+                cout << "``";
+                flag = true;
+            }
+            else if (c == '"' && flag) {
+                cout << "''";
+                flag = false;
+            }
+            else {
+                cout << c;
+            }
+        }
+        cout << '\n';
+    }
+}
 ```
 
 ### Dates
@@ -60,9 +68,7 @@ for line in stdin:
 ```python
 from datetime import datetime, timedelta
 
-T = int(input())
-
-for i in range(1, T + 1):
+for i in range(1, int(input()) + 1):
     d = datetime.strptime(input(), "%Y-%B-%d")
     k = int(input())
 
@@ -203,9 +209,65 @@ signed main() {
 
 > [UVa11576](https://onlinejudge.org/external/115/11576.pdf)、[ZeroJudge n683](https://zerojudge.tw/ShowProblem?problemid=n683)
 
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+// #define int long long
+
+signed main() {
+    ios::sync_with_stdio(0), cin.tie(0);
+
+    int n;
+    cin >> n;
+    while (n--) {
+        int k, w;
+        string a = "", b;
+        cin >> k >> w >> a;
+        int ans = k;
+        --w;
+
+        while (w--) {
+            cin >> b;
+            for (int i = k; i >= 0; --i)
+                if (a.substr(k - i, i) == b.substr(0, i)) {
+                    ans += k - i;
+                    a = b;
+                    break;
+                }
+        }
+        cout << ans << '\n';
+    }
+}
+```
+
 ### Find The Telephone
 
 > [UVa10921](https://onlinejudge.org/external/109/10921.pdf)、[ZeroJudge d670](https://zerojudge.tw/ShowProblem?problemid=d670)
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+// #define int long long
+
+const map<char, int> M = {{'A', 2}, {'B', 2}, {'C', 2}, {'D', 3}, {'E', 3}, {'F', 3}, {'G', 4}, {'H', 4}, {'I', 4},
+                          {'J', 5}, {'K', 5}, {'L', 5}, {'M', 6}, {'N', 6}, {'O', 6}, {'P', 7}, {'Q', 7}, {'R', 7},
+                          {'S', 7}, {'T', 8}, {'U', 8}, {'V', 8}, {'W', 9}, {'X', 9}, {'Y', 9}, {'Z', 9}};
+
+signed main() {
+    ios::sync_with_stdio(0), cin.tie(0);
+
+    string s;
+    while (cin >> s) {
+        for (char& i : s) {
+            if ('A' <= i && i <= 'Z')
+                cout << M.at(i);
+            else
+                cout << i;
+        }
+        cout << '\n';
+    }
+}
+```
 
 ## 日期時間
 
