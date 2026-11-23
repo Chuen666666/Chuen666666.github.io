@@ -13,7 +13,7 @@ tags:
   - CPE
   - C++
   - Python
-math: true
+math: false
 mermaid: false
 hide: true
 date: 2026-11-11 14:00:44
