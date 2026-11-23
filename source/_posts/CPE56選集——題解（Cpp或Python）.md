@@ -174,6 +174,31 @@ int main() {
 
 > [UVa11541](https://onlinejudge.org/external/115/11541.pdf)、[ZeroJudge e208](https://zerojudge.tw/ShowProblem?problemid=e208)
 
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+// #define int long long
+
+signed main() {
+    ios::sync_with_stdio(0), cin.tie(0);
+
+    int T;
+    cin >> T;
+    for (int i = 1; i <= T; ++i) {
+        cout << "Case " << i << ": ";
+
+        string s;
+        cin >> s;
+        stringstream ss(s);
+        int n;
+        char c;
+
+        while (ss >> c >> n) cout << string(n, c);
+        cout << '\n';
+    }
+}
+```
+
 ### Scrolling Sign
 
 > [UVa11576](https://onlinejudge.org/external/115/11576.pdf)、[ZeroJudge n683](https://zerojudge.tw/ShowProblem?problemid=n683)
