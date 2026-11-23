@@ -275,9 +275,57 @@ signed main() {
 
 > [UVa11650](https://onlinejudge.org/external/116/11650.pdf)、[ZeroJudge j056](https://zerojudge.tw/ShowProblem?problemid=j056)
 
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+// #define int long long
+
+signed main() {
+    ios::sync_with_stdio(0), cin.tie(0);
+
+    int T;
+    char _;
+    pair<int, int> t;
+    cin >> T;
+
+    while (T--) {
+        cin >> t.first >> _ >> t.second;
+
+        int ttl = (t.first % 12) * 60 + t.second;
+        int mir = (720 - ttl) % 720;
+
+        t = {mir / 60, mir % 60};
+        if (t.first == 0) t.first = 12;
+
+        cout << setfill('0') << setw(2) << t.first << ':' << setw(2) << t.second << '\n';
+    }
+}
+```
+
 ### Cancer or Scorpio
 
 > [UVa11947](https://onlinejudge.org/external/119/11947.pdf)、[ZeroJudge e680](https://zerojudge.tw/ShowProblem?problemid=e680)
+
+```python
+from datetime import datetime, timedelta
+
+SIGN = [
+    'capricorn', 'aquarius', 'pisces', 'aries', 'taurus',
+    'gemini', 'cancer', 'leo', 'virgo', 'libra',
+    'scorpio', 'sagittarius', 'capricorn',
+]
+BEGIN = [0, 21, 20, 21, 21, 22, 22, 23, 22, 24, 24, 23, 23]
+
+for i in range(1, int(input()) + 1):
+    d = datetime.strptime(input(), '%m%d%Y')
+    d += timedelta(days=280)
+
+    m = d.month
+    sign = SIGN[m] if d.day >= BEGIN[m] else SIGN[m - 1]
+
+    print(f'{i} {d.strftime("%m/%d/%Y")} {sign}')
+
+```
 
 ### How old are you?
 
