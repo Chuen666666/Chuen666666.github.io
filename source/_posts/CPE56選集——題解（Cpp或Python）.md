@@ -519,6 +519,45 @@ int main() {
 
 > [UVa00275](https://onlinejudge.org/external/2/275.pdf)、[ZeroJudge c084](https://zerojudge.tw/ShowProblem?problemid=c084)
 
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+// #define int long long
+
+signed main() {
+    ios::sync_with_stdio(0), cin.tie(0);
+
+    int n, m;
+    while (cin >> n >> m && (n != 0 || m != 0)) {
+        vector<int> pos(m, -1);
+
+        int r = n, i = 0, cnt = 1;
+        cout << '.';
+
+        while (r != 0 && pos[r] == -1) {
+            pos[r] = i++;
+
+            r *= 10;
+            cout << r / m;
+
+            if (++cnt == 50) {
+                cout << '\n';
+                cnt = 0;
+            }
+
+            r %= m;
+        }
+
+        if (cnt != 0) cout << '\n';
+
+        if (r == 0)
+            cout << "This expansion terminates.\n";
+        else
+            cout << "The last " << i - pos[r] << " digits repeat forever.\n";
+    }
+}
+```
+
 ## 質因倍數
 
 ### Count the factors
@@ -822,6 +861,48 @@ signed main() {
 ### Minesweeper
 
 > [UVa10189](https://onlinejudge.org/external/101/10189.pdf)、[ZeroJudge e605](https://zerojudge.tw/ShowProblem?problemid=e605)
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+// #define int long long
+
+int n, m, K = 1;
+vector<vector<char>> g;
+
+int f(int x, int y) {
+    int ans = 0;
+    vector<pair<int, int>> dir = {{1, 0}, {0, 1}, {-1, 1}, {1, 1}, {-1, 0}, {0, -1}, {-1, -1}, {1, -1}};
+    for (auto [xx, yy] : dir) {
+        if ((x + xx) >= n || (x + xx) < 0 || (y + yy) >= m || (y + yy) < 0) continue;
+        if (g[x + xx][y + yy] == '*') ++ans;
+    }
+    return ans;
+}
+
+signed main() {
+    ios::sync_with_stdio(0), cin.tie(0);
+
+    while (cin >> n >> m && n != 0 && m != 0) {
+        g.assign(n, vector<char>(m));
+        cout << "Field #" << K++ << ":\n";
+        for (auto& i : g)
+            for (auto& j : i)
+                cin >> j;
+
+        for (int i = 0; i < n; ++i) {
+            for (int j = 0; j < m; ++j) {
+                if (g[i][j] == '*')
+                    cout << '*';
+                else
+                    cout << f(i, j);
+            }
+            cout << '\n';
+        }
+        cout << '\n';
+    }
+}
+```
 
 ### Where's Waldorf?
 
