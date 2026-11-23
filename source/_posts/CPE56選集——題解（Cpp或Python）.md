@@ -592,7 +592,8 @@ void init() {
 
     for (int i = 2; i * i < MAXN; ++i)
         if (prime[i])
-            for (int j = i * i; j < MAXN; j += i) prime[j] = false;
+            for (int j = i * i; j < MAXN; j += i)
+                prime[j] = false;
 }
 
 int f(int n) {
